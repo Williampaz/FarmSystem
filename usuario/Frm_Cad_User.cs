@@ -73,6 +73,7 @@ namespace FarmSystem.usuario
 		private void btn_Cadastrar_Click(object sender, EventArgs e)
 		{
 			
+
 			if (btn_Cadastrar.Text == "Cadastrar")
 			{
 				ativa();
