@@ -48,6 +48,9 @@ namespace FarmSystem.Funcionario
         private void btngravar_Click(object sender, EventArgs e)
         {
 
+
+
+
         }
     }
 }
