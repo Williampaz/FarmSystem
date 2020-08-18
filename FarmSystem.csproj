@@ -150,6 +150,14 @@
     <Compile Include="Fornecedor\frmListaFornecedor.Designer.cs">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funcionario\daofuncionario.cs" />
+    <Compile Include="Funcionario\funcionario.cs" />
+    <Compile Include="Funcionario\frmfuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionario\frmfuncionario.Designer.cs">
+      <DependentUpon>frmfuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +186,9 @@
     <EmbeddedResource Include="Fornecedor\frmListaFornecedor.resx">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Funcionario\frmfuncionario.resx">
+      <DependentUpon>frmfuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="usuario\Frm_Cad_User.resx">
       <DependentUpon>Frm_Cad_User.cs</DependentUpon>
@@ -209,6 +221,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
