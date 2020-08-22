@@ -151,6 +151,12 @@
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario\daofuncionario.cs" />
+    <Compile Include="Funcionario\frmlistafuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionario\frmlistafuncionario.Designer.cs">
+      <DependentUpon>frmlistafuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Funcionario\funcionario.cs" />
     <Compile Include="Funcionario\frmfuncionario.cs">
       <SubType>Form</SubType>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\frmfuncionario.resx">
       <DependentUpon>frmfuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionario\frmlistafuncionario.resx">
+      <DependentUpon>frmlistafuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

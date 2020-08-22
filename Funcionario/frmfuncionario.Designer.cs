@@ -67,14 +67,14 @@
             this.txtcodigo.Location = new System.Drawing.Point(9, 38);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(179, 20);
-            this.txtcodigo.TabIndex = 1;
+            this.txtcodigo.TabIndex = 0;
             // 
             // txtnome
             // 
             this.txtnome.Location = new System.Drawing.Point(194, 38);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(591, 20);
-            this.txtnome.TabIndex = 3;
+            this.txtnome.TabIndex = 1;
             // 
             // label2
             // 
@@ -89,9 +89,11 @@
             // mskdtanasc
             // 
             this.mskdtanasc.Location = new System.Drawing.Point(194, 84);
+            this.mskdtanasc.Mask = "00/00/0000";
             this.mskdtanasc.Name = "mskdtanasc";
             this.mskdtanasc.Size = new System.Drawing.Size(147, 20);
-            this.mskdtanasc.TabIndex = 4;
+            this.mskdtanasc.TabIndex = 3;
+            this.mskdtanasc.ValidatingType = typeof(System.DateTime);
             // 
             // label3
             // 
@@ -108,7 +110,7 @@
             this.txtidade.Location = new System.Drawing.Point(9, 84);
             this.txtidade.Name = "txtidade";
             this.txtidade.Size = new System.Drawing.Size(179, 20);
-            this.txtidade.TabIndex = 7;
+            this.txtidade.TabIndex = 2;
             // 
             // label4
             // 
@@ -133,16 +135,17 @@
             // msktel
             // 
             this.msktel.Location = new System.Drawing.Point(350, 84);
+            this.msktel.Mask = "(99) 00000-0000";
             this.msktel.Name = "msktel";
             this.msktel.Size = new System.Drawing.Size(245, 20);
-            this.msktel.TabIndex = 9;
+            this.msktel.TabIndex = 4;
             // 
             // txtendereco
             // 
             this.txtendereco.Location = new System.Drawing.Point(9, 127);
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(776, 20);
-            this.txtendereco.TabIndex = 11;
+            this.txtendereco.TabIndex = 5;
             // 
             // label6
             // 
@@ -168,9 +171,11 @@
             // mskdtaadm
             // 
             this.mskdtaadm.Location = new System.Drawing.Point(9, 170);
+            this.mskdtaadm.Mask = "00/00/0000";
             this.mskdtaadm.Name = "mskdtaadm";
             this.mskdtaadm.Size = new System.Drawing.Size(179, 20);
-            this.mskdtaadm.TabIndex = 12;
+            this.mskdtaadm.TabIndex = 6;
+            this.mskdtaadm.ValidatingType = typeof(System.DateTime);
             this.mskdtaadm.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             // 
             // txtcargo
@@ -178,7 +183,7 @@
             this.txtcargo.Location = new System.Drawing.Point(194, 170);
             this.txtcargo.Name = "txtcargo";
             this.txtcargo.Size = new System.Drawing.Size(295, 20);
-            this.txtcargo.TabIndex = 15;
+            this.txtcargo.TabIndex = 7;
             // 
             // label8
             // 
@@ -195,7 +200,7 @@
             this.txtsalario.Location = new System.Drawing.Point(495, 170);
             this.txtsalario.Name = "txtsalario";
             this.txtsalario.Size = new System.Drawing.Size(213, 20);
-            this.txtsalario.TabIndex = 17;
+            this.txtsalario.TabIndex = 8;
             // 
             // label9
             // 
@@ -214,7 +219,7 @@
             this.btnlistar.Location = new System.Drawing.Point(450, 237);
             this.btnlistar.Name = "btnlistar";
             this.btnlistar.Size = new System.Drawing.Size(131, 96);
-            this.btnlistar.TabIndex = 21;
+            this.btnlistar.TabIndex = 12;
             this.btnlistar.UseVisualStyleBackColor = true;
             // 
             // btnexcluir
@@ -224,8 +229,9 @@
             this.btnexcluir.Location = new System.Drawing.Point(313, 237);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(131, 96);
-            this.btnexcluir.TabIndex = 20;
+            this.btnexcluir.TabIndex = 11;
             this.btnexcluir.UseVisualStyleBackColor = true;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btneditar
             // 
@@ -234,8 +240,9 @@
             this.btneditar.Location = new System.Drawing.Point(176, 237);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(131, 96);
-            this.btneditar.TabIndex = 19;
+            this.btneditar.TabIndex = 10;
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btngravar
             // 
@@ -244,7 +251,7 @@
             this.btngravar.Location = new System.Drawing.Point(39, 237);
             this.btngravar.Name = "btngravar";
             this.btngravar.Size = new System.Drawing.Size(131, 96);
-            this.btngravar.TabIndex = 18;
+            this.btngravar.TabIndex = 9;
             this.btngravar.UseVisualStyleBackColor = true;
             this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 

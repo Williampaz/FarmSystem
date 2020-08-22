@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FarmSystem.Funcionario;
 
 namespace FarmSystem.Principal
 {
@@ -28,5 +29,11 @@ namespace FarmSystem.Principal
 		{
 			new frmCadastroFornecedor().ShowDialog();
 		}
-	}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+			new frmfuncionario().ShowDialog();
+
+        }
+    }
 }

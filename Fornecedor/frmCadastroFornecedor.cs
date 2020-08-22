@@ -92,5 +92,10 @@ namespace FarmSystem.Fornecedor
 		{
             Limpar();
         }
-	}
+
+        private void txtCodFornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

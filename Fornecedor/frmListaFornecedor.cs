@@ -54,5 +54,10 @@ namespace FarmSystem.Fornecedor
 		{
 
 		}
-	}
+
+        private void frmListaFornecedor_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

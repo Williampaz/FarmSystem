@@ -27,6 +27,7 @@ namespace FarmSystem.Funcionario
 
         }
 
+
         private funcionario getfuncionario()
         {
             funcionario func = new funcionario();
@@ -42,15 +43,61 @@ namespace FarmSystem.Funcionario
                 return func;
 
         }
+        private void setfuncionario(funcionario f)
+        {
+            txtcodigo.Text = f.codigo.ToString();
+            txtnome.Text = f.nome;
+            txtidade.Text = f.idade;
+            mskdtanasc.Text = f.datanasc.ToString();
+            msktel.Text = f.fone;
+            txtendereco.Text = f.endereco;
+            mskdtaadm.Text = f.dataadmissao.ToString();
+            txtcargo.Text = f.cargo;
+            txtsalario.Text = f.salario.ToString();
+        }
 
- 
+        private void limpar()
+        {
+            txtcodigo.Clear();
+            txtnome.Clear();
+            txtidade.Clear();
+            mskdtanasc.Clear();
+            msktel.Clear();
+            txtendereco.Clear();
+            mskdtaadm.Clear();
+            txtcargo.Clear();
+            txtsalario.Clear();
+            
 
+
+        }
         private void btngravar_Click(object sender, EventArgs e)
         {
 
+            daofuncionario df = new daofuncionario();
 
+            df.Cadastar(getfuncionario());
 
+            MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado");
+            limpar();
 
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            daofuncionario df = new daofuncionario();
+            df.Editar(getfuncionario());
+            limpar();
+            MessageBox.Show("Dados alterados com sucesso", "Dados alterados");
+        }
+
+        private void btnexcluir_Click(object sender, EventArgs e)
+        {
+
+            daofuncionario df = new daofuncionario();
+            df.Excluir(Convert.ToInt32(txtcodigo.Text));
+            limpar();
+            MessageBox.Show("Excluido", "Exclusão");
         }
     }
 }
