@@ -89,5 +89,55 @@ namespace FarmSystem.usuario
 			}
 			
 		}
+		public void setUser(User user)
+		{
+			txt_Codigo.Text = user.codigo.ToString();
+			txt_CPF.Text = user.cpf;
+			txt_DataNascimento.Text = user.nascimento.ToString();
+			txt_Email.Text = user.email;
+			txt_Endereco.Text = user.endereco;
+			txt_Idade.Text = user.idade;
+			txt_Nome.Text = user.nome;
+			txt_Rg.Text = user.rg;
+			txt_Senha.Text = user.senha;
+		}
+		public User GetUser()
+		{
+			User user = new User();
+			
+				user.codigo = Convert.ToInt32(txt_Codigo.Text);
+				user.nome = txt_Nome.Text;
+				user.rg = txt_Rg.Text;
+				user.cpf = txt_CPF.Text;
+				user.nascimento = Convert.ToDateTime(txt_DataNascimento.Text);
+				user.idade = txt_Idade.Text;
+				user.email = txt_Email.Text;
+				user.senha = txt_Senha.Text;
+				user.endereco = txt_Endereco.Text;
+			return user;
+
+		}
+		private void btn_Editar_Click(object sender, EventArgs e)
+		{
+			if (btn_Editar.Text == "Editar")
+			{
+				User_DAO editar = new User_DAO();
+				Frm_Sel_User edit = new Frm_Sel_User();
+				edit.ShowDialog();
+				if (edit.DialogResult == DialogResult.OK)
+				{
+					setUser(edit.GetUser());
+				}
+				btn_Editar.Text = "Alterar";
+				ativa();
+			}
+			else
+			{
+				User_DAO edit = new User_DAO();
+				edit.editar(GetUser());
+				btn_Editar.Text = "Editar";
+				desativa();
+			}
+		}
 	}
 }

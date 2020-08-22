@@ -244,6 +244,7 @@
 			this.btn_Editar.TabIndex = 22;
 			this.btn_Editar.Text = "Editar";
 			this.btn_Editar.UseVisualStyleBackColor = true;
+			this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
 			// 
 			// btn_Limpar
 			// 

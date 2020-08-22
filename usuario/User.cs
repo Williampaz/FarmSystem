@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FarmSystem.usuario
 {
-	class User
+	public class User
 	{
         private int _codigo;
         public int codigo
@@ -56,8 +56,8 @@ namespace FarmSystem.usuario
 			get { return _senha; }
 			set { _senha = value; }
 		}
-		private float _endereco;
-		public float endereco
+		private string _endereco;
+		public string endereco
 		{
 			get { return _endereco; }
 			set { _endereco = value; }
