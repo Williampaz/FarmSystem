@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmfuncionario));
             this.label1 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.txtnome = new System.Windows.Forms.TextBox();
@@ -50,6 +51,10 @@
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btngravar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +73,7 @@
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(179, 20);
             this.txtcodigo.TabIndex = 0;
+            this.txtcodigo.Leave += new System.EventHandler(this.txtcodigo_Leave);
             // 
             // txtnome
             // 
@@ -221,6 +227,7 @@
             this.btnlistar.Size = new System.Drawing.Size(131, 96);
             this.btnlistar.TabIndex = 12;
             this.btnlistar.UseVisualStyleBackColor = true;
+            this.btnlistar.Click += new System.EventHandler(this.btnlistar_Click);
             // 
             // btnexcluir
             // 
@@ -255,11 +262,51 @@
             this.btngravar.UseVisualStyleBackColor = true;
             this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(82, 336);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Gravar";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(214, 336);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Editar";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(361, 336);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Excluir";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(495, 336);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 13);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Listar";
+            // 
             // frmfuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 376);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnlistar);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btneditar);
@@ -282,6 +329,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmfuncionario";
             this.Text = "Funcionarios";
             this.ResumeLayout(false);
@@ -313,5 +361,9 @@
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnexcluir;
         private System.Windows.Forms.Button btnlistar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

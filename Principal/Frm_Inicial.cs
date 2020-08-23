@@ -35,5 +35,10 @@ namespace FarmSystem.Principal
 			new frmfuncionario().ShowDialog();
 
         }
+
+        private void Frm_Inicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -63,6 +63,16 @@ namespace FarmSystem.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adicionar_usuario {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clipboard {
             get {
                 object obj = ResourceManager.GetObject("clipboard", resourceCulture);
@@ -93,9 +103,49 @@ namespace FarmSystem.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fabricacao {
+            get {
+                object obj = ResourceManager.GetObject("fabricacao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap farm {
+            get {
+                object obj = ResourceManager.GetObject("farm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap floppy_disk {
             get {
                 object obj = ResourceManager.GetObject("floppy-disk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap funcionarios {
+            get {
+                object obj = ResourceManager.GetObject("funcionarios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Plantação_1240_x600_capa_site_sindafa {
+            get {
+                object obj = ResourceManager.GetObject("Plantação-1240-x600-capa-site-sindafa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

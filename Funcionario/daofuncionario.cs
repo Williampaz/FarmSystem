@@ -34,9 +34,7 @@ namespace FarmSystem.Funcionario
         public List<funcionario> Listafuncioario()
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,idade,nascimento," +
-                "fone,endereco,dataadmissao," +
-                "cargo,salario from farmsystem.funcionario");
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,idade,nascimento,fone,endereco,dataadmissao,cargo,salario from farmsystem.funcionario");
             query.Connection = conn.entrar();
             using (NpgsqlDataReader dr = query.ExecuteReader())
             {
@@ -49,12 +47,12 @@ namespace FarmSystem.Funcionario
                         f.codigo = dr.GetInt32(0);
                         f.nome = dr.GetString(1);
                         f.idade = dr.GetString(2);
-                        f.dataadmissao = dr.GetDateTime(3);
+                        f.datanasc = dr.GetDateTime(3);
                         f.fone = dr.GetString(4);
                         f.endereco = dr.GetString(5);
                         f.dataadmissao = dr.GetDateTime(6);
                         f.cargo = dr.GetString(7);
-                        f.salario = dr.GetFloat(8);
+                        f.salario = dr.GetDouble(8);
                         funcionario.Add(f);
                     }
                     conn.sair();
@@ -84,7 +82,7 @@ namespace FarmSystem.Funcionario
                         f.codigo = dr.GetInt32(0);
                         f.nome = dr.GetString(1);
                         f.idade = dr.GetString(2);
-                        f.dataadmissao = dr.GetDateTime(3);
+                        f.datanasc = dr.GetDateTime(3);
                         f.fone = dr.GetString(4);
                         f.endereco = dr.GetString(5);
                         f.dataadmissao = dr.GetDateTime(6);
@@ -100,11 +98,47 @@ namespace FarmSystem.Funcionario
             return null;
         }
 
+        public funcionario buscafuncid(int codfunc)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,idade,nascimento," +
+                "fone,endereco,dataadmissao," +
+                "cargo,salario from farmsystem.funcionario where codigo = @codfunc");
+            query.Connection = conn.entrar();
+            query.Parameters.Add("@codfunc", NpgsqlDbType.Integer).Value = codfunc;
+
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    funcionario f = null;
+                    if (dr.Read())
+                    {
+                        f = new funcionario();
+
+                        f.codigo = dr.GetInt32(0);
+                        f.nome = dr.GetString(1);
+                        f.idade = dr.GetString(2);
+                        f.datanasc = dr.GetDateTime(3);
+                        f.fone = dr.GetString(4);
+                        f.endereco = dr.GetString(5);
+                        f.dataadmissao = dr.GetDateTime(6);
+                        f.cargo = dr.GetString(7);
+                        f.salario = dr.GetDouble(8);
+
+                    }
+                    conn.sair();
+                    return f;
+                }
+            }
+            conn.sair();
+            return null;
+        }
         public void Editar(funcionario f)
         {
             Conexao conn = new Conexao();
             NpgsqlCommand query = new NpgsqlCommand("update farmsystem.funcionario set nome=@nome," +
-                " idade=@idade,nascimento=@nascimento,telefone=@fone, endereco=@end, dataadmissao=@dataadmissao, " +
+                " idade=@idade,nascimento=@nascimento,fone=@fone, endereco=@end, dataadmissao=@dataadmissao, " +
                 "cargo=@cargo,salario=@salario where codigo=@cod");
             query.Connection = conn.entrar();
             query.Parameters.Add("@nome", NpgsqlDbType.Varchar).Value = f.nome;

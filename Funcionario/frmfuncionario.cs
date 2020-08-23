@@ -48,10 +48,10 @@ namespace FarmSystem.Funcionario
             txtcodigo.Text = f.codigo.ToString();
             txtnome.Text = f.nome;
             txtidade.Text = f.idade;
-            mskdtanasc.Text = f.datanasc.ToString();
+            mskdtanasc.Text = f.datanasc.ToShortDateString();
             msktel.Text = f.fone;
             txtendereco.Text = f.endereco;
-            mskdtaadm.Text = f.dataadmissao.ToString();
+            mskdtaadm.Text = f.dataadmissao.ToShortDateString();
             txtcargo.Text = f.cargo;
             txtsalario.Text = f.salario.ToString();
         }
@@ -98,6 +98,35 @@ namespace FarmSystem.Funcionario
             df.Excluir(Convert.ToInt32(txtcodigo.Text));
             limpar();
             MessageBox.Show("Excluido", "Exclusão");
+        }
+
+        private void btnlistar_Click(object sender, EventArgs e)
+        {
+            frmlistafuncionario lf = new frmlistafuncionario();
+            lf.ShowDialog();
+
+            if (lf.DialogResult == DialogResult.OK)
+            {
+                setfuncionario(lf.getfuncionario());
+
+            }
+          
+        }
+
+        private void txtcodigo_Leave(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            txt.BackColor = Color.White;
+            if ((txt.Name == txtcodigo.Name) && (txt.Text != ""))
+            {
+                funcionario f = new daofuncionario().buscafuncid(Int32.Parse(txtcodigo.Text));
+              
+
+                if (f != null)
+                {
+                    setfuncionario(f);
+                }
+            }
         }
     }
 }

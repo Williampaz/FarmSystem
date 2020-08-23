@@ -268,5 +268,20 @@
   <ItemGroup>
     <None Include="Resources\clipboard.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plantação-1240-x600-capa-site-sindafa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fabricacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
