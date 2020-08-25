@@ -136,6 +136,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="FarmsystemDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FarmsystemDB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Fornecedor\DAOfornecedor.cs" />
     <Compile Include="Fornecedor\Fornecedor.cs" />
     <Compile Include="Fornecedor\frmCadastroFornecedor.cs">
@@ -231,6 +236,17 @@
     <EmbeddedResource Include="usuario\Frm_Sel_User.resx">
       <DependentUpon>Frm_Sel_User.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="FarmsystemDB.xsc">
+      <DependentUpon>FarmsystemDB.xsd</DependentUpon>
+    </None>
+    <None Include="FarmsystemDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FarmsystemDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FarmsystemDB.xss">
+      <DependentUpon>FarmsystemDB.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="postgresDataSet.xsc">
       <DependentUpon>postgresDataSet.xsd</DependentUpon>
@@ -282,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\farm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corn-691634_1920.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,19 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.farmsystemDB = new FarmSystem.FarmsystemDB();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionarioTableAdapter = new FarmSystem.FarmsystemDBTableAdapters.funcionarioTableAdapter();
             this.dgvfuncionarios = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datanascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataadmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncionarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtpesquisa
@@ -60,87 +67,91 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Procurar:";
             // 
+            // farmsystemDB
+            // 
+            this.farmsystemDB.DataSetName = "FarmsystemDB";
+            this.farmsystemDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "funcionario";
+            this.funcionarioBindingSource.DataSource = this.farmsystemDB;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
             // dgvfuncionarios
             // 
             this.dgvfuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvfuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.nome,
-            this.idade,
-            this.datanascimento,
-            this.telefone,
-            this.endereco,
-            this.dataadmissao,
-            this.cargo,
-            this.salario});
-            this.dgvfuncionarios.Location = new System.Drawing.Point(12, 51);
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dgvfuncionarios.Location = new System.Drawing.Point(13, 38);
             this.dgvfuncionarios.Name = "dgvfuncionarios";
-            this.dgvfuncionarios.Size = new System.Drawing.Size(1233, 450);
+            this.dgvfuncionarios.Size = new System.Drawing.Size(1067, 314);
             this.dgvfuncionarios.TabIndex = 9;
-            this.dgvfuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellContentClick_2);
-            this.dgvfuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellDoubleClick);
+            this.dgvfuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellContentClick_3);
+            this.dgvfuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellDoubleClick_2);
             // 
-            // codigo
+            // funcionarioBindingSource1
             // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.Name = "codigo";
-            this.codigo.Width = 90;
+            this.funcionarioBindingSource1.DataMember = "funcionario";
+            this.funcionarioBindingSource1.DataSource = this.farmsystemDB;
             // 
-            // nome
+            // Column1
             // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.Width = 180;
+            this.Column1.DataPropertyName = "codigo";
+            this.Column1.HeaderText = "codigo";
+            this.Column1.Name = "Column1";
             // 
-            // idade
+            // Column2
             // 
-            this.idade.DataPropertyName = "idade";
-            this.idade.HeaderText = "Idade";
-            this.idade.Name = "idade";
-            this.idade.Width = 80;
+            this.Column2.DataPropertyName = "nome";
+            this.Column2.HeaderText = "nome";
+            this.Column2.Name = "Column2";
             // 
-            // datanascimento
+            // Column3
             // 
-            this.datanascimento.DataPropertyName = "nascimento";
-            this.datanascimento.HeaderText = "Data Nacimento";
-            this.datanascimento.Name = "datanascimento";
-            this.datanascimento.Width = 110;
+            this.Column3.DataPropertyName = "idade";
+            this.Column3.HeaderText = "idade";
+            this.Column3.Name = "Column3";
             // 
-            // telefone
+            // Column4
             // 
-            this.telefone.DataPropertyName = "fone";
-            this.telefone.HeaderText = "Telefone";
-            this.telefone.Name = "telefone";
-            this.telefone.Width = 110;
+            this.Column4.DataPropertyName = "datanasc";
+            this.Column4.HeaderText = "nascimento";
+            this.Column4.Name = "Column4";
             // 
-            // endereco
+            // Column5
             // 
-            this.endereco.DataPropertyName = "endereco";
-            this.endereco.HeaderText = "Endereço";
-            this.endereco.Name = "endereco";
-            this.endereco.Width = 260;
+            this.Column5.DataPropertyName = "fone";
+            this.Column5.HeaderText = "fone";
+            this.Column5.Name = "Column5";
             // 
-            // dataadmissao
+            // Column6
             // 
-            this.dataadmissao.DataPropertyName = "dataadmissao";
-            this.dataadmissao.HeaderText = "Data Admissão";
-            this.dataadmissao.Name = "dataadmissao";
+            this.Column6.DataPropertyName = "endereco";
+            this.Column6.HeaderText = "endereço";
+            this.Column6.Name = "Column6";
             // 
-            // cargo
+            // Column7
             // 
-            this.cargo.DataPropertyName = "cargo";
-            this.cargo.HeaderText = "Cargo";
-            this.cargo.Name = "cargo";
-            this.cargo.Width = 150;
+            this.Column7.DataPropertyName = "cargo";
+            this.Column7.HeaderText = "cargo";
+            this.Column7.Name = "Column7";
             // 
-            // salario
+            // Column8
             // 
-            this.salario.DataPropertyName = "salario";
-            this.salario.HeaderText = "Salario";
-            this.salario.Name = "salario";
-            this.salario.Width = 110;
+            this.Column8.DataPropertyName = "salario";
+            this.Column8.HeaderText = "salario";
+            this.Column8.Name = "Column8";
             // 
             // frmlistafuncionario
             // 
@@ -153,7 +164,10 @@
             this.Name = "frmlistafuncionario";
             this.Text = "frmlistafuncionario";
             this.Load += new System.EventHandler(this.frmlistafuncionario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncionarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,15 +176,18 @@
         #endregion
         private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label1;
+        private FarmsystemDB farmsystemDB;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource;
+        private FarmsystemDBTableAdapters.funcionarioTableAdapter funcionarioTableAdapter;
         private System.Windows.Forms.DataGridView dgvfuncionarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datanascimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endereco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataadmissao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salario;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

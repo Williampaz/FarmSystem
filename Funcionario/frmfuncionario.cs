@@ -48,10 +48,10 @@ namespace FarmSystem.Funcionario
             txtcodigo.Text = f.codigo.ToString();
             txtnome.Text = f.nome;
             txtidade.Text = f.idade;
-            mskdtanasc.Text = f.datanasc.ToShortDateString();
+            mskdtanasc.Text = f.datanasc.ToString();
             msktel.Text = f.fone;
             txtendereco.Text = f.endereco;
-            mskdtaadm.Text = f.dataadmissao.ToShortDateString();
+            mskdtaadm.Text = f.dataadmissao.ToString();
             txtcargo.Text = f.cargo;
             txtsalario.Text = f.salario.ToString();
         }
@@ -73,13 +73,21 @@ namespace FarmSystem.Funcionario
         }
         private void btngravar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                daofuncionario df = new daofuncionario();
 
-            daofuncionario df = new daofuncionario();
+                df.Cadastar(getfuncionario());
 
-            df.Cadastar(getfuncionario());
-
-            MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado");
-            limpar();
+                MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado");
+                limpar();
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao Cadastrar, por favor verifique se todos campo estão preenchidos");
+            }
+        
+          
 
         }
 
