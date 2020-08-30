@@ -40,7 +40,7 @@ namespace FarmSystem.Produtos
             p.mesdeuso = txtmesdeuso.Text;
             p.tipoprod = txttipoprod.Text;
             p.quantidade = Convert.ToInt32(txtquantidade.Text);
-            p.preçokg_uni= Convert.ToDouble(txtprecokguni.Text);
+            p.precokg_uni = Convert.ToInt32(txtprecokguni.Text);
             p.descricao = txtdescicao.Text;
             return p;
         }
@@ -53,7 +53,7 @@ namespace FarmSystem.Produtos
             txtmesdeuso.Text = p.mesdeuso;
             txttipoprod.Text = p.tipoprod;
             txtquantidade.Text = p.quantidade.ToString();
-            txtquantidade.Text = p.quantidade.ToString();
+            txtprecokguni.Text = p.precokg_uni.ToString();             
             txtdescicao.Text = p.descricao.ToString();
         }
         Produtos_DAO df = new Produtos_DAO();
@@ -88,9 +88,10 @@ namespace FarmSystem.Produtos
 
 		private void btnsel_Click(object sender, EventArgs e)
 		{
-            Frm_Cad_Prod sel = new Frm_Cad_Prod();
+            Frmlistaproduto sel = new Frmlistaproduto();
           
             sel.ShowDialog();
+
             if (sel.DialogResult == DialogResult.OK)
             {
                 setProduto(sel.getProduto());

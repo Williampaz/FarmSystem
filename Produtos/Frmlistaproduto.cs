@@ -19,6 +19,28 @@ namespace FarmSystem.Produtos
 			dvgprod.DataSource = df.ListaProduto();
 		}
 
+
+		public Produto getProduto()
+        {
+
+			Produto p = new Produto();
+			p.codigo = Convert.ToInt32(dvgprod.CurrentRow.Cells[0].Value);
+			p.codigoforn = Convert.ToInt32(dvgprod.CurrentRow.Cells[1].Value);
+			p.tipoprod = dvgprod.CurrentRow.Cells[2].ToString();
+			p.nome = dvgprod.CurrentRow.Cells[3].ToString();
+			p.quantidade = Convert.ToInt32(dvgprod.CurrentRow.Cells[4].Value);
+			p.mesdeuso = dvgprod.CurrentRow.Cells[5].ToString();
+			p.validade = Convert.ToDateTime(dvgprod.CurrentRow.Cells[6].Value);
+			p.mesdeplantio = Convert.ToDateTime(dvgprod.CurrentRow.Cells[7].Value);
+			p.diacolheita = Convert.ToInt32(dvgprod.CurrentRow.Cells[8].Value);
+			p.precokg_uni = Convert.ToInt32(dvgprod.CurrentRow.Cells[9].Value);
+
+			p.descricao = dvgprod.CurrentRow.Cells[10].ToString();
+			return p;
+
+		}
+
+
 		private void Frmlistaproduto_Load(object sender, EventArgs e)
 		{
 			// TODO: esta linha de código carrega dados na tabela 'farmsystemDB.produtos'. Você pode movê-la ou removê-la conforme necessário.

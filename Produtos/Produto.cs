@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace FarmSystem.Produtos
 {
-	class Produto
+	public class Produto
 	{
         private int _codigo;
         public int codigo
@@ -63,11 +63,11 @@ namespace FarmSystem.Produtos
             get { return _diacolheita; }
             set { _diacolheita = value; }
         }
-        private Double _precokg_uni;
-        public Double preçokg_uni
+        private float _precokg_uni; 
+        public float precokg_uni
         {
-            get { return preçokg_uni; }
-            set { preçokg_uni = value; }
+            get { return precokg_uni; }
+            set { precokg_uni = value; }
         }
         private string _descricao;
         public string descricao
