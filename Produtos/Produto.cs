@@ -63,11 +63,11 @@ namespace FarmSystem.Produtos
             get { return _diacolheita; }
             set { _diacolheita = value; }
         }
-        private float _precokg_uni; 
-        public float precokg_uni
+		private double _precokg_uni;
+        public double precokg_uni
         {
-            get { return precokg_uni; }
-            set { precokg_uni = value; }
+            get { return _precokg_uni; }
+            set { _precokg_uni = value; }
         }
         private string _descricao;
         public string descricao
@@ -75,5 +75,5 @@ namespace FarmSystem.Produtos
             get { return _descricao; }
             set { _descricao = value; }
         }
-    }
+	}
 }

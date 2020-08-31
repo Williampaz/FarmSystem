@@ -162,7 +162,6 @@
             this.txtCodFornecedor.Location = new System.Drawing.Point(25, 49);
             this.txtCodFornecedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCodFornecedor.Name = "txtCodFornecedor";
-            this.txtCodFornecedor.ReadOnly = true;
             this.txtCodFornecedor.Size = new System.Drawing.Size(98, 20);
             this.txtCodFornecedor.TabIndex = 53;
             this.txtCodFornecedor.TextChanged += new System.EventHandler(this.txtCodFornecedor_TextChanged);
@@ -252,8 +251,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmCadastroFornecedor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Fornecedor";
+            this.Text = "frmCadastroFornecedor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
