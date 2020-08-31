@@ -15,7 +15,13 @@ namespace FarmSystem.Fornecedor
 		public frmCadastroFornecedor()
 		{
 			InitializeComponent();
+            DAOfornecedor df = new DAOfornecedor();
+            res = df.getCod() + 1;
+            txtCodFornecedor.Text = res + "";
+            txtNomeFornecedor.Focus();
 		}
+
+        int res;
 
         private void Limpar()
         {

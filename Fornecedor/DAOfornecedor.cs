@@ -110,5 +110,28 @@ namespace FarmSystem.Fornecedor
             query.ExecuteNonQuery();
             conn.sair();
         }
+
+        public int getCod()
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("select f.codigo from farmsystem.fornecedor f " +
+                "where f.codigo=(select max(forn.codigo) from farmsystem.fornecedor forn)");
+            query.Connection = conn.entrar();
+            int num = 0;
+            using(NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRow())
+                {
+                    while (dr.Reader())
+                    {
+                        num = dr.GetInt32(0);
+                    }
+                    conn.sair();
+                    return num;
+                }
+            }
+            conn.sair();
+            return 0000;
+        }
     }
 }
