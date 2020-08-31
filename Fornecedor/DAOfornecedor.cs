@@ -120,9 +120,9 @@ namespace FarmSystem.Fornecedor
             int num = 0;
             using(NpgsqlDataReader dr = query.ExecuteReader())
             {
-                if (dr.HasRow())
+                if (dr.HasRows)
                 {
-                    while (dr.Reader())
+                    while (dr.Read())
                     {
                         num = dr.GetInt32(0);
                     }
@@ -131,7 +131,7 @@ namespace FarmSystem.Fornecedor
                 }
             }
             conn.sair();
-            return 0000;
+            return num;
         }
     }
 }
