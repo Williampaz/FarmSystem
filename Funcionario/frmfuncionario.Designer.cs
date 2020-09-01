@@ -332,6 +332,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmfuncionario";
             this.Text = "Funcionarios";
+            this.Load += new System.EventHandler(this.frmfuncionario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

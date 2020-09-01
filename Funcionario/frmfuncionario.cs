@@ -136,5 +136,10 @@ namespace FarmSystem.Funcionario
                 }
             }
         }
+
+        private void frmfuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

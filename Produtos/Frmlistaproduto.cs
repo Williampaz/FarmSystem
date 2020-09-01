@@ -24,18 +24,17 @@ namespace FarmSystem.Produtos
         {
 
 			Produto p = new Produto();
-			p.codigo = Convert.ToInt32(dvgprod.CurrentRow.Cells[0].Value);
-			p.codigoforn = Convert.ToInt32(dvgprod.CurrentRow.Cells[1].Value);
-			p.tipoprod = dvgprod.CurrentRow.Cells[2].ToString();
-			p.nome = dvgprod.CurrentRow.Cells[3].ToString();
-			p.quantidade = Convert.ToInt32(dvgprod.CurrentRow.Cells[4].Value);
-			p.mesdeuso = dvgprod.CurrentRow.Cells[5].ToString();
-			p.validade = Convert.ToDateTime(dvgprod.CurrentRow.Cells[6].Value);
-			p.mesdeplantio = Convert.ToDateTime(dvgprod.CurrentRow.Cells[7].Value);
-			p.diacolheita = Convert.ToInt32(dvgprod.CurrentRow.Cells[8].Value);
-			p.precokg_uni = Convert.ToInt32(dvgprod.CurrentRow.Cells[9].Value);
-
-			p.descricao = dvgprod.CurrentRow.Cells[10].ToString();
+			p.codigo = Convert.ToInt32(dvgprod.CurrentRow.Cells[0].Value.ToString());
+			p.codigoforn = Convert.ToInt32(dvgprod.CurrentRow.Cells[1].Value.ToString());
+			p.tipoprod = dvgprod.CurrentRow.Cells[2].Value.ToString();
+			p.nome = dvgprod.CurrentRow.Cells[3].Value.ToString();
+			p.quantidade = Convert.ToInt32(dvgprod.CurrentRow.Cells[4].Value.ToString());
+			p.mesdeuso = dvgprod.CurrentRow.Cells[5].Value.ToString();
+			p.validade = Convert.ToDateTime(dvgprod.CurrentRow.Cells[6].Value.ToString());
+			p.mesdeplantio = Convert.ToDateTime(dvgprod.CurrentRow.Cells[7].Value.ToString());
+			p.diacolheita = Convert.ToInt32(dvgprod.CurrentRow.Cells[8].Value.ToString());
+			p.precokg_uni = Convert.ToDouble(dvgprod.CurrentRow.Cells[9].Value);
+			p.descricao = dvgprod.CurrentRow.Cells[10].Value.ToString();
 			return p;
 
 		}
@@ -43,9 +42,9 @@ namespace FarmSystem.Produtos
 
 		private void Frmlistaproduto_Load(object sender, EventArgs e)
 		{
-			// TODO: esta linha de código carrega dados na tabela 'farmsystemDB.produtos'. Você pode movê-la ou removê-la conforme necessário.
-			this.produtosTableAdapter.Fill(this.farmsystemDB.produtos);
-
+            // TODO: esta linha de código carrega dados na tabela 'postgresDataSet1.produtos'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtosTableAdapter.Fill(this.postgresDataSet1.produtos);
+           
 		}
 
 		private void txtbusca_TextChanged(object sender, EventArgs e)
@@ -53,5 +52,11 @@ namespace FarmSystem.Produtos
 			Produtos_DAO d = new Produtos_DAO();
 			dvgprod.DataSource = d.ListaProduto(txtbusca.Text);
 		}
-	}
+
+        private void dvgprod_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+			this.DialogResult = DialogResult.OK;
+
+        }
+    }
 }

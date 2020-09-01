@@ -32,6 +32,9 @@
             this.txtbusca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dvgprod = new System.Windows.Forms.DataGridView();
+            this.postgresDataSet1 = new FarmSystem.postgresDataSet1();
+            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.produtosTableAdapter = new FarmSystem.postgresDataSet1TableAdapters.produtosTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigofornDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +44,11 @@
             this.validadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mesdeplantioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preçokguniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precokguniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.farmsystemDB = new FarmSystem.FarmsystemDB();
-            this.produtosTableAdapter = new FarmSystem.FarmsystemDBTableAdapters.produtosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dvgprod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbusca
@@ -82,13 +82,28 @@
             this.validadeDataGridViewTextBoxColumn,
             this.mesdeplantioDataGridViewTextBoxColumn,
             this.diacolheitaDataGridViewTextBoxColumn,
-            this.preçokguniDataGridViewTextBoxColumn,
+            this.precokguniDataGridViewTextBoxColumn,
             this.descricaoDataGridViewTextBoxColumn});
             this.dvgprod.DataSource = this.produtosBindingSource;
             this.dvgprod.Location = new System.Drawing.Point(12, 67);
             this.dvgprod.Name = "dvgprod";
             this.dvgprod.Size = new System.Drawing.Size(1300, 371);
             this.dvgprod.TabIndex = 3;
+            this.dvgprod.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgprod_CellDoubleClick);
+            // 
+            // postgresDataSet1
+            // 
+            this.postgresDataSet1.DataSetName = "postgresDataSet1";
+            this.postgresDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // produtosBindingSource
+            // 
+            this.produtosBindingSource.DataMember = "produtos";
+            this.produtosBindingSource.DataSource = this.postgresDataSet1;
+            // 
+            // produtosTableAdapter
+            // 
+            this.produtosTableAdapter.ClearBeforeFill = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -144,31 +159,17 @@
             this.diacolheitaDataGridViewTextBoxColumn.HeaderText = "diacolheita";
             this.diacolheitaDataGridViewTextBoxColumn.Name = "diacolheitaDataGridViewTextBoxColumn";
             // 
-            // preçokguniDataGridViewTextBoxColumn
+            // precokguniDataGridViewTextBoxColumn
             // 
-            this.preçokguniDataGridViewTextBoxColumn.DataPropertyName = "preçokg_uni";
-            this.preçokguniDataGridViewTextBoxColumn.HeaderText = "preçokg_uni";
-            this.preçokguniDataGridViewTextBoxColumn.Name = "preçokguniDataGridViewTextBoxColumn";
+            this.precokguniDataGridViewTextBoxColumn.DataPropertyName = "precokg_uni";
+            this.precokguniDataGridViewTextBoxColumn.HeaderText = "precokg_uni";
+            this.precokguniDataGridViewTextBoxColumn.Name = "precokguniDataGridViewTextBoxColumn";
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
             this.descricaoDataGridViewTextBoxColumn.HeaderText = "descricao";
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            // 
-            // produtosBindingSource
-            // 
-            this.produtosBindingSource.DataMember = "produtos";
-            this.produtosBindingSource.DataSource = this.farmsystemDB;
-            // 
-            // farmsystemDB
-            // 
-            this.farmsystemDB.DataSetName = "FarmsystemDB";
-            this.farmsystemDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produtosTableAdapter
-            // 
-            this.produtosTableAdapter.ClearBeforeFill = true;
             // 
             // Frmlistaproduto
             // 
@@ -182,8 +183,8 @@
             this.Text = "Frmlistaproduto";
             this.Load += new System.EventHandler(this.Frmlistaproduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgprod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,19 +195,19 @@
 		private System.Windows.Forms.TextBox txtbusca;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.DataGridView dvgprod;
-		private FarmsystemDB farmsystemDB;
-		private System.Windows.Forms.BindingSource produtosBindingSource;
-		private FarmsystemDBTableAdapters.produtosTableAdapter produtosTableAdapter;
-		private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn codigofornDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn tipoprodDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn mesdeusoDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn validadeDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn mesdeplantioDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn diacolheitaDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn preçokguniDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
-	}
+        private postgresDataSet1 postgresDataSet1;
+        private System.Windows.Forms.BindingSource produtosBindingSource;
+        private postgresDataSet1TableAdapters.produtosTableAdapter produtosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigofornDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoprodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mesdeusoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn validadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mesdeplantioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diacolheitaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precokguniDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+    }
 }

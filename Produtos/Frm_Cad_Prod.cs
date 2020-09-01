@@ -23,7 +23,7 @@ namespace FarmSystem.Produtos
         {
             txtcodigofornecedor.Clear();
             txtdiacolheita.Clear();
-            txtmescolheita.Clear();
+            txtmesplantio.Clear();
             txtnomeprod.Clear();
             txtvalidade.Clear();
             txtmesdeuso.Clear();
@@ -31,37 +31,49 @@ namespace FarmSystem.Produtos
             txtquantidade.Clear();
             txtprecokguni.Clear();
             txtdescicao.Clear();
+            txtcodigo.Clear();
+
         }
 
         private Produto getProduto()
         {
             Produto p = new Produto();
-            p.codigo = Convert.ToInt32(txtcodigofornecedor.Text);
+            p.codigoforn = Convert.ToInt32(txtcodigofornecedor.Text);
+            p.codigo = Convert.ToInt32(txtcodigo.Text);
             p.nome = txtnomeprod.Text;
             p.validade = Convert.ToDateTime(txtvalidade.Text);
             p.mesdeuso = txtmesdeuso.Text;
             p.tipoprod = txttipoprod.Text;
             p.quantidade = Convert.ToInt32(txtquantidade.Text);
-            p.precokg_uni = Convert.ToInt32(txtprecokguni.Text);
+            p.precokg_uni = Convert.ToDouble(txtprecokguni.Text);
             p.descricao = txtdescicao.Text;
+            p.diacolheita = Convert.ToInt32(txtdiacolheita.Text);
+            p.mesdeplantio = Convert.ToDateTime(txtmesplantio.Text);
+
             return p;
         }
 
         private void setProduto(Produto p)
         {
-            txtcodigofornecedor.Text = p.codigo.ToString();
-            txtnomeprod.Text = p.nome;
+            txtcodigo.Text = p.codigo.ToString();
+
+            txtcodigofornecedor.Text = p.codigoforn.ToString();
+            txtnomeprod.Text = p.nome.ToString();
             txtvalidade.Text = p.validade.ToString();
-            txtmesdeuso.Text = p.mesdeuso;
-            txttipoprod.Text = p.tipoprod;
+            txtmesdeuso.Text = p.mesdeuso.ToString();
+            txttipoprod.Text = p.tipoprod.ToString();
             txtquantidade.Text = p.quantidade.ToString();
             txtprecokguni.Text = p.precokg_uni.ToString();             
             txtdescicao.Text = p.descricao.ToString();
+            txtdiacolheita.Text = p.diacolheita.ToString();
+            txtmesplantio.Text = p.mesdeplantio.ToString();
+
+
         }
         Produtos_DAO df = new Produtos_DAO();
         private void btncad_Click(object sender, EventArgs e)
 		{
-            df.Cadastar(Convert.ToInt32(txtcodigofornecedor.Text), txtnomeprod.Text, Convert.ToInt32(txtquantidade.Text), txttipoprod.Text, txtmesdeuso.Text, Convert.ToDateTime(txtvalidade.Text), txtmescolheita.Text, Convert.ToInt32(txtdiacolheita.Text), Convert.ToDouble(txtprecokguni.Text),txtdescicao.Text);
+            df.Cadastar(Convert.ToInt32(txtcodigofornecedor.Text), txtnomeprod.Text, Convert.ToInt32(txtquantidade.Text), txttipoprod.Text, txtmesdeuso.Text, Convert.ToDateTime(txtvalidade.Text), Convert.ToDateTime(txtmesplantio.Text), Convert.ToInt32(txtdiacolheita.Text), Convert.ToDouble(txtprecokguni.Text),txtdescicao.Text);
             MessageBox.Show("Produto cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Limpar();
         }
