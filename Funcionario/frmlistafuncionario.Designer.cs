@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlistafuncionario));
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.farmsystemDB = new FarmSystem.FarmsystemDB();
@@ -95,7 +96,7 @@
             this.Column8});
             this.dgvfuncionarios.Location = new System.Drawing.Point(13, 38);
             this.dgvfuncionarios.Name = "dgvfuncionarios";
-            this.dgvfuncionarios.Size = new System.Drawing.Size(1067, 314);
+            this.dgvfuncionarios.Size = new System.Drawing.Size(1124, 349);
             this.dgvfuncionarios.TabIndex = 9;
             this.dgvfuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellContentClick_3);
             this.dgvfuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellDoubleClick_2);
@@ -108,61 +109,66 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "codigo";
-            this.Column1.HeaderText = "codigo";
+            this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
+            this.Column1.Width = 80;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "nome";
-            this.Column2.HeaderText = "nome";
+            this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
+            this.Column2.Width = 180;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "idade";
-            this.Column3.HeaderText = "idade";
+            this.Column3.HeaderText = "Idade";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "datanasc";
-            this.Column4.HeaderText = "nascimento";
+            this.Column4.HeaderText = "Data de Nascimento";
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "fone";
-            this.Column5.HeaderText = "fone";
+            this.Column5.HeaderText = "Telefone";
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "endereco";
-            this.Column6.HeaderText = "endereço";
+            this.Column6.HeaderText = "Endereço";
             this.Column6.Name = "Column6";
+            this.Column6.Width = 300;
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "cargo";
-            this.Column7.HeaderText = "cargo";
+            this.Column7.HeaderText = "Cargo";
             this.Column7.Name = "Column7";
+            this.Column7.Width = 120;
             // 
             // Column8
             // 
             this.Column8.DataPropertyName = "salario";
-            this.Column8.HeaderText = "salario";
+            this.Column8.HeaderText = "Salário";
             this.Column8.Name = "Column8";
             // 
             // frmlistafuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 513);
+            this.ClientSize = new System.Drawing.Size(1152, 399);
             this.Controls.Add(this.dgvfuncionarios);
             this.Controls.Add(this.txtpesquisa);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmlistafuncionario";
-            this.Text = "frmlistafuncionario";
+            this.Text = "Listagem de Funcionarios";
             this.Load += new System.EventHandler(this.frmlistafuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();

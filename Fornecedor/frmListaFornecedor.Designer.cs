@@ -29,6 +29,8 @@
 		private void InitializeComponent()
 		{
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
+            this.txtPesquisarForn = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,8 +38,6 @@
             this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPesquisarForn = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,15 +54,32 @@
             this.Email});
             this.dgvFornecedores.Location = new System.Drawing.Point(1, 48);
             this.dgvFornecedores.Name = "dgvFornecedores";
-            this.dgvFornecedores.Size = new System.Drawing.Size(965, 459);
+            this.dgvFornecedores.Size = new System.Drawing.Size(1208, 459);
             this.dgvFornecedores.TabIndex = 5;
             this.dgvFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornecedores_CellContentClick);
             this.dgvFornecedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornecedores_CellDoubleClick);
             // 
+            // txtPesquisarForn
+            // 
+            this.txtPesquisarForn.Location = new System.Drawing.Point(69, 12);
+            this.txtPesquisarForn.Name = "txtPesquisarForn";
+            this.txtPesquisarForn.Size = new System.Drawing.Size(736, 20);
+            this.txtPesquisarForn.TabIndex = 4;
+            this.txtPesquisarForn.TextChanged += new System.EventHandler(this.txtPesquisarForn_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Procurar:";
+            // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "codigo";
-            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.HeaderText = "Código";
             this.Codigo.Name = "Codigo";
             this.Codigo.Width = 60;
             // 
@@ -90,7 +107,7 @@
             // CNPJ
             // 
             this.CNPJ.DataPropertyName = "cnpj";
-            this.CNPJ.HeaderText = "Cnpj";
+            this.CNPJ.HeaderText = "CNPJ";
             this.CNPJ.Name = "CNPJ";
             this.CNPJ.Width = 130;
             // 
@@ -106,30 +123,13 @@
             this.Email.DataPropertyName = "email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
-            this.Email.Width = 150;
-            // 
-            // txtPesquisarForn
-            // 
-            this.txtPesquisarForn.Location = new System.Drawing.Point(69, 12);
-            this.txtPesquisarForn.Name = "txtPesquisarForn";
-            this.txtPesquisarForn.Size = new System.Drawing.Size(736, 20);
-            this.txtPesquisarForn.TabIndex = 4;
-            this.txtPesquisarForn.TextChanged += new System.EventHandler(this.txtPesquisarForn_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Procurar:";
+            this.Email.Width = 250;
             // 
             // frmListaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 507);
+            this.ClientSize = new System.Drawing.Size(1234, 507);
             this.Controls.Add(this.dgvFornecedores);
             this.Controls.Add(this.txtPesquisarForn);
             this.Controls.Add(this.label1);
@@ -145,14 +145,14 @@
 		#endregion
 
 		private System.Windows.Forms.DataGridView dgvFornecedores;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Email;
 		private System.Windows.Forms.TextBox txtPesquisarForn;
 		private System.Windows.Forms.Label label1;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+    }
 }

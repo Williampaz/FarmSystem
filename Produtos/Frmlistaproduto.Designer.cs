@@ -29,11 +29,12 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmlistaproduto));
             this.txtbusca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dvgprod = new System.Windows.Forms.DataGridView();
-            this.postgresDataSet1 = new FarmSystem.postgresDataSet1();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet1 = new FarmSystem.postgresDataSet1();
             this.produtosTableAdapter = new FarmSystem.postgresDataSet1TableAdapters.produtosTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigofornDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,8 +48,8 @@
             this.precokguniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgprod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbusca
@@ -87,19 +88,19 @@
             this.dvgprod.DataSource = this.produtosBindingSource;
             this.dvgprod.Location = new System.Drawing.Point(12, 67);
             this.dvgprod.Name = "dvgprod";
-            this.dvgprod.Size = new System.Drawing.Size(1300, 371);
+            this.dvgprod.Size = new System.Drawing.Size(1317, 371);
             this.dvgprod.TabIndex = 3;
             this.dvgprod.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgprod_CellDoubleClick);
-            // 
-            // postgresDataSet1
-            // 
-            this.postgresDataSet1.DataSetName = "postgresDataSet1";
-            this.postgresDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // produtosBindingSource
             // 
             this.produtosBindingSource.DataMember = "produtos";
             this.produtosBindingSource.DataSource = this.postgresDataSet1;
+            // 
+            // postgresDataSet1
+            // 
+            this.postgresDataSet1.DataSetName = "postgresDataSet1";
+            this.postgresDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // produtosTableAdapter
             // 
@@ -108,83 +109,90 @@
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.Width = 60;
             // 
             // codigofornDataGridViewTextBoxColumn
             // 
             this.codigofornDataGridViewTextBoxColumn.DataPropertyName = "codigoforn";
-            this.codigofornDataGridViewTextBoxColumn.HeaderText = "codigoforn";
+            this.codigofornDataGridViewTextBoxColumn.HeaderText = "Código Fornecedor";
             this.codigofornDataGridViewTextBoxColumn.Name = "codigofornDataGridViewTextBoxColumn";
+            this.codigofornDataGridViewTextBoxColumn.Width = 60;
             // 
             // tipoprodDataGridViewTextBoxColumn
             // 
             this.tipoprodDataGridViewTextBoxColumn.DataPropertyName = "tipoprod";
-            this.tipoprodDataGridViewTextBoxColumn.HeaderText = "tipoprod";
+            this.tipoprodDataGridViewTextBoxColumn.HeaderText = "Tipo de Produto";
             this.tipoprodDataGridViewTextBoxColumn.Name = "tipoprodDataGridViewTextBoxColumn";
+            this.tipoprodDataGridViewTextBoxColumn.Width = 150;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.Width = 150;
             // 
             // quantidadeDataGridViewTextBoxColumn
             // 
             this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
             this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.Width = 90;
             // 
             // mesdeusoDataGridViewTextBoxColumn
             // 
             this.mesdeusoDataGridViewTextBoxColumn.DataPropertyName = "mesdeuso";
-            this.mesdeusoDataGridViewTextBoxColumn.HeaderText = "mesdeuso";
+            this.mesdeusoDataGridViewTextBoxColumn.HeaderText = "Mês de Uso";
             this.mesdeusoDataGridViewTextBoxColumn.Name = "mesdeusoDataGridViewTextBoxColumn";
             // 
             // validadeDataGridViewTextBoxColumn
             // 
             this.validadeDataGridViewTextBoxColumn.DataPropertyName = "validade";
-            this.validadeDataGridViewTextBoxColumn.HeaderText = "validade";
+            this.validadeDataGridViewTextBoxColumn.HeaderText = "Data de Validade";
             this.validadeDataGridViewTextBoxColumn.Name = "validadeDataGridViewTextBoxColumn";
             // 
             // mesdeplantioDataGridViewTextBoxColumn
             // 
             this.mesdeplantioDataGridViewTextBoxColumn.DataPropertyName = "mesdeplantio";
-            this.mesdeplantioDataGridViewTextBoxColumn.HeaderText = "mesdeplantio";
+            this.mesdeplantioDataGridViewTextBoxColumn.HeaderText = "Mês de Plantio";
             this.mesdeplantioDataGridViewTextBoxColumn.Name = "mesdeplantioDataGridViewTextBoxColumn";
             // 
             // diacolheitaDataGridViewTextBoxColumn
             // 
             this.diacolheitaDataGridViewTextBoxColumn.DataPropertyName = "diacolheita";
-            this.diacolheitaDataGridViewTextBoxColumn.HeaderText = "diacolheita";
+            this.diacolheitaDataGridViewTextBoxColumn.HeaderText = "Dia da Colheita";
             this.diacolheitaDataGridViewTextBoxColumn.Name = "diacolheitaDataGridViewTextBoxColumn";
             // 
             // precokguniDataGridViewTextBoxColumn
             // 
             this.precokguniDataGridViewTextBoxColumn.DataPropertyName = "precokg_uni";
-            this.precokguniDataGridViewTextBoxColumn.HeaderText = "precokg_uni";
+            this.precokguniDataGridViewTextBoxColumn.HeaderText = "Preço Kg/UN";
             this.precokguniDataGridViewTextBoxColumn.Name = "precokguniDataGridViewTextBoxColumn";
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.Width = 300;
             // 
             // Frmlistaproduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 450);
+            this.ClientSize = new System.Drawing.Size(1341, 451);
             this.Controls.Add(this.txtbusca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dvgprod);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmlistaproduto";
-            this.Text = "Frmlistaproduto";
+            this.Text = "Listagem de Produtos";
             this.Load += new System.EventHandler(this.Frmlistaproduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgprod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

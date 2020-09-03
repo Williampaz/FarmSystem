@@ -103,5 +103,10 @@ namespace FarmSystem.Fornecedor
         {
 
         }
+
+        private void frmCadastroFornecedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

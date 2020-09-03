@@ -141,5 +141,10 @@ namespace FarmSystem.Funcionario
         {
 
         }
+
+        private void btnlimpar_Click(object sender, EventArgs e)
+        {
+            limpar();
+        }
     }
 }
