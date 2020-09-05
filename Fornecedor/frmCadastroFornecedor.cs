@@ -19,6 +19,8 @@ namespace FarmSystem.Fornecedor
             res = df.getCod() + 1;
             txtCodFornecedor.Text = res + "";
             txtNomeFornecedor.Focus();
+            btnExcluir.Enabled = false;
+            btnEditar.Enabled = false;
 		}
 
         int res;
@@ -58,10 +60,16 @@ namespace FarmSystem.Fornecedor
         }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            DAOfornecedor df = new DAOfornecedor();
-            df.Cadastar(getFornecedor());
-            MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Limpar();
+            try
+            {
+                DAOfornecedor df = new DAOfornecedor();
+                df.Cadastar(getFornecedor());
+                MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpar();
+            } catch (Exception )
+            {
+                MessageBox.Show("Não foi possível realizar o cadastro, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -72,41 +80,120 @@ namespace FarmSystem.Fornecedor
             lf.ShowDialog();
             if (lf.DialogResult == DialogResult.OK)
             {
+                btnEditar.Enabled = true;
+                btnExcluir.Enabled = true;
+                btnCadastrar.Enabled = false;
                 setFornecedor(lf.GetFornecedor());
             }
         }
 
 		private void btnEditar_Click_1(object sender, EventArgs e)
 		{
-            DAOfornecedor df = new DAOfornecedor();
-            df.Editar(getFornecedor());
-            MessageBox.Show("Dados alterados", "Edição concluida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            Limpar();
+            try
+            {
+                DAOfornecedor df = new DAOfornecedor();
+                df.Editar(getFornecedor());
+                MessageBox.Show("Dados alterados", "Edição concluida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Limpar();
+                btnCadastrar.Enabled = true;
+                btnEditar.Enabled = false;
+                btnExcluir.Enabled = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possível realizar a edição, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 		private void btnExcluir_Click(object sender, EventArgs e)
 		{
-            if (MessageBox.Show("Deseja excluir este fornecedor ?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                DAOfornecedor df = new DAOfornecedor();
-                df.Excluir(Convert.ToInt32(txtCodFornecedor.Text));
-                Limpar();
+                if (MessageBox.Show("Deseja excluir este fornecedor ?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DAOfornecedor df = new DAOfornecedor();
+                    df.Excluir(Convert.ToInt32(txtCodFornecedor.Text));
+                    Limpar();
+                    btnCadastrar.Enabled = true;
+                    btnEditar.Enabled = false;
+                    btnExcluir.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possível realizar a exclusão, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
 		private void btnLimpar_Click(object sender, EventArgs e)
 		{
-            Limpar();
-        }
-
-        private void txtCodFornecedor_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void frmCadastroFornecedor_Load(object sender, EventArgs e)
+        private void txtNomeFornecedor_Leave(object sender, EventArgs e)
         {
+            epdFornecedor.Clear();
+            if(txtNomeFornecedor.Text.Equals(""))
+            {
+                epdFornecedor.SetError(txtNomeFornecedor, "Preencha este campo");
+                txtNomeFornecedor.Focus();
+                return;
+            }
+        }
 
+        private void txtEndFornecedor_Leave(object sender, EventArgs e)
+        {
+            epdFornecedor.Clear();
+            if (txtEndFornecedor.Text.Equals(""))
+            {
+                epdFornecedor.SetError(txtEndFornecedor, "Preencha este campo");
+                txtEndFornecedor.Focus();
+                return;
+            }
+        }
+
+        private void txtCidadeFornecedor_Leave(object sender, EventArgs e)
+        {
+            epdFornecedor.Clear();
+            if (txtCidadeFornecedor.Text.Equals(""))
+            {
+                epdFornecedor.SetError(txtCidadeFornecedor, "Preencha este campo");
+                txtCidadeFornecedor.Focus();
+                return;
+            }
+        }
+
+        private void txtEmailFornecedor_Leave(object sender, EventArgs e)
+        {
+            epdFornecedor.Clear();
+            if (txtEmailFornecedor.Text.Equals(""))
+            {
+                epdFornecedor.SetError(txtEmailFornecedor, "Preencha este campo");
+                txtEmailFornecedor.Focus();
+                return;
+            }
+        }
+
+        private void txtCnpj_Leave(object sender, EventArgs e)
+        {
+            epdFornecedor.Clear();
+            if (!txtCnpj.MaskCompleted)
+            {
+                epdFornecedor.SetError(txtCnpj, "Preencha este campo");
+                txtCnpj.Focus();
+                return;
+            }
+        }
+
+        private void txtFoneFornecedor_Leave(object sender, EventArgs e)
+        {
+            epdFornecedor.Clear();
+            if (!txtFoneFornecedor.MaskCompleted)
+            {
+                epdFornecedor.SetError(txtFoneFornecedor, "Preencha este campo");
+                txtFoneFornecedor.Focus();
+                return;
+            }
         }
     }
 }

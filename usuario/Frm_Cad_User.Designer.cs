@@ -58,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 16);
+            this.label1.Location = new System.Drawing.Point(64, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);
@@ -69,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 79);
+            this.label2.Location = new System.Drawing.Point(16, 79);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
@@ -113,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(525, 141);
+            this.label6.Location = new System.Drawing.Point(528, 144);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 16);
@@ -124,7 +124,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(269, 202);
+            this.label7.Location = new System.Drawing.Point(17, 205);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 16);
@@ -135,7 +135,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 202);
+            this.label8.Location = new System.Drawing.Point(369, 205);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 16);
@@ -155,7 +155,7 @@
             // 
             // txt_Codigo
             // 
-            this.txt_Codigo.Location = new System.Drawing.Point(71, 41);
+            this.txt_Codigo.Location = new System.Drawing.Point(64, 41);
             this.txt_Codigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(94, 26);
@@ -163,16 +163,18 @@
             // 
             // txt_Nome
             // 
-            this.txt_Nome.Location = new System.Drawing.Point(19, 100);
+            this.txt_Nome.Location = new System.Drawing.Point(17, 100);
             this.txt_Nome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Nome.MaxLength = 80;
             this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(597, 26);
+            this.txt_Nome.Size = new System.Drawing.Size(600, 26);
             this.txt_Nome.TabIndex = 11;
             // 
             // txt_Rg
             // 
             this.txt_Rg.Location = new System.Drawing.Point(17, 162);
             this.txt_Rg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Rg.MaxLength = 20;
             this.txt_Rg.Name = "txt_Rg";
             this.txt_Rg.Size = new System.Drawing.Size(148, 26);
             this.txt_Rg.TabIndex = 12;
@@ -189,37 +191,41 @@
             // 
             this.txt_Idade.Location = new System.Drawing.Point(528, 162);
             this.txt_Idade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Idade.MaxLength = 3;
             this.txt_Idade.Name = "txt_Idade";
-            this.txt_Idade.Size = new System.Drawing.Size(88, 26);
+            this.txt_Idade.Size = new System.Drawing.Size(89, 26);
             this.txt_Idade.TabIndex = 15;
             // 
             // txt_Email
             // 
-            this.txt_Email.Location = new System.Drawing.Point(272, 223);
+            this.txt_Email.Location = new System.Drawing.Point(17, 223);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Email.MaxLength = 200;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(344, 26);
             this.txt_Email.TabIndex = 16;
             // 
             // txt_Senha
             // 
-            this.txt_Senha.Location = new System.Drawing.Point(19, 223);
+            this.txt_Senha.Location = new System.Drawing.Point(372, 223);
             this.txt_Senha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Senha.MaxLength = 15;
             this.txt_Senha.Name = "txt_Senha";
             this.txt_Senha.Size = new System.Drawing.Size(245, 26);
             this.txt_Senha.TabIndex = 17;
             // 
             // txt_Endereco
             // 
-            this.txt_Endereco.Location = new System.Drawing.Point(19, 285);
+            this.txt_Endereco.Location = new System.Drawing.Point(17, 285);
             this.txt_Endereco.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Endereco.MaxLength = 120;
             this.txt_Endereco.Name = "txt_Endereco";
-            this.txt_Endereco.Size = new System.Drawing.Size(597, 26);
+            this.txt_Endereco.Size = new System.Drawing.Size(600, 26);
             this.txt_Endereco.TabIndex = 18;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(19, 27);
+            this.button1.Location = new System.Drawing.Point(17, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 40);
             this.button1.TabIndex = 25;
@@ -228,7 +234,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(175, 27);
+            this.button2.Location = new System.Drawing.Point(167, 27);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 26;
@@ -293,7 +299,7 @@
             // 
             // txt_CPF
             // 
-            this.txt_CPF.Location = new System.Drawing.Point(172, 163);
+            this.txt_CPF.Location = new System.Drawing.Point(173, 162);
             this.txt_CPF.Mask = "000.000.000-00";
             this.txt_CPF.Name = "txt_CPF";
             this.txt_CPF.Size = new System.Drawing.Size(193, 26);
