@@ -39,6 +39,7 @@ namespace FarmSystem.Fornecedor
         private Fornecedor getFornecedor()
         {
             Fornecedor f = new Fornecedor();
+            f.codigo = Convert.ToInt32(txtCodFornecedor.Text);
             f.nome = txtNomeFornecedor.Text;
             f.telefone = txtFoneFornecedor.Text;
             f.endereco = txtEndFornecedor.Text;
