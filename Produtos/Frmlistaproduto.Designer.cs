@@ -33,9 +33,6 @@
             this.txtbusca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dvgprod = new System.Windows.Forms.DataGridView();
-            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postgresDataSet1 = new FarmSystem.postgresDataSet1();
-            this.produtosTableAdapter = new FarmSystem.postgresDataSet1TableAdapters.produtosTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigofornDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,9 @@
             this.diacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precokguniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet1 = new FarmSystem.postgresDataSet1();
+            this.produtosTableAdapter = new FarmSystem.postgresDataSet1TableAdapters.produtosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dvgprod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).BeginInit();
@@ -72,6 +72,7 @@
             // dvgprod
             // 
             this.dvgprod.AutoGenerateColumns = false;
+            this.dvgprod.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dvgprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgprod.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoDataGridViewTextBoxColumn,
@@ -86,25 +87,11 @@
             this.precokguniDataGridViewTextBoxColumn,
             this.descricaoDataGridViewTextBoxColumn});
             this.dvgprod.DataSource = this.produtosBindingSource;
-            this.dvgprod.Location = new System.Drawing.Point(12, 67);
+            this.dvgprod.Location = new System.Drawing.Point(3, 68);
             this.dvgprod.Name = "dvgprod";
-            this.dvgprod.Size = new System.Drawing.Size(1317, 371);
+            this.dvgprod.Size = new System.Drawing.Size(1317, 403);
             this.dvgprod.TabIndex = 3;
             this.dvgprod.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgprod_CellDoubleClick);
-            // 
-            // produtosBindingSource
-            // 
-            this.produtosBindingSource.DataMember = "produtos";
-            this.produtosBindingSource.DataSource = this.postgresDataSet1;
-            // 
-            // postgresDataSet1
-            // 
-            this.postgresDataSet1.DataSetName = "postgresDataSet1";
-            this.postgresDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produtosTableAdapter
-            // 
-            this.produtosTableAdapter.ClearBeforeFill = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -178,11 +165,26 @@
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
             this.descricaoDataGridViewTextBoxColumn.Width = 300;
             // 
+            // produtosBindingSource
+            // 
+            this.produtosBindingSource.DataMember = "produtos";
+            this.produtosBindingSource.DataSource = this.postgresDataSet1;
+            // 
+            // postgresDataSet1
+            // 
+            this.postgresDataSet1.DataSetName = "postgresDataSet1";
+            this.postgresDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // produtosTableAdapter
+            // 
+            this.produtosTableAdapter.ClearBeforeFill = true;
+            // 
             // Frmlistaproduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 451);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(1324, 472);
             this.Controls.Add(this.txtbusca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dvgprod);

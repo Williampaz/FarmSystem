@@ -18,7 +18,13 @@ namespace FarmSystem.Produtos
 		public Frm_Cad_Prod()
 		{
 			InitializeComponent();
+            Produtos_DAO pd = new Produtos_DAO();
+            res = pd.getCod() + 1;
+            txtcodigo.Text = res + "";
 		}
+
+        int res;
+
         private void Limpar()
         {
             txtcodigofornecedor.Clear();
@@ -159,5 +165,104 @@ namespace FarmSystem.Produtos
 		{
             PreencherCombo();
         }
-	}
+
+        private void txtdescicao_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (txtdescicao.Text.Equals(""))
+            {
+                epdProdutos.SetError(txtdescicao, "Preencha este campo");
+                txtdescicao.Focus();
+                return;
+            }
+        }
+
+        private void txtprecokguni_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (txtprecokguni.Text.Equals(""))
+            {
+                epdProdutos.SetError(txtprecokguni, "Preencha este campo");
+                txtprecokguni.Focus();
+                return;
+            }
+        }
+
+        private void txtquantidade_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (txtquantidade.Text.Equals(""))
+            {
+                epdProdutos.SetError(txtquantidade, "Preencha este campo");
+                txtquantidade.Focus();
+                return;
+            }
+        }
+
+        private void txttipoprod_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (txttipoprod.Text.Equals(""))
+            {
+                epdProdutos.SetError(txttipoprod, "Preencha este campo");
+                txttipoprod.Focus();
+                return;
+            }
+        }
+
+        private void txtmesdeuso_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (txtmesdeuso.Text.Equals(""))
+            {
+                epdProdutos.SetError(txtmesdeuso, "Preencha este campo");
+                txtmesdeuso.Focus();
+                return;
+            }
+        }
+
+        private void txtvalidade_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (!txtvalidade.MaskCompleted)
+            {
+                epdProdutos.SetError(txtvalidade, "Preencha este campo");
+                txtvalidade.Focus();
+                return;
+            }
+        }
+
+        private void txtnomeprod_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (txtnomeprod.Text.Equals(""))
+            {
+                epdProdutos.SetError(txtnomeprod, "Preencha este campo");
+                txtnomeprod.Focus();
+                return;
+            }
+        }
+
+        private void txtmesplantio_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (!txtmesplantio.MaskCompleted)
+            {
+                epdProdutos.SetError(txtmesplantio, "Preencha este campo");
+                txtmesplantio.Focus();
+                return;
+            }
+        }
+
+        private void txtdiacolheita_Leave(object sender, EventArgs e)
+        {
+            epdProdutos.Clear();
+            if (txtdiacolheita.Text.Equals(""))
+            {
+                epdProdutos.SetError(txtdiacolheita, "Preencha este campo");
+                txtdiacolheita.Focus();
+                return;
+            }
+        }
+    }
 }

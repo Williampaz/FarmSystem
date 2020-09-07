@@ -143,6 +143,29 @@ namespace FarmSystem.Produtos
             query.ExecuteNonQuery();
             conn.sair();
         }
-        
+
+        public int getCod()
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("select p.codigo from farmsystem.produtos p " +
+                "where p.codigo=(select max(prod.codigo) from farmsystem.produto prod)");
+            query.Connection = conn.entrar();
+            int num = 0;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        num = dr.GetInt32(0);
+                    }
+                    conn.sair();
+                    return num;
+                }
+            }
+            conn.sair();
+            return num;
+        }
+
     }
 }

@@ -15,12 +15,12 @@ namespace FarmSystem.Funcionario
         public frmfuncionario()
         {
             InitializeComponent();
+            daofuncionario df = new daofuncionario();
+            res = df.getCod() + 1;
+            txtcodigo.Text = res + "";
         }
 
-        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
+        int res;
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -137,14 +137,97 @@ namespace FarmSystem.Funcionario
             }
         }
 
-        private void frmfuncionario_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnlimpar_Click(object sender, EventArgs e)
         {
             limpar();
+        }
+
+        private void txtnome_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (txtnome.Text.Equals(""))
+            {
+                epdFuncionario.SetError(txtnome, "Preencha este campo");
+                txtnome.Focus();
+                return;
+            }
+        }
+
+        private void txtidade_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (txtidade.Text.Equals(""))
+            {
+                epdFuncionario.SetError(txtidade, "Preencha este campo");
+                txtidade.Focus();
+                return;
+            }
+        }
+
+        private void txtendereco_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (txtendereco.Text.Equals(""))
+            {
+                epdFuncionario.SetError(txtendereco, "Preencha este campo");
+                txtendereco.Focus();
+                return;
+            }
+        }
+
+        private void txtcargo_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (txtcargo.Text.Equals(""))
+            {
+                epdFuncionario.SetError(txtcargo, "Preencha este campo");
+                txtcargo.Focus();
+                return;
+            }
+        }
+
+        private void txtsalario_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (txtsalario.Text.Equals(""))
+            {
+                epdFuncionario.SetError(txtsalario, "Preencha este campo");
+                txtsalario.Focus();
+                return;
+            }
+        }
+
+        private void mskdtanasc_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (!mskdtanasc.MaskCompleted)
+            {
+                epdFuncionario.SetError(mskdtanasc, "Preencha este campo");
+                mskdtanasc.Focus();
+                return;
+            }
+        }
+
+        private void msktel_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (!msktel.MaskCompleted)
+            {
+                epdFuncionario.SetError(msktel, "Preencha este campo");
+                msktel.Focus();
+                return;
+            }
+        }
+
+        private void mskdtaadm_Leave(object sender, EventArgs e)
+        {
+            epdFuncionario.Clear();
+            if (!mskdtaadm.MaskCompleted)
+            {
+                epdFuncionario.SetError(mskdtaadm, "Preencha este campo");
+                mskdtaadm.Focus();
+                return;
+            }
         }
     }
 }

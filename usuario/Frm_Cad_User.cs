@@ -139,5 +139,93 @@ namespace FarmSystem.usuario
 				desativa();
 			}
 		}
-	}
+
+        private void txt_Nome_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (txt_Nome.Text.Equals(""))
+			{
+				epdUsuario.SetError(txt_Nome, "Preencha este campo");
+				txt_Nome.Focus();
+				return;
+			}
+		}
+
+        private void txt_Rg_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (txt_Rg.Text.Equals(""))
+			{
+				epdUsuario.SetError(txt_Rg, "Preencha este campo");
+				txt_Rg.Focus();
+				return;
+			}
+		}
+
+        private void txt_DataNascimento_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (txt_Rg.Text.Equals(""))
+			{
+				epdUsuario.SetError(txt_Rg, "Preencha este campo");
+				txt_Rg.Focus();
+				return;
+			}
+		}
+
+        private void txt_Idade_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (txt_Idade.Text.Equals(""))
+			{
+				epdUsuario.SetError(txt_Idade, "Preencha este campo");
+				txt_Idade.Focus();
+				return;
+			}
+		}
+
+        private void txt_Senha_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (txt_Senha.Text.Equals(""))
+			{
+				epdUsuario.SetError(txt_Senha, "Preencha este campo");
+				txt_Senha.Focus();
+				return;
+			}
+		}
+
+        private void txt_Email_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (txt_Email.Text.Equals(""))
+			{
+				epdUsuario.SetError(txt_Email, "Preencha este campo");
+				txt_Email.Focus();
+				return;
+			}
+		}
+
+        private void txt_Endereco_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (txt_Endereco.Text.Equals(""))
+			{
+				epdUsuario.SetError(txt_Endereco, "Preencha este campo");
+				txt_Endereco.Focus();
+				return;
+			}
+		}
+
+        private void txt_CPF_Leave(object sender, EventArgs e)
+        {
+			epdUsuario.Clear();
+			if (!txt_CPF.MaskCompleted)
+			{
+				epdUsuario.SetError(txt_CPF, "Preencha este campo");
+				txt_CPF.Focus();
+				return;
+			}
+		}
+    }
 }

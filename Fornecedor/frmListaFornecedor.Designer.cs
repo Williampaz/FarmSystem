@@ -29,8 +29,6 @@
 		private void InitializeComponent()
 		{
             this.dgvFornecedores = new System.Windows.Forms.DataGridView();
-            this.txtPesquisarForn = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,11 +36,14 @@
             this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPesquisarForn = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvFornecedores
             // 
+            this.dgvFornecedores.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgvFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -58,23 +59,6 @@
             this.dgvFornecedores.TabIndex = 5;
             this.dgvFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornecedores_CellContentClick);
             this.dgvFornecedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornecedores_CellDoubleClick);
-            // 
-            // txtPesquisarForn
-            // 
-            this.txtPesquisarForn.Location = new System.Drawing.Point(69, 12);
-            this.txtPesquisarForn.Name = "txtPesquisarForn";
-            this.txtPesquisarForn.Size = new System.Drawing.Size(736, 20);
-            this.txtPesquisarForn.TabIndex = 4;
-            this.txtPesquisarForn.TextChanged += new System.EventHandler(this.txtPesquisarForn_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Procurar:";
             // 
             // Codigo
             // 
@@ -125,16 +109,34 @@
             this.Email.Name = "Email";
             this.Email.Width = 250;
             // 
+            // txtPesquisarForn
+            // 
+            this.txtPesquisarForn.Location = new System.Drawing.Point(69, 12);
+            this.txtPesquisarForn.Name = "txtPesquisarForn";
+            this.txtPesquisarForn.Size = new System.Drawing.Size(736, 20);
+            this.txtPesquisarForn.TabIndex = 4;
+            this.txtPesquisarForn.TextChanged += new System.EventHandler(this.txtPesquisarForn_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Procurar:";
+            // 
             // frmListaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 507);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(1213, 507);
             this.Controls.Add(this.dgvFornecedores);
             this.Controls.Add(this.txtPesquisarForn);
             this.Controls.Add(this.label1);
             this.Name = "frmListaFornecedor";
-            this.Text = "frmListaFornecedor";
+            this.Text = "Lista de Fornecedores";
             this.Load += new System.EventHandler(this.frmListaFornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();
             this.ResumeLayout(false);

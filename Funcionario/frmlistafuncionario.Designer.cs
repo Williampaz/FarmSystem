@@ -36,7 +36,6 @@
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioTableAdapter = new FarmSystem.FarmsystemDBTableAdapters.funcionarioTableAdapter();
             this.dgvfuncionarios = new System.Windows.Forms.DataGridView();
-            this.funcionarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +44,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncionarios)).BeginInit();
@@ -53,16 +53,16 @@
             // 
             // txtpesquisa
             // 
-            this.txtpesquisa.Location = new System.Drawing.Point(66, 12);
+            this.txtpesquisa.Location = new System.Drawing.Point(68, 12);
             this.txtpesquisa.Name = "txtpesquisa";
-            this.txtpesquisa.Size = new System.Drawing.Size(745, 20);
+            this.txtpesquisa.Size = new System.Drawing.Size(599, 20);
             this.txtpesquisa.TabIndex = 8;
             this.txtpesquisa.TextChanged += new System.EventHandler(this.txtPesquisarForn_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 15);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 7;
@@ -84,6 +84,7 @@
             // 
             // dgvfuncionarios
             // 
+            this.dgvfuncionarios.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgvfuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvfuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -94,17 +95,12 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvfuncionarios.Location = new System.Drawing.Point(13, 38);
+            this.dgvfuncionarios.Location = new System.Drawing.Point(2, 38);
             this.dgvfuncionarios.Name = "dgvfuncionarios";
-            this.dgvfuncionarios.Size = new System.Drawing.Size(1124, 349);
+            this.dgvfuncionarios.Size = new System.Drawing.Size(1124, 404);
             this.dgvfuncionarios.TabIndex = 9;
             this.dgvfuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellContentClick_3);
             this.dgvfuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfuncionarios_CellDoubleClick_2);
-            // 
-            // funcionarioBindingSource1
-            // 
-            this.funcionarioBindingSource1.DataMember = "funcionario";
-            this.funcionarioBindingSource1.DataSource = this.farmsystemDB;
             // 
             // Column1
             // 
@@ -158,11 +154,17 @@
             this.Column8.HeaderText = "Salário";
             this.Column8.Name = "Column8";
             // 
+            // funcionarioBindingSource1
+            // 
+            this.funcionarioBindingSource1.DataMember = "funcionario";
+            this.funcionarioBindingSource1.DataSource = this.farmsystemDB;
+            // 
             // frmlistafuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 399);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(1128, 444);
             this.Controls.Add(this.dgvfuncionarios);
             this.Controls.Add(this.txtpesquisa);
             this.Controls.Add(this.label1);

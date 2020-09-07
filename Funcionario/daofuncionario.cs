@@ -164,7 +164,28 @@ namespace FarmSystem.Funcionario
             conn.sair();
         }
 
-
+        public int getCod()
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("select f.codigo from farmsystem.funcionario f " +
+                "where f.codigo=(select max(func.codigo) from farmsystem.funcionario func)");
+            query.Connection = conn.entrar();
+            int num = 0;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        num = dr.GetInt32(0);
+                    }
+                    conn.sair();
+                    return num;
+                }
+            }
+            conn.sair();
+            return num;
+        }
 
 
     }
