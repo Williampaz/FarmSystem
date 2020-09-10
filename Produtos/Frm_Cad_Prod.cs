@@ -264,5 +264,10 @@ namespace FarmSystem.Produtos
                 return;
             }
         }
-    }
+
+		private void txtcodigo_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

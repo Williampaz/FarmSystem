@@ -148,7 +148,7 @@ namespace FarmSystem.Produtos
         {
             Conexao conn = new Conexao();
             NpgsqlCommand query = new NpgsqlCommand("select p.codigo from farmsystem.produtos p " +
-                "where p.codigo=(select max(prod.codigo) from farmsystem.produto prod)");
+                "where p.codigo=(select max(prod.codigo) from farmsystem.produtos prod)");
             query.Connection = conn.entrar();
             int num = 0;
             using (NpgsqlDataReader dr = query.ExecuteReader())
