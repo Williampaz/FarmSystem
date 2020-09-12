@@ -25,7 +25,7 @@ namespace FarmSystem.Funcionario
         {
             funcionario f  = new funcionario();
             f.codigo = Convert.ToInt32(dgvfuncionarios.CurrentRow.Cells[0].Value);
-            f.nome = dgvfuncionarios.CurrentRow.Cells[1].ToString();
+            f.nome = dgvfuncionarios.CurrentRow.Cells[1].Value.ToString();
             f.idade = dgvfuncionarios.CurrentRow.Cells[2].Value.ToString();
             f.datanasc = Convert.ToDateTime(dgvfuncionarios.CurrentRow.Cells[3].Value.ToString());
             f.fone = dgvfuncionarios.CurrentRow.Cells[4].Value.ToString();

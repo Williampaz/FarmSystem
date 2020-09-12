@@ -178,6 +178,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="FarmsystemDB.cs">
+      <DependentUpon>FarmsystemDB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FarmsystemDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -217,6 +220,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plantação\plantacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantação\plantacao.Designer.cs">
+      <DependentUpon>plantacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="postgresDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,6 +235,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>postgresDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="postgresDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>postgresDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Principal\Frm_Inicial.cs">
       <SubType>Form</SubType>
@@ -303,6 +317,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Plantação\plantacao.resx">
+      <DependentUpon>plantacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\Frm_Inicial.resx">
       <DependentUpon>Frm_Inicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -378,6 +395,17 @@
     <None Include="postgresDataSet1.xss">
       <DependentUpon>postgresDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="postgresDataSet2.xsc">
+      <DependentUpon>postgresDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="postgresDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>postgresDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="postgresDataSet2.xss">
+      <DependentUpon>postgresDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -437,6 +465,7 @@
     <None Include="Resources\clean.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\plantar.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

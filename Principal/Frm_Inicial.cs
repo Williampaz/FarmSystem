@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using FarmSystem.Funcionario;
 using FarmSystem.Produtos;
 using FarmSystem.Relatorios;
+using FarmSystem.Plantação;
 
 namespace FarmSystem.Principal
 {
@@ -93,5 +94,10 @@ namespace FarmSystem.Principal
 		{
 			new Frm_Relacao_Produtos().ShowDialog();
 		}
-	}
+
+        private void btnplantacao_Click(object sender, EventArgs e)
+        {
+			new plantacao().ShowDialog();
+		}
+    }
 }
