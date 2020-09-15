@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cad_User));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,8 +47,6 @@
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Senha = new System.Windows.Forms.TextBox();
             this.txt_Endereco = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_Limpar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
@@ -61,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 24);
+            this.label1.Location = new System.Drawing.Point(13, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 16);
@@ -158,10 +157,10 @@
             // 
             // txt_Codigo
             // 
-            this.txt_Codigo.Location = new System.Drawing.Point(64, 41);
+            this.txt_Codigo.Location = new System.Drawing.Point(13, 48);
             this.txt_Codigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Codigo.Name = "txt_Codigo";
-            this.txt_Codigo.Size = new System.Drawing.Size(94, 26);
+            this.txt_Codigo.Size = new System.Drawing.Size(222, 26);
             this.txt_Codigo.TabIndex = 10;
             // 
             // txt_Nome
@@ -232,24 +231,6 @@
             this.txt_Endereco.Size = new System.Drawing.Size(600, 26);
             this.txt_Endereco.TabIndex = 18;
             this.txt_Endereco.Leave += new System.EventHandler(this.txt_Endereco_Leave);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(17, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(167, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 40);
-            this.button2.TabIndex = 26;
-            this.button2.Text = ">>";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btn_Limpar
             // 
@@ -335,8 +316,6 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(828, 349);
             this.Controls.Add(this.txt_CPF);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Cancelar);
@@ -359,8 +338,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Frm_Cad_User";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Usuário";
             ((System.ComponentModel.ISupportInitialize)(this.epdUsuario)).EndInit();
             this.ResumeLayout(false);
@@ -391,8 +372,6 @@
 		private System.Windows.Forms.Button btn_Cancelar;
 		private System.Windows.Forms.Button btn_Editar;
 		private System.Windows.Forms.Button btn_Limpar;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox txt_CPF;
         private System.Windows.Forms.ErrorProvider epdUsuario;
     }

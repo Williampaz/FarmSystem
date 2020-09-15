@@ -227,5 +227,10 @@ namespace FarmSystem.usuario
 				return;
 			}
 		}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

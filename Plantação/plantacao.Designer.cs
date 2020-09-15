@@ -60,9 +60,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
-            this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.plantacaoTableAdapter();
             this.btnacoes = new System.Windows.Forms.Button();
             this.brnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
@@ -78,9 +75,12 @@
             this.prevdatacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
+            this.plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.plantacaoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtcodigo
@@ -348,20 +348,6 @@
             this.label16.TabIndex = 34;
             this.label16.Text = "AÇÕES";
             // 
-            // postgresDataSet2
-            // 
-            this.postgresDataSet2.DataSetName = "postgresDataSet2";
-            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // plantacaoBindingSource
-            // 
-            this.plantacaoBindingSource.DataMember = "plantacao";
-            this.plantacaoBindingSource.DataSource = this.postgresDataSet2;
-            // 
-            // plantacaoTableAdapter
-            // 
-            this.plantacaoTableAdapter.ClearBeforeFill = true;
-            // 
             // btnacoes
             // 
             this.btnacoes.BackgroundImage = global::FarmSystem.Properties.Resources.clipboard;
@@ -373,6 +359,7 @@
             this.btnacoes.TabIndex = 25;
             this.btnacoes.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnacoes.UseVisualStyleBackColor = true;
+            this.btnacoes.Click += new System.EventHandler(this.btnacoes_Click);
             // 
             // brnexcluir
             // 
@@ -475,6 +462,20 @@
             this.sementeusadaDataGridViewTextBoxColumn.Name = "sementeusadaDataGridViewTextBoxColumn";
             this.sementeusadaDataGridViewTextBoxColumn.Width = 210;
             // 
+            // plantacaoBindingSource
+            // 
+            this.plantacaoBindingSource.DataMember = "plantacao";
+            this.plantacaoBindingSource.DataSource = this.postgresDataSet2;
+            // 
+            // postgresDataSet2
+            // 
+            this.postgresDataSet2.DataSetName = "postgresDataSet2";
+            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // plantacaoTableAdapter
+            // 
+            this.plantacaoTableAdapter.ClearBeforeFill = true;
+            // 
             // plantacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,10 +519,11 @@
             this.Name = "plantacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plantação";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.plantacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

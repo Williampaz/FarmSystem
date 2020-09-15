@@ -28,58 +28,61 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-			this.Rp_Fornecedores = new Microsoft.Reporting.WinForms.ReportViewer();
-			this.farmsystemDB = new FarmSystem.FarmsystemDB();
-			this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.fornecedorTableAdapter = new FarmSystem.FarmsystemDBTableAdapters.fornecedorTableAdapter();
-			((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// Rp_Fornecedores
-			// 
-			this.Rp_Fornecedores.AutoSize = true;
-			this.Rp_Fornecedores.Dock = System.Windows.Forms.DockStyle.Fill;
-			reportDataSource2.Name = "Fornecedores";
-			reportDataSource2.Value = this.fornecedorBindingSource;
-			this.Rp_Fornecedores.LocalReport.DataSources.Add(reportDataSource2);
-			this.Rp_Fornecedores.LocalReport.ReportEmbeddedResource = "FarmSystem.Relatorios.Rel_de Fornecedores.rdlc";
-			this.Rp_Fornecedores.Location = new System.Drawing.Point(0, 0);
-			this.Rp_Fornecedores.Name = "Rp_Fornecedores";
-			this.Rp_Fornecedores.ServerReport.BearerToken = null;
-			this.Rp_Fornecedores.Size = new System.Drawing.Size(800, 450);
-			this.Rp_Fornecedores.TabIndex = 0;
-			// 
-			// farmsystemDB
-			// 
-			this.farmsystemDB.DataSetName = "FarmsystemDB";
-			this.farmsystemDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// fornecedorBindingSource
-			// 
-			this.fornecedorBindingSource.DataMember = "fornecedor";
-			this.fornecedorBindingSource.DataSource = this.farmsystemDB;
-			// 
-			// fornecedorTableAdapter
-			// 
-			this.fornecedorTableAdapter.ClearBeforeFill = true;
-			// 
-			// Frm_Relacao_Fornecedores
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.Rp_Fornecedores);
-			this.Name = "Frm_Relacao_Fornecedores";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Form1";
-			this.Load += new System.EventHandler(this.Frm_Relacao_Fornecedores_Load);
-			((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Relacao_Fornecedores));
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.farmsystemDB = new FarmSystem.FarmsystemDB();
+            this.Rp_Fornecedores = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.fornecedorTableAdapter = new FarmSystem.FarmsystemDBTableAdapters.fornecedorTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "fornecedor";
+            this.fornecedorBindingSource.DataSource = this.farmsystemDB;
+            // 
+            // farmsystemDB
+            // 
+            this.farmsystemDB.DataSetName = "FarmsystemDB";
+            this.farmsystemDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Rp_Fornecedores
+            // 
+            this.Rp_Fornecedores.AutoSize = true;
+            this.Rp_Fornecedores.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource2.Name = "Fornecedores";
+            reportDataSource2.Value = this.fornecedorBindingSource;
+            this.Rp_Fornecedores.LocalReport.DataSources.Add(reportDataSource2);
+            this.Rp_Fornecedores.LocalReport.ReportEmbeddedResource = "FarmSystem.Relatorios.Rel_de Fornecedores.rdlc";
+            this.Rp_Fornecedores.Location = new System.Drawing.Point(0, 0);
+            this.Rp_Fornecedores.Name = "Rp_Fornecedores";
+            this.Rp_Fornecedores.ServerReport.BearerToken = null;
+            this.Rp_Fornecedores.Size = new System.Drawing.Size(800, 450);
+            this.Rp_Fornecedores.TabIndex = 0;
+            // 
+            // fornecedorTableAdapter
+            // 
+            this.fornecedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // Frm_Relacao_Fornecedores
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Rp_Fornecedores);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Frm_Relacao_Fornecedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Relatório de Fornecedores";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Relacao_Fornecedores_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 

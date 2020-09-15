@@ -29,5 +29,11 @@ namespace FarmSystem.Plantação
            
 
         }
+
+        private void btnacoes_Click(object sender, EventArgs e)
+        {
+            new acoes().ShowDialog();
+
+        }
     }
 }
