@@ -23,18 +23,18 @@ namespace FarmSystem.Plantação
             set { _funcionario = value; }
             }
 
-        private float _area;
-        public float area
+        private double _area;
+        public double area
         {
             get { return _area; }
             set { _area = value; }
         }
 
-        private float _distanciaentreplantas;
-        public float distanciaentreplantas
+        private double _distinciaentreplantas;
+        public double distinciaentreplantas
         {
-            get { return _distanciaentreplantas; }
-            set { _distanciaentreplantas = value; }
+            get { return _distinciaentreplantas; }
+            set { _distinciaentreplantas = value; }
         }
 
         private DateTime _datadeplantio;

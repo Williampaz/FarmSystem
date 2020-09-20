@@ -226,6 +226,7 @@
     <Compile Include="Plantação\acoes.Designer.cs">
       <DependentUpon>acoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plantação\daoplantacao.cs" />
     <Compile Include="Plantação\objacao.cs" />
     <Compile Include="Plantação\objplantacao.cs" />
     <Compile Include="Plantação\plantacao.cs">
