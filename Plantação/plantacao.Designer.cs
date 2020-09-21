@@ -51,6 +51,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtvalorvenda = new System.Windows.Forms.TextBox();
             this.dtgplantacao = new System.Windows.Forms.DataGridView();
+            this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.btnlistafunc = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtqtdsacas = new System.Windows.Forms.TextBox();
@@ -60,13 +62,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
-            this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.plantacaoTableAdapter();
             this.btnacoes = new System.Windows.Forms.Button();
             this.brnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btngravar = new System.Windows.Forms.Button();
+            this.plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.plantacaoTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,8 +79,8 @@
             this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtcodigo
@@ -162,7 +162,7 @@
             this.txtnomefunc.Location = new System.Drawing.Point(189, 75);
             this.txtnomefunc.Name = "txtnomefunc";
             this.txtnomefunc.Size = new System.Drawing.Size(604, 20);
-            this.txtnomefunc.TabIndex = 8;
+            this.txtnomefunc.TabIndex = 18;
             // 
             // label6
             // 
@@ -178,7 +178,7 @@
             this.txtstatus.Location = new System.Drawing.Point(12, 166);
             this.txtstatus.Name = "txtstatus";
             this.txtstatus.Size = new System.Drawing.Size(377, 20);
-            this.txtstatus.TabIndex = 10;
+            this.txtstatus.TabIndex = 6;
             // 
             // label7
             // 
@@ -194,7 +194,7 @@
             this.txtprevisaosacas.Location = new System.Drawing.Point(395, 166);
             this.txtprevisaosacas.Name = "txtprevisaosacas";
             this.txtprevisaosacas.Size = new System.Drawing.Size(220, 20);
-            this.txtprevisaosacas.TabIndex = 12;
+            this.txtprevisaosacas.TabIndex = 7;
             // 
             // label8
             // 
@@ -211,7 +211,7 @@
             this.mskprevisaodata.Mask = "00/00/0000";
             this.mskprevisaodata.Name = "mskprevisaodata";
             this.mskprevisaodata.Size = new System.Drawing.Size(172, 20);
-            this.mskprevisaodata.TabIndex = 16;
+            this.mskprevisaodata.TabIndex = 8;
             this.mskprevisaodata.ValidatingType = typeof(System.DateTime);
             // 
             // mskdataplantio
@@ -220,7 +220,7 @@
             this.mskdataplantio.Mask = "00/00/0000";
             this.mskdataplantio.Name = "mskdataplantio";
             this.mskdataplantio.Size = new System.Drawing.Size(184, 20);
-            this.mskdataplantio.TabIndex = 18;
+            this.mskdataplantio.TabIndex = 4;
             this.mskdataplantio.ValidatingType = typeof(System.DateTime);
             // 
             // label9
@@ -246,7 +246,7 @@
             this.txtvalorvenda.Location = new System.Drawing.Point(620, 118);
             this.txtvalorvenda.Name = "txtvalorvenda";
             this.txtvalorvenda.Size = new System.Drawing.Size(173, 20);
-            this.txtvalorvenda.TabIndex = 19;
+            this.txtvalorvenda.TabIndex = 5;
             // 
             // dtgplantacao
             // 
@@ -270,15 +270,26 @@
             this.dtgplantacao.Size = new System.Drawing.Size(1335, 433);
             this.dtgplantacao.TabIndex = 21;
             // 
+            // plantacaoBindingSource
+            // 
+            this.plantacaoBindingSource.DataMember = "plantacao";
+            this.plantacaoBindingSource.DataSource = this.postgresDataSet2;
+            // 
+            // postgresDataSet2
+            // 
+            this.postgresDataSet2.DataSetName = "postgresDataSet2";
+            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnlistafunc
             // 
             this.btnlistafunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlistafunc.Location = new System.Drawing.Point(137, 71);
             this.btnlistafunc.Name = "btnlistafunc";
             this.btnlistafunc.Size = new System.Drawing.Size(46, 24);
-            this.btnlistafunc.TabIndex = 26;
+            this.btnlistafunc.TabIndex = 1;
             this.btnlistafunc.Text = "Listar";
             this.btnlistafunc.UseVisualStyleBackColor = true;
+            this.btnlistafunc.Click += new System.EventHandler(this.btnlistafunc_Click);
             // 
             // label11
             // 
@@ -294,7 +305,7 @@
             this.txtqtdsacas.Location = new System.Drawing.Point(12, 211);
             this.txtqtdsacas.Name = "txtqtdsacas";
             this.txtqtdsacas.Size = new System.Drawing.Size(179, 20);
-            this.txtqtdsacas.TabIndex = 27;
+            this.txtqtdsacas.TabIndex = 9;
             // 
             // label12
             // 
@@ -310,7 +321,7 @@
             this.txtsemente.Location = new System.Drawing.Point(197, 211);
             this.txtsemente.Name = "txtsemente";
             this.txtsemente.Size = new System.Drawing.Size(596, 20);
-            this.txtsemente.TabIndex = 29;
+            this.txtsemente.TabIndex = 10;
             // 
             // label13
             // 
@@ -348,20 +359,6 @@
             this.label16.TabIndex = 34;
             this.label16.Text = "AÇÕES";
             // 
-            // postgresDataSet2
-            // 
-            this.postgresDataSet2.DataSetName = "postgresDataSet2";
-            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // plantacaoBindingSource
-            // 
-            this.plantacaoBindingSource.DataMember = "plantacao";
-            this.plantacaoBindingSource.DataSource = this.postgresDataSet2;
-            // 
-            // plantacaoTableAdapter
-            // 
-            this.plantacaoTableAdapter.ClearBeforeFill = true;
-            // 
             // btnacoes
             // 
             this.btnacoes.BackgroundImage = global::FarmSystem.Properties.Resources.clipboard;
@@ -370,9 +367,10 @@
             this.btnacoes.Location = new System.Drawing.Point(906, 146);
             this.btnacoes.Name = "btnacoes";
             this.btnacoes.Size = new System.Drawing.Size(375, 82);
-            this.btnacoes.TabIndex = 25;
+            this.btnacoes.TabIndex = 14;
             this.btnacoes.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnacoes.UseVisualStyleBackColor = true;
+            this.btnacoes.Click += new System.EventHandler(this.btnacoes_Click);
             // 
             // brnexcluir
             // 
@@ -381,7 +379,7 @@
             this.brnexcluir.Location = new System.Drawing.Point(1160, 33);
             this.brnexcluir.Name = "brnexcluir";
             this.brnexcluir.Size = new System.Drawing.Size(121, 82);
-            this.brnexcluir.TabIndex = 24;
+            this.brnexcluir.TabIndex = 13;
             this.brnexcluir.UseVisualStyleBackColor = true;
             // 
             // btneditar
@@ -391,7 +389,7 @@
             this.btneditar.Location = new System.Drawing.Point(1033, 33);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(121, 82);
-            this.btneditar.TabIndex = 23;
+            this.btneditar.TabIndex = 12;
             this.btneditar.UseVisualStyleBackColor = true;
             // 
             // btngravar
@@ -401,8 +399,13 @@
             this.btngravar.Location = new System.Drawing.Point(906, 33);
             this.btngravar.Name = "btngravar";
             this.btngravar.Size = new System.Drawing.Size(121, 82);
-            this.btngravar.TabIndex = 22;
+            this.btngravar.TabIndex = 11;
             this.btngravar.UseVisualStyleBackColor = true;
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
+            // 
+            // plantacaoTableAdapter
+            // 
+            this.plantacaoTableAdapter.ClearBeforeFill = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -428,7 +431,7 @@
             // distinciaentreplantasDataGridViewTextBoxColumn
             // 
             this.distinciaentreplantasDataGridViewTextBoxColumn.DataPropertyName = "distinciaentreplantas";
-            this.distinciaentreplantasDataGridViewTextBoxColumn.HeaderText = "Distancia Plantas";
+            this.distinciaentreplantasDataGridViewTextBoxColumn.HeaderText = "Distancia Plantas CM";
             this.distinciaentreplantasDataGridViewTextBoxColumn.Name = "distinciaentreplantasDataGridViewTextBoxColumn";
             // 
             // datadeplantioDataGridViewTextBoxColumn
@@ -518,10 +521,11 @@
             this.Name = "plantacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plantação";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.plantacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

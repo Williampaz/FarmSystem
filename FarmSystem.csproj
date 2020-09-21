@@ -222,6 +222,15 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plantação\acoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantação\acoes.Designer.cs">
+      <DependentUpon>acoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantação\daoplantacao.cs" />
+    <Compile Include="Plantação\objacao.cs" />
+    <Compile Include="Plantação\objplantacao.cs" />
     <Compile Include="Plantação\plantacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +246,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>postgresDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="postgresDataSet2.cs">
+      <DependentUpon>postgresDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="postgresDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -318,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantação\acoes.resx">
+      <DependentUpon>acoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plantação\plantacao.resx">
       <DependentUpon>plantacao.cs</DependentUpon>
