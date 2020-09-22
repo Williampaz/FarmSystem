@@ -68,7 +68,7 @@ namespace FarmSystem.Funcionario
             Conexao conn = new Conexao();
             NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,idade,nascimento," +
                 "fone,endereco,dataadmissao," +
-                "cargo,salario from farmsystem.funcionario where LIKE @nomefunc");
+                "cargo,salario from farmsystem.funcionario where nome LIKE @nomefunc");
             query.Connection = conn.entrar();
             query.Parameters.Add("@nomefunc", NpgsqlDbType.Varchar).Value = "%" + func + "%";
             using (NpgsqlDataReader dr = query.ExecuteReader())

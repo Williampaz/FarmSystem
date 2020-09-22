@@ -51,6 +51,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtvalorvenda = new System.Windows.Forms.TextBox();
             this.dtgplantacao = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distinciaentreplantasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datadeplantioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valordevendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusdaplantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.previsaodecolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prevdatacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.btnlistafunc = new System.Windows.Forms.Button();
@@ -67,20 +78,13 @@
             this.btneditar = new System.Windows.Forms.Button();
             this.btngravar = new System.Windows.Forms.Button();
             this.plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.plantacaoTableAdapter();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distinciaentreplantasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datadeplantioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valordevendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusdaplantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.previsaodecolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prevdatacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtpesquisa = new System.Windows.Forms.TextBox();
+            this.Pesquisa = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
+            this.Pesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtcodigo
@@ -96,6 +100,7 @@
             this.txtcodfunc.Name = "txtcodfunc";
             this.txtcodfunc.Size = new System.Drawing.Size(119, 20);
             this.txtcodfunc.TabIndex = 1;
+            this.txtcodfunc.TextChanged += new System.EventHandler(this.txtcodfunc_TextChanged);
             // 
             // txtarea
             // 
@@ -265,147 +270,11 @@
             this.quantidadecolhidaDataGridViewTextBoxColumn,
             this.sementeusadaDataGridViewTextBoxColumn});
             this.dtgplantacao.DataSource = this.plantacaoBindingSource;
-            this.dtgplantacao.Location = new System.Drawing.Point(12, 254);
+            this.dtgplantacao.Location = new System.Drawing.Point(12, 303);
             this.dtgplantacao.Name = "dtgplantacao";
-            this.dtgplantacao.Size = new System.Drawing.Size(1335, 433);
+            this.dtgplantacao.Size = new System.Drawing.Size(1335, 384);
             this.dtgplantacao.TabIndex = 21;
-            // 
-            // plantacaoBindingSource
-            // 
-            this.plantacaoBindingSource.DataMember = "plantacao";
-            this.plantacaoBindingSource.DataSource = this.postgresDataSet2;
-            // 
-            // postgresDataSet2
-            // 
-            this.postgresDataSet2.DataSetName = "postgresDataSet2";
-            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnlistafunc
-            // 
-            this.btnlistafunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlistafunc.Location = new System.Drawing.Point(137, 71);
-            this.btnlistafunc.Name = "btnlistafunc";
-            this.btnlistafunc.Size = new System.Drawing.Size(46, 24);
-            this.btnlistafunc.TabIndex = 1;
-            this.btnlistafunc.Text = "Listar";
-            this.btnlistafunc.UseVisualStyleBackColor = true;
-            this.btnlistafunc.Click += new System.EventHandler(this.btnlistafunc_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 195);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 13);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Quantidade Colhida (SACAS):";
-            // 
-            // txtqtdsacas
-            // 
-            this.txtqtdsacas.Location = new System.Drawing.Point(12, 211);
-            this.txtqtdsacas.Name = "txtqtdsacas";
-            this.txtqtdsacas.Size = new System.Drawing.Size(179, 20);
-            this.txtqtdsacas.TabIndex = 9;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(197, 195);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 13);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Semete Usada:";
-            // 
-            // txtsemente
-            // 
-            this.txtsemente.Location = new System.Drawing.Point(197, 211);
-            this.txtsemente.Name = "txtsemente";
-            this.txtsemente.Size = new System.Drawing.Size(596, 20);
-            this.txtsemente.TabIndex = 10;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(943, 119);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 13);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "GRAVAR";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1070, 119);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 13);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "EDITAR";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1193, 119);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 13);
-            this.label15.TabIndex = 33;
-            this.label15.Text = "EXCLUIR";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1074, 231);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 13);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "AÇÕES";
-            // 
-            // btnacoes
-            // 
-            this.btnacoes.BackgroundImage = global::FarmSystem.Properties.Resources.clipboard;
-            this.btnacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnacoes.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnacoes.Location = new System.Drawing.Point(906, 146);
-            this.btnacoes.Name = "btnacoes";
-            this.btnacoes.Size = new System.Drawing.Size(375, 82);
-            this.btnacoes.TabIndex = 14;
-            this.btnacoes.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnacoes.UseVisualStyleBackColor = true;
-            this.btnacoes.Click += new System.EventHandler(this.btnacoes_Click);
-            // 
-            // brnexcluir
-            // 
-            this.brnexcluir.BackgroundImage = global::FarmSystem.Properties.Resources.delete;
-            this.brnexcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.brnexcluir.Location = new System.Drawing.Point(1160, 33);
-            this.brnexcluir.Name = "brnexcluir";
-            this.brnexcluir.Size = new System.Drawing.Size(121, 82);
-            this.brnexcluir.TabIndex = 13;
-            this.brnexcluir.UseVisualStyleBackColor = true;
-            // 
-            // btneditar
-            // 
-            this.btneditar.BackgroundImage = global::FarmSystem.Properties.Resources.edit;
-            this.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btneditar.Location = new System.Drawing.Point(1033, 33);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(121, 82);
-            this.btneditar.TabIndex = 12;
-            this.btneditar.UseVisualStyleBackColor = true;
-            // 
-            // btngravar
-            // 
-            this.btngravar.BackgroundImage = global::FarmSystem.Properties.Resources.floppy_disk;
-            this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btngravar.Location = new System.Drawing.Point(906, 33);
-            this.btngravar.Name = "btngravar";
-            this.btngravar.Size = new System.Drawing.Size(121, 82);
-            this.btngravar.TabIndex = 11;
-            this.btngravar.UseVisualStyleBackColor = true;
-            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
-            // 
-            // plantacaoTableAdapter
-            // 
-            this.plantacaoTableAdapter.ClearBeforeFill = true;
+            this.dtgplantacao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgplantacao_CellDoubleClick);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -478,11 +347,181 @@
             this.sementeusadaDataGridViewTextBoxColumn.Name = "sementeusadaDataGridViewTextBoxColumn";
             this.sementeusadaDataGridViewTextBoxColumn.Width = 210;
             // 
+            // plantacaoBindingSource
+            // 
+            this.plantacaoBindingSource.DataMember = "plantacao";
+            this.plantacaoBindingSource.DataSource = this.postgresDataSet2;
+            // 
+            // postgresDataSet2
+            // 
+            this.postgresDataSet2.DataSetName = "postgresDataSet2";
+            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnlistafunc
+            // 
+            this.btnlistafunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlistafunc.Location = new System.Drawing.Point(137, 71);
+            this.btnlistafunc.Name = "btnlistafunc";
+            this.btnlistafunc.Size = new System.Drawing.Size(46, 24);
+            this.btnlistafunc.TabIndex = 1;
+            this.btnlistafunc.Text = "Listar";
+            this.btnlistafunc.UseVisualStyleBackColor = true;
+            this.btnlistafunc.Click += new System.EventHandler(this.btnlistafunc_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 195);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 13);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Quantidade Colhida (SACAS):";
+            // 
+            // txtqtdsacas
+            // 
+            this.txtqtdsacas.Location = new System.Drawing.Point(12, 211);
+            this.txtqtdsacas.Name = "txtqtdsacas";
+            this.txtqtdsacas.Size = new System.Drawing.Size(179, 20);
+            this.txtqtdsacas.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(197, 195);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 13);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Semete Usada:";
+            // 
+            // txtsemente
+            // 
+            this.txtsemente.Location = new System.Drawing.Point(197, 211);
+            this.txtsemente.Name = "txtsemente";
+            this.txtsemente.Size = new System.Drawing.Size(596, 20);
+            this.txtsemente.TabIndex = 10;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(903, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "GRAVAR";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1070, 119);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "EDITAR";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(1240, 119);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 13);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "EXCLUIR";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1074, 231);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 13);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "AÇÕES";
+            // 
+            // btnacoes
+            // 
+            this.btnacoes.BackgroundImage = global::FarmSystem.Properties.Resources.clipboard;
+            this.btnacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnacoes.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnacoes.Location = new System.Drawing.Point(844, 146);
+            this.btnacoes.Name = "btnacoes";
+            this.btnacoes.Size = new System.Drawing.Size(507, 82);
+            this.btnacoes.TabIndex = 14;
+            this.btnacoes.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnacoes.UseVisualStyleBackColor = true;
+            this.btnacoes.Click += new System.EventHandler(this.btnacoes_Click);
+            // 
+            // brnexcluir
+            // 
+            this.brnexcluir.BackgroundImage = global::FarmSystem.Properties.Resources.delete;
+            this.brnexcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.brnexcluir.Location = new System.Drawing.Point(1186, 36);
+            this.brnexcluir.Name = "brnexcluir";
+            this.brnexcluir.Size = new System.Drawing.Size(165, 82);
+            this.brnexcluir.TabIndex = 13;
+            this.brnexcluir.UseVisualStyleBackColor = true;
+            this.brnexcluir.Click += new System.EventHandler(this.brnexcluir_Click);
+            // 
+            // btneditar
+            // 
+            this.btneditar.BackgroundImage = global::FarmSystem.Properties.Resources.edit;
+            this.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btneditar.Location = new System.Drawing.Point(1015, 36);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(165, 82);
+            this.btneditar.TabIndex = 12;
+            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
+            // 
+            // btngravar
+            // 
+            this.btngravar.BackgroundImage = global::FarmSystem.Properties.Resources.floppy_disk;
+            this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btngravar.Location = new System.Drawing.Point(844, 36);
+            this.btngravar.Name = "btngravar";
+            this.btngravar.Size = new System.Drawing.Size(165, 82);
+            this.btngravar.TabIndex = 11;
+            this.btngravar.UseVisualStyleBackColor = true;
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
+            // 
+            // plantacaoTableAdapter
+            // 
+            this.plantacaoTableAdapter.ClearBeforeFill = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(45, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(161, 15);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Pesquisar por Semente:";
+            // 
+            // txtpesquisa
+            // 
+            this.txtpesquisa.Font = new System.Drawing.Font("Ebrima", 8.25F);
+            this.txtpesquisa.Location = new System.Drawing.Point(212, 11);
+            this.txtpesquisa.Name = "txtpesquisa";
+            this.txtpesquisa.Size = new System.Drawing.Size(1035, 22);
+            this.txtpesquisa.TabIndex = 35;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
+            // 
+            // Pesquisa
+            // 
+            this.Pesquisa.Controls.Add(this.txtpesquisa);
+            this.Pesquisa.Controls.Add(this.label17);
+            this.Pesquisa.Location = new System.Drawing.Point(12, 258);
+            this.Pesquisa.Name = "Pesquisa";
+            this.Pesquisa.Size = new System.Drawing.Size(1314, 39);
+            this.Pesquisa.TabIndex = 37;
+            this.Pesquisa.TabStop = false;
+            this.Pesquisa.Text = "Pesquisa";
+            // 
             // plantacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 699);
+            this.Controls.Add(this.Pesquisa);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -526,6 +565,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).EndInit();
+            this.Pesquisa.ResumeLayout(false);
+            this.Pesquisa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,5 +622,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prevdatacolheitaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadecolhidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sementeusadaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtpesquisa;
+        private System.Windows.Forms.GroupBox Pesquisa;
     }
 }

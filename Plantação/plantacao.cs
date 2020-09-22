@@ -27,6 +27,7 @@ namespace FarmSystem.Plantação
           
             objplantacao plant  = new objplantacao();
 
+            plant.codigo = Convert.ToInt32(txtcodigo.Text);
             plant.funcionario = Convert.ToInt32(txtcodfunc.Text);
             plant.area = Convert.ToDouble(txtarea.Text);
             plant.distinciaentreplantas = Convert.ToDouble(txtdistancia.Text);
@@ -42,6 +43,48 @@ namespace FarmSystem.Plantação
             return plant;
         }
 
+        private objplantacao GetcadPlantacao()
+        {
+
+            objplantacao plant = new objplantacao();
+
+
+            plant.funcionario = Convert.ToInt32(txtcodfunc.Text);
+            plant.area = Convert.ToDouble(txtarea.Text);
+            plant.distinciaentreplantas = Convert.ToDouble(txtdistancia.Text);
+            plant.datadeplantio = Convert.ToDateTime(mskdataplantio.Text);
+            plant.valordevenda = txtvalorvenda.Text;
+            plant.statusdaplantacao = txtstatus.Text;
+            plant.previsaodecolheita = Convert.ToInt32(txtprevisaosacas.Text);
+            plant.prevdatacolheita = Convert.ToDateTime(mskprevisaodata.Text);
+            plant.quantidadecolhida = Convert.ToInt32(txtqtdsacas.Text);
+            plant.sementeusada = txtsemente.Text;
+
+
+            return plant;
+        }
+
+
+
+        private objplantacao getlistplantacao()
+        {
+            objplantacao plant = new objplantacao();
+
+            plant.codigo = Convert.ToInt32(dtgplantacao.CurrentRow.Cells[0].Value.ToString());
+            plant.funcionario = Convert.ToInt32(dtgplantacao.CurrentRow.Cells[1].Value.ToString());
+            plant.area = Convert.ToDouble(dtgplantacao.CurrentRow.Cells[2].Value.ToString());
+            plant.distinciaentreplantas = Convert.ToDouble(dtgplantacao.CurrentRow.Cells[3].Value.ToString());
+            plant.datadeplantio = Convert.ToDateTime(dtgplantacao.CurrentRow.Cells[4].Value.ToString());
+            plant.valordevenda = dtgplantacao.CurrentRow.Cells[5].Value.ToString();
+            plant.statusdaplantacao = dtgplantacao.CurrentRow.Cells[6].Value.ToString();
+            plant.previsaodecolheita = Convert.ToInt32(dtgplantacao.CurrentRow.Cells[7].Value.ToString());
+            plant.prevdatacolheita = Convert.ToDateTime(dtgplantacao.CurrentRow.Cells[8].Value.ToString());
+            plant.quantidadecolhida = Convert.ToInt32(dtgplantacao.CurrentRow.Cells[9].Value.ToString());
+            plant.sementeusada = dtgplantacao.CurrentRow.Cells[10].Value.ToString();
+
+            return plant;
+
+        }
         private void setplantacao(objplantacao plant)
         {
             /*
@@ -89,14 +132,19 @@ namespace FarmSystem.Plantação
 
         }
 
+        private void atualizardtg()
+        {
+            daoplantacao dp = new daoplantacao();
+            dtgplantacao.DataSource = dp.Listaplantacao();
+
+        }
         private void plantacao_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'postgresDataSet2.plantacao'. Você pode movê-la ou removê-la conforme necessário.
             this.plantacaoTableAdapter.Fill(this.postgresDataSet2.plantacao);
 
-            daoplantacao dp = new daoplantacao();
-            dtgplantacao.DataSource = dp.Listaplantacao();
-                       
+            atualizardtg();
+            
 
         }
 
@@ -112,12 +160,12 @@ namespace FarmSystem.Plantação
             {*/
                 daoplantacao dp = new daoplantacao();
 
-                dp.cadastrar(GetPlantacao());
+                dp.cadastrar(GetcadPlantacao());
 
                 MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado");
                 limpar();
 
-                dtgplantacao.DataSource = dp.Listaplantacao();
+            atualizardtg();
 
           /*  }
             catch
@@ -145,6 +193,69 @@ namespace FarmSystem.Plantação
                 setfuncionario(func.getfuncionario());
 
             }
+        }
+
+        private void dtgplantacao_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            setplantacao(getlistplantacao());
+               
+           
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                daoplantacao dp = new daoplantacao();
+                dp.Editar(GetPlantacao());
+                limpar();
+                MessageBox.Show("Alteração efetuada com sucesso!", "Alteração");
+                atualizardtg();
+            }
+            catch
+            {
+                MessageBox.Show("Erro por favor verifique se algum campo esta em branco", "Erro");
+            }
+        }
+
+        private void brnexcluir_Click(object sender, EventArgs e)
+        {
+
+            DialogResult confirm = MessageBox.Show("Deseja excluir registro?","Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES") {
+
+                daoplantacao dp = new daoplantacao();
+                dp.Excluir(Convert.ToInt32(txtcodigo.Text));
+                MessageBox.Show("Excluido", "Exclusão");
+                atualizardtg();
+                limpar();
+            }
+        }
+
+        private void txtcodfunc_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            txt.BackColor = Color.White;
+            if ((txt.Name == txtcodfunc.Name) && (txt.Text != ""))
+            {
+                funcionario f = new daoplantacao().buscafuncid(Int32.Parse(txtcodfunc.Text));
+
+
+                if (f != null)
+                {
+                    setfuncionario(f);
+                }
+            }
+        }
+
+        private void txtpesquisa_TextChanged(object sender, EventArgs e)
+        {
+        
+            daoplantacao dp = new daoplantacao();
+            dtgplantacao.DataSource = dp.Listaplantacao(txtpesquisa.Text);
+        
         }
     }
 }
