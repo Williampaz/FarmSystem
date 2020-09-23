@@ -57,7 +57,5 @@ namespace FarmSystem.Plantação
             get { return _status; }
             set { _status = value; }
         }
-
-
     }
 }

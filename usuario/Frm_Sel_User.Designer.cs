@@ -30,9 +30,6 @@
 		{
             this.components = new System.ComponentModel.Container();
             this.data_usuario = new System.Windows.Forms.DataGridView();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postgresDataSet = new FarmSystem.postgresDataSet();
-            this.usuarioTableAdapter = new FarmSystem.postgresDataSetTableAdapters.usuarioTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,9 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet = new FarmSystem.postgresDataSet();
+            this.usuarioTableAdapter = new FarmSystem.postgresDataSetTableAdapters.usuarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.data_usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet)).BeginInit();
@@ -50,6 +50,7 @@
             // data_usuario
             // 
             this.data_usuario.AutoGenerateColumns = false;
+            this.data_usuario.BackgroundColor = System.Drawing.Color.Honeydew;
             this.data_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_usuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoDataGridViewTextBoxColumn,
@@ -69,20 +70,6 @@
             this.data_usuario.TabIndex = 0;
             this.data_usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_usuario_CellContentClick);
             this.data_usuario.DoubleClick += new System.EventHandler(this.data_usuario_DoubleClick);
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "usuario";
-            this.usuarioBindingSource.DataSource = this.postgresDataSet;
-            // 
-            // postgresDataSet
-            // 
-            this.postgresDataSet.DataSetName = "postgresDataSet";
-            this.postgresDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -140,13 +127,29 @@
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
             this.enderecoDataGridViewTextBoxColumn.Width = 150;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "usuario";
+            this.usuarioBindingSource.DataSource = this.postgresDataSet;
+            // 
+            // postgresDataSet
+            // 
+            this.postgresDataSet.DataSetName = "postgresDataSet";
+            this.postgresDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
             // Frm_Sel_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 418);
             this.Controls.Add(this.data_usuario);
+            this.MaximizeBox = false;
             this.Name = "Frm_Sel_User";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleção de Usuários";
             this.Load += new System.EventHandler(this.Frm_Sel_User_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_usuario)).EndInit();

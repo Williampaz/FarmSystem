@@ -33,7 +33,7 @@ namespace FarmSystem.Produtos
 			p.validade = Convert.ToDateTime(dvgprod.CurrentRow.Cells[6].Value.ToString());
 			p.mesdeplantio = Convert.ToDateTime(dvgprod.CurrentRow.Cells[7].Value.ToString());
 			p.diacolheita = Convert.ToInt32(dvgprod.CurrentRow.Cells[8].Value.ToString());
-			p.precokg_uni = Convert.ToDouble(dvgprod.CurrentRow.Cells[9].Value);
+			p.precokg_uni = Convert.ToDouble(dvgprod.CurrentRow.Cells[9].Value.ToString());
 			p.descricao = dvgprod.CurrentRow.Cells[10].Value.ToString();
 			return p;
 

@@ -99,5 +99,10 @@ namespace FarmSystem.Principal
         {
 			new plantacao().ShowDialog();
 		}
+
+        private void acõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			new acoes().ShowDialog();
+        }
     }
 }

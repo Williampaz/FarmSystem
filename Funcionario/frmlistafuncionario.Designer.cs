@@ -169,7 +169,9 @@
             this.Controls.Add(this.txtpesquisa);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmlistafuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listagem de Funcionarios";
             this.Load += new System.EventHandler(this.frmlistafuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).EndInit();

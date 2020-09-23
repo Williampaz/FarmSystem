@@ -51,6 +51,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtvalorvenda = new System.Windows.Forms.TextBox();
             this.dtgplantacao = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distinciaentreplantasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datadeplantioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valordevendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusdaplantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.previsaodecolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prevdatacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.btnlistafunc = new System.Windows.Forms.Button();
@@ -67,17 +78,6 @@
             this.btneditar = new System.Windows.Forms.Button();
             this.btngravar = new System.Windows.Forms.Button();
             this.plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.plantacaoTableAdapter();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distinciaentreplantasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datadeplantioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valordevendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusdaplantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.previsaodecolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prevdatacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
@@ -270,6 +270,77 @@
             this.dtgplantacao.Size = new System.Drawing.Size(1335, 433);
             this.dtgplantacao.TabIndex = 21;
             // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // funcionarioDataGridViewTextBoxColumn
+            // 
+            this.funcionarioDataGridViewTextBoxColumn.DataPropertyName = "funcionario";
+            this.funcionarioDataGridViewTextBoxColumn.HeaderText = "Funcionário";
+            this.funcionarioDataGridViewTextBoxColumn.Name = "funcionarioDataGridViewTextBoxColumn";
+            this.funcionarioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // areaDataGridViewTextBoxColumn
+            // 
+            this.areaDataGridViewTextBoxColumn.DataPropertyName = "area";
+            this.areaDataGridViewTextBoxColumn.HeaderText = "Área M²";
+            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
+            this.areaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // distinciaentreplantasDataGridViewTextBoxColumn
+            // 
+            this.distinciaentreplantasDataGridViewTextBoxColumn.DataPropertyName = "distinciaentreplantas";
+            this.distinciaentreplantasDataGridViewTextBoxColumn.HeaderText = "Distancia Plantas CM";
+            this.distinciaentreplantasDataGridViewTextBoxColumn.Name = "distinciaentreplantasDataGridViewTextBoxColumn";
+            // 
+            // datadeplantioDataGridViewTextBoxColumn
+            // 
+            this.datadeplantioDataGridViewTextBoxColumn.DataPropertyName = "datadeplantio";
+            this.datadeplantioDataGridViewTextBoxColumn.HeaderText = "Data Plantio";
+            this.datadeplantioDataGridViewTextBoxColumn.Name = "datadeplantioDataGridViewTextBoxColumn";
+            // 
+            // valordevendaDataGridViewTextBoxColumn
+            // 
+            this.valordevendaDataGridViewTextBoxColumn.DataPropertyName = "valordevenda";
+            this.valordevendaDataGridViewTextBoxColumn.HeaderText = "Valor de Venda";
+            this.valordevendaDataGridViewTextBoxColumn.Name = "valordevendaDataGridViewTextBoxColumn";
+            // 
+            // statusdaplantacaoDataGridViewTextBoxColumn
+            // 
+            this.statusdaplantacaoDataGridViewTextBoxColumn.DataPropertyName = "statusdaplantacao";
+            this.statusdaplantacaoDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusdaplantacaoDataGridViewTextBoxColumn.Name = "statusdaplantacaoDataGridViewTextBoxColumn";
+            this.statusdaplantacaoDataGridViewTextBoxColumn.Width = 210;
+            // 
+            // previsaodecolheitaDataGridViewTextBoxColumn
+            // 
+            this.previsaodecolheitaDataGridViewTextBoxColumn.DataPropertyName = "previsaodecolheita";
+            this.previsaodecolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Colheita (SACAS)";
+            this.previsaodecolheitaDataGridViewTextBoxColumn.Name = "previsaodecolheitaDataGridViewTextBoxColumn";
+            // 
+            // prevdatacolheitaDataGridViewTextBoxColumn
+            // 
+            this.prevdatacolheitaDataGridViewTextBoxColumn.DataPropertyName = "prevdatacolheita";
+            this.prevdatacolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Data Colheita";
+            this.prevdatacolheitaDataGridViewTextBoxColumn.Name = "prevdatacolheitaDataGridViewTextBoxColumn";
+            // 
+            // quantidadecolhidaDataGridViewTextBoxColumn
+            // 
+            this.quantidadecolhidaDataGridViewTextBoxColumn.DataPropertyName = "quantidadecolhida";
+            this.quantidadecolhidaDataGridViewTextBoxColumn.HeaderText = "Qtd Colhita (SACAS)";
+            this.quantidadecolhidaDataGridViewTextBoxColumn.Name = "quantidadecolhidaDataGridViewTextBoxColumn";
+            // 
+            // sementeusadaDataGridViewTextBoxColumn
+            // 
+            this.sementeusadaDataGridViewTextBoxColumn.DataPropertyName = "sementeusada";
+            this.sementeusadaDataGridViewTextBoxColumn.HeaderText = "Semente Usada";
+            this.sementeusadaDataGridViewTextBoxColumn.Name = "sementeusadaDataGridViewTextBoxColumn";
+            this.sementeusadaDataGridViewTextBoxColumn.Width = 210;
+            // 
             // plantacaoBindingSource
             // 
             this.plantacaoBindingSource.DataMember = "plantacao";
@@ -407,77 +478,6 @@
             // 
             this.plantacaoTableAdapter.ClearBeforeFill = true;
             // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // funcionarioDataGridViewTextBoxColumn
-            // 
-            this.funcionarioDataGridViewTextBoxColumn.DataPropertyName = "funcionario";
-            this.funcionarioDataGridViewTextBoxColumn.HeaderText = "Funcionário";
-            this.funcionarioDataGridViewTextBoxColumn.Name = "funcionarioDataGridViewTextBoxColumn";
-            this.funcionarioDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // areaDataGridViewTextBoxColumn
-            // 
-            this.areaDataGridViewTextBoxColumn.DataPropertyName = "area";
-            this.areaDataGridViewTextBoxColumn.HeaderText = "Área M²";
-            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
-            this.areaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // distinciaentreplantasDataGridViewTextBoxColumn
-            // 
-            this.distinciaentreplantasDataGridViewTextBoxColumn.DataPropertyName = "distinciaentreplantas";
-            this.distinciaentreplantasDataGridViewTextBoxColumn.HeaderText = "Distancia Plantas CM";
-            this.distinciaentreplantasDataGridViewTextBoxColumn.Name = "distinciaentreplantasDataGridViewTextBoxColumn";
-            // 
-            // datadeplantioDataGridViewTextBoxColumn
-            // 
-            this.datadeplantioDataGridViewTextBoxColumn.DataPropertyName = "datadeplantio";
-            this.datadeplantioDataGridViewTextBoxColumn.HeaderText = "Data Plantio";
-            this.datadeplantioDataGridViewTextBoxColumn.Name = "datadeplantioDataGridViewTextBoxColumn";
-            // 
-            // valordevendaDataGridViewTextBoxColumn
-            // 
-            this.valordevendaDataGridViewTextBoxColumn.DataPropertyName = "valordevenda";
-            this.valordevendaDataGridViewTextBoxColumn.HeaderText = "Valor de Venda";
-            this.valordevendaDataGridViewTextBoxColumn.Name = "valordevendaDataGridViewTextBoxColumn";
-            // 
-            // statusdaplantacaoDataGridViewTextBoxColumn
-            // 
-            this.statusdaplantacaoDataGridViewTextBoxColumn.DataPropertyName = "statusdaplantacao";
-            this.statusdaplantacaoDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusdaplantacaoDataGridViewTextBoxColumn.Name = "statusdaplantacaoDataGridViewTextBoxColumn";
-            this.statusdaplantacaoDataGridViewTextBoxColumn.Width = 210;
-            // 
-            // previsaodecolheitaDataGridViewTextBoxColumn
-            // 
-            this.previsaodecolheitaDataGridViewTextBoxColumn.DataPropertyName = "previsaodecolheita";
-            this.previsaodecolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Colheita (SACAS)";
-            this.previsaodecolheitaDataGridViewTextBoxColumn.Name = "previsaodecolheitaDataGridViewTextBoxColumn";
-            // 
-            // prevdatacolheitaDataGridViewTextBoxColumn
-            // 
-            this.prevdatacolheitaDataGridViewTextBoxColumn.DataPropertyName = "prevdatacolheita";
-            this.prevdatacolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Data Colheita";
-            this.prevdatacolheitaDataGridViewTextBoxColumn.Name = "prevdatacolheitaDataGridViewTextBoxColumn";
-            // 
-            // quantidadecolhidaDataGridViewTextBoxColumn
-            // 
-            this.quantidadecolhidaDataGridViewTextBoxColumn.DataPropertyName = "quantidadecolhida";
-            this.quantidadecolhidaDataGridViewTextBoxColumn.HeaderText = "Qtd Colhita (SACAS)";
-            this.quantidadecolhidaDataGridViewTextBoxColumn.Name = "quantidadecolhidaDataGridViewTextBoxColumn";
-            // 
-            // sementeusadaDataGridViewTextBoxColumn
-            // 
-            this.sementeusadaDataGridViewTextBoxColumn.DataPropertyName = "sementeusada";
-            this.sementeusadaDataGridViewTextBoxColumn.HeaderText = "Semente Usada";
-            this.sementeusadaDataGridViewTextBoxColumn.Name = "sementeusadaDataGridViewTextBoxColumn";
-            this.sementeusadaDataGridViewTextBoxColumn.Width = 210;
-            // 
             // plantacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +518,7 @@
             this.Controls.Add(this.txtcodfunc);
             this.Controls.Add(this.txtcodigo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "plantacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plantação";

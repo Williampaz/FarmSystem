@@ -135,7 +135,9 @@
             this.Controls.Add(this.dgvFornecedores);
             this.Controls.Add(this.txtPesquisarForn);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmListaFornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Fornecedores";
             this.Load += new System.EventHandler(this.frmListaFornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedores)).EndInit();

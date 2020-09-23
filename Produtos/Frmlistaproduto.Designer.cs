@@ -189,7 +189,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dvgprod);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Frmlistaproduto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listagem de Produtos";
             this.Load += new System.EventHandler(this.Frmlistaproduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgprod)).EndInit();
