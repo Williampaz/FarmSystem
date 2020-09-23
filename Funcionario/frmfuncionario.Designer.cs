@@ -74,6 +74,7 @@
             this.txtcodigo.ReadOnly = true;
             this.txtcodigo.Size = new System.Drawing.Size(179, 20);
             this.txtcodigo.TabIndex = 0;
+            this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
             this.txtcodigo.Leave += new System.EventHandler(this.txtcodigo_Leave);
             // 
             // txtnome

@@ -28,9 +28,27 @@ namespace FarmSystem.Funcionario
         }
 
 
+        private funcionario getcadfuncionario()
+        {
+            funcionario func = new funcionario();
+
+            func.nome = txtnome.Text;
+            func.idade = txtidade.Text;
+            func.datanasc = Convert.ToDateTime(mskdtanasc.Text);
+            func.fone = msktel.Text;
+            func.endereco = txtendereco.Text;
+            func.dataadmissao = Convert.ToDateTime(mskdtaadm.Text);
+            func.cargo = txtcargo.Text;
+            func.salario = Convert.ToDouble(txtsalario.Text);
+
+            return func;
+
+        }
+
         private funcionario getfuncionario()
         {
             funcionario func = new funcionario();
+            func.codigo = Convert.ToInt32(txtcodigo.Text);
             func.nome = txtnome.Text;
             func.idade = txtidade.Text;
             func.datanasc = Convert.ToDateTime(mskdtanasc.Text);
@@ -77,7 +95,7 @@ namespace FarmSystem.Funcionario
             {
                 daofuncionario df = new daofuncionario();
 
-                df.Cadastar(getfuncionario());
+                df.Cadastar(getcadfuncionario());
 
                 MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado");
                 limpar();
@@ -97,6 +115,7 @@ namespace FarmSystem.Funcionario
             df.Editar(getfuncionario());
             limpar();
             MessageBox.Show("Dados alterados com sucesso", "Dados alterados");
+
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
@@ -228,6 +247,11 @@ namespace FarmSystem.Funcionario
                 mskdtaadm.Focus();
                 return;
             }
+        }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
