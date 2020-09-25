@@ -16,7 +16,12 @@ namespace FarmSystem.Plantação
         public plantacao()
         {
             InitializeComponent();
+            daoplantacao dp = new daoplantacao();
+            res = dp.getCod() + 1;
+            txtcodigo.Text = res + "";
         }
+
+        int res;
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -141,7 +146,7 @@ namespace FarmSystem.Plantação
         private void plantacao_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'postgresDataSet2.plantacao'. Você pode movê-la ou removê-la conforme necessário.
-            this.plantacaoTableAdapter.Fill(this.postgresDataSet2.plantacao);
+            //this.plantacaoTableAdapter.Fill(this.postgresDataSet2.plantacao);
 
             atualizardtg();
             
@@ -156,22 +161,26 @@ namespace FarmSystem.Plantação
 
         private void btngravar_Click(object sender, EventArgs e)
         {
-            /*try
-            {*/
+            try
+            {
                 daoplantacao dp = new daoplantacao();
 
                 dp.cadastrar(GetcadPlantacao());
 
-                MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado");
+                MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpar();
 
-            atualizardtg();
+                atualizardtg();
 
-          /*  }
-            catch
+                res = dp.getCod() + 1;
+                txtcodigo.Text = res + "";
+
+            }
+             catch
             {
-                MessageBox.Show("Erro ao Cadastrar, por favor verifique se todos campo estão preenchidos");
-            }*/
+                  MessageBox.Show("Não foi possível realizar o cadastro, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
 
@@ -210,27 +219,38 @@ namespace FarmSystem.Plantação
                 daoplantacao dp = new daoplantacao();
                 dp.Editar(GetPlantacao());
                 limpar();
-                MessageBox.Show("Alteração efetuada com sucesso!", "Alteração");
+                MessageBox.Show("Alteração efetuada com sucesso!", "Alteração", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 atualizardtg();
+                res = dp.getCod() + 1;
+                txtcodigo.Text = res + "";
             }
             catch
             {
-                MessageBox.Show("Erro por favor verifique se algum campo esta em branco", "Erro");
+                MessageBox.Show("Não foi possível realizar a edição, tente novamente", "Erro na edição", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void brnexcluir_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DialogResult confirm = MessageBox.Show("Deseja excluir registro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
 
-            DialogResult confirm = MessageBox.Show("Deseja excluir registro?","Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                if (confirm.ToString().ToUpper() == "YES")
+                {
 
-            if (confirm.ToString().ToUpper() == "YES") {
-
-                daoplantacao dp = new daoplantacao();
-                dp.Excluir(Convert.ToInt32(txtcodigo.Text));
-                MessageBox.Show("Excluido", "Exclusão");
-                atualizardtg();
-                limpar();
+                    daoplantacao dp = new daoplantacao();
+                    dp.Excluir(Convert.ToInt32(txtcodigo.Text));
+                    MessageBox.Show("Excluído com sucesso", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    atualizardtg();
+                    limpar();
+                    res = dp.getCod() + 1;
+                    txtcodigo.Text = res + "";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível excluir o cadastro", "Erro na exclusão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

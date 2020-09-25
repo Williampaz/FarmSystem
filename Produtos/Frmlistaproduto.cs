@@ -24,11 +24,11 @@ namespace FarmSystem.Produtos
         {
 
 			Produto p = new Produto();
-			p.codigo = Convert.ToInt32(dvgprod.CurrentRow.Cells[0].Value.ToString());
-			p.codigoforn = Convert.ToInt32(dvgprod.CurrentRow.Cells[1].Value.ToString());
+			p.codigo = Convert.ToInt32(dvgprod.CurrentRow.Cells[0].Value);
+			p.codigoforn = Convert.ToInt32(dvgprod.CurrentRow.Cells[1].Value);
 			p.tipoprod = dvgprod.CurrentRow.Cells[2].Value.ToString();
 			p.nome = dvgprod.CurrentRow.Cells[3].Value.ToString();
-			p.quantidade = Convert.ToInt32(dvgprod.CurrentRow.Cells[4].Value.ToString());
+			p.quantidade = Convert.ToInt32(dvgprod.CurrentRow.Cells[4].Value);
 			p.mesdeuso = dvgprod.CurrentRow.Cells[5].Value.ToString();
 			p.validade = Convert.ToDateTime(dvgprod.CurrentRow.Cells[6].Value.ToString());
 			p.mesdeplantio = Convert.ToDateTime(dvgprod.CurrentRow.Cells[7].Value.ToString());
@@ -43,7 +43,7 @@ namespace FarmSystem.Produtos
 		private void Frmlistaproduto_Load(object sender, EventArgs e)
 		{
             // TODO: esta linha de código carrega dados na tabela 'postgresDataSet1.produtos'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtosTableAdapter.Fill(this.postgresDataSet1.produtos);
+            //this.produtosTableAdapter.Fill(this.postgresDataSet1.produtos);
            
 		}
 

@@ -34,7 +34,7 @@ namespace FarmSystem.Plantação
         public int codigoprod
         {
             get { return _codigoprod; }
-            set { _codigo = value; }
+            set { _codigoprod = value; }
         }
 
         private DateTime _dataac;

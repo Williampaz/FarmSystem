@@ -111,7 +111,7 @@
             // 
             // txtPesquisarForn
             // 
-            this.txtPesquisarForn.Location = new System.Drawing.Point(69, 12);
+            this.txtPesquisarForn.Location = new System.Drawing.Point(245, 12);
             this.txtPesquisarForn.Name = "txtPesquisarForn";
             this.txtPesquisarForn.Size = new System.Drawing.Size(736, 20);
             this.txtPesquisarForn.TabIndex = 4;
@@ -120,7 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Location = new System.Drawing.Point(189, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 3;

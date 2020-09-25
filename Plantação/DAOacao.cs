@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FarmSystem.Funcionario;
 using FarmSystem.Plantação;
+using FarmSystem.Produtos;
 using Npgsql;
 using NpgsqlTypes;
 
@@ -14,7 +16,8 @@ namespace FarmSystem
         public void CadastarAcao(objacao acao)
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("insert into farmsystem.acoes (tipoacao,plantacao,codigoprod,dataac,funcionario,status) values (@tipo,@plantacao,@prod,@dt,@func,@status)");
+            NpgsqlCommand query = new NpgsqlCommand("insert into farmsystem.acoes (tipoacao,plantacao," +
+                "codigoprod,dataac,funcionario,status) values (@tipo,@plantacao,@prod,@dt,@func,@status)");
             query.Connection = conn.entrar();
             query.Parameters.Add("@tipo", NpgsqlDbType.Varchar).Value = acao.tipoacao;
             query.Parameters.Add("@plantacao", NpgsqlDbType.Integer).Value = acao.plantacao;
@@ -132,6 +135,106 @@ namespace FarmSystem
                     }
                     conn.sair();
                     return acoes;
+                }
+            }
+            conn.sair();
+            return null;
+        }
+
+        public funcionario ProcuraFuncionario(int codFunc)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,idade,nascimento,fone,endereco,dataadmissao,cargo,salario from farmsystem.funcionario where codigo = @codfunc");
+            query.Connection = conn.entrar();
+            query.Parameters.Add("@codfunc", NpgsqlDbType.Integer).Value = codFunc;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    funcionario f = null;
+                    if (dr.Read())
+                    {
+                        f = new funcionario();
+                        f.codigo = dr.GetInt32(0);
+                        f.nome = dr.GetString(1);
+                        f.idade = dr.GetString(2);
+                        f.datanasc = dr.GetDateTime(3);
+                        f.fone = dr.GetString(4);
+                        f.endereco = dr.GetString(5);
+                        f.dataadmissao = dr.GetDateTime(6);
+                        f.cargo = dr.GetString(7);
+                        f.salario = dr.GetDouble(8);
+                    }
+                    conn.sair();
+                    return f;
+                }
+            }
+            conn.sair();
+            return null;
+        }
+
+        public Produto ProcuraProduto(int codProd)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,codigoforn,tipoprod,nome,quantidade,mesdeuso,validade,mesdeplantio,diacolheita,precokg_uni,descricao from farmsystem.produtos where codigo = @cod");
+            query.Connection = conn.entrar();
+            query.Parameters.Add("@cod", NpgsqlDbType.Integer).Value = codProd;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    Produto p = null;
+                    if (dr.Read())
+                    {
+                        p = new Produto();
+                        p.codigo = dr.GetInt32(0);
+                        p.codigoforn = dr.GetInt32(1);
+                        p.tipoprod = dr.GetString(2);
+                        p.nome = dr.GetString(3);
+                        p.quantidade = dr.GetInt32(4);
+                        p.mesdeuso = dr.GetString(5);
+                        p.validade = dr.GetDateTime(6);
+                        p.mesdeplantio = dr.GetDateTime(7);
+                        p.diacolheita = dr.GetInt32(8);
+                        p.precokg_uni = dr.GetDouble(9);
+                        p.descricao = dr.GetString(10);
+                    }
+                    conn.sair();
+                    return p;
+                }
+            }
+            conn.sair();
+            return null;
+        }
+
+        public objplantacao ProcuraPlantacao(int codPlant)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,funcionario,area,distinciaentreplantas,datadeplantio,valordevenda,statusdaplantacao,previsaodecolheita,prevdatacolheita,quantidadecolhida,sementeusada from farmsystem.plantacao where codigo = @cod");
+            query.Connection = conn.entrar();
+            query.Parameters.Add("@cod", NpgsqlDbType.Integer).Value = codPlant;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    objplantacao p = null;
+                    if (dr.Read())
+                    {
+                        p = new objplantacao();
+                        p.codigo = dr.GetInt32(0);
+                        p.funcionario = dr.GetInt32(1);
+                        p.area = dr.GetDouble(2);
+                        p.distinciaentreplantas = dr.GetDouble(3);
+                        p.datadeplantio = dr.GetDateTime(4);
+                        p.valordevenda = dr.GetString(5);
+                        p.statusdaplantacao = dr.GetString(6);
+                        p.previsaodecolheita = dr.GetInt32(7);
+                        p.prevdatacolheita = dr.GetDateTime(8);
+                        p.quantidadecolhida = dr.GetInt32(9);
+                        p.sementeusada = dr.GetString(10);
+                    }
+                    conn.sair();
+                    return p;
                 }
             }
             conn.sair();

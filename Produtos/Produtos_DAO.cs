@@ -69,7 +69,8 @@ namespace FarmSystem.Produtos
         public List<Produto> ListaProduto(String prod)
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,quantidade,tipoprod,mesdeuso,validade,mesdeplantio,diacolheita,precokg_uni,descricao from farmsystem.produtos where LIKE @nomep");
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,codigoforn,tipoprod,nome,quantidade,mesdeuso,validade," +
+                "mesdeplantio,diacolheita,precokg_uni,descricao from farmsystem.produtos where nome ILIKE @nomep");
             query.Connection = conn.entrar();
             query.Parameters.Add("@nomep", NpgsqlDbType.Varchar).Value = "%" + prod + "%";
             using (NpgsqlDataReader dr = query.ExecuteReader())
@@ -89,7 +90,7 @@ namespace FarmSystem.Produtos
                         p.validade = dr.GetDateTime(6);
                         p.mesdeplantio = dr.GetDateTime(7);
                         p.diacolheita = dr.GetInt32(8);
-                        p.precokg_uni = dr.GetFloat(9);
+                        p.precokg_uni = dr.GetDouble(9);
                         p.descricao = dr.GetString(10);
                         produtos.Add(p);
                     }

@@ -43,6 +43,7 @@
             this.cadastroDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosPessoalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relaçãoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,6 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.btnplantacao = new System.Windows.Forms.Button();
-            this.acõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,6 +157,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Honeydew;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.relatoriosPessoalToolStripMenuItem,
@@ -207,6 +208,13 @@
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "&Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
+            // acõesToolStripMenuItem
+            // 
+            this.acõesToolStripMenuItem.Name = "acõesToolStripMenuItem";
+            this.acõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acõesToolStripMenuItem.Text = "Acões";
+            this.acõesToolStripMenuItem.Click += new System.EventHandler(this.acõesToolStripMenuItem_Click);
             // 
             // relatoriosPessoalToolStripMenuItem
             // 
@@ -284,13 +292,6 @@
             this.btnplantacao.TabIndex = 9;
             this.btnplantacao.UseVisualStyleBackColor = false;
             this.btnplantacao.Click += new System.EventHandler(this.btnplantacao_Click);
-            // 
-            // acõesToolStripMenuItem
-            // 
-            this.acõesToolStripMenuItem.Name = "acõesToolStripMenuItem";
-            this.acõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.acõesToolStripMenuItem.Text = "Acões";
-            this.acõesToolStripMenuItem.Click += new System.EventHandler(this.acõesToolStripMenuItem_Click);
             // 
             // Frm_Inicial
             // 

@@ -66,9 +66,7 @@ namespace FarmSystem.Funcionario
         public List<funcionario> listafunciorio(String func)
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,idade,nascimento," +
-                "fone,endereco,dataadmissao," +
-                "cargo,salario from farmsystem.funcionario where nome LIKE @nomefunc");
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome,idade,nascimento,fone,endereco,dataadmissao,cargo,salario from farmsystem.funcionario where nome ILIKE @nomefunc");
             query.Connection = conn.entrar();
             query.Parameters.Add("@nomefunc", NpgsqlDbType.Varchar).Value = "%" + func + "%";
             using (NpgsqlDataReader dr = query.ExecuteReader())
@@ -87,7 +85,7 @@ namespace FarmSystem.Funcionario
                         f.endereco = dr.GetString(5);
                         f.dataadmissao = dr.GetDateTime(6);
                         f.cargo = dr.GetString(7);
-                        f.salario = dr.GetFloat(8);
+                        f.salario = dr.GetDouble(8);
                         funcionario.Add(f);
                     }
                     conn.sair();

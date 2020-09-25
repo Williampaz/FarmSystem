@@ -98,6 +98,7 @@
             this.txtplantacao.Name = "txtplantacao";
             this.txtplantacao.Size = new System.Drawing.Size(82, 20);
             this.txtplantacao.TabIndex = 11;
+            this.txtplantacao.TextChanged += new System.EventHandler(this.txtplantacao_TextChanged);
             // 
             // txtprod
             // 
@@ -105,6 +106,7 @@
             this.txtprod.Name = "txtprod";
             this.txtprod.Size = new System.Drawing.Size(82, 20);
             this.txtprod.TabIndex = 12;
+            this.txtprod.TextChanged += new System.EventHandler(this.txtprod_TextChanged);
             // 
             // txtdescricao
             // 
@@ -215,6 +217,7 @@
             this.txtfunc.Name = "txtfunc";
             this.txtfunc.Size = new System.Drawing.Size(82, 20);
             this.txtfunc.TabIndex = 13;
+            this.txtfunc.TextChanged += new System.EventHandler(this.txtfunc_TextChanged);
             // 
             // btnListaPlant
             // 
@@ -226,6 +229,7 @@
             this.btnListaPlant.TabIndex = 2;
             this.btnListaPlant.Text = "Listar";
             this.btnListaPlant.UseVisualStyleBackColor = true;
+            this.btnListaPlant.Click += new System.EventHandler(this.btnListaPlant_Click);
             // 
             // btnListaProd
             // 
@@ -269,6 +273,7 @@
             this.dgvacoes.Name = "dgvacoes";
             this.dgvacoes.Size = new System.Drawing.Size(934, 317);
             this.dgvacoes.TabIndex = 17;
+            this.dgvacoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvacoes_CellDoubleClick);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -424,6 +429,7 @@
             this.btnexcluir.Size = new System.Drawing.Size(89, 76);
             this.btnexcluir.TabIndex = 9;
             this.btnexcluir.UseVisualStyleBackColor = true;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btneditar
             // 
@@ -436,6 +442,7 @@
             this.btneditar.Size = new System.Drawing.Size(89, 76);
             this.btneditar.TabIndex = 8;
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btngravar
             // 
@@ -448,6 +455,7 @@
             this.btngravar.Size = new System.Drawing.Size(89, 76);
             this.btngravar.TabIndex = 7;
             this.btngravar.UseVisualStyleBackColor = true;
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
             // acoes
             // 

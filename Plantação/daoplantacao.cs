@@ -237,7 +237,28 @@ namespace FarmSystem.Plantação
             conn.sair();
         }
 
-
+        public int getCod()
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("select p.codigo from farmsystem.plantacao p " +
+                "where p.codigo=(select max(plant.codigo) from farmsystem.plantacao plant)");
+            query.Connection = conn.entrar();
+            int num = 0;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        num = dr.GetInt32(0);
+                    }
+                    conn.sair();
+                    return num;
+                }
+            }
+            conn.sair();
+            return num;
+        }
 
 
     }

@@ -36,6 +36,16 @@ namespace FarmSystem.Fornecedor
             txtEmailFornecedor.Clear();
         }
 
+        private void LimparBtn()
+        {
+            txtNomeFornecedor.Clear();
+            txtEndFornecedor.Clear();
+            txtCidadeFornecedor.Clear();
+            txtCnpj.Clear();
+            txtFoneFornecedor.Clear();
+            txtEmailFornecedor.Clear();
+        }
+
         private Fornecedor getFornecedor()
         {
             Fornecedor f = new Fornecedor();
@@ -67,6 +77,8 @@ namespace FarmSystem.Fornecedor
                 df.Cadastar(getFornecedor());
                 MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpar();
+                res = df.getCod() + 1;
+                txtCodFornecedor.Text = res + "";
             } catch (Exception )
             {
                 MessageBox.Show("Não foi possível realizar o cadastro, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,14 +89,21 @@ namespace FarmSystem.Fornecedor
         
 		private void btnSelecionarForn_Click_1(object sender, EventArgs e)
 		{
-            frmListaFornecedor lf = new frmListaFornecedor();
-            lf.ShowDialog();
-            if (lf.DialogResult == DialogResult.OK)
+            try
             {
-                btnEditar.Enabled = true;
-                btnExcluir.Enabled = true;
-                btnCadastrar.Enabled = false;
-                setFornecedor(lf.GetFornecedor());
+                frmListaFornecedor lf = new frmListaFornecedor();
+                lf.ShowDialog();
+                if (lf.DialogResult == DialogResult.OK)
+                {
+                    btnEditar.Enabled = true;
+                    btnExcluir.Enabled = true;
+                    btnCadastrar.Enabled = false;
+                    setFornecedor(lf.GetFornecedor());
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -99,10 +118,12 @@ namespace FarmSystem.Fornecedor
                 btnCadastrar.Enabled = true;
                 btnEditar.Enabled = false;
                 btnExcluir.Enabled = false;
+                res = df.getCod() + 1;
+                txtCodFornecedor.Text = res + "";
             }
             catch (Exception)
             {
-                MessageBox.Show("Não foi possível realizar a edição, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Não foi possível realizar a edição, tente novamente", "Erro na edição", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -118,17 +139,19 @@ namespace FarmSystem.Fornecedor
                     btnCadastrar.Enabled = true;
                     btnEditar.Enabled = false;
                     btnExcluir.Enabled = false;
+                    res = df.getCod() + 1;
+                    txtCodFornecedor.Text = res + "";
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Não foi possível realizar a exclusão, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Não foi possível realizar a exclusão, tente novamente", "Erro ao excluir", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
 		private void btnLimpar_Click(object sender, EventArgs e)
 		{
-            Limpar();
+            LimparBtn();
         }
 
         private void txtNomeFornecedor_Leave(object sender, EventArgs e)
