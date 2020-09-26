@@ -43,6 +43,7 @@
             this.cadastroDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosPessoalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relaçãoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -156,6 +157,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Honeydew;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.relatoriosPessoalToolStripMenuItem,
@@ -173,7 +175,8 @@
             this.cadastroDeUsuáriosToolStripMenuItem,
             this.cadastroDeFuncionáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem,
-            this.produtosToolStripMenuItem});
+            this.produtosToolStripMenuItem,
+            this.acõesToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "&Cadastros";
@@ -181,30 +184,37 @@
             // cadastroDeUsuáriosToolStripMenuItem
             // 
             this.cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
-            this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroDeUsuáriosToolStripMenuItem.Text = "&Usuários";
             this.cadastroDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeUsuáriosToolStripMenuItem_Click);
             // 
             // cadastroDeFuncionáriosToolStripMenuItem
             // 
             this.cadastroDeFuncionáriosToolStripMenuItem.Name = "cadastroDeFuncionáriosToolStripMenuItem";
-            this.cadastroDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.cadastroDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroDeFuncionáriosToolStripMenuItem.Text = "Fu&ncionários";
             this.cadastroDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFuncionáriosToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fornecedoresToolStripMenuItem.Text = "&Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "&Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
+            // acõesToolStripMenuItem
+            // 
+            this.acõesToolStripMenuItem.Name = "acõesToolStripMenuItem";
+            this.acõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acõesToolStripMenuItem.Text = "Acões";
+            this.acõesToolStripMenuItem.Click += new System.EventHandler(this.acõesToolStripMenuItem_Click);
             // 
             // relatoriosPessoalToolStripMenuItem
             // 
@@ -340,5 +350,6 @@
 		private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnplantacao;
+        private System.Windows.Forms.ToolStripMenuItem acõesToolStripMenuItem;
     }
 }

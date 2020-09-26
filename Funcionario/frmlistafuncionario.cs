@@ -42,7 +42,7 @@ namespace FarmSystem.Funcionario
         private void frmlistafuncionario_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'farmsystemDB.funcionario'. Você pode movê-la ou removê-la conforme necessário.
-            this.funcionarioTableAdapter.Fill(this.farmsystemDB.funcionario);
+            //this.funcionarioTableAdapter.Fill(this.farmsystemDB.funcionario);
        
 
         }

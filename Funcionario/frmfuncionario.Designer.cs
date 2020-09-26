@@ -341,7 +341,9 @@
             this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmfuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionarios";
             ((System.ComponentModel.ISupportInitialize)(this.epdFuncionario)).EndInit();
             this.ResumeLayout(false);

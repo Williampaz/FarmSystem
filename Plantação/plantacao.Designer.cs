@@ -256,6 +256,7 @@
             // dtgplantacao
             // 
             this.dtgplantacao.AutoGenerateColumns = false;
+            this.dtgplantacao.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dtgplantacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgplantacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoDataGridViewTextBoxColumn,
@@ -359,6 +360,8 @@
             // 
             // btnlistafunc
             // 
+            this.btnlistafunc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlistafunc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlistafunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlistafunc.Location = new System.Drawing.Point(137, 71);
             this.btnlistafunc.Name = "btnlistafunc";
@@ -430,7 +433,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1074, 231);
+            this.label16.Location = new System.Drawing.Point(1077, 231);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(43, 13);
             this.label16.TabIndex = 34;
@@ -440,7 +443,8 @@
             // 
             this.btnacoes.BackgroundImage = global::FarmSystem.Properties.Resources.clipboard;
             this.btnacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnacoes.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnacoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnacoes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnacoes.Location = new System.Drawing.Point(844, 146);
             this.btnacoes.Name = "btnacoes";
             this.btnacoes.Size = new System.Drawing.Size(507, 82);
@@ -453,6 +457,8 @@
             // 
             this.brnexcluir.BackgroundImage = global::FarmSystem.Properties.Resources.delete;
             this.brnexcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.brnexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.brnexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.brnexcluir.Location = new System.Drawing.Point(1186, 36);
             this.brnexcluir.Name = "brnexcluir";
             this.brnexcluir.Size = new System.Drawing.Size(165, 82);
@@ -464,6 +470,8 @@
             // 
             this.btneditar.BackgroundImage = global::FarmSystem.Properties.Resources.edit;
             this.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btneditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btneditar.Location = new System.Drawing.Point(1015, 36);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(165, 82);
@@ -475,6 +483,8 @@
             // 
             this.btngravar.BackgroundImage = global::FarmSystem.Properties.Resources.floppy_disk;
             this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btngravar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btngravar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btngravar.Location = new System.Drawing.Point(844, 36);
             this.btngravar.Name = "btngravar";
             this.btngravar.Size = new System.Drawing.Size(165, 82);
@@ -520,7 +530,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1354, 699);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(1363, 699);
             this.Controls.Add(this.Pesquisa);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);

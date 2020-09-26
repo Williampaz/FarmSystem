@@ -19,13 +19,6 @@ namespace FarmSystem.Fornecedor
             dgvFornecedores.DataSource = df.ListaFornecedores();
         }
 
-        public frmListaFornecedor(Fornecedor f)
-        {
-            InitializeComponent();
-            DAOfornecedor df = new DAOfornecedor();
-            dgvFornecedores.DataSource = df.ListaFornecedores();
-        }
-
         public Fornecedor GetFornecedor()
         {
             Fornecedor f = new Fornecedor();

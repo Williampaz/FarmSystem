@@ -18,6 +18,8 @@ namespace FarmSystem.Funcionario
             daofuncionario df = new daofuncionario();
             res = df.getCod() + 1;
             txtcodigo.Text = res + "";
+            btneditar.Enabled = false;
+            btnexcluir.Enabled = false;
         }
 
         int res;
@@ -89,6 +91,19 @@ namespace FarmSystem.Funcionario
 
 
         }
+
+        public void limparbtn()
+        {
+            txtnome.Clear();
+            txtidade.Clear();
+            mskdtanasc.Clear();
+            msktel.Clear();
+            txtendereco.Clear();
+            mskdtaadm.Clear();
+            txtcargo.Clear();
+            txtsalario.Clear();
+        }
+    
         private void btngravar_Click(object sender, EventArgs e)
         {
             try
@@ -97,68 +112,111 @@ namespace FarmSystem.Funcionario
 
                 df.Cadastar(getcadfuncionario());
 
-                MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado");
+                MessageBox.Show("Funcionário cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpar();
             }
             catch
             {
-                MessageBox.Show("Erro ao Cadastrar, por favor verifique se todos campo estão preenchidos");
+                MessageBox.Show("Erro ao Cadastrar, por favor verifique se todos campo estão preenchidos","Não foi possível realizar o cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         
-          
-
         }
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            daofuncionario df = new daofuncionario();
-            df.Editar(getfuncionario());
-            limpar();
-            MessageBox.Show("Dados alterados com sucesso", "Dados alterados");
-
+            try
+            {
+                daofuncionario df = new daofuncionario();
+                df.Editar(getfuncionario());
+                limpar();
+                MessageBox.Show("Dados alterados com sucesso", "Dados alterados", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                btngravar.Enabled = true;
+                btneditar.Enabled = false;
+                btnexcluir.Enabled = false;
+                res = df.getCod() + 1;
+                txtcodigo.Text = res + "";
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao Editar, por favor verifique se os dados estão corretos", "Não foi possível realizar a edição", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+            }
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
         {
-
-            daofuncionario df = new daofuncionario();
-            df.Excluir(Convert.ToInt32(txtcodigo.Text));
-            limpar();
-            MessageBox.Show("Excluido", "Exclusão");
+            try
+            {
+                if ((MessageBox.Show("Deseja excluir este cadastro ?", "Excluir funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+                {
+                    daofuncionario df = new daofuncionario();
+                    df.Excluir(Convert.ToInt32(txtcodigo.Text));
+                    limpar();
+                    MessageBox.Show("Cadastro de funcionário excluido com sucesso", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btngravar.Enabled = true;
+                    btneditar.Enabled = false;
+                    btnexcluir.Enabled = false;
+                    res = df.getCod() + 1;
+                    txtcodigo.Text = res + "";
+                }
+                else
+                {
+                    limpar();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao excluir, por favor verifique se há um funcionário selecionado", "Não foi possível realizar a exclusão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnlistar_Click(object sender, EventArgs e)
         {
-            frmlistafuncionario lf = new frmlistafuncionario();
-            lf.ShowDialog();
-
-            if (lf.DialogResult == DialogResult.OK)
+            try
             {
-                setfuncionario(lf.getfuncionario());
+                frmlistafuncionario lf = new frmlistafuncionario();
+                lf.ShowDialog();
 
+                if (lf.DialogResult == DialogResult.OK)
+                {
+                    setfuncionario(lf.getfuncionario());
+                    btneditar.Enabled = true;
+                    btnexcluir.Enabled = true;
+                    btngravar.Enabled = false;
+                }
             }
-          
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro, por favor tente novamente", "Erro",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtcodigo_Leave(object sender, EventArgs e)
         {
-            TextBox txt = (TextBox)sender;
-            txt.BackColor = Color.White;
-            if ((txt.Name == txtcodigo.Name) && (txt.Text != ""))
+            try
             {
-                funcionario f = new daofuncionario().buscafuncid(Int32.Parse(txtcodigo.Text));
-              
-
-                if (f != null)
+                TextBox txt = (TextBox)sender;
+                txt.BackColor = Color.White;
+                if ((txt.Name == txtcodigo.Name) && (txt.Text != ""))
                 {
-                    setfuncionario(f);
+                    funcionario f = new daofuncionario().buscafuncid(Int32.Parse(txtcodigo.Text));
+
+
+                    if (f != null)
+                    {
+                        setfuncionario(f);
+                    }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnlimpar_Click(object sender, EventArgs e)
         {
-            limpar();
+            limparbtn();
         }
 
         private void txtnome_Leave(object sender, EventArgs e)

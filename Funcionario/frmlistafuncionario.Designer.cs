@@ -53,7 +53,7 @@
             // 
             // txtpesquisa
             // 
-            this.txtpesquisa.Location = new System.Drawing.Point(68, 12);
+            this.txtpesquisa.Location = new System.Drawing.Point(308, 12);
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(599, 20);
             this.txtpesquisa.TabIndex = 8;
@@ -62,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(252, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 7;
@@ -169,7 +169,9 @@
             this.Controls.Add(this.txtpesquisa);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmlistafuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listagem de Funcionarios";
             this.Load += new System.EventHandler(this.frmlistafuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.farmsystemDB)).EndInit();

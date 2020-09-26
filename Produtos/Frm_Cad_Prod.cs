@@ -21,6 +21,8 @@ namespace FarmSystem.Produtos
             Produtos_DAO pd = new Produtos_DAO();
             res = pd.getCod() + 1;
             txtcodigo.Text = res + "";
+            btnedit.Enabled = false;
+            btnexcluir.Enabled = false;
 		}
 
         int res;
@@ -38,7 +40,22 @@ namespace FarmSystem.Produtos
             txtprecokguni.Clear();
             txtdescicao.Clear();
             txtcodigo.Clear();
+            cmb_Sel_Forn.SelectedIndex = -1;
 
+        }
+
+        private void LimparBtn()
+        {
+            txtdiacolheita.Clear();
+            txtmesplantio.Clear();
+            txtnomeprod.Clear();
+            txtvalidade.Clear();
+            txtmesdeuso.Clear();
+            txttipoprod.Clear();
+            txtquantidade.Clear();
+            txtprecokguni.Clear();
+            txtdescicao.Clear();
+            cmb_Sel_Forn.SelectedIndex = -1;
         }
 
         private Produto getProduto()
@@ -79,43 +96,87 @@ namespace FarmSystem.Produtos
         Produtos_DAO df = new Produtos_DAO();
         private void btncad_Click(object sender, EventArgs e)
 		{
-            df.Cadastar(Convert.ToInt32(txtcodigofornecedor.Text), txtnomeprod.Text, Convert.ToInt32(txtquantidade.Text), txttipoprod.Text, txtmesdeuso.Text, Convert.ToDateTime(txtvalidade.Text), Convert.ToDateTime(txtmesplantio.Text), Convert.ToInt32(txtdiacolheita.Text), Convert.ToDouble(txtprecokguni.Text),txtdescicao.Text);
-            MessageBox.Show("Produto cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Limpar();
+            try
+            {
+                df.Cadastar(Convert.ToInt32(txtcodigofornecedor.Text), txtnomeprod.Text, Convert.ToInt32(txtquantidade.Text), txttipoprod.Text, txtmesdeuso.Text, Convert.ToDateTime(txtvalidade.Text), Convert.ToDateTime(txtmesplantio.Text), Convert.ToInt32(txtdiacolheita.Text), Convert.ToDouble(txtprecokguni.Text), txtdescicao.Text);
+                MessageBox.Show("Produto cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpar();
+                res = df.getCod() + 1;
+                txtcodigo.Text = res + "";
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível realizar o cadastro, verifique se os dados estão corretos", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 		private void btnlimpar_Click(object sender, EventArgs e)
 		{
-            Limpar();
+            LimparBtn();
         }
 
 		private void btnexcluir_Click(object sender, EventArgs e)
 		{
-            if (MessageBox.Show("Deseja excluir este fornecedor ?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                df.Excluir(getProduto());
-                Limpar();
+                if (MessageBox.Show("Deseja excluir este Produto ?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    df.Excluir(getProduto());
+                    Limpar();
+                    res = df.getCod() + 1;
+                    txtcodigo.Text = res + "";
+                    btnexcluir.Enabled = false;
+                    btnedit.Enabled = false;
+                    btncad.Enabled = true;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro ao excluir, tente novamente", "Erro na exclusão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
 		private void btnedit_Click(object sender, EventArgs e)
 		{
-            df.Editar(getProduto());
-            MessageBox.Show("Dados alterados", "Edição concluida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            Limpar();
+            try
+            {
+                df.Editar(getProduto());
+                MessageBox.Show("Dados alterados", "Edição concluida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Limpar();
+                btncad.Enabled = true;
+                btnedit.Enabled = false;
+                btnexcluir.Enabled = false;
+                res = df.getCod() + 1;
+                txtcodigo.Text = res + "";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não foi possível realizar a edição, tente novamente", "Erro na edição", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 		private void btnsel_Click(object sender, EventArgs e)
 		{
-            Frmlistaproduto sel = new Frmlistaproduto();
-          
-            sel.ShowDialog();
-
-            if (sel.DialogResult == DialogResult.OK)
+            try
             {
-                setProduto(sel.getProduto());
+                Frmlistaproduto sel = new Frmlistaproduto();
+
+                sel.ShowDialog();
+
+                if (sel.DialogResult == DialogResult.OK)
+                {
+                    setProduto(sel.getProduto());
+                    btnedit.Enabled = true;
+                    btnexcluir.Enabled = true;
+                    btncad.Enabled = false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void PreencherCombo()
         {
             Conexao conn = new Conexao();
