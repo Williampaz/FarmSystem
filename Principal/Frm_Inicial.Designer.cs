@@ -53,6 +53,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.btnplantacao = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,35 +185,35 @@
             // cadastroDeUsuáriosToolStripMenuItem
             // 
             this.cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
-            this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.cadastroDeUsuáriosToolStripMenuItem.Text = "&Usuários";
             this.cadastroDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeUsuáriosToolStripMenuItem_Click);
             // 
             // cadastroDeFuncionáriosToolStripMenuItem
             // 
             this.cadastroDeFuncionáriosToolStripMenuItem.Name = "cadastroDeFuncionáriosToolStripMenuItem";
-            this.cadastroDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.cadastroDeFuncionáriosToolStripMenuItem.Text = "Fu&ncionários";
             this.cadastroDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFuncionáriosToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.fornecedoresToolStripMenuItem.Text = "&Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.produtosToolStripMenuItem.Text = "&Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // acõesToolStripMenuItem
             // 
             this.acõesToolStripMenuItem.Name = "acõesToolStripMenuItem";
-            this.acõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acõesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.acõesToolStripMenuItem.Text = "Acões";
             this.acõesToolStripMenuItem.Click += new System.EventHandler(this.acõesToolStripMenuItem_Click);
             // 
@@ -293,6 +294,18 @@
             this.btnplantacao.UseVisualStyleBackColor = false;
             this.btnplantacao.Click += new System.EventHandler(this.btnplantacao_Click);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Ivory;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(97, 482);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(82, 84);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Teste de Mensagem";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Frm_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +313,7 @@
             this.BackgroundImage = global::FarmSystem.Properties.Resources.corn_691634_1920;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 624);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnplantacao);
             this.Controls.Add(this.label4);
@@ -351,5 +365,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnplantacao;
         private System.Windows.Forms.ToolStripMenuItem acõesToolStripMenuItem;
+        private System.Windows.Forms.Button button5;
     }
 }
