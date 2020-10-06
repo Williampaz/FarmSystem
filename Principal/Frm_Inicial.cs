@@ -25,21 +25,27 @@ namespace FarmSystem.Principal
 		public Frm_Inicial()
 		{
 			InitializeComponent();
+			Slidepanel.Height = button1.Height;
+			Slidepanel.Top = button1.Top;
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			Slidepanel.Height = button1.Height;
+			Slidepanel.Top = button1.Top;
 			new Frm_Cad_User().ShowDialog();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
 			new frmCadastroFornecedor().ShowDialog();
+		
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
 			new frmfuncionario().ShowDialog();
+	
 
 		}
 
@@ -129,5 +135,39 @@ namespace FarmSystem.Principal
 				Console.WriteLine(message.Sid);
 			}
 		}
-	}
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+			Slidepanel.Height = button6.Height;
+			Slidepanel.Top = button6.Top;
+			new frmCadastroFornecedor().ShowDialog();
+		}
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+			Slidepanel.Height = button7.Height;
+			Slidepanel.Top = button7.Top;
+			new frmfuncionario().ShowDialog();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+			Slidepanel.Height = button8.Height;
+			Slidepanel.Top = button8.Top;
+			new Frm_Cad_Prod().ShowDialog();
+
+		}
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+			Slidepanel.Height = button9.Height;
+			Slidepanel.Top = button9.Top;
+			new plantacao().ShowDialog();
+			
+		}
+    }
 }
