@@ -8,7 +8,7 @@ using System;
 using System.Windows.Forms;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
-
+using FarmSystem.Previsão_do_tempo;
 
 namespace FarmSystem.Principal
 {
@@ -157,12 +157,7 @@ namespace FarmSystem.Principal
 			Slidepanel.Height = button9.Height;
 			Slidepanel.Top = button9.Top;
 			new plantacao().ShowDialog();
-
+			
 		}
-
-		private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-	}
+    }
 }
