@@ -99,7 +99,7 @@ namespace FarmSystem.Plantação
         {
             txtcodigo.Clear();
             txtdescricao.Clear();
-            txtipoac.Clear();
+            txtipoac.Text = "";
             txtfunc.Clear();
             txtprod.Clear();
             txtsemente.Clear();
@@ -113,7 +113,7 @@ namespace FarmSystem.Plantação
         public void limparbtn()
         {
             txtdescricao.Clear();
-            txtipoac.Clear();
+            txtipoac.Text = "";
             txtfunc.Clear();
             txtprod.Clear();
             txtsemente.Clear();

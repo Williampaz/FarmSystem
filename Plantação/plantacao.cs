@@ -129,7 +129,7 @@ namespace FarmSystem.Plantação
             txtdistancia.Clear();
             mskdataplantio.Text = "";
             txtvalorvenda.Clear();
-            txtstatus.Clear();
+            txtstatus.Text = "";
             txtprevisaosacas.Clear();
             mskprevisaodata.Text = "";
             txtqtdsacas.Clear();
