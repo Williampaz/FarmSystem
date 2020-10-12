@@ -158,14 +158,8 @@ namespace FarmSystem.Principal
 			Slidepanel.Height = button9.Height;
 			Slidepanel.Top = button9.Top;
 			new plantacao().ShowDialog();
-			
-		}
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-			Slidepanel.Height = button2.Height;
-			Slidepanel.Top = button2.Top;
-			new previsao().ShowDialog();
-        }
+		}
     }
+>>>>>>> ae66c0eab47d3ba4a74c2b6732a4bb2e5223b757
 }
