@@ -66,6 +66,8 @@ namespace FarmSystem.Plantação
             acao.dataac = Convert.ToDateTime(dgvacoes.CurrentRow.Cells[4].Value.ToString());
             acao.funcionario = Convert.ToInt32(dgvacoes.CurrentRow.Cells[5].Value.ToString());
             acao.status = dgvacoes.CurrentRow.Cells[6].Value.ToString();
+            acao.horario = dgvacoes.CurrentRow.Cells[7].Value.ToString();
+
             return acao;
         }
 
@@ -79,6 +81,8 @@ namespace FarmSystem.Plantação
             a.dataac = Convert.ToDateTime(mskdata.Text);
             a.funcionario = Convert.ToInt32(txtfunc.Text);
             a.status = combstatus.SelectedItem.ToString();
+            a.horario = txthorario.Text;
+
             return a;
         }
 
@@ -93,6 +97,8 @@ namespace FarmSystem.Plantação
             mskdata.Text = a.dataac.ToString();
             txtfunc.Text = a.funcionario.ToString();
             combstatus.SelectedIndex = posicao;
+            txthorario.Text = a.horario.ToString();
+
         }
 
         public void limpar()
@@ -107,6 +113,8 @@ namespace FarmSystem.Plantação
             combstatus.Text = "";
             txtplantacao.Clear();
             txtnome.Clear();
+            txthorario.Clear();
+
 
         }
 
@@ -121,6 +129,7 @@ namespace FarmSystem.Plantação
             combstatus.Text = "";
             txtplantacao.Clear();
             txtnome.Clear();
+            txthorario.Clear();
         }
 
         private void btnlimpar_Click(object sender, EventArgs e)
@@ -167,8 +176,9 @@ namespace FarmSystem.Plantação
 
         private void btngravar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+          
+         //{
                 DAOacao da = new DAOacao();
                 da.CadastarAcao(getAcao());
                 MessageBox.Show("Ação cadastrada com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -176,11 +186,11 @@ namespace FarmSystem.Plantação
                 Atualizar();
                 res = da.getCod() + 1;
                 txtcodigo.Text = res + "";
-            }
-            catch (Exception)
-            {
+          //  }
+           // catch (Exception)
+          //  {
                MessageBox.Show("Não foi possível realizar o cadastro da ação, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+          //  }
         }
 
         private void btneditar_Click(object sender, EventArgs e)

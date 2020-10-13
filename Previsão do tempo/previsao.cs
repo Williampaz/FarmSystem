@@ -18,6 +18,7 @@ namespace FarmSystem.Previsão_do_tempo
         public previsao()
         {
             InitializeComponent();
+
         }
 
             string city = "";
@@ -177,6 +178,11 @@ namespace FarmSystem.Previsão_do_tempo
         
 
         private void previsao_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

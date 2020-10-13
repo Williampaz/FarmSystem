@@ -82,6 +82,7 @@
             this.textBox1.Size = new System.Drawing.Size(212, 27);
             this.textBox1.TabIndex = 67;
             this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.previsao_KeyDown);
             // 
             // label2

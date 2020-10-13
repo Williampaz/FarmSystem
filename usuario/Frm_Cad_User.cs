@@ -28,6 +28,7 @@ namespace FarmSystem.usuario
 			txt_Nome.Enabled = false;
 			txt_Rg.Enabled = false;
 			txt_Senha.Enabled = false;
+			txtcidade.Enabled = false;
 		}
 		public void ativa()
 		{
@@ -39,6 +40,8 @@ namespace FarmSystem.usuario
 			txt_Nome.Enabled = true;
 			txt_Rg.Enabled = true;
 			txt_Senha.Enabled = true;
+			txtcidade.Enabled = true;
+
 		}
 		public void limpar()
 		{
@@ -51,6 +54,8 @@ namespace FarmSystem.usuario
 			txt_Nome.Clear();
 			txt_Rg.Clear();
 			txt_Senha.Clear();
+			txtcidade.Clear();
+
 		}
 		private void btn_Cancelar_Click(object sender, EventArgs e)
 		{
@@ -80,8 +85,8 @@ namespace FarmSystem.usuario
 			else
 			{
 				User_DAO cad = new User_DAO();
-				cad.cadastrar(txt_Nome.Text, txt_Rg.Text, txt_Codigo.Text, Convert.ToDateTime(txt_DataNascimento.Text),
-							  txt_Idade.Text, txt_Email.Text, txt_Senha.Text, txt_Endereco.Text);
+				cad.cadastrar(txt_Nome.Text, txt_Rg.Text,txt_CPF.Text, Convert.ToDateTime(txt_DataNascimento.Text),
+							  txt_Idade.Text, txt_Email.Text, txt_Senha.Text, txt_Endereco.Text, txtcidade.Text);
 				limpar();
 				MessageBox.Show("Cadastro realizado com sucesso!!");
 				desativa();
@@ -100,6 +105,8 @@ namespace FarmSystem.usuario
 			txt_Nome.Text = user.nome;
 			txt_Rg.Text = user.rg;
 			txt_Senha.Text = user.senha;
+			txtcidade.Text = user.cidade;
+
 		}
 		public User GetUser()
 		{
@@ -114,6 +121,8 @@ namespace FarmSystem.usuario
 				user.email = txt_Email.Text;
 				user.senha = txt_Senha.Text;
 				user.endereco = txt_Endereco.Text;
+			   user.cidade = txtcidade.Text;
+
 			return user;
 
 		}
@@ -232,5 +241,19 @@ namespace FarmSystem.usuario
         {
 
         }
+
+        private void txtcidade_Leave(object sender, EventArgs e)
+        {
+
+			epdUsuario.Clear();
+			if (txtcidade.Text.Equals(""))
+			{
+				epdUsuario.SetError(txtcidade, "Preencha este campo");
+				txtcidade.Focus();
+				return;
+			}
+
+
+		}
     }
 }

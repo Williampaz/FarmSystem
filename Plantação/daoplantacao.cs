@@ -18,9 +18,9 @@ namespace FarmSystem.Plantação
             Conexao conn = new Conexao();
             NpgsqlCommand query = new NpgsqlCommand("insert into farmsystem.plantacao" +
                 "(funcionario,area,distinciaentreplantas, datadeplantio, valordevenda, statusdaplantacao, " +
-                "previsaodecolheita, prevdatacolheita,quantidadecolhida, sementeusada)" +
+                "previsaodecolheita, prevdatacolheita,quantidadecolhida, sementeusada, datadecolheita)" +
                 "values(@funcionario, @area, @distanciaentreplantas, @datadeplantio, @valordevenda, @status," +
-                "@previsaocolheita, @prevdatacolheita, @quantidadecolhida, @semente)");
+                "@previsaodecolheita, @prevdatacolheita, @quantidadecolhida, @semente, @datadecolheita)");
 
             /*
                    codigo serial,
@@ -44,10 +44,11 @@ namespace FarmSystem.Plantação
             query.Parameters.Add("@datadeplantio", NpgsqlDbType.Date).Value = plant.datadeplantio;
             query.Parameters.Add("@valordevenda", NpgsqlDbType.Varchar).Value = plant.valordevenda;
             query.Parameters.Add("@status", NpgsqlDbType.Varchar).Value = plant.statusdaplantacao;
-            query.Parameters.Add("@previsaocolheita", NpgsqlDbType.Integer).Value = plant.previsaodecolheita;
+            query.Parameters.Add("@previsaodecolheita", NpgsqlDbType.Integer).Value = plant.previsaodecolheita;
             query.Parameters.Add("@prevdatacolheita", NpgsqlDbType.Date).Value = plant.prevdatacolheita;
             query.Parameters.Add("@quantidadecolhida", NpgsqlDbType.Integer).Value = plant.quantidadecolhida;
             query.Parameters.Add("@semente", NpgsqlDbType.Varchar).Value = plant.sementeusada;
+            query.Parameters.Add("@datadecolheita", NpgsqlDbType.Date).Value = plant.datadecolheita;
 
             query.ExecuteNonQuery();
             conn.sair();
@@ -57,7 +58,7 @@ namespace FarmSystem.Plantação
         public List<objplantacao> Listaplantacao()
         {
             Conexao conn = new Conexao();
-          NpgsqlCommand query = new NpgsqlCommand("Select codigo,funcionario, area, distinciaentreplantas, datadeplantio, valordevenda,statusdaplantacao,previsaodecolheita, prevdatacolheita, quantidadecolhida,sementeusada from Farmsystem.plantacao");
+          NpgsqlCommand query = new NpgsqlCommand("Select codigo,funcionario, area, distinciaentreplantas, datadeplantio, valordevenda,statusdaplantacao,previsaodecolheita, prevdatacolheita, quantidadecolhida,sementeusada, datadecolheita from Farmsystem.plantacao");
 
             query.Connection = conn.entrar();
             using (NpgsqlDataReader dr = query.ExecuteReader())
@@ -80,7 +81,7 @@ namespace FarmSystem.Plantação
                         p.prevdatacolheita = dr.GetDateTime(8);
                         p.quantidadecolhida = dr.GetInt32(9);
                         p.sementeusada = dr.GetString(10);
-
+                        p.datadecolheita = dr.GetDateTime(11);
                        plantacao.Add(p);
                     }
                     conn.sair();
@@ -95,7 +96,7 @@ namespace FarmSystem.Plantação
         public List<objplantacao> Listaplantacao(String semente)
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("Select codigo,funcionario,area, distinciaentreplantas, datadeplantio,valordevenda,statusdaplantacao,previsaodecolheita, prevdatacolheita, quantidadecolhida,sementeusada from farmsystem.plantacao where sementeusada ILIKE @semente");
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,funcionario,area, distinciaentreplantas, datadeplantio,valordevenda,statusdaplantacao,previsaodecolheita, prevdatacolheita, quantidadecolhida,sementeusada, datadecolheita from farmsystem.plantacao where sementeusada ILIKE @semente");
 
             query.Connection = conn.entrar();
 
@@ -136,6 +137,8 @@ namespace FarmSystem.Plantação
                         p.prevdatacolheita = dr.GetDateTime(8);
                         p.quantidadecolhida = dr.GetInt32(9);
                         p.sementeusada = dr.GetString(10);
+                        p.datadecolheita = dr.GetDateTime(11);
+
 
                         plantacao.Add(p);
                     }
@@ -154,7 +157,7 @@ namespace FarmSystem.Plantação
             NpgsqlCommand query = new NpgsqlCommand("update farmsystem.plantacao set funcionario = @funcionario," +
                 " area = @area,distinciaentreplantas = @distinciaentreplantas,datadeplantio = @datadeplantio, " +
                 "valordevenda = @valordevenda, statusdaplantacao = @status, previsaodecolheita = @previsaodecolheita," +
-                "prevdatacolheita = @prevdatacolheita,quantidadecolhida = @quantidadecolhida,sementeusada = @sementeusada" +
+                "prevdatacolheita = @prevdatacolheita,quantidadecolhida = @quantidadecolhida,sementeusada = @sementeusada, datadecolheita = @datadecolheita" +
                 " where codigo = @cod");
             /*
                  codigo serial,
@@ -181,11 +184,11 @@ namespace FarmSystem.Plantação
             query.Parameters.Add("@datadeplantio", NpgsqlDbType.Date).Value = plant.datadeplantio;
             query.Parameters.Add("@valordevenda", NpgsqlDbType.Varchar).Value = plant.valordevenda;
             query.Parameters.Add("@status", NpgsqlDbType.Varchar).Value = plant.statusdaplantacao;
-            query.Parameters.Add("@previsaocolheita", NpgsqlDbType.Integer).Value = plant.previsaodecolheita;
+            query.Parameters.Add("@previsaodecolheita", NpgsqlDbType.Integer).Value = plant.previsaodecolheita;
             query.Parameters.Add("@prevdatacolheita", NpgsqlDbType.Date).Value = plant.prevdatacolheita;
             query.Parameters.Add("@quantidadecolhida", NpgsqlDbType.Integer).Value = plant.quantidadecolhida;
             query.Parameters.Add("@sementeusada", NpgsqlDbType.Varchar).Value = plant.sementeusada;
-
+            query.Parameters.Add("@datadecolheita", NpgsqlDbType.Date).Value = plant.datadecolheita;
             query.ExecuteNonQuery();
             conn.sair();
         }

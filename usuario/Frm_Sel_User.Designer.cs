@@ -30,6 +30,9 @@
 		{
             this.components = new System.ComponentModel.Container();
             this.data_usuario = new System.Windows.Forms.DataGridView();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet = new FarmSystem.postgresDataSet();
+            this.usuarioTableAdapter = new FarmSystem.postgresDataSetTableAdapters.usuarioTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,9 +42,7 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postgresDataSet = new FarmSystem.postgresDataSet();
-            this.usuarioTableAdapter = new FarmSystem.postgresDataSetTableAdapters.usuarioTableAdapter();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet)).BeginInit();
@@ -61,15 +62,30 @@
             this.idadeDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.senhaDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn});
+            this.enderecoDataGridViewTextBoxColumn,
+            this.Cidade});
             this.data_usuario.DataSource = this.usuarioBindingSource;
             this.data_usuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_usuario.Location = new System.Drawing.Point(0, 0);
             this.data_usuario.Name = "data_usuario";
-            this.data_usuario.Size = new System.Drawing.Size(1051, 418);
+            this.data_usuario.Size = new System.Drawing.Size(1195, 418);
             this.data_usuario.TabIndex = 0;
             this.data_usuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_usuario_CellContentClick);
             this.data_usuario.DoubleClick += new System.EventHandler(this.data_usuario_DoubleClick);
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "usuario";
+            this.usuarioBindingSource.DataSource = this.postgresDataSet;
+            // 
+            // postgresDataSet
+            // 
+            this.postgresDataSet.DataSetName = "postgresDataSet";
+            this.postgresDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -127,25 +143,18 @@
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
             this.enderecoDataGridViewTextBoxColumn.Width = 150;
             // 
-            // usuarioBindingSource
+            // Cidade
             // 
-            this.usuarioBindingSource.DataMember = "usuario";
-            this.usuarioBindingSource.DataSource = this.postgresDataSet;
-            // 
-            // postgresDataSet
-            // 
-            this.postgresDataSet.DataSetName = "postgresDataSet";
-            this.postgresDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
+            this.Cidade.DataPropertyName = "cidade";
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.Width = 130;
             // 
             // Frm_Sel_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 418);
+            this.ClientSize = new System.Drawing.Size(1195, 418);
             this.Controls.Add(this.data_usuario);
             this.MaximizeBox = false;
             this.Name = "Frm_Sel_User";
@@ -174,5 +183,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
     }
 }

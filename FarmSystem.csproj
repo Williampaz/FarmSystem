@@ -474,6 +474,9 @@
     <Compile Include="Plantação\plantacao.Designer.cs">
       <DependentUpon>plantacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="postgresDataSet.cs">
+      <DependentUpon>postgresDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="postgresDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -169,6 +169,11 @@ namespace FarmSystem.Principal
 			new previsao().ShowDialog();
 
 		}
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

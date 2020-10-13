@@ -57,5 +57,13 @@ namespace FarmSystem.Plantação
             get { return _status; }
             set { _status = value; }
         }
+
+        private string _horario;
+        public string horario
+        {
+            get { return _horario; }
+            set { _horario = value; }
+
+        }
     }
 }

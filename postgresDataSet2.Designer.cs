@@ -328,6 +328,8 @@ namespace FarmSystem {
             
             private global::System.Data.DataColumn columnstatus;
             
+            private global::System.Data.DataColumn columnhorario;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public acoesDataTable() {
@@ -419,6 +421,14 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn horarioColumn {
+                get {
+                    return this.columnhorario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -454,7 +464,7 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public acoesRow AddacoesRow(string tipoacao, int plantacao, int codigoprod, System.DateTime dataac, int funcionario, string status) {
+            public acoesRow AddacoesRow(string tipoacao, int plantacao, int codigoprod, System.DateTime dataac, int funcionario, string status, string horario) {
                 acoesRow rowacoesRow = ((acoesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -463,7 +473,8 @@ namespace FarmSystem {
                         codigoprod,
                         dataac,
                         funcionario,
-                        status};
+                        status,
+                        horario};
                 rowacoesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowacoesRow);
                 return rowacoesRow;
@@ -500,6 +511,7 @@ namespace FarmSystem {
                 this.columndataac = base.Columns["dataac"];
                 this.columnfuncionario = base.Columns["funcionario"];
                 this.columnstatus = base.Columns["status"];
+                this.columnhorario = base.Columns["horario"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,6 +531,8 @@ namespace FarmSystem {
                 base.Columns.Add(this.columnfuncionario);
                 this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstatus);
+                this.columnhorario = new global::System.Data.DataColumn("horario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhorario);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo}, true));
                 this.columncodigo.AutoIncrement = true;
@@ -528,6 +542,7 @@ namespace FarmSystem {
                 this.columncodigo.Unique = true;
                 this.columntipoacao.MaxLength = 200;
                 this.columnstatus.MaxLength = 80;
+                this.columnhorario.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -683,6 +698,8 @@ namespace FarmSystem {
             
             private global::System.Data.DataColumn columnsementeusada;
             
+            private global::System.Data.DataColumn columndatadecolheita;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public plantacaoDataTable() {
@@ -806,6 +823,14 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn datadecolheitaColumn {
+                get {
+                    return this.columndatadecolheita;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -841,7 +866,7 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public plantacaoRow AddplantacaoRow(int funcionario, double area, double distinciaentreplantas, System.DateTime datadeplantio, string valordevenda, string statusdaplantacao, int previsaodecolheita, System.DateTime prevdatacolheita, int quantidadecolhida, string sementeusada) {
+            public plantacaoRow AddplantacaoRow(int funcionario, double area, double distinciaentreplantas, System.DateTime datadeplantio, string valordevenda, string statusdaplantacao, int previsaodecolheita, System.DateTime prevdatacolheita, int quantidadecolhida, string sementeusada, System.DateTime datadecolheita) {
                 plantacaoRow rowplantacaoRow = ((plantacaoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -854,7 +879,8 @@ namespace FarmSystem {
                         previsaodecolheita,
                         prevdatacolheita,
                         quantidadecolhida,
-                        sementeusada};
+                        sementeusada,
+                        datadecolheita};
                 rowplantacaoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowplantacaoRow);
                 return rowplantacaoRow;
@@ -895,6 +921,7 @@ namespace FarmSystem {
                 this.columnprevdatacolheita = base.Columns["prevdatacolheita"];
                 this.columnquantidadecolhida = base.Columns["quantidadecolhida"];
                 this.columnsementeusada = base.Columns["sementeusada"];
+                this.columndatadecolheita = base.Columns["datadecolheita"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -922,6 +949,8 @@ namespace FarmSystem {
                 base.Columns.Add(this.columnquantidadecolhida);
                 this.columnsementeusada = new global::System.Data.DataColumn("sementeusada", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsementeusada);
+                this.columndatadecolheita = new global::System.Data.DataColumn("datadecolheita", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndatadecolheita);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo}, true));
                 this.columncodigo.AutoIncrement = true;
@@ -1181,6 +1210,22 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string horario {
+                get {
+                    try {
+                        return ((string)(this[this.tableacoes.horarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'horario\' na tabela \'acoes\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableacoes.horarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IstipoacaoNull() {
                 return this.IsNull(this.tableacoes.tipoacaoColumn);
             }
@@ -1249,6 +1294,18 @@ namespace FarmSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetstatusNull() {
                 this[this.tableacoes.statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IshorarioNull() {
+                return this.IsNull(this.tableacoes.horarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SethorarioNull() {
+                this[this.tableacoes.horarioColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1439,6 +1496,22 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime datadecolheita {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableplantacao.datadecolheitaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'datadecolheita\' na tabela \'plantacao\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableplantacao.datadecolheitaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsfuncionarioNull() {
                 return this.IsNull(this.tableplantacao.funcionarioColumn);
             }
@@ -1555,6 +1628,18 @@ namespace FarmSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetsementeusadaNull() {
                 this[this.tableplantacao.sementeusadaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdatadecolheitaNull() {
+                return this.IsNull(this.tableplantacao.datadecolheitaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdatadecolheitaNull() {
+                this[this.tableplantacao.datadecolheitaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1758,6 +1843,7 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("dataac", "dataac");
             tableMapping.ColumnMappings.Add("funcionario", "funcionario");
             tableMapping.ColumnMappings.Add("status", "status");
+            tableMapping.ColumnMappings.Add("horario", "horario");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1774,8 +1860,8 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT \"codigo\", \"tipoacao\", \"plantacao\", \"codigoprod\", \"dataac\", \"funcionario\",\"" +
-                "status\" FROM \"farmsystem\".\"acoes\"";
+            this._commandCollection[0].CommandText = "SELECT        codigo, tipoacao, plantacao, codigoprod, dataac, funcionario, statu" +
+                "s, horario\r\nFROM            farmsystem.acoes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1936,81 +2022,8 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("prevdatacolheita", "prevdatacolheita");
             tableMapping.ColumnMappings.Add("quantidadecolhida", "quantidadecolhida");
             tableMapping.ColumnMappings.Add("sementeusada", "sementeusada");
+            tableMapping.ColumnMappings.Add("datadecolheita", "datadecolheita");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""postgres"".""farmsystem"".""plantacao"" WHERE ((""codigo"" = ?) AND ((? = 1 AND ""funcionario"" IS NULL) OR (""funcionario"" = ?)) AND ((? = 1 AND ""area"" IS NULL) OR (""area"" = ?)) AND ((? = 1 AND ""distinciaentreplantas"" IS NULL) OR (""distinciaentreplantas"" = ?)) AND ((? = 1 AND ""datadeplantio"" IS NULL) OR (""datadeplantio"" = ?)) AND ((? = 1 AND ""valordevenda"" IS NULL) OR (""valordevenda"" = ?)) AND ((? = 1 AND ""statusdaplantacao"" IS NULL) OR (""statusdaplantacao"" = ?)) AND ((? = 1 AND ""previsaodecolheita"" IS NULL) OR (""previsaodecolheita"" = ?)) AND ((? = 1 AND ""prevdatacolheita"" IS NULL) OR (""prevdatacolheita"" = ?)) AND ((? = 1 AND ""quantidadecolhida"" IS NULL) OR (""quantidadecolhida"" = ?)) AND ((? = 1 AND ""sementeusada"" IS NULL) OR (""sementeusada"" = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_codigo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "codigo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_funcionario", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "funcionario", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_funcionario", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "funcionario", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_area", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "area", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_area", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "area", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_distinciaentreplantas", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "distinciaentreplantas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_distinciaentreplantas", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "distinciaentreplantas", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_datadeplantio", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datadeplantio", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_datadeplantio", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datadeplantio", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_valordevenda", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "valordevenda", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_valordevenda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "valordevenda", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_statusdaplantacao", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "statusdaplantacao", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_statusdaplantacao", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "statusdaplantacao", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_previsaodecolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "previsaodecolheita", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_previsaodecolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "previsaodecolheita", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_prevdatacolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prevdatacolheita", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_prevdatacolheita", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prevdatacolheita", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_quantidadecolhida", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "quantidadecolhida", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_quantidadecolhida", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "quantidadecolhida", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_sementeusada", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sementeusada", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_sementeusada", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sementeusada", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""postgres"".""farmsystem"".""plantacao"" (""funcionario"", ""area"", ""distinciaentreplantas"", ""datadeplantio"", ""valordevenda"", ""statusdaplantacao"", ""previsaodecolheita"", ""prevdatacolheita"", ""quantidadecolhida"", ""sementeusada"") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("funcionario", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "funcionario", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("area", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "area", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("distinciaentreplantas", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "distinciaentreplantas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("datadeplantio", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datadeplantio", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("valordevenda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "valordevenda", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("statusdaplantacao", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "statusdaplantacao", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("previsaodecolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "previsaodecolheita", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("prevdatacolheita", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prevdatacolheita", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("quantidadecolhida", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "quantidadecolhida", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("sementeusada", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sementeusada", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""postgres"".""farmsystem"".""plantacao"" SET ""funcionario"" = ?, ""area"" = ?, ""distinciaentreplantas"" = ?, ""datadeplantio"" = ?, ""valordevenda"" = ?, ""statusdaplantacao"" = ?, ""previsaodecolheita"" = ?, ""prevdatacolheita"" = ?, ""quantidadecolhida"" = ?, ""sementeusada"" = ? WHERE ((""codigo"" = ?) AND ((? = 1 AND ""funcionario"" IS NULL) OR (""funcionario"" = ?)) AND ((? = 1 AND ""area"" IS NULL) OR (""area"" = ?)) AND ((? = 1 AND ""distinciaentreplantas"" IS NULL) OR (""distinciaentreplantas"" = ?)) AND ((? = 1 AND ""datadeplantio"" IS NULL) OR (""datadeplantio"" = ?)) AND ((? = 1 AND ""valordevenda"" IS NULL) OR (""valordevenda"" = ?)) AND ((? = 1 AND ""statusdaplantacao"" IS NULL) OR (""statusdaplantacao"" = ?)) AND ((? = 1 AND ""previsaodecolheita"" IS NULL) OR (""previsaodecolheita"" = ?)) AND ((? = 1 AND ""prevdatacolheita"" IS NULL) OR (""prevdatacolheita"" = ?)) AND ((? = 1 AND ""quantidadecolhida"" IS NULL) OR (""quantidadecolhida"" = ?)) AND ((? = 1 AND ""sementeusada"" IS NULL) OR (""sementeusada"" = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("funcionario", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "funcionario", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("area", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "area", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("distinciaentreplantas", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "distinciaentreplantas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("datadeplantio", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datadeplantio", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("valordevenda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "valordevenda", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("statusdaplantacao", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "statusdaplantacao", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("previsaodecolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "previsaodecolheita", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("prevdatacolheita", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prevdatacolheita", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("quantidadecolhida", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "quantidadecolhida", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("sementeusada", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sementeusada", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_codigo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "codigo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_funcionario", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "funcionario", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_funcionario", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "funcionario", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_area", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "area", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_area", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "area", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_distinciaentreplantas", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "distinciaentreplantas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_distinciaentreplantas", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "distinciaentreplantas", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_datadeplantio", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datadeplantio", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_datadeplantio", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datadeplantio", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_valordevenda", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "valordevenda", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_valordevenda", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "valordevenda", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_statusdaplantacao", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "statusdaplantacao", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_statusdaplantacao", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "statusdaplantacao", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_previsaodecolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "previsaodecolheita", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_previsaodecolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "previsaodecolheita", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_prevdatacolheita", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prevdatacolheita", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_prevdatacolheita", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prevdatacolheita", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_quantidadecolhida", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "quantidadecolhida", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_quantidadecolhida", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "quantidadecolhida", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_sementeusada", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sementeusada", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_sementeusada", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sementeusada", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2026,9 +2039,9 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT \"codigo\", \"funcionario\", \"area\", \"distinciaentreplantas\", \"datadeplantio\"," +
-                " \"valordevenda\", \"statusdaplantacao\", \"previsaodecolheita\", \"prevdatacolheita\", " +
-                "\"quantidadecolhida\", \"sementeusada\" FROM \"farmsystem\".\"plantacao\"";
+            this._commandCollection[0].CommandText = "SELECT        codigo, funcionario, area, distinciaentreplantas, datadeplantio, va" +
+                "lordevenda, statusdaplantacao, previsaodecolheita, prevdatacolheita, quantidadec" +
+                "olhida, sementeusada, datadecolheita\r\nFROM            farmsystem.plantacao";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2055,241 +2068,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(postgresDataSet2.plantacaoDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(postgresDataSet2 dataSet) {
-            return this.Adapter.Update(dataSet, "plantacao");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_codigo, int Original_funcionario, double Original_area, double Original_distinciaentreplantas, System.DateTime Original_datadeplantio, string Original_valordevenda, string Original_statusdaplantacao, int Original_previsaodecolheita, System.DateTime Original_prevdatacolheita, int Original_quantidadecolhida, string Original_sementeusada) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_codigo));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_funcionario));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_area));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_distinciaentreplantas));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_datadeplantio));
-            if ((Original_valordevenda == null)) {
-                throw new global::System.ArgumentNullException("Original_valordevenda");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_valordevenda));
-            }
-            if ((Original_statusdaplantacao == null)) {
-                throw new global::System.ArgumentNullException("Original_statusdaplantacao");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_statusdaplantacao));
-            }
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_previsaodecolheita));
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[16].Value = ((System.DateTime)(Original_prevdatacolheita));
-            this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_quantidadecolhida));
-            if ((Original_sementeusada == null)) {
-                throw new global::System.ArgumentNullException("Original_sementeusada");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_sementeusada));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int funcionario, double area, double distinciaentreplantas, System.DateTime datadeplantio, string valordevenda, string statusdaplantacao, int previsaodecolheita, System.DateTime prevdatacolheita, int quantidadecolhida, string sementeusada) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(funcionario));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((double)(area));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(distinciaentreplantas));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(datadeplantio));
-            if ((valordevenda == null)) {
-                throw new global::System.ArgumentNullException("valordevenda");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(valordevenda));
-            }
-            if ((statusdaplantacao == null)) {
-                throw new global::System.ArgumentNullException("statusdaplantacao");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(statusdaplantacao));
-            }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(previsaodecolheita));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(prevdatacolheita));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(quantidadecolhida));
-            if ((sementeusada == null)) {
-                throw new global::System.ArgumentNullException("sementeusada");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(sementeusada));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int funcionario, 
-                    double area, 
-                    double distinciaentreplantas, 
-                    System.DateTime datadeplantio, 
-                    string valordevenda, 
-                    string statusdaplantacao, 
-                    int previsaodecolheita, 
-                    System.DateTime prevdatacolheita, 
-                    int quantidadecolhida, 
-                    string sementeusada, 
-                    int Original_codigo, 
-                    int Original_funcionario, 
-                    double Original_area, 
-                    double Original_distinciaentreplantas, 
-                    System.DateTime Original_datadeplantio, 
-                    string Original_valordevenda, 
-                    string Original_statusdaplantacao, 
-                    int Original_previsaodecolheita, 
-                    System.DateTime Original_prevdatacolheita, 
-                    int Original_quantidadecolhida, 
-                    string Original_sementeusada) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(funcionario));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(area));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(distinciaentreplantas));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(datadeplantio));
-            if ((valordevenda == null)) {
-                throw new global::System.ArgumentNullException("valordevenda");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(valordevenda));
-            }
-            if ((statusdaplantacao == null)) {
-                throw new global::System.ArgumentNullException("statusdaplantacao");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(statusdaplantacao));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(previsaodecolheita));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(prevdatacolheita));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(quantidadecolhida));
-            if ((sementeusada == null)) {
-                throw new global::System.ArgumentNullException("sementeusada");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(sementeusada));
-            }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_codigo));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_funcionario));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_area));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((double)(Original_distinciaentreplantas));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_datadeplantio));
-            if ((Original_valordevenda == null)) {
-                throw new global::System.ArgumentNullException("Original_valordevenda");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_valordevenda));
-            }
-            if ((Original_statusdaplantacao == null)) {
-                throw new global::System.ArgumentNullException("Original_statusdaplantacao");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_statusdaplantacao));
-            }
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_previsaodecolheita));
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_prevdatacolheita));
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_quantidadecolhida));
-            if ((Original_sementeusada == null)) {
-                throw new global::System.ArgumentNullException("Original_sementeusada");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_sementeusada));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
     }
     
     /// <summary>
@@ -2304,8 +2082,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private plantacaoTableAdapter _plantacaoTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -2318,20 +2094,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public plantacaoTableAdapter plantacaoTableAdapter {
-            get {
-                return this._plantacaoTableAdapter;
-            }
-            set {
-                this._plantacaoTableAdapter = value;
             }
         }
         
@@ -2354,10 +2116,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._plantacaoTableAdapter != null) 
-                            && (this._plantacaoTableAdapter.Connection != null))) {
-                    return this._plantacaoTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -2371,9 +2129,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._plantacaoTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -2385,15 +2140,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(postgresDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._plantacaoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.plantacao.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._plantacaoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -2404,14 +2150,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(postgresDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._plantacaoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.plantacao.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._plantacaoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -2422,14 +2160,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(postgresDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._plantacaoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.plantacao.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._plantacaoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -2469,11 +2199,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._plantacaoTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._plantacaoTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
-                        "cadeia de conexão.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager não contém informações de conexão. Defina cada propriedade Ta" +
@@ -2506,15 +2231,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._plantacaoTableAdapter != null)) {
-                    revertConnections.Add(this._plantacaoTableAdapter, this._plantacaoTableAdapter.Connection);
-                    this._plantacaoTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
-                    this._plantacaoTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
-                    if (this._plantacaoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._plantacaoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._plantacaoTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -2572,10 +2288,6 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._plantacaoTableAdapter != null)) {
-                    this._plantacaoTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._plantacaoTableAdapter]));
-                    this._plantacaoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
