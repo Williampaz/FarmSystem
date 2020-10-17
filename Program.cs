@@ -17,8 +17,12 @@ namespace FarmSystem
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new Login());
-			Application.Run(new Frm_Inicial());
+			Login log = new Login();
+			log.ShowDialog();
+			if(log.logado == true)
+            {
+				Application.Run(new Frm_Inicial());
+			}
 		}
 	}
 }

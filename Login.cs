@@ -14,6 +14,7 @@ namespace FarmSystem
 {
 	public partial class Login : Form
 	{
+		public bool logado = false;
 		public Login()
 		{
 			InitializeComponent();
@@ -32,10 +33,7 @@ namespace FarmSystem
 			car.logar(txt_Usuario.Text, txt_Senha.Text);
 			if (car.logar(txt_Usuario.Text, txt_Senha.Text) == true)
 			{
-				Frm_Inicial frm = new Frm_Inicial();
-				frm.ShowDialog();
-				txt_Usuario.Clear();
-				txt_Senha.Clear();
+				logado = true;
 				this.Close();
 
 			}
