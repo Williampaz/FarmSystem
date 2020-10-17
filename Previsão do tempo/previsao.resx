@@ -117,22 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="horario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="acoesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>165, 17</value>
-  </metadata>
-  <metadata name="postgresDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAOw4AADsOAFxK8o4AAADbUlE
+        QVRYR+2Uy0tUYRjGj6J5CS/jtJCocXIy05LCblpBpRBFEC5S+xNatUtauWiRtYoEPeOMWbgotRtlqZTk
+        bSAswXJTUcGoiZJlZY4F4bw9z5nPQD2Oo4KbfODH+fze533eb845Hm1Vq1qK/MUObap4M68WkCBF+Pu0
+        Q1VXQDwASAQPwD21VtUVEIcBGxhUcK2qyxBDQAKIDxaofCEfgDUQPFeZaKgHzWAr98zEfRDSAbgPtoEW
+        wGzzQ3ATxIEmIKANmB7CXwhvIYKKHHdAg7HG3myxF3C4BzDzIeAM5ZglFgCHtgPTBumIJRHiiUmSausO
+        qUnKMtbcQ21a7AH8tbybzHoK0oByzCMaAA/xCARu2ZkUDg0HGeAcuA16pTPWiyvpBQ2ANXrC2WP0BjIa
+        wcLDp0UjMF4aqbFy+AZQBgaAH8g8sEYPveul1vIvh5mLEn7d9O3eDTwg2ODZ0NsBsoGRtSgZTQH2gD5g
+        NiQUXgFmIGutSg9BgQbjtncBs+DFwAxmqfQFRCMIA3yOZoFL4SJgppoSRDSBTNAPzMKWArOYqaYEEU2g
+        BJgFLYezQE2ZRzQAflD4f24Wshz4nZjxsZojFoEV8MNiFrIcmMkvpppmIhaBDYTw/GNAtIJrM88MmMls
+        NU0ptWJc26T/TAS2sKsSN9FuSZHOKH5ezUIENfHjOv4sWYZa0wzG25KNPdZMewyivf7OKJt2QSIwKw5E
+        AY3DreA+GLLrE927XN7arqbjI3864hC4ho0BsOZed3O+lNaVS8GNTjlQ/UYOAq5L68uN2ty+KJnCHepr
+        yR3Y5/5wBTMaMasbuEEiD2ABd8EwmIRBdroGpeSWSzoen5DB1nQDT9MxOV+nG7WNlb8kRff5wIDCxz3W
+        6KGXPZ/Ai+Y8KWu4JDnu935k+zFjCvwGT8A6HmD6EdhBHqiA8YutclIyqkZlf/U7g8yqz2LTJwX1MYf+
+        vTLNOZYP7Ip87rFGD72BvreyvWqEhzUOjPpNcArkgGTMUS+CEjZJJMh16D8ug+cwee26rx/rl1ucY+UZ
+        ztFD2a7+yHTnV9WlaVxzjzV66EVfP/q8qfp4D/LqQAGIAaoriI7W9Ggnr3vC9ro/xqc5v9kQaMOAxCPX
+        XofjmSvXXOGd0A7Dg/fIwh6SVTVsSdEnIlJDGbyq/1Ca9hcosLih/t4FTgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="acoesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>326, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>37</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIACjHgAAZgAAAICAAAABACAAKAgBAAkfAABAQAAAAQAgAChCAAAxJwEAMDAAAAEA

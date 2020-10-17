@@ -45,10 +45,10 @@ namespace FarmSystem.usuario
             conn.sair();
             return existe;
         }
-        public void cadastrar(string nome, string rg, string cpf,DateTime nascimento, string idade, string email, string senha, string endereco)
+        public void cadastrar(string nome, string rg, string cpf,DateTime nascimento, string idade, string email, string senha, string endereco,String cidade)
 		{
-            NpgsqlCommand query = new NpgsqlCommand("insert into farmsystem.usuario (nome, rg, cpf, nascimento, idade, email, senha, endereco) " +
-                                                                         "values (@nome, @rg, @cpf, @nascimento, @idade, @email, @senha, @endereco)");
+            NpgsqlCommand query = new NpgsqlCommand("insert into farmsystem.usuario (nome, rg, cpf, nascimento, idade, email, senha, endereco,cidade) " +
+                                                                         "values (@nome, @rg, @cpf, @nascimento, @idade, @email, @senha, @endereco, @cidade)");
             query.Connection = conn.entrar();
             query.Parameters.Add("@nome", NpgsqlDbType.Varchar).Value = nome;
             query.Parameters.Add("@rg", NpgsqlDbType.Varchar).Value = rg;
@@ -58,13 +58,15 @@ namespace FarmSystem.usuario
             query.Parameters.Add("@email", NpgsqlDbType.Varchar).Value = email;
             query.Parameters.Add("@senha", NpgsqlDbType.Varchar).Value = senha;
             query.Parameters.Add("@endereco", NpgsqlDbType.Varchar).Value = endereco;
+            query.Parameters.Add("@cidade", NpgsqlDbType.Varchar).Value = cidade;
+
             query.ExecuteNonQuery();
             conn.sair();
 		}
         public void editar(User user)
 		{
             NpgsqlCommand query = new NpgsqlCommand("update farmsystem.usuario set nome = @nome, rg = @rg, cpf = @cpf, " +
-                "nascimento = @nascimento, idade = @idade, email = @email, senha = @senha, endereco = @endereco where codigo = @codigo");
+                "nascimento = @nascimento, idade = @idade, email = @email, senha = @senha, endereco = @endereco, cidade = @cidade where codigo = @codigo");
             query.Connection = conn.entrar();
             query.Parameters.Add("@codigo", NpgsqlDbType.Integer).Value = user.codigo;
             query.Parameters.Add("@nome", NpgsqlDbType.Varchar).Value = user.nome;
@@ -75,6 +77,7 @@ namespace FarmSystem.usuario
             query.Parameters.Add("@email", NpgsqlDbType.Varchar).Value = user.email;
             query.Parameters.Add("@senha", NpgsqlDbType.Varchar).Value = user.senha;
             query.Parameters.Add("@endereco", NpgsqlDbType.Varchar).Value = user.endereco;
+            query.Parameters.Add("@cidade", NpgsqlDbType.Varchar).Value = user.cidade;
             query.ExecuteNonQuery();
             conn.sair();
         }
@@ -112,7 +115,7 @@ namespace FarmSystem.usuario
         public List<User> bustaUsuarios()
         {
             NpgsqlCommand query = new NpgsqlCommand(
-                "Select codigo, nome, rg, cpf, nascimento, idade, email, senha, endereco from farmsystem.usuario");
+                "Select codigo, nome, rg, cpf, nascimento, idade, email, senha, endereco, cidade from farmsystem.usuario");
             query.Connection = conn.entrar();
             using (NpgsqlDataReader rs = query.ExecuteReader())
             {
@@ -131,6 +134,8 @@ namespace FarmSystem.usuario
                         user.email = rs.GetString(6);
                         user.senha = rs.GetString(7);
                         user.endereco = rs.GetString(8);
+                        user.cidade = rs.GetString(9);
+
                         users.Add(user);
                     }
                     conn.sair();

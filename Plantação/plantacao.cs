@@ -43,7 +43,9 @@ namespace FarmSystem.Plantação
             plant.prevdatacolheita = Convert.ToDateTime(mskprevisaodata.Text);
             plant.quantidadecolhida = Convert.ToInt32(txtqtdsacas.Text);
             plant.sementeusada = txtsemente.Text;
-                      
+            plant.datadecolheita = Convert.ToDateTime(txtdatadacolheita.Text);
+
+
 
             return plant;
         }
@@ -64,6 +66,7 @@ namespace FarmSystem.Plantação
             plant.prevdatacolheita = Convert.ToDateTime(mskprevisaodata.Text);
             plant.quantidadecolhida = Convert.ToInt32(txtqtdsacas.Text);
             plant.sementeusada = txtsemente.Text;
+            plant.datadecolheita = Convert.ToDateTime(txtdatadacolheita.Text);
 
 
             return plant;
@@ -86,6 +89,8 @@ namespace FarmSystem.Plantação
             plant.prevdatacolheita = Convert.ToDateTime(dtgplantacao.CurrentRow.Cells[8].Value.ToString());
             plant.quantidadecolhida = Convert.ToInt32(dtgplantacao.CurrentRow.Cells[9].Value.ToString());
             plant.sementeusada = dtgplantacao.CurrentRow.Cells[10].Value.ToString();
+            plant.datadecolheita = Convert.ToDateTime(dtgplantacao.CurrentRow.Cells[11].Value.ToString());
+
 
             return plant;
 
@@ -117,6 +122,8 @@ namespace FarmSystem.Plantação
             mskprevisaodata.Text = plant.prevdatacolheita.ToString();
             txtqtdsacas.Text = plant.quantidadecolhida.ToString();
             txtsemente.Text = plant.sementeusada;
+            txtdatadacolheita.Text = plant.datadecolheita.ToString() ;
+
                      
         }
 
@@ -129,11 +136,13 @@ namespace FarmSystem.Plantação
             txtdistancia.Clear();
             mskdataplantio.Text = "";
             txtvalorvenda.Clear();
-            txtstatus.Clear();
+            txtstatus.Text = "";
             txtprevisaosacas.Clear();
             mskprevisaodata.Text = "";
             txtqtdsacas.Clear();
             txtsemente.Clear();
+            txtdatadacolheita.Clear();
+
 
         }
 

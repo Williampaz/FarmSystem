@@ -42,6 +42,7 @@
             this.Data_Colheita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qtide_Colhida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Semente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datacolhida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlantacoes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,10 +78,11 @@
             this.Previsao_Colheita,
             this.Data_Colheita,
             this.Qtide_Colhida,
-            this.Semente});
+            this.Semente,
+            this.datacolhida});
             this.dgvPlantacoes.Location = new System.Drawing.Point(1, 45);
             this.dgvPlantacoes.Name = "dgvPlantacoes";
-            this.dgvPlantacoes.Size = new System.Drawing.Size(1015, 448);
+            this.dgvPlantacoes.Size = new System.Drawing.Size(1122, 448);
             this.dgvPlantacoes.TabIndex = 2;
             this.dgvPlantacoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlantacoes_CellDoubleClick);
             // 
@@ -160,12 +162,18 @@
             this.Semente.Name = "Semente";
             this.Semente.Width = 120;
             // 
+            // datacolhida
+            // 
+            this.datacolhida.DataPropertyName = "datadecolheita";
+            this.datacolhida.HeaderText = "Data Colhida";
+            this.datacolhida.Name = "datacolhida";
+            // 
             // frmListaPlantacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(1016, 494);
+            this.ClientSize = new System.Drawing.Size(1128, 494);
             this.Controls.Add(this.dgvPlantacoes);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label1);
@@ -195,5 +203,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Data_Colheita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qtide_Colhida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Semente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datacolhida;
     }
 }

@@ -41,7 +41,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtnomefunc = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtstatus = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtprevisaosacas = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,17 +50,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtvalorvenda = new System.Windows.Forms.TextBox();
             this.dtgplantacao = new System.Windows.Forms.DataGridView();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distinciaentreplantasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datadeplantioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valordevendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusdaplantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.previsaodecolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prevdatacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.btnlistafunc = new System.Windows.Forms.Button();
@@ -81,6 +69,21 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.Pesquisa = new System.Windows.Forms.GroupBox();
+            this.txtstatus = new System.Windows.Forms.ComboBox();
+            this.txtdatadacolheita = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distinciaentreplantasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datadeplantioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valordevendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusdaplantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.previsaodecolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prevdatacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadecolhidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sementeusadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datacolhida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
@@ -178,17 +181,10 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Status da Plantação:";
             // 
-            // txtstatus
-            // 
-            this.txtstatus.Location = new System.Drawing.Point(12, 166);
-            this.txtstatus.Name = "txtstatus";
-            this.txtstatus.Size = new System.Drawing.Size(377, 20);
-            this.txtstatus.TabIndex = 6;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(395, 150);
+            this.label7.Location = new System.Drawing.Point(366, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 13);
             this.label7.TabIndex = 13;
@@ -196,7 +192,7 @@
             // 
             // txtprevisaosacas
             // 
-            this.txtprevisaosacas.Location = new System.Drawing.Point(395, 166);
+            this.txtprevisaosacas.Location = new System.Drawing.Point(366, 167);
             this.txtprevisaosacas.Name = "txtprevisaosacas";
             this.txtprevisaosacas.Size = new System.Drawing.Size(220, 20);
             this.txtprevisaosacas.TabIndex = 7;
@@ -204,7 +200,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(618, 150);
+            this.label8.Location = new System.Drawing.Point(589, 150);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(145, 13);
             this.label8.TabIndex = 15;
@@ -212,10 +208,10 @@
             // 
             // mskprevisaodata
             // 
-            this.mskprevisaodata.Location = new System.Drawing.Point(621, 166);
+            this.mskprevisaodata.Location = new System.Drawing.Point(592, 166);
             this.mskprevisaodata.Mask = "00/00/0000";
             this.mskprevisaodata.Name = "mskprevisaodata";
-            this.mskprevisaodata.Size = new System.Drawing.Size(172, 20);
+            this.mskprevisaodata.Size = new System.Drawing.Size(200, 20);
             this.mskprevisaodata.TabIndex = 8;
             this.mskprevisaodata.ValidatingType = typeof(System.DateTime);
             // 
@@ -269,84 +265,14 @@
             this.previsaodecolheitaDataGridViewTextBoxColumn,
             this.prevdatacolheitaDataGridViewTextBoxColumn,
             this.quantidadecolhidaDataGridViewTextBoxColumn,
-            this.sementeusadaDataGridViewTextBoxColumn});
+            this.sementeusadaDataGridViewTextBoxColumn,
+            this.datacolhida});
             this.dtgplantacao.DataSource = this.plantacaoBindingSource;
             this.dtgplantacao.Location = new System.Drawing.Point(12, 303);
             this.dtgplantacao.Name = "dtgplantacao";
-            this.dtgplantacao.Size = new System.Drawing.Size(1335, 384);
+            this.dtgplantacao.Size = new System.Drawing.Size(1346, 384);
             this.dtgplantacao.TabIndex = 21;
             this.dtgplantacao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgplantacao_CellDoubleClick);
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // funcionarioDataGridViewTextBoxColumn
-            // 
-            this.funcionarioDataGridViewTextBoxColumn.DataPropertyName = "funcionario";
-            this.funcionarioDataGridViewTextBoxColumn.HeaderText = "Funcionário";
-            this.funcionarioDataGridViewTextBoxColumn.Name = "funcionarioDataGridViewTextBoxColumn";
-            this.funcionarioDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // areaDataGridViewTextBoxColumn
-            // 
-            this.areaDataGridViewTextBoxColumn.DataPropertyName = "area";
-            this.areaDataGridViewTextBoxColumn.HeaderText = "Área M²";
-            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
-            this.areaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // distinciaentreplantasDataGridViewTextBoxColumn
-            // 
-            this.distinciaentreplantasDataGridViewTextBoxColumn.DataPropertyName = "distinciaentreplantas";
-            this.distinciaentreplantasDataGridViewTextBoxColumn.HeaderText = "Distancia Plantas CM";
-            this.distinciaentreplantasDataGridViewTextBoxColumn.Name = "distinciaentreplantasDataGridViewTextBoxColumn";
-            // 
-            // datadeplantioDataGridViewTextBoxColumn
-            // 
-            this.datadeplantioDataGridViewTextBoxColumn.DataPropertyName = "datadeplantio";
-            this.datadeplantioDataGridViewTextBoxColumn.HeaderText = "Data Plantio";
-            this.datadeplantioDataGridViewTextBoxColumn.Name = "datadeplantioDataGridViewTextBoxColumn";
-            // 
-            // valordevendaDataGridViewTextBoxColumn
-            // 
-            this.valordevendaDataGridViewTextBoxColumn.DataPropertyName = "valordevenda";
-            this.valordevendaDataGridViewTextBoxColumn.HeaderText = "Valor de Venda";
-            this.valordevendaDataGridViewTextBoxColumn.Name = "valordevendaDataGridViewTextBoxColumn";
-            // 
-            // statusdaplantacaoDataGridViewTextBoxColumn
-            // 
-            this.statusdaplantacaoDataGridViewTextBoxColumn.DataPropertyName = "statusdaplantacao";
-            this.statusdaplantacaoDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusdaplantacaoDataGridViewTextBoxColumn.Name = "statusdaplantacaoDataGridViewTextBoxColumn";
-            this.statusdaplantacaoDataGridViewTextBoxColumn.Width = 210;
-            // 
-            // previsaodecolheitaDataGridViewTextBoxColumn
-            // 
-            this.previsaodecolheitaDataGridViewTextBoxColumn.DataPropertyName = "previsaodecolheita";
-            this.previsaodecolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Colheita (SACAS)";
-            this.previsaodecolheitaDataGridViewTextBoxColumn.Name = "previsaodecolheitaDataGridViewTextBoxColumn";
-            // 
-            // prevdatacolheitaDataGridViewTextBoxColumn
-            // 
-            this.prevdatacolheitaDataGridViewTextBoxColumn.DataPropertyName = "prevdatacolheita";
-            this.prevdatacolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Data Colheita";
-            this.prevdatacolheitaDataGridViewTextBoxColumn.Name = "prevdatacolheitaDataGridViewTextBoxColumn";
-            // 
-            // quantidadecolhidaDataGridViewTextBoxColumn
-            // 
-            this.quantidadecolhidaDataGridViewTextBoxColumn.DataPropertyName = "quantidadecolhida";
-            this.quantidadecolhidaDataGridViewTextBoxColumn.HeaderText = "Qtd Colhita (SACAS)";
-            this.quantidadecolhidaDataGridViewTextBoxColumn.Name = "quantidadecolhidaDataGridViewTextBoxColumn";
-            // 
-            // sementeusadaDataGridViewTextBoxColumn
-            // 
-            this.sementeusadaDataGridViewTextBoxColumn.DataPropertyName = "sementeusada";
-            this.sementeusadaDataGridViewTextBoxColumn.HeaderText = "Semente Usada";
-            this.sementeusadaDataGridViewTextBoxColumn.Name = "sementeusadaDataGridViewTextBoxColumn";
-            this.sementeusadaDataGridViewTextBoxColumn.Width = 210;
             // 
             // plantacaoBindingSource
             // 
@@ -400,7 +326,7 @@
             // 
             this.txtsemente.Location = new System.Drawing.Point(197, 211);
             this.txtsemente.Name = "txtsemente";
-            this.txtsemente.Size = new System.Drawing.Size(596, 20);
+            this.txtsemente.Size = new System.Drawing.Size(418, 20);
             this.txtsemente.TabIndex = 10;
             // 
             // label13
@@ -526,12 +452,124 @@
             this.Pesquisa.TabStop = false;
             this.Pesquisa.Text = "Pesquisa";
             // 
+            // txtstatus
+            // 
+            this.txtstatus.FormattingEnabled = true;
+            this.txtstatus.Items.AddRange(new object[] {
+            "Agendada",
+            "Plantado",
+            "Em Crescimento",
+            "Colhida",
+            "Plantação Perdida"});
+            this.txtstatus.Location = new System.Drawing.Point(12, 166);
+            this.txtstatus.Name = "txtstatus";
+            this.txtstatus.Size = new System.Drawing.Size(348, 21);
+            this.txtstatus.TabIndex = 6;
+            // 
+            // txtdatadacolheita
+            // 
+            this.txtdatadacolheita.Location = new System.Drawing.Point(620, 211);
+            this.txtdatadacolheita.Mask = "00/00/0000";
+            this.txtdatadacolheita.Name = "txtdatadacolheita";
+            this.txtdatadacolheita.Size = new System.Drawing.Size(172, 20);
+            this.txtdatadacolheita.TabIndex = 38;
+            this.txtdatadacolheita.ValidatingType = typeof(System.DateTime);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(617, 195);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(89, 13);
+            this.label18.TabIndex = 39;
+            this.label18.Text = "Data da Colheita:";
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // funcionarioDataGridViewTextBoxColumn
+            // 
+            this.funcionarioDataGridViewTextBoxColumn.DataPropertyName = "funcionario";
+            this.funcionarioDataGridViewTextBoxColumn.HeaderText = "Funcionário";
+            this.funcionarioDataGridViewTextBoxColumn.Name = "funcionarioDataGridViewTextBoxColumn";
+            this.funcionarioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // areaDataGridViewTextBoxColumn
+            // 
+            this.areaDataGridViewTextBoxColumn.DataPropertyName = "area";
+            this.areaDataGridViewTextBoxColumn.HeaderText = "Área M²";
+            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
+            this.areaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // distinciaentreplantasDataGridViewTextBoxColumn
+            // 
+            this.distinciaentreplantasDataGridViewTextBoxColumn.DataPropertyName = "distinciaentreplantas";
+            this.distinciaentreplantasDataGridViewTextBoxColumn.HeaderText = "Distancia Plantas CM";
+            this.distinciaentreplantasDataGridViewTextBoxColumn.Name = "distinciaentreplantasDataGridViewTextBoxColumn";
+            // 
+            // datadeplantioDataGridViewTextBoxColumn
+            // 
+            this.datadeplantioDataGridViewTextBoxColumn.DataPropertyName = "datadeplantio";
+            this.datadeplantioDataGridViewTextBoxColumn.HeaderText = "Data Plantio";
+            this.datadeplantioDataGridViewTextBoxColumn.Name = "datadeplantioDataGridViewTextBoxColumn";
+            // 
+            // valordevendaDataGridViewTextBoxColumn
+            // 
+            this.valordevendaDataGridViewTextBoxColumn.DataPropertyName = "valordevenda";
+            this.valordevendaDataGridViewTextBoxColumn.HeaderText = "Valor de Venda";
+            this.valordevendaDataGridViewTextBoxColumn.Name = "valordevendaDataGridViewTextBoxColumn";
+            // 
+            // statusdaplantacaoDataGridViewTextBoxColumn
+            // 
+            this.statusdaplantacaoDataGridViewTextBoxColumn.DataPropertyName = "statusdaplantacao";
+            this.statusdaplantacaoDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusdaplantacaoDataGridViewTextBoxColumn.Name = "statusdaplantacaoDataGridViewTextBoxColumn";
+            this.statusdaplantacaoDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // previsaodecolheitaDataGridViewTextBoxColumn
+            // 
+            this.previsaodecolheitaDataGridViewTextBoxColumn.DataPropertyName = "previsaodecolheita";
+            this.previsaodecolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Colheita (SACAS)";
+            this.previsaodecolheitaDataGridViewTextBoxColumn.Name = "previsaodecolheitaDataGridViewTextBoxColumn";
+            // 
+            // prevdatacolheitaDataGridViewTextBoxColumn
+            // 
+            this.prevdatacolheitaDataGridViewTextBoxColumn.DataPropertyName = "prevdatacolheita";
+            this.prevdatacolheitaDataGridViewTextBoxColumn.HeaderText = "Previsão Data Colheita";
+            this.prevdatacolheitaDataGridViewTextBoxColumn.Name = "prevdatacolheitaDataGridViewTextBoxColumn";
+            // 
+            // quantidadecolhidaDataGridViewTextBoxColumn
+            // 
+            this.quantidadecolhidaDataGridViewTextBoxColumn.DataPropertyName = "quantidadecolhida";
+            this.quantidadecolhidaDataGridViewTextBoxColumn.HeaderText = "Qtd Colhita (SACAS)";
+            this.quantidadecolhidaDataGridViewTextBoxColumn.Name = "quantidadecolhidaDataGridViewTextBoxColumn";
+            // 
+            // sementeusadaDataGridViewTextBoxColumn
+            // 
+            this.sementeusadaDataGridViewTextBoxColumn.DataPropertyName = "sementeusada";
+            this.sementeusadaDataGridViewTextBoxColumn.HeaderText = "Semente Usada";
+            this.sementeusadaDataGridViewTextBoxColumn.Name = "sementeusadaDataGridViewTextBoxColumn";
+            this.sementeusadaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // datacolhida
+            // 
+            this.datacolhida.DataPropertyName = "datadecolheita";
+            this.datacolhida.HeaderText = "Data Colhida";
+            this.datacolhida.Name = "datacolhida";
+            // 
             // plantacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(1363, 699);
+            this.ClientSize = new System.Drawing.Size(1370, 699);
+            this.Controls.Add(this.txtdatadacolheita);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.txtstatus);
             this.Controls.Add(this.Pesquisa);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -556,7 +594,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtprevisaosacas);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtstatus);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtnomefunc);
             this.Controls.Add(this.label4);
@@ -596,7 +633,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtnomefunc;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtstatus;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtprevisaosacas;
         private System.Windows.Forms.Label label8;
@@ -622,6 +658,12 @@
         private postgresDataSet2 postgresDataSet2;
         private System.Windows.Forms.BindingSource plantacaoBindingSource;
         private postgresDataSet2TableAdapters.plantacaoTableAdapter plantacaoTableAdapter;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtpesquisa;
+        private System.Windows.Forms.GroupBox Pesquisa;
+		private System.Windows.Forms.ComboBox txtstatus;
+        private System.Windows.Forms.MaskedTextBox txtdatadacolheita;
+        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn funcionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn areaDataGridViewTextBoxColumn;
@@ -633,8 +675,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prevdatacolheitaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadecolhidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sementeusadaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtpesquisa;
-        private System.Windows.Forms.GroupBox Pesquisa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datacolhida;
     }
 }

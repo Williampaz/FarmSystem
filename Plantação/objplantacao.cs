@@ -85,6 +85,13 @@ namespace FarmSystem.Plantação
             set { _sementeusada = value; }
         }
 
+        private DateTime _datadecolheita;
+        public DateTime datadecolheita
+        {
+            get { return _datadecolheita; }
+            set { _datadecolheita = value; }
+        }
+
         /*
           codigo serial,
           funcionario int,

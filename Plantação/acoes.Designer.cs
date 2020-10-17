@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(acoes));
             this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.txtipoac = new System.Windows.Forms.TextBox();
             this.txtplantacao = new System.Windows.Forms.TextBox();
             this.txtprod = new System.Windows.Forms.TextBox();
             this.txtdescricao = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.dataacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.acoesTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.acoesTableAdapter();
@@ -72,6 +72,9 @@
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btngravar = new System.Windows.Forms.Button();
+            this.txtipoac = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txthorario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvacoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
@@ -84,13 +87,6 @@
             this.txtcodigo.ReadOnly = true;
             this.txtcodigo.Size = new System.Drawing.Size(82, 20);
             this.txtcodigo.TabIndex = 0;
-            // 
-            // txtipoac
-            // 
-            this.txtipoac.Location = new System.Drawing.Point(100, 28);
-            this.txtipoac.Name = "txtipoac";
-            this.txtipoac.Size = new System.Drawing.Size(430, 20);
-            this.txtipoac.TabIndex = 1;
             // 
             // txtplantacao
             // 
@@ -163,7 +159,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(546, 138);
+            this.label6.Location = new System.Drawing.Point(8, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 11;
@@ -189,7 +185,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(146, 138);
+            this.label8.Location = new System.Drawing.Point(145, 138);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 17;
@@ -206,7 +202,7 @@
             // 
             // txtnome
             // 
-            this.txtnome.Location = new System.Drawing.Point(146, 154);
+            this.txtnome.Location = new System.Drawing.Point(145, 154);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(384, 20);
             this.txtnome.TabIndex = 16;
@@ -267,11 +263,12 @@
             this.codigoprodDataGridViewTextBoxColumn,
             this.dataacDataGridViewTextBoxColumn,
             this.funcionarioDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn});
+            this.statusDataGridViewTextBoxColumn,
+            this.horario});
             this.dgvacoes.DataSource = this.acoesBindingSource;
-            this.dgvacoes.Location = new System.Drawing.Point(1, 196);
+            this.dgvacoes.Location = new System.Drawing.Point(-11, 235);
             this.dgvacoes.Name = "dgvacoes";
-            this.dgvacoes.Size = new System.Drawing.Size(934, 317);
+            this.dgvacoes.Size = new System.Drawing.Size(1036, 317);
             this.dgvacoes.TabIndex = 17;
             this.dgvacoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvacoes_CellDoubleClick);
             // 
@@ -323,6 +320,12 @@
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.Width = 200;
             // 
+            // horario
+            // 
+            this.horario.DataPropertyName = "horario";
+            this.horario.HeaderText = "Horário";
+            this.horario.Name = "horario";
+            // 
             // acoesBindingSource
             // 
             this.acoesBindingSource.DataMember = "acoes";
@@ -340,7 +343,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(575, 105);
+            this.label10.Location = new System.Drawing.Point(608, 161);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 26;
@@ -350,7 +353,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(668, 105);
+            this.label11.Location = new System.Drawing.Point(719, 161);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 13);
             this.label11.TabIndex = 27;
@@ -359,7 +362,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(766, 105);
+            this.label12.Location = new System.Drawing.Point(832, 164);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 13);
             this.label12.TabIndex = 28;
@@ -368,7 +371,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(861, 105);
+            this.label13.Location = new System.Drawing.Point(940, 161);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 13);
             this.label13.TabIndex = 29;
@@ -376,7 +379,7 @@
             // 
             // mskdata
             // 
-            this.mskdata.Location = new System.Drawing.Point(549, 154);
+            this.mskdata.Location = new System.Drawing.Point(11, 197);
             this.mskdata.Mask = "00/00/0000";
             this.mskdata.Name = "mskdata";
             this.mskdata.Size = new System.Drawing.Size(125, 20);
@@ -386,7 +389,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(682, 138);
+            this.label14.Location = new System.Drawing.Point(146, 181);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 13);
             this.label14.TabIndex = 32;
@@ -399,8 +402,8 @@
             "A executar",
             "Em execução",
             "Executada",
-            "Não Executada"});
-            this.combstatus.Location = new System.Drawing.Point(685, 154);
+            "Ação Cancelada"});
+            this.combstatus.Location = new System.Drawing.Point(149, 197);
             this.combstatus.Name = "combstatus";
             this.combstatus.Size = new System.Drawing.Size(238, 21);
             this.combstatus.TabIndex = 6;
@@ -408,12 +411,12 @@
             // btnlimpar
             // 
             this.btnlimpar.BackgroundImage = global::FarmSystem.Properties.Resources.clean;
-            this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlimpar.Location = new System.Drawing.Point(834, 26);
+            this.btnlimpar.Location = new System.Drawing.Point(907, 76);
             this.btnlimpar.Name = "btnlimpar";
-            this.btnlimpar.Size = new System.Drawing.Size(89, 76);
+            this.btnlimpar.Size = new System.Drawing.Size(104, 82);
             this.btnlimpar.TabIndex = 10;
             this.btnlimpar.UseVisualStyleBackColor = true;
             this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
@@ -421,12 +424,12 @@
             // btnexcluir
             // 
             this.btnexcluir.BackgroundImage = global::FarmSystem.Properties.Resources.delete;
-            this.btnexcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnexcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnexcluir.Location = new System.Drawing.Point(739, 26);
+            this.btnexcluir.Location = new System.Drawing.Point(797, 79);
             this.btnexcluir.Name = "btnexcluir";
-            this.btnexcluir.Size = new System.Drawing.Size(89, 76);
+            this.btnexcluir.Size = new System.Drawing.Size(104, 82);
             this.btnexcluir.TabIndex = 9;
             this.btnexcluir.UseVisualStyleBackColor = true;
             this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
@@ -434,12 +437,12 @@
             // btneditar
             // 
             this.btneditar.BackgroundImage = global::FarmSystem.Properties.Resources.edit;
-            this.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btneditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btneditar.Location = new System.Drawing.Point(644, 26);
+            this.btneditar.Location = new System.Drawing.Point(687, 76);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(89, 76);
+            this.btneditar.Size = new System.Drawing.Size(104, 82);
             this.btneditar.TabIndex = 8;
             this.btneditar.UseVisualStyleBackColor = true;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
@@ -447,22 +450,54 @@
             // btngravar
             // 
             this.btngravar.BackgroundImage = global::FarmSystem.Properties.Resources.floppy_disk;
-            this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btngravar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btngravar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btngravar.Location = new System.Drawing.Point(549, 26);
+            this.btngravar.Location = new System.Drawing.Point(577, 76);
             this.btngravar.Name = "btngravar";
-            this.btngravar.Size = new System.Drawing.Size(89, 76);
+            this.btngravar.Size = new System.Drawing.Size(104, 82);
             this.btngravar.TabIndex = 7;
             this.btngravar.UseVisualStyleBackColor = true;
             this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
+            // 
+            // txtipoac
+            // 
+            this.txtipoac.FormattingEnabled = true;
+            this.txtipoac.Items.AddRange(new object[] {
+            "Plantar",
+            "Colher",
+            "Detetizar",
+            "Adubar"});
+            this.txtipoac.Location = new System.Drawing.Point(86, 29);
+            this.txtipoac.Name = "txtipoac";
+            this.txtipoac.Size = new System.Drawing.Size(444, 21);
+            this.txtipoac.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(391, 181);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 13);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "Horário:";
+            // 
+            // txthorario
+            // 
+            this.txthorario.Location = new System.Drawing.Point(393, 197);
+            this.txthorario.Name = "txthorario";
+            this.txthorario.Size = new System.Drawing.Size(137, 20);
+            this.txthorario.TabIndex = 34;
             // 
             // acoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(936, 514);
+            this.ClientSize = new System.Drawing.Size(1037, 564);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txthorario);
+            this.Controls.Add(this.txtipoac);
             this.Controls.Add(this.combstatus);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.mskdata);
@@ -493,7 +528,6 @@
             this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.txtprod);
             this.Controls.Add(this.txtplantacao);
-            this.Controls.Add(this.txtipoac);
             this.Controls.Add(this.txtcodigo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -512,7 +546,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtcodigo;
-        private System.Windows.Forms.TextBox txtipoac;
         private System.Windows.Forms.TextBox txtplantacao;
         private System.Windows.Forms.TextBox txtprod;
         private System.Windows.Forms.TextBox txtdescricao;
@@ -535,13 +568,6 @@
         private postgresDataSet2 postgresDataSet2;
         private System.Windows.Forms.BindingSource acoesBindingSource;
         private postgresDataSet2TableAdapters.acoesTableAdapter acoesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoacaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn plantacaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoprodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataacDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn funcionarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btngravar;
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnexcluir;
@@ -553,5 +579,16 @@
         private System.Windows.Forms.MaskedTextBox mskdata;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox combstatus;
+		private System.Windows.Forms.ComboBox txtipoac;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txthorario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plantacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoprodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funcionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horario;
     }
 }

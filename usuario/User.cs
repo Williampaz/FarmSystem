@@ -62,7 +62,12 @@ namespace FarmSystem.usuario
 			get { return _endereco; }
 			set { _endereco = value; }
 		}
-
+		private String _cidade;
+		public string cidade
+        {
+            get { return _cidade; }
+			set { _cidade = value; }
+        }
 
 	}
 }

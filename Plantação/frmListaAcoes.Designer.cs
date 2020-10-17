@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvAcoes = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ação = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plantação = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,8 +38,7 @@
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Funcionário = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcoes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,12 +53,30 @@
             this.Produto,
             this.Data,
             this.Funcionário,
-            this.Status});
+            this.Status,
+            this.horario});
             this.dgvAcoes.Location = new System.Drawing.Point(1, 61);
             this.dgvAcoes.Name = "dgvAcoes";
-            this.dgvAcoes.Size = new System.Drawing.Size(860, 425);
+            this.dgvAcoes.Size = new System.Drawing.Size(974, 425);
             this.dgvAcoes.TabIndex = 0;
             this.dgvAcoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcoes_CellDoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(140, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Pesquisar:";
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(202, 20);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(494, 20);
+            this.txtPesquisar.TabIndex = 2;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // Código
             // 
@@ -107,29 +126,18 @@
             this.Status.Name = "Status";
             this.Status.Width = 130;
             // 
-            // label1
+            // horario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Pesquisar:";
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Location = new System.Drawing.Point(202, 20);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(494, 20);
-            this.txtPesquisar.TabIndex = 2;
-            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            this.horario.DataPropertyName = "horario";
+            this.horario.HeaderText = "Horário";
+            this.horario.Name = "horario";
             // 
             // frmListaAcoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(863, 486);
+            this.ClientSize = new System.Drawing.Size(987, 486);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAcoes);
@@ -146,6 +154,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvAcoes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ação;
         private System.Windows.Forms.DataGridViewTextBoxColumn Plantação;
@@ -153,7 +163,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn Funcionário;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horario;
     }
 }
