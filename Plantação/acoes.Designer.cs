@@ -468,9 +468,9 @@
             "Colher",
             "Detetizar",
             "Adubar"});
-            this.txtipoac.Location = new System.Drawing.Point(86, 29);
+            this.txtipoac.Location = new System.Drawing.Point(100, 30);
             this.txtipoac.Name = "txtipoac";
-            this.txtipoac.Size = new System.Drawing.Size(444, 21);
+            this.txtipoac.Size = new System.Drawing.Size(430, 21);
             this.txtipoac.TabIndex = 33;
             // 
             // label15

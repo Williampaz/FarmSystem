@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using Newtonsoft.Json;
-
+using Npgsql;
+using NpgsqlTypes;
 
 namespace FarmSystem.Previsão_do_tempo
 {
@@ -172,7 +173,11 @@ namespace FarmSystem.Previsão_do_tempo
             private void Form1_Load(object sender, EventArgs e)
             {
 
-            }
+            Conexao conn = new Conexao();
+
+
+       
+    }
 
 
         
