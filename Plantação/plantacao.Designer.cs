@@ -92,6 +92,7 @@
             // 
             // txtcodigo
             // 
+            this.txtcodigo.Enabled = false;
             this.txtcodigo.Location = new System.Drawing.Point(12, 36);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(179, 20);
@@ -254,6 +255,7 @@
             this.dtgplantacao.Name = "dtgplantacao";
             this.dtgplantacao.Size = new System.Drawing.Size(1346, 384);
             this.dtgplantacao.TabIndex = 21;
+            this.dtgplantacao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgplantacao_CellContentClick);
             this.dtgplantacao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgplantacao_CellDoubleClick);
             // 
             // codigoDataGridViewTextBoxColumn

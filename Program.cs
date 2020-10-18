@@ -1,4 +1,5 @@
 ﻿using FarmSystem.Principal;
+using FarmSystem.usuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,9 @@ namespace FarmSystem
 			log.ShowDialog();
 			if(log.logado == true)
             {
-				Application.Run(new Frm_Inicial());
+				
+				User_DAO car = new User_DAO();
+				new Frm_Inicial(car.buscacod(log.email), car.bucanome(log.email)).ShowDialog();
 			}
 		}
 	}

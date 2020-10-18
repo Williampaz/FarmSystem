@@ -53,6 +53,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtnome = new System.Windows.Forms.Label();
+            this.txtuser = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +71,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(25, 26);
+            this.button1.Location = new System.Drawing.Point(25, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(269, 83);
             this.button1.TabIndex = 0;
@@ -207,7 +210,10 @@
             // 
             this.panel1.AllowDrop = true;
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtuser);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.Slidepanel);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
@@ -230,7 +236,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(25, 471);
+            this.button2.Location = new System.Drawing.Point(25, 480);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(269, 83);
             this.button2.TabIndex = 15;
@@ -242,7 +248,7 @@
             // Slidepanel
             // 
             this.Slidepanel.BackColor = System.Drawing.Color.ForestGreen;
-            this.Slidepanel.Location = new System.Drawing.Point(3, 26);
+            this.Slidepanel.Location = new System.Drawing.Point(3, 35);
             this.Slidepanel.Name = "Slidepanel";
             this.Slidepanel.Size = new System.Drawing.Size(16, 83);
             this.Slidepanel.TabIndex = 14;
@@ -257,7 +263,7 @@
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(25, 382);
+            this.button9.Location = new System.Drawing.Point(25, 391);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(269, 83);
             this.button9.TabIndex = 4;
@@ -276,7 +282,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(25, 293);
+            this.button8.Location = new System.Drawing.Point(25, 302);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(269, 83);
             this.button8.TabIndex = 3;
@@ -295,7 +301,7 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(25, 204);
+            this.button7.Location = new System.Drawing.Point(25, 213);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(269, 83);
             this.button7.TabIndex = 2;
@@ -315,7 +321,7 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(25, 115);
+            this.button6.Location = new System.Drawing.Point(25, 124);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(269, 83);
             this.button6.TabIndex = 1;
@@ -337,6 +343,39 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // txtnome
+            // 
+            this.txtnome.AutoSize = true;
+            this.txtnome.BackColor = System.Drawing.Color.Transparent;
+            this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.Location = new System.Drawing.Point(113, 7);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(50, 19);
+            this.txtnome.TabIndex = 15;
+            this.txtnome.Text = "label1";
+            // 
+            // txtuser
+            // 
+            this.txtuser.AutoSize = true;
+            this.txtuser.BackColor = System.Drawing.Color.Transparent;
+            this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.Location = new System.Drawing.Point(77, 7);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(50, 19);
+            this.txtuser.TabIndex = 16;
+            this.txtuser.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 19);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Usuario:";
+            // 
             // Frm_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +396,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -395,8 +435,9 @@
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button2;
-  
-      
+        private System.Windows.Forms.Label txtnome;
+        private System.Windows.Forms.Label txtuser;
+        private System.Windows.Forms.Label label1;
     }
 
 }

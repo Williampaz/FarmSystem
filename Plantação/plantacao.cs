@@ -334,5 +334,10 @@ namespace FarmSystem.Plantação
             dtgplantacao.DataSource = dp.Listaplantacao(txtpesquisa.Text);
         
         }
+
+        private void dtgplantacao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

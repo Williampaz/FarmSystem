@@ -87,6 +87,7 @@
             this.txtcodigo.ReadOnly = true;
             this.txtcodigo.Size = new System.Drawing.Size(82, 20);
             this.txtcodigo.TabIndex = 0;
+            this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
             // 
             // txtplantacao
             // 

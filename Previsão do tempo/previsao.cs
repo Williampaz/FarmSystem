@@ -11,6 +11,7 @@ using System.Net;
 using Newtonsoft.Json;
 using Npgsql;
 using NpgsqlTypes;
+using FarmSystem.Principal;
 
 namespace FarmSystem.Previsão_do_tempo
 {
@@ -22,7 +23,15 @@ namespace FarmSystem.Previsão_do_tempo
 
         }
 
-            string city = "";
+        public previsao(int user)
+        {
+            InitializeComponent();
+            txtusu.Text = user.ToString();
+
+        }
+
+
+        string city = "";
 
             string pasta_aplicacao = Application.StartupPath + @"\"; // pega endereço da pasta que contem arquivo executavel 
         
@@ -144,6 +153,31 @@ namespace FarmSystem.Previsão_do_tempo
                 }
             }
 
+
+        private string getcidade(int user)
+        {
+
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("select cidade from farmsystem.usuario where codigo = @user ");
+            query.Parameters.Add("@user", NpgsqlDbType.Integer).Value =user;
+            query.Connection = conn.entrar();
+            string cid = "";
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        cid = dr.GetString(0);
+                    }
+                    conn.sair();
+                    return cid;
+                }
+            }
+            conn.sair();
+            return cid;
+        }
+
             private void previsao_KeyDown(object sender, KeyEventArgs e)
             {
                 if (e.KeyCode == Keys.F1)
@@ -173,18 +207,25 @@ namespace FarmSystem.Previsão_do_tempo
             private void Form1_Load(object sender, EventArgs e)
             {
 
-            Conexao conn = new Conexao();
+            
 
-
-       
-    }
+        }
 
 
         
 
         private void previsao_Load(object sender, EventArgs e)
         {
+            Conexao conn = new Conexao();
 
+            string cid;
+           
+            cid = getcidade(Int32.Parse(txtusu.Text));
+
+            city = cid;
+
+
+            CarregaWeather();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
