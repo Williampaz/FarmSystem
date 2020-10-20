@@ -53,6 +53,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.plantaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -145,7 +146,8 @@
             this.relaçãoDeUsuariosToolStripMenuItem,
             this.funcionáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem1,
-            this.produtosToolStripMenuItem1});
+            this.produtosToolStripMenuItem1,
+            this.plantaçõesToolStripMenuItem});
             this.relatoriosPessoalToolStripMenuItem.Name = "relatoriosPessoalToolStripMenuItem";
             this.relatoriosPessoalToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.relatoriosPessoalToolStripMenuItem.Text = "R&elação";
@@ -154,28 +156,28 @@
             // relaçãoDeUsuariosToolStripMenuItem
             // 
             this.relaçãoDeUsuariosToolStripMenuItem.Name = "relaçãoDeUsuariosToolStripMenuItem";
-            this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.relaçãoDeUsuariosToolStripMenuItem.Text = "&Usuarios";
             this.relaçãoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeUsuariosToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.funcionáriosToolStripMenuItem.Text = "Fu&ncionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem1
             // 
             this.fornecedoresToolStripMenuItem1.Name = "fornecedoresToolStripMenuItem1";
-            this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.fornecedoresToolStripMenuItem1.Text = "&Fornecedores";
             this.fornecedoresToolStripMenuItem1.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem1_Click);
             // 
             // produtosToolStripMenuItem1
             // 
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem1.Text = "&Produtos";
             this.produtosToolStripMenuItem1.Click += new System.EventHandler(this.produtosToolStripMenuItem1_Click);
             // 
@@ -337,6 +339,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // plantaçõesToolStripMenuItem
+            // 
+            this.plantaçõesToolStripMenuItem.Name = "plantaçõesToolStripMenuItem";
+            this.plantaçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.plantaçõesToolStripMenuItem.Text = "Plantações";
+            this.plantaçõesToolStripMenuItem.Click += new System.EventHandler(this.plantaçõesToolStripMenuItem_Click);
+            // 
             // Frm_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,8 +404,7 @@
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button2;
-  
-      
+        private System.Windows.Forms.ToolStripMenuItem plantaçõesToolStripMenuItem;
     }
 
 }

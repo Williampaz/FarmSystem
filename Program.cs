@@ -18,11 +18,11 @@ namespace FarmSystem
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Login log = new Login();
-			log.ShowDialog();
-			if(log.logado == true)
-            {
+			//log.ShowDialog();
+			//if(log.logado == true)
+            //{
 				Application.Run(new Frm_Inicial());
-			}
+			//}
 		}
 	}
 }
