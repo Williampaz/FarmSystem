@@ -53,9 +53,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtnome = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -148,7 +145,8 @@
             this.relaçãoDeUsuariosToolStripMenuItem,
             this.funcionáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem1,
-            this.produtosToolStripMenuItem1});
+            this.produtosToolStripMenuItem1,
+            this.plantaçõesToolStripMenuItem});
             this.relatoriosPessoalToolStripMenuItem.Name = "relatoriosPessoalToolStripMenuItem";
             this.relatoriosPessoalToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.relatoriosPessoalToolStripMenuItem.Text = "R&elação";
@@ -157,28 +155,28 @@
             // relaçãoDeUsuariosToolStripMenuItem
             // 
             this.relaçãoDeUsuariosToolStripMenuItem.Name = "relaçãoDeUsuariosToolStripMenuItem";
-            this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.relaçãoDeUsuariosToolStripMenuItem.Text = "&Usuarios";
             this.relaçãoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeUsuariosToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.funcionáriosToolStripMenuItem.Text = "Fu&ncionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem1
             // 
             this.fornecedoresToolStripMenuItem1.Name = "fornecedoresToolStripMenuItem1";
-            this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.fornecedoresToolStripMenuItem1.Text = "&Fornecedores";
             this.fornecedoresToolStripMenuItem1.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem1_Click);
             // 
             // produtosToolStripMenuItem1
             // 
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem1.Text = "&Produtos";
             this.produtosToolStripMenuItem1.Click += new System.EventHandler(this.produtosToolStripMenuItem1_Click);
             // 
@@ -343,39 +341,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txtnome
-            // 
-            this.txtnome.AutoSize = true;
-            this.txtnome.BackColor = System.Drawing.Color.Transparent;
-            this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnome.Location = new System.Drawing.Point(113, 7);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(50, 19);
-            this.txtnome.TabIndex = 15;
-            this.txtnome.Text = "label1";
-            // 
-            // txtuser
-            // 
-            this.txtuser.AutoSize = true;
-            this.txtuser.BackColor = System.Drawing.Color.Transparent;
-            this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.Location = new System.Drawing.Point(77, 7);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(50, 19);
-            this.txtuser.TabIndex = 16;
-            this.txtuser.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 19);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Usuario:";
-            // 
             // Frm_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,9 +400,8 @@
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label txtnome;
-        private System.Windows.Forms.Label txtuser;
-        private System.Windows.Forms.Label label1;
+  
+      
     }
 
 }
