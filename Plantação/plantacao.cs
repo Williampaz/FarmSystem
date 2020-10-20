@@ -29,8 +29,8 @@ namespace FarmSystem.Plantação
         }
         private objplantacao GetPlantacao()
         {
-          
-            objplantacao plant  = new objplantacao();
+
+            objplantacao plant = new objplantacao();
 
             plant.codigo = Convert.ToInt32(txtcodigo.Text);
             plant.funcionario = Convert.ToInt32(txtcodfunc.Text);
@@ -71,6 +71,38 @@ namespace FarmSystem.Plantação
 
             return plant;
         }
+
+
+        public objacao getAcaoPlantar()
+        {
+            objacao a = new objacao();
+
+            a.tipoacao = "Plantar";
+            a.plantacao = Convert.ToInt32(txtcodigo.Text);
+            a.codigoprod = Convert.ToInt32(2);
+            a.dataac = Convert.ToDateTime(mskdataplantio.Text);
+            a.funcionario = Convert.ToInt32(txtcodfunc.Text);
+            a.status = "A executar";
+            a.horario = "07h00";
+
+            return a;
+        }
+
+        public objacao getAcaoColheita()
+        {
+            objacao a = new objacao();
+
+            a.tipoacao = "Colher";
+            a.plantacao = Convert.ToInt32(txtcodigo.Text);
+            a.codigoprod = Convert.ToInt32(2);
+            a.dataac = Convert.ToDateTime(mskprevisaodata.Text);
+            a.funcionario = Convert.ToInt32(txtcodfunc.Text);
+            a.status = "A executar";
+            a.horario = "07h00";
+
+            return a;
+        }
+
 
 
 
@@ -122,9 +154,9 @@ namespace FarmSystem.Plantação
             mskprevisaodata.Text = plant.prevdatacolheita.ToString();
             txtqtdsacas.Text = plant.quantidadecolhida.ToString();
             txtsemente.Text = plant.sementeusada;
-            txtdatadacolheita.Text = plant.datadecolheita.ToString() ;
+            txtdatadacolheita.Text = plant.datadecolheita.ToString();
 
-                     
+
         }
 
         private void limpar()
@@ -134,14 +166,14 @@ namespace FarmSystem.Plantação
             txtnomefunc.Clear();
             txtarea.Clear();
             txtdistancia.Clear();
-            mskdataplantio.Text = "";
+            mskdataplantio.Value = DateTime.Now;
             txtvalorvenda.Clear();
             txtstatus.Text = "";
             txtprevisaosacas.Clear();
-            mskprevisaodata.Text = "";
+            mskprevisaodata.Value = DateTime.Now;
             txtqtdsacas.Clear();
             txtsemente.Clear();
-            txtdatadacolheita.Clear();
+            txtdatadacolheita.Value = DateTime.Now;
 
 
         }
@@ -158,7 +190,7 @@ namespace FarmSystem.Plantação
             this.plantacaoTableAdapter.Fill(this.postgresDataSet2.plantacao);
 
             atualizardtg();
-            
+
 
         }
 
@@ -168,6 +200,17 @@ namespace FarmSystem.Plantação
 
         }
 
+        private void cadac()
+        {
+            DAOacao ac = new DAOacao();
+
+            ac.CadastarAcao(getAcaoPlantar());
+
+            ac.CadastarAcao(getAcaoColheita());
+
+            limpar();
+
+        }
         private void btngravar_Click(object sender, EventArgs e)
         {
             try
@@ -177,21 +220,26 @@ namespace FarmSystem.Plantação
                 dp.cadastrar(GetcadPlantacao());
 
                 MessageBox.Show("Cadastro realizado com sucesso", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpar();
+        
 
                 atualizardtg();
+
+                cadac();
 
                 res = dp.getCod() + 1;
                 txtcodigo.Text = res + "";
 
+
             }
-             catch
-            {
-                  MessageBox.Show("Não foi possível realizar o cadastro, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        catch {
+                MessageBox.Show("Não foi possível realizar o cadastro, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
         }
+
+        
 
         private void setfuncionario(funcionario func)
 
@@ -285,6 +333,11 @@ namespace FarmSystem.Plantação
             daoplantacao dp = new daoplantacao();
             dtgplantacao.DataSource = dp.Listaplantacao(txtpesquisa.Text);
         
+        }
+
+        private void dtgplantacao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

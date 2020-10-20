@@ -289,5 +289,10 @@ namespace FarmSystem.Plantação
         {
 
         }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

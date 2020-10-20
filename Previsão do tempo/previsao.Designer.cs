@@ -65,6 +65,7 @@
             this.pb_dia2 = new System.Windows.Forms.PictureBox();
             this.pb_dia1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtusu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_diaAtual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_dia5)).BeginInit();
@@ -462,12 +463,21 @@
             this.pb_dia1.TabIndex = 42;
             this.pb_dia1.TabStop = false;
             // 
+            // txtusu
+            // 
+            this.txtusu.Location = new System.Drawing.Point(753, 50);
+            this.txtusu.Name = "txtusu";
+            this.txtusu.Size = new System.Drawing.Size(100, 20);
+            this.txtusu.TabIndex = 68;
+            this.txtusu.Visible = false;
+            // 
             // previsao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(728, 528);
+            this.ClientSize = new System.Drawing.Size(731, 528);
+            this.Controls.Add(this.txtusu);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pb_diaAtual);
@@ -504,6 +514,7 @@
             this.Controls.Add(this.lbl_cidade);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "previsao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Previsão do Tempo";
             this.Load += new System.EventHandler(this.previsao_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.previsao_KeyDown);
@@ -556,5 +567,6 @@
         private System.Windows.Forms.Label lbl_diaSemana;
         private System.Windows.Forms.Label lbl_cidade;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox txtusu;
     }
 }

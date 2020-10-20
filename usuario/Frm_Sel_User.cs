@@ -36,6 +36,7 @@ namespace FarmSystem.usuario
 			user.email = data_usuario.CurrentRow.Cells[6].Value.ToString();
 			user.senha = data_usuario.CurrentRow.Cells[7].Value.ToString();
 			user.endereco = data_usuario.CurrentRow.Cells[8].Value.ToString();
+			user.cidade = data_usuario.CurrentRow.Cells[9].Value.ToString();
 			return user;
 		}
 		private void data_usuario_DoubleClick(object sender, EventArgs e)

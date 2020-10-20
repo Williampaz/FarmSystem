@@ -21,6 +21,17 @@ namespace FarmSystem.Principal
 			Slidepanel.Top = button1.Top;
 		}
 
+		public Frm_Inicial(int user, string nome)
+		{
+			InitializeComponent();
+			Slidepanel.Height = button1.Height;
+			Slidepanel.Top = button1.Top;
+
+			txtuser.Text = user.ToString();
+			txtnome.Text = nome;
+
+		}
+
 		private void button1_Click(object sender, EventArgs e)
 		{
 			Slidepanel.Height = button1.Height;
@@ -166,7 +177,7 @@ namespace FarmSystem.Principal
 
 			Slidepanel.Height = button2.Height;
 			Slidepanel.Top = button2.Top;
-			new previsao().ShowDialog();
+			new previsao(Int32.Parse(txtuser.Text)).ShowDialog();
 
 		}
 

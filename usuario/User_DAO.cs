@@ -89,6 +89,55 @@ namespace FarmSystem.usuario
             query.ExecuteNonQuery();
             conn.sair();
         }
+
+        public int buscacod(string user)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("select codigo from farmsystem.usuario where email = @user ");
+            query.Parameters.Add("@user", NpgsqlDbType.Varchar).Value = user;
+            query.Connection = conn.entrar();
+            int cid = 0;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        cid = dr.GetInt32(0);
+                    }
+                    conn.sair();
+                    return cid;
+                }
+            }
+            conn.sair();
+            return cid;
+
+        }
+
+        public string bucanome(string user)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("select nome from farmsystem.usuario where email = @user ");
+            query.Parameters.Add("@user", NpgsqlDbType.Varchar).Value = user;
+            query.Connection = conn.entrar();
+            string cid = "";
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        cid = dr.GetString(0);
+                    }
+                    conn.sair();
+                    return cid;
+                }
+            }
+            conn.sair();
+            return cid;
+
+        }
+
         public List<User> bustatodos()
         {
             NpgsqlCommand query = new NpgsqlCommand(
