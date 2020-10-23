@@ -408,23 +408,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
-    <Compile Include="Relatorios\frmRelAcoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Relatorios\frmRelAcoes.Designer.cs">
-      <DependentUpon>frmRelAcoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="postgresDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>postgresDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Relatorios\frmRelPlantacao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Relatorios\frmRelPlantacao.Designer.cs">
-      <DependentUpon>frmRelPlantacao.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Plantação\Data_Acao.cs" />
     <Compile Include="Plantação\frmListaPlantacoes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -516,11 +500,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>postgresDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="postgresDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>postgresDataSet3.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Previsão do tempo\previsao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -575,6 +554,11 @@
       <DependentUpon>Frm_Relacao_User.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Tarefas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tarefas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="usuario\Frm_Sel_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -594,13 +578,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fornecedor\frmListaFornecedor.resx">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Relatorios\frmRelAcoes.resx">
-      <DependentUpon>frmRelAcoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Relatorios\relAcoes.rdlc" />
-    <EmbeddedResource Include="Relatorios\frmRelPlantacao.resx">
-      <DependentUpon>frmRelPlantacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plantação\frmListaPlantacoes.resx">
       <DependentUpon>frmListaPlantacoes.cs</DependentUpon>
@@ -661,7 +638,6 @@
     <EmbeddedResource Include="Relatorios\Rel_de_Produtos.rdlc" />
     <EmbeddedResource Include="Relatorios\Rel_de_Usuarios.rdlc" />
     <EmbeddedResource Include="Relatorios\Rel_de Fornecedores.rdlc" />
-    <EmbeddedResource Include="Relatorios\relPlantacao.rdlc" />
     <EmbeddedResource Include="usuario\Frm_Cad_User.resx">
       <DependentUpon>Frm_Cad_User.cs</DependentUpon>
     </EmbeddedResource>
@@ -713,28 +689,6 @@
     <None Include="postgresDataSet2.xss">
       <DependentUpon>postgresDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="postgresDataSet3.xsc">
-      <DependentUpon>postgresDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="postgresDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>postgresDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="postgresDataSet3.xss">
-      <DependentUpon>postgresDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="postgresDataSet4.xsc">
-      <DependentUpon>postgresDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="postgresDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>postgresDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="postgresDataSet4.xss">
-      <DependentUpon>postgresDataSet4.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\FarmSystem.Plantação.objplantacao.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -745,6 +699,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Tarefas.xsc">
+      <DependentUpon>Tarefas.xsd</DependentUpon>
+    </None>
+    <None Include="Tarefas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tarefas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tarefas.xss">
+      <DependentUpon>Tarefas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
