@@ -247,5 +247,40 @@ namespace FarmSystem
             conn.sair();
             return null;
         }
+        public List<Data_Acao> Lista_Data(DateTime data)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("SSELECT p2.codigo, p2.sementeusada, p.nome, f.nome, a.dataac, a.tipoacao, a.status, a.horario" +
+                "FROM farmsystem.acoes a, farmsystem.produtos p, farmsystem.plantacao p2, farmsystem.funcionario f " +
+                "where a.plantacao = p2.codigo and f.codigo = a.funcionario and a.codigoprod = p.codigo and a.dataac = @data " +
+                "order by a.dataac, a.codigo");
+            query.Parameters.Add("@data", NpgsqlDbType.Date).Value = data;
+            query.Connection = conn.entrar();
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    List<Data_Acao> acoes = new List<Data_Acao>();
+                    while (dr.Read())
+                    {
+                        Data_Acao ac = new Data_Acao();
+                        ac.codigo = dr.GetInt32(0);
+                        ac.semente_usada = dr.GetString(1);
+                        ac.nome_produto = dr.GetString(2);
+                        ac.nome_funcionario = dr.GetString(3);
+                        ac.data_acao = dr.GetDateTime(4);
+                        ac.Tipo_Acao = dr.GetString(5);
+                        ac.Status = dr.GetString(6);
+                        ac.Horario = dr.GetString(7);
+
+                        acoes.Add(ac);
+                    }
+                    conn.sair();
+                    return acoes;
+                }
+            }
+            conn.sair();
+            return null;
+        }
     }
 }

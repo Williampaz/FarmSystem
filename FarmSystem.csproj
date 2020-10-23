@@ -404,6 +404,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Plantação\Data_Acao.cs" />
     <Compile Include="Plantação\frmListaPlantacoes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -549,6 +550,11 @@
       <DependentUpon>Frm_Relacao_User.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Tarefas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tarefas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="usuario\Frm_Sel_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -688,6 +694,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Tarefas.xsc">
+      <DependentUpon>Tarefas.xsd</DependentUpon>
+    </None>
+    <None Include="Tarefas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tarefas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tarefas.xss">
+      <DependentUpon>Tarefas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

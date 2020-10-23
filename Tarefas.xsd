@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Tarefas" targetNamespace="http://tempuri.org/Tarefas.xsd" xmlns:mstns="http://tempuri.org/Tarefas.xsd" xmlns="http://tempuri.org/Tarefas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="postgresConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="postgresConnectionString (Settings)" PropertyReference="ApplicationSettings.FarmSystem.Properties.Settings.GlobalReference.Default.postgresConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="postgresConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        p2.codigo AS "Plantação ", p2.sementeusada AS "Tipo Planta", p.nome AS Produtos, f.nome AS Funcionário, a.dataac AS "Data de Execução", a.tipoacao AS Ação, a.status AS Status, a.horario AS Hora
+FROM            farmsystem.acoes a, farmsystem.plantacao p2, farmsystem.funcionario f, farmsystem.produtos p
+WHERE        a.plantacao = p2.codigo AND a.funcionario = f.codigo AND a.codigoprod = p.codigo
+ORDER BY "Data de Execução", a.codigo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Plantação " DataSetColumn="Plantação " />
+              <Mapping SourceColumn="Tipo Planta" DataSetColumn="Tipo Planta" />
+              <Mapping SourceColumn="produtos" DataSetColumn="produtos" />
+              <Mapping SourceColumn="funcionário" DataSetColumn="funcionário" />
+              <Mapping SourceColumn="Data de Execução" DataSetColumn="Data de Execução" />
+              <Mapping SourceColumn="ação" DataSetColumn="ação" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="hora" DataSetColumn="hora" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Tarefas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Tarefas" msprop:Generator_UserDSName="Tarefas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Plantação_x0020_" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPlantação_" msprop:Generator_ColumnPropNameInRow="Plantação_" msprop:Generator_ColumnPropNameInTable="Plantação_Column" msprop:Generator_UserColumnName="Plantação " type="xs:int" />
+              <xs:element name="Tipo_x0020_Planta" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTipo_Planta" msprop:Generator_ColumnPropNameInRow="Tipo_Planta" msprop:Generator_ColumnPropNameInTable="Tipo_PlantaColumn" msprop:Generator_UserColumnName="Tipo Planta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="produtos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnprodutos" msprop:Generator_ColumnPropNameInRow="produtos" msprop:Generator_ColumnPropNameInTable="produtosColumn" msprop:Generator_UserColumnName="produtos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="funcionário" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnfuncionário" msprop:Generator_ColumnPropNameInRow="funcionário" msprop:Generator_ColumnPropNameInTable="funcionárioColumn" msprop:Generator_UserColumnName="funcionário" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_x0020_de_x0020_Execução" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnData_de_Execução" msprop:Generator_ColumnPropNameInRow="Data_de_Execução" msprop:Generator_ColumnPropNameInTable="Data_de_ExecuçãoColumn" msprop:Generator_UserColumnName="Data de Execução" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ação" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnação" msprop:Generator_ColumnPropNameInRow="ação" msprop:Generator_ColumnPropNameInTable="açãoColumn" msprop:Generator_UserColumnName="ação" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnhora" msprop:Generator_ColumnPropNameInRow="hora" msprop:Generator_ColumnPropNameInTable="horaColumn" msprop:Generator_UserColumnName="hora" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

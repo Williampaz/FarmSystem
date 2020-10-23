@@ -19,6 +19,8 @@ namespace FarmSystem.Principal
 			InitializeComponent();
 			Slidepanel.Height = button1.Height;
 			Slidepanel.Top = button1.Top;
+			DAOacao acao = new DAOacao();
+			//dataGridView2.DataSource = acao.Lista_Data(dateTimePicker2.CustomFormat('aaaa/mm/dd'));
 		}
 
 		public Frm_Inicial(int user, string nome)
@@ -52,6 +54,8 @@ namespace FarmSystem.Principal
 
 		private void Frm_Inicial_Load(object sender, EventArgs e)
 		{
+			// TODO: esta linha de código carrega dados na tabela 'tarefas.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
+			this.dataTable1TableAdapter.Fill(this.tarefas.DataTable1);
 
 		}
 
