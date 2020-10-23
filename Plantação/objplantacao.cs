@@ -104,8 +104,9 @@ namespace FarmSystem.Plantação
           prevdatacolheita date,
           quantidadecolhida int,
           sementeusada varchar (40),  
-         
-         */
+          datadecolheita date
+
+        */
 
     }
 }

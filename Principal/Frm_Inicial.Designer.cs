@@ -28,82 +28,63 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Inicial));
-			this.button1 = new System.Windows.Forms.Button();
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.cadastroDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.cadastroDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.acõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.relatoriosPessoalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.relaçãoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fornecedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.relatorioDeAçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.button5 = new System.Windows.Forms.Button();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.txtuser = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
-			this.txtnome = new System.Windows.Forms.Label();
-			this.Slidepanel = new System.Windows.Forms.Panel();
-			this.button9 = new System.Windows.Forms.Button();
-			this.button8 = new System.Windows.Forms.Button();
-			this.button7 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.dataGridView2 = new System.Windows.Forms.DataGridView();
-			this.plantaçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.tipoPlantaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.produtosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.funcionárioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataDeExecuçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.açãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.tarefasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.tarefas = new FarmSystem.Tarefas();
-			this.dataTable1TableAdapter = new FarmSystem.TarefasTableAdapters.DataTable1TableAdapter();
-			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-			this.pic_data = new System.Windows.Forms.PictureBox();
-			this.menuStrip1.SuspendLayout();
-			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tarefasBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tarefas)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pic_data)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.Color.Transparent;
-			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-			this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button1.Location = new System.Drawing.Point(25, 35);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(269, 83);
-			this.button1.TabIndex = 0;
-			this.button1.Text = " Usuario";
-			this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// menuStrip1
-			// 
-			this.menuStrip1.BackColor = System.Drawing.Color.Honeydew;
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Inicial));
+            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatoriosPessoalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relaçãoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatorioDeAçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Slidepanel = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtnome = new System.Windows.Forms.Label();
+            this.txtuser = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(25, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(269, 83);
+            this.button1.TabIndex = 0;
+            this.button1.Text = " Usuario";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Honeydew;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.relatoriosPessoalToolStripMenuItem,
             this.relatorioDeAçõesToolStripMenuItem,
@@ -168,366 +149,257 @@
             this.funcionáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem1,
             this.produtosToolStripMenuItem1});
-			this.relatoriosPessoalToolStripMenuItem.Name = "relatoriosPessoalToolStripMenuItem";
-			this.relatoriosPessoalToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-			this.relatoriosPessoalToolStripMenuItem.Text = "R&elação";
-			this.relatoriosPessoalToolStripMenuItem.Click += new System.EventHandler(this.relatoriosPessoalToolStripMenuItem_Click);
-			// 
-			// relaçãoDeUsuariosToolStripMenuItem
-			// 
-			this.relaçãoDeUsuariosToolStripMenuItem.Name = "relaçãoDeUsuariosToolStripMenuItem";
-			this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.relaçãoDeUsuariosToolStripMenuItem.Text = "&Usuarios";
-			this.relaçãoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeUsuariosToolStripMenuItem_Click);
-			// 
-			// funcionáriosToolStripMenuItem
-			// 
-			this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-			this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.funcionáriosToolStripMenuItem.Text = "Fu&ncionários";
-			this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
-			// 
-			// fornecedoresToolStripMenuItem1
-			// 
-			this.fornecedoresToolStripMenuItem1.Name = "fornecedoresToolStripMenuItem1";
-			this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
-			this.fornecedoresToolStripMenuItem1.Text = "&Fornecedores";
-			this.fornecedoresToolStripMenuItem1.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem1_Click);
-			// 
-			// produtosToolStripMenuItem1
-			// 
-			this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-			this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
-			this.produtosToolStripMenuItem1.Text = "&Produtos";
-			this.produtosToolStripMenuItem1.Click += new System.EventHandler(this.produtosToolStripMenuItem1_Click);
-			// 
-			// relatorioDeAçõesToolStripMenuItem
-			// 
-			this.relatorioDeAçõesToolStripMenuItem.Name = "relatorioDeAçõesToolStripMenuItem";
-			this.relatorioDeAçõesToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
-			this.relatorioDeAçõesToolStripMenuItem.Text = "&Relatorio de Ações";
-			// 
-			// sairToolStripMenuItem
-			// 
-			this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-			this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-			this.sairToolStripMenuItem.Text = "&Sair";
-			// 
-			// button5
-			// 
-			this.button5.BackColor = System.Drawing.Color.Ivory;
-			this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button5.Location = new System.Drawing.Point(323, 261);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(270, 128);
-			this.button5.TabIndex = 11;
-			this.button5.Text = "Teste de Mensagem";
-			this.button5.UseVisualStyleBackColor = false;
-			this.button5.Visible = false;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
-			// 
-			// panel1
-			// 
-			this.panel1.AllowDrop = true;
-			this.panel1.BackColor = System.Drawing.Color.LightGray;
-			this.panel1.Controls.Add(this.label1);
-			this.panel1.Controls.Add(this.txtuser);
-			this.panel1.Controls.Add(this.button2);
-			this.panel1.Controls.Add(this.txtnome);
-			this.panel1.Controls.Add(this.Slidepanel);
-			this.panel1.Controls.Add(this.button9);
-			this.panel1.Controls.Add(this.button8);
-			this.panel1.Controls.Add(this.button7);
-			this.panel1.Controls.Add(this.button6);
-			this.panel1.Controls.Add(this.button1);
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.panel1.Location = new System.Drawing.Point(0, 24);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(307, 639);
-			this.panel1.TabIndex = 12;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(7, 7);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(64, 19);
-			this.label1.TabIndex = 17;
-			this.label1.Text = "Usuario:";
-			// 
-			// txtuser
-			// 
-			this.txtuser.AutoSize = true;
-			this.txtuser.BackColor = System.Drawing.Color.Transparent;
-			this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtuser.Location = new System.Drawing.Point(77, 7);
-			this.txtuser.Name = "txtuser";
-			this.txtuser.Size = new System.Drawing.Size(50, 19);
-			this.txtuser.TabIndex = 16;
-			this.txtuser.Text = "label2";
-			// 
-			// button2
-			// 
-			this.button2.BackColor = System.Drawing.Color.Transparent;
-			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.ForeColor = System.Drawing.Color.White;
-			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button2.Location = new System.Drawing.Point(25, 480);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(269, 83);
-			this.button2.TabIndex = 15;
-			this.button2.Text = "Previsão Tempo";
-			this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.button2.UseVisualStyleBackColor = false;
-			this.button2.Click += new System.EventHandler(this.button2_Click_1);
-			// 
-			// txtnome
-			// 
-			this.txtnome.AutoSize = true;
-			this.txtnome.BackColor = System.Drawing.Color.Transparent;
-			this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtnome.Location = new System.Drawing.Point(113, 7);
-			this.txtnome.Name = "txtnome";
-			this.txtnome.Size = new System.Drawing.Size(50, 19);
-			this.txtnome.TabIndex = 15;
-			this.txtnome.Text = "label1";
-			// 
-			// Slidepanel
-			// 
-			this.Slidepanel.BackColor = System.Drawing.Color.ForestGreen;
-			this.Slidepanel.Location = new System.Drawing.Point(3, 35);
-			this.Slidepanel.Name = "Slidepanel";
-			this.Slidepanel.Size = new System.Drawing.Size(16, 83);
-			this.Slidepanel.TabIndex = 14;
-			// 
-			// button9
-			// 
-			this.button9.BackColor = System.Drawing.Color.Transparent;
-			this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button9.FlatAppearance.BorderSize = 0;
-			this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button9.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button9.ForeColor = System.Drawing.Color.White;
-			this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-			this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button9.Location = new System.Drawing.Point(25, 391);
-			this.button9.Name = "button9";
-			this.button9.Size = new System.Drawing.Size(269, 83);
-			this.button9.TabIndex = 4;
-			this.button9.Text = "Plantação";
-			this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.button9.UseVisualStyleBackColor = false;
-			this.button9.Click += new System.EventHandler(this.button9_Click);
-			// 
-			// button8
-			// 
-			this.button8.BackColor = System.Drawing.Color.Transparent;
-			this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button8.FlatAppearance.BorderSize = 0;
-			this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button8.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button8.ForeColor = System.Drawing.Color.White;
-			this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-			this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button8.Location = new System.Drawing.Point(25, 302);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(269, 83);
-			this.button8.TabIndex = 3;
-			this.button8.Text = "Produtos";
-			this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.button8.UseVisualStyleBackColor = false;
-			this.button8.Click += new System.EventHandler(this.button8_Click);
-			// 
-			// button7
-			// 
-			this.button7.BackColor = System.Drawing.Color.Transparent;
-			this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button7.FlatAppearance.BorderSize = 0;
-			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button7.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button7.ForeColor = System.Drawing.Color.White;
-			this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-			this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button7.Location = new System.Drawing.Point(25, 213);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(269, 83);
-			this.button7.TabIndex = 2;
-			this.button7.Text = " Funcionarios";
-			this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.button7.UseVisualStyleBackColor = false;
-			this.button7.Click += new System.EventHandler(this.button7_Click);
-			// 
-			// button6
-			// 
-			this.button6.BackColor = System.Drawing.Color.Transparent;
-			this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button6.FlatAppearance.BorderSize = 0;
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-			this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button6.Location = new System.Drawing.Point(25, 124);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(269, 83);
-			this.button6.TabIndex = 1;
-			this.button6.Text = "                Fornecedores";
-			this.button6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.button6.UseVisualStyleBackColor = false;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
-			// 
-			// dataGridView2
-			// 
-			this.dataGridView2.AutoGenerateColumns = false;
-			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.plantaçãoDataGridViewTextBoxColumn,
-            this.tipoPlantaDataGridViewTextBoxColumn,
-            this.produtosDataGridViewTextBoxColumn,
-            this.funcionárioDataGridViewTextBoxColumn,
-            this.dataDeExecuçãoDataGridViewTextBoxColumn,
-            this.açãoDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.horaDataGridViewTextBoxColumn});
-			this.dataGridView2.DataSource = this.dataTable1BindingSource;
-			this.dataGridView2.Location = new System.Drawing.Point(514, 483);
-			this.dataGridView2.Name = "dataGridView2";
-			this.dataGridView2.Size = new System.Drawing.Size(844, 138);
-			this.dataGridView2.TabIndex = 14;
-			// 
-			// plantaçãoDataGridViewTextBoxColumn
-			// 
-			this.plantaçãoDataGridViewTextBoxColumn.DataPropertyName = "Plantação ";
-			this.plantaçãoDataGridViewTextBoxColumn.HeaderText = "Plantação ";
-			this.plantaçãoDataGridViewTextBoxColumn.Name = "plantaçãoDataGridViewTextBoxColumn";
-			this.plantaçãoDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// tipoPlantaDataGridViewTextBoxColumn
-			// 
-			this.tipoPlantaDataGridViewTextBoxColumn.DataPropertyName = "Tipo Planta";
-			this.tipoPlantaDataGridViewTextBoxColumn.HeaderText = "Tipo Planta";
-			this.tipoPlantaDataGridViewTextBoxColumn.Name = "tipoPlantaDataGridViewTextBoxColumn";
-			this.tipoPlantaDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// produtosDataGridViewTextBoxColumn
-			// 
-			this.produtosDataGridViewTextBoxColumn.DataPropertyName = "produtos";
-			this.produtosDataGridViewTextBoxColumn.HeaderText = "Produtos";
-			this.produtosDataGridViewTextBoxColumn.Name = "produtosDataGridViewTextBoxColumn";
-			this.produtosDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// funcionárioDataGridViewTextBoxColumn
-			// 
-			this.funcionárioDataGridViewTextBoxColumn.DataPropertyName = "funcionário";
-			this.funcionárioDataGridViewTextBoxColumn.HeaderText = "Funcionário";
-			this.funcionárioDataGridViewTextBoxColumn.Name = "funcionárioDataGridViewTextBoxColumn";
-			this.funcionárioDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// dataDeExecuçãoDataGridViewTextBoxColumn
-			// 
-			this.dataDeExecuçãoDataGridViewTextBoxColumn.DataPropertyName = "Data de Execução";
-			this.dataDeExecuçãoDataGridViewTextBoxColumn.HeaderText = "Data de Execução";
-			this.dataDeExecuçãoDataGridViewTextBoxColumn.Name = "dataDeExecuçãoDataGridViewTextBoxColumn";
-			this.dataDeExecuçãoDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// açãoDataGridViewTextBoxColumn
-			// 
-			this.açãoDataGridViewTextBoxColumn.DataPropertyName = "ação";
-			this.açãoDataGridViewTextBoxColumn.HeaderText = "Ação";
-			this.açãoDataGridViewTextBoxColumn.Name = "açãoDataGridViewTextBoxColumn";
-			this.açãoDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// statusDataGridViewTextBoxColumn
-			// 
-			this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-			this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-			this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-			this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// horaDataGridViewTextBoxColumn
-			// 
-			this.horaDataGridViewTextBoxColumn.DataPropertyName = "hora";
-			this.horaDataGridViewTextBoxColumn.HeaderText = "Hora";
-			this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
-			this.horaDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// dataTable1BindingSource
-			// 
-			this.dataTable1BindingSource.DataMember = "DataTable1";
-			this.dataTable1BindingSource.DataSource = this.tarefasBindingSource;
-			// 
-			// tarefasBindingSource
-			// 
-			this.tarefasBindingSource.DataSource = this.tarefas;
-			this.tarefasBindingSource.Position = 0;
-			// 
-			// tarefas
-			// 
-			this.tarefas.DataSetName = "Tarefas";
-			this.tarefas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// dataTable1TableAdapter
-			// 
-			this.dataTable1TableAdapter.ClearBeforeFill = true;
-			// 
-			// dateTimePicker2
-			// 
-			this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dateTimePicker2.Location = new System.Drawing.Point(1258, 447);
-			this.dateTimePicker2.Name = "dateTimePicker2";
-			this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
-			this.dateTimePicker2.TabIndex = 15;
-			// 
-			// pic_data
-			// 
-			this.pic_data.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pic_data.Image = global::FarmSystem.Properties.Resources.corn_691634_1920;
-			this.pic_data.Location = new System.Drawing.Point(307, 24);
-			this.pic_data.Name = "pic_data";
-			this.pic_data.Size = new System.Drawing.Size(1063, 639);
-			this.pic_data.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pic_data.TabIndex = 13;
-			this.pic_data.TabStop = false;
-			this.pic_data.Click += new System.EventHandler(this.pictureBox1_Click);
-			// 
-			// Frm_Inicial
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1370, 663);
-			this.Controls.Add(this.dateTimePicker2);
-			this.Controls.Add(this.dataGridView2);
-			this.Controls.Add(this.button5);
-			this.Controls.Add(this.pic_data);
-			this.Controls.Add(this.panel1);
-			this.Controls.Add(this.menuStrip1);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MainMenuStrip = this.menuStrip1;
-			this.Name = "Frm_Inicial";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Menu";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.Load += new System.EventHandler(this.Frm_Inicial_Load);
-			this.menuStrip1.ResumeLayout(false);
-			this.menuStrip1.PerformLayout();
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tarefasBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tarefas)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pic_data)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.relatoriosPessoalToolStripMenuItem.Name = "relatoriosPessoalToolStripMenuItem";
+            this.relatoriosPessoalToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.relatoriosPessoalToolStripMenuItem.Text = "R&elação";
+            this.relatoriosPessoalToolStripMenuItem.Click += new System.EventHandler(this.relatoriosPessoalToolStripMenuItem_Click);
+            // 
+            // relaçãoDeUsuariosToolStripMenuItem
+            // 
+            this.relaçãoDeUsuariosToolStripMenuItem.Name = "relaçãoDeUsuariosToolStripMenuItem";
+            this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.relaçãoDeUsuariosToolStripMenuItem.Text = "&Usuarios";
+            this.relaçãoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeUsuariosToolStripMenuItem_Click);
+            // 
+            // funcionáriosToolStripMenuItem
+            // 
+            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.funcionáriosToolStripMenuItem.Text = "Fu&ncionários";
+            this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
+            // 
+            // fornecedoresToolStripMenuItem1
+            // 
+            this.fornecedoresToolStripMenuItem1.Name = "fornecedoresToolStripMenuItem1";
+            this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem1.Text = "&Fornecedores";
+            this.fornecedoresToolStripMenuItem1.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem1_Click);
+            // 
+            // produtosToolStripMenuItem1
+            // 
+            this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.produtosToolStripMenuItem1.Text = "&Produtos";
+            this.produtosToolStripMenuItem1.Click += new System.EventHandler(this.produtosToolStripMenuItem1_Click);
+            // 
+            // relatorioDeAçõesToolStripMenuItem
+            // 
+            this.relatorioDeAçõesToolStripMenuItem.Name = "relatorioDeAçõesToolStripMenuItem";
+            this.relatorioDeAçõesToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.relatorioDeAçõesToolStripMenuItem.Text = "&Relatorio de Ações";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "&Sair";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Ivory;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(328, 473);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(270, 128);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Teste de Mensagem";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.AllowDrop = true;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtuser);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.txtnome);
+            this.panel1.Controls.Add(this.Slidepanel);
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(307, 600);
+            this.panel1.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(25, 480);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(269, 83);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Previsão Tempo";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // Slidepanel
+            // 
+            this.Slidepanel.BackColor = System.Drawing.Color.ForestGreen;
+            this.Slidepanel.Location = new System.Drawing.Point(3, 35);
+            this.Slidepanel.Name = "Slidepanel";
+            this.Slidepanel.Size = new System.Drawing.Size(16, 83);
+            this.Slidepanel.TabIndex = 14;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(25, 391);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(269, 83);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "Plantação";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(25, 302);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(269, 83);
+            this.button8.TabIndex = 3;
+            this.button8.Text = "Produtos";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(25, 213);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(269, 83);
+            this.button7.TabIndex = 2;
+            this.button7.Text = " Funcionarios";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(25, 124);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(269, 83);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "                Fornecedores";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::FarmSystem.Properties.Resources.corn_691634_1920;
+            this.pictureBox1.Location = new System.Drawing.Point(307, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1063, 600);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // txtnome
+            // 
+            this.txtnome.AutoSize = true;
+            this.txtnome.BackColor = System.Drawing.Color.Transparent;
+            this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.Location = new System.Drawing.Point(113, 7);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(50, 19);
+            this.txtnome.TabIndex = 15;
+            this.txtnome.Text = "label1";
+            // 
+            // txtuser
+            // 
+            this.txtuser.AutoSize = true;
+            this.txtuser.BackColor = System.Drawing.Color.Transparent;
+            this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.Location = new System.Drawing.Point(77, 7);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(50, 19);
+            this.txtuser.TabIndex = 16;
+            this.txtuser.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 19);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Usuario:";
+            // 
+            // Frm_Inicial
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1370, 624);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Frm_Inicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Inicial_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
@@ -565,21 +437,6 @@
         private System.Windows.Forms.Label txtnome;
         private System.Windows.Forms.Label txtuser;
         private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.DataGridView dataGridView2;
-		private System.Windows.Forms.BindingSource tarefasBindingSource;
-		private Tarefas tarefas;
-		private System.Windows.Forms.BindingSource dataTable1BindingSource;
-		private TarefasTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
-		private System.Windows.Forms.DataGridViewTextBoxColumn plantaçãoDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn tipoPlantaDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn produtosDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn funcionárioDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataDeExecuçãoDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn açãoDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DateTimePicker dateTimePicker2;
-		private System.Windows.Forms.PictureBox pic_data;
-	}
+    }
 
 }
