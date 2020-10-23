@@ -190,6 +190,16 @@ namespace FarmSystem.Principal
         {
 			new frmRelPlantacao().ShowDialog();
         }
+
+        private void plantaçõesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+			new frmRelPlantacao().ShowDialog();
+        }
+
+        private void todasAsAçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			new frmRelAcoes().ShowDialog();
+        }
     }
 
 }
