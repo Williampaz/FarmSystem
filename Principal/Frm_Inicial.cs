@@ -19,6 +19,8 @@ namespace FarmSystem.Principal
 			InitializeComponent();
 			Slidepanel.Height = button1.Height;
 			Slidepanel.Top = button1.Top;
+			DAOacao acao = new DAOacao();
+			//dataGridView2.DataSource = acao.Lista_Data(dateTimePicker2.CustomFormat('aaaa/mm/dd'));
 		}
 
 		public Frm_Inicial(int user, string nome)
@@ -52,8 +54,8 @@ namespace FarmSystem.Principal
 
 		private void Frm_Inicial_Load(object sender, EventArgs e)
 		{
-          
-        }
+
+		}
 
         private void button4_Click(object sender, EventArgs e)
 		{
@@ -184,6 +186,11 @@ namespace FarmSystem.Principal
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void plantaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			new frmRelPlantacao().ShowDialog();
         }
     }
 

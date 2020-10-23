@@ -18,14 +18,15 @@ namespace FarmSystem
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Login log = new Login();
-			log.ShowDialog();
-			if(log.logado == true)
-            {
+			new Frm_Inicial().ShowDialog();
+			//Login log = new Login();
+			//log.ShowDialog();
+			//if(log.logado == true)
+            //{
 				
-				User_DAO car = new User_DAO();
-				new Frm_Inicial(car.buscacod(log.email), car.bucanome(log.email)).ShowDialog();
-			}
+			//	User_DAO car = new User_DAO();
+			//	new Frm_Inicial(car.buscacod(log.email), car.bucanome(log.email)).ShowDialog();
+			//}
 		}
 	}
 }
