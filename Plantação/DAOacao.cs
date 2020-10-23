@@ -250,10 +250,7 @@ namespace FarmSystem
         public List<Data_Acao> Lista_Data(DateTime data)
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("SSELECT p2.codigo, p2.sementeusada, p.nome, f.nome, a.dataac, a.tipoacao, a.status, a.horario" +
-                "FROM farmsystem.acoes a, farmsystem.produtos p, farmsystem.plantacao p2, farmsystem.funcionario f " +
-                "where a.plantacao = p2.codigo and f.codigo = a.funcionario and a.codigoprod = p.codigo and a.dataac = @data " +
-                "order by a.dataac, a.codigo");
+            NpgsqlCommand query = new NpgsqlCommand("SELECT p2.codigo, p2.sementeusada, p.nome, f.nome, a.dataac, a.tipoacao, a.status, a.horario FROM farmsystem.acoes a, farmsystem.produtos p, farmsystem.plantacao p2, farmsystem.funcionario f where a.plantacao = p2.codigo and f.codigo = a.funcionario and a.codigoprod = p.codigo and a.dataac = @data order by a.dataac, a.codigo");
             query.Parameters.Add("@data", NpgsqlDbType.Date).Value = data;
             query.Connection = conn.entrar();
             using (NpgsqlDataReader dr = query.ExecuteReader())

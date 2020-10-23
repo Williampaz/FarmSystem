@@ -176,9 +176,10 @@ namespace FarmSystem.Plantação
 
         private void btngravar_Click(object sender, EventArgs e)
         {
-            //try
+           
+            try
           
-         //{
+         {
                 DAOacao da = new DAOacao();
                 da.CadastarAcao(getAcao());
                 MessageBox.Show("Ação cadastrada com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -186,11 +187,11 @@ namespace FarmSystem.Plantação
                 Atualizar();
                 res = da.getCod() + 1;
                 txtcodigo.Text = res + "";
-          //  }
-           // catch (Exception)
-          //  {
+            }
+           catch (Exception)
+            {
                MessageBox.Show("Não foi possível realizar o cadastro da ação, tente novamente", "Verifique se os dados estão corretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          //  }
+            }
         }
 
         private void btneditar_Click(object sender, EventArgs e)

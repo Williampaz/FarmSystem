@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Inicial));
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -46,21 +47,44 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtnome = new System.Windows.Forms.Label();
             this.Slidepanel = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtuser = new System.Windows.Forms.Label();
+            this.txtnome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.dtg_tarefas = new System.Windows.Forms.DataGridView();
+            this.tarefas = new FarmSystem.Tarefas();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1TableAdapter = new FarmSystem.TarefasTableAdapters.DataTable1TableAdapter();
+            this.txt_data = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.plantaçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoPlantaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionárioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDeExecuçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.açãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_teste = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_tarefas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tarefas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -91,62 +115,62 @@
             this.relatoriosPessoalToolStripMenuItem,
             this.relatorioDeAçõesToolStripMenuItem,
             this.sairToolStripMenuItem});
-			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
-			this.menuStrip1.TabIndex = 8;
-			this.menuStrip1.Text = "menuStrip1";
-			// 
-			// cadastrosToolStripMenuItem
-			// 
-			this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cadastrosToolStripMenuItem
+            // 
+            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroDeUsuáriosToolStripMenuItem,
             this.cadastroDeFuncionáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem,
             this.produtosToolStripMenuItem,
             this.acõesToolStripMenuItem});
-			this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-			this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-			this.cadastrosToolStripMenuItem.Text = "&Cadastros";
-			// 
-			// cadastroDeUsuáriosToolStripMenuItem
-			// 
-			this.cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
-			this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.cadastroDeUsuáriosToolStripMenuItem.Text = "&Usuários";
-			this.cadastroDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeUsuáriosToolStripMenuItem_Click);
-			// 
-			// cadastroDeFuncionáriosToolStripMenuItem
-			// 
-			this.cadastroDeFuncionáriosToolStripMenuItem.Name = "cadastroDeFuncionáriosToolStripMenuItem";
-			this.cadastroDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.cadastroDeFuncionáriosToolStripMenuItem.Text = "Fu&ncionários";
-			this.cadastroDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFuncionáriosToolStripMenuItem_Click);
-			// 
-			// fornecedoresToolStripMenuItem
-			// 
-			this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-			this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.fornecedoresToolStripMenuItem.Text = "&Fornecedores";
-			this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
-			// 
-			// produtosToolStripMenuItem
-			// 
-			this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-			this.produtosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.produtosToolStripMenuItem.Text = "&Produtos";
-			this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
-			// 
-			// acõesToolStripMenuItem
-			// 
-			this.acõesToolStripMenuItem.Name = "acõesToolStripMenuItem";
-			this.acõesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-			this.acõesToolStripMenuItem.Text = "Acões";
-			this.acõesToolStripMenuItem.Click += new System.EventHandler(this.acõesToolStripMenuItem_Click);
-			// 
-			// relatoriosPessoalToolStripMenuItem
-			// 
-			this.relatoriosPessoalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.cadastrosToolStripMenuItem.Text = "&Cadastros";
+            // 
+            // cadastroDeUsuáriosToolStripMenuItem
+            // 
+            this.cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
+            this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.cadastroDeUsuáriosToolStripMenuItem.Text = "&Usuários";
+            this.cadastroDeUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeUsuáriosToolStripMenuItem_Click);
+            // 
+            // cadastroDeFuncionáriosToolStripMenuItem
+            // 
+            this.cadastroDeFuncionáriosToolStripMenuItem.Name = "cadastroDeFuncionáriosToolStripMenuItem";
+            this.cadastroDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.cadastroDeFuncionáriosToolStripMenuItem.Text = "Fu&ncionários";
+            this.cadastroDeFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFuncionáriosToolStripMenuItem_Click);
+            // 
+            // fornecedoresToolStripMenuItem
+            // 
+            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem.Text = "&Fornecedores";
+            this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
+            // 
+            // produtosToolStripMenuItem
+            // 
+            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.produtosToolStripMenuItem.Text = "&Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
+            // acõesToolStripMenuItem
+            // 
+            this.acõesToolStripMenuItem.Name = "acõesToolStripMenuItem";
+            this.acõesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.acõesToolStripMenuItem.Text = "Acões";
+            this.acõesToolStripMenuItem.Click += new System.EventHandler(this.acõesToolStripMenuItem_Click);
+            // 
+            // relatoriosPessoalToolStripMenuItem
+            // 
+            this.relatoriosPessoalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.relaçãoDeUsuariosToolStripMenuItem,
             this.funcionáriosToolStripMenuItem,
             this.fornecedoresToolStripMenuItem1,
@@ -200,7 +224,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Ivory;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(328, 473);
+            this.button5.Location = new System.Drawing.Point(348, 217);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(270, 128);
             this.button5.TabIndex = 11;
@@ -222,30 +246,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(307, 600);
+            this.panel1.Size = new System.Drawing.Size(307, 725);
             this.panel1.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Usuario:";
-            // 
-            // txtuser
-            // 
-            this.txtuser.AutoSize = true;
-            this.txtuser.BackColor = System.Drawing.Color.Transparent;
-            this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.Location = new System.Drawing.Point(62, 6);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(40, 16);
-            this.txtuser.TabIndex = 16;
-            this.txtuser.Text = "label2";
             // 
             // button2
             // 
@@ -265,17 +267,6 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // txtnome
-            // 
-            this.txtnome.AutoSize = true;
-            this.txtnome.BackColor = System.Drawing.Color.Transparent;
-            this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnome.Location = new System.Drawing.Point(87, 6);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(40, 16);
-            this.txtnome.TabIndex = 15;
-            this.txtnome.Text = "label1";
             // 
             // Slidepanel
             // 
@@ -363,17 +354,38 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::FarmSystem.Properties.Resources.corn_691634_1920;
-            this.pictureBox1.Location = new System.Drawing.Point(307, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1063, 600);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Usuario:";
+            // 
+            // txtuser
+            // 
+            this.txtuser.AutoSize = true;
+            this.txtuser.BackColor = System.Drawing.Color.Transparent;
+            this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.Location = new System.Drawing.Point(62, 6);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(40, 16);
+            this.txtuser.TabIndex = 16;
+            this.txtuser.Text = "label2";
+            // 
+            // txtnome
+            // 
+            this.txtnome.AutoSize = true;
+            this.txtnome.BackColor = System.Drawing.Color.Transparent;
+            this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.Location = new System.Drawing.Point(87, 6);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(40, 16);
+            this.txtnome.TabIndex = 15;
+            this.txtnome.Text = "label1";
             // 
             // panel2
             // 
@@ -385,17 +397,186 @@
             this.panel2.Size = new System.Drawing.Size(399, 25);
             this.panel2.TabIndex = 14;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::FarmSystem.Properties.Resources.corn_691634_1920;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(300, 24);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1067, 741);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // dtg_tarefas
+            // 
+            this.dtg_tarefas.AutoGenerateColumns = false;
+            this.dtg_tarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_tarefas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.plantaçãoDataGridViewTextBoxColumn,
+            this.tipoPlantaDataGridViewTextBoxColumn,
+            this.produtosDataGridViewTextBoxColumn,
+            this.funcionárioDataGridViewTextBoxColumn,
+            this.dataDeExecuçãoDataGridViewTextBoxColumn,
+            this.açãoDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.horaDataGridViewTextBoxColumn});
+            this.dtg_tarefas.DataSource = this.dataTable1BindingSource;
+            this.dtg_tarefas.Location = new System.Drawing.Point(409, 528);
+            this.dtg_tarefas.Name = "dtg_tarefas";
+            this.dtg_tarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtg_tarefas.Size = new System.Drawing.Size(949, 171);
+            this.dtg_tarefas.TabIndex = 18;
+            this.dtg_tarefas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_tarefas_CellContentClick);
+            // 
+            // tarefas
+            // 
+            this.tarefas.DataSetName = "Tarefas";
+            this.tarefas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.tarefas;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // txt_data
+            // 
+            this.txt_data.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_data.Location = new System.Drawing.Point(1186, 495);
+            this.txt_data.Name = "txt_data";
+            this.txt_data.Size = new System.Drawing.Size(139, 24);
+            this.txt_data.TabIndex = 19;
+            this.txt_data.ValueChanged += new System.EventHandler(this.txt_data_ValueChanged);
+            this.txt_data.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_data_KeyDown);
+            this.txt_data.Leave += new System.EventHandler(this.txt_data_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1186, 476);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Filtrar data";
+            // 
+            // plantaçãoDataGridViewTextBoxColumn
+            // 
+            this.plantaçãoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.plantaçãoDataGridViewTextBoxColumn.HeaderText = "Plantação ";
+            this.plantaçãoDataGridViewTextBoxColumn.Name = "plantaçãoDataGridViewTextBoxColumn";
+            this.plantaçãoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.plantaçãoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tipoPlantaDataGridViewTextBoxColumn
+            // 
+            this.tipoPlantaDataGridViewTextBoxColumn.DataPropertyName = "semente_usada";
+            this.tipoPlantaDataGridViewTextBoxColumn.HeaderText = "Tipo Planta";
+            this.tipoPlantaDataGridViewTextBoxColumn.Name = "tipoPlantaDataGridViewTextBoxColumn";
+            this.tipoPlantaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoPlantaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // produtosDataGridViewTextBoxColumn
+            // 
+            this.produtosDataGridViewTextBoxColumn.DataPropertyName = "nome_produto";
+            this.produtosDataGridViewTextBoxColumn.HeaderText = "produtos";
+            this.produtosDataGridViewTextBoxColumn.Name = "produtosDataGridViewTextBoxColumn";
+            this.produtosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funcionárioDataGridViewTextBoxColumn
+            // 
+            this.funcionárioDataGridViewTextBoxColumn.DataPropertyName = "nome_funcionario";
+            this.funcionárioDataGridViewTextBoxColumn.HeaderText = "funcionário";
+            this.funcionárioDataGridViewTextBoxColumn.Name = "funcionárioDataGridViewTextBoxColumn";
+            this.funcionárioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataDeExecuçãoDataGridViewTextBoxColumn
+            // 
+            this.dataDeExecuçãoDataGridViewTextBoxColumn.DataPropertyName = "data_acao";
+            this.dataDeExecuçãoDataGridViewTextBoxColumn.HeaderText = "Data de Execução";
+            this.dataDeExecuçãoDataGridViewTextBoxColumn.Name = "dataDeExecuçãoDataGridViewTextBoxColumn";
+            this.dataDeExecuçãoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // açãoDataGridViewTextBoxColumn
+            // 
+            this.açãoDataGridViewTextBoxColumn.DataPropertyName = "Tipo_Acao";
+            this.açãoDataGridViewTextBoxColumn.HeaderText = "ação";
+            this.açãoDataGridViewTextBoxColumn.Name = "açãoDataGridViewTextBoxColumn";
+            this.açãoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.açãoDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // horaDataGridViewTextBoxColumn
+            // 
+            this.horaDataGridViewTextBoxColumn.DataPropertyName = "horario";
+            this.horaDataGridViewTextBoxColumn.HeaderText = "hora";
+            this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
+            this.horaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // txt_teste
+            // 
+            this.txt_teste.Location = new System.Drawing.Point(673, 215);
+            this.txt_teste.Multiline = true;
+            this.txt_teste.Name = "txt_teste";
+            this.txt_teste.Size = new System.Drawing.Size(433, 118);
+            this.txt_teste.TabIndex = 21;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(673, 340);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(433, 69);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Frm_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 624);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txt_teste);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_data);
+            this.Controls.Add(this.dtg_tarefas);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frm_Inicial";
@@ -406,9 +587,14 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_tarefas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tarefas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,6 +635,25 @@
         private System.Windows.Forms.Label txtuser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.DataGridView dtg_tarefas;
+        private Tarefas tarefas;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
+        private TarefasTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.DateTimePicker txt_data;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plantaçãoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoPlantaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produtosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funcionárioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDeExecuçãoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn açãoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txt_teste;
+        private System.Windows.Forms.Button button3;
     }
 
 }

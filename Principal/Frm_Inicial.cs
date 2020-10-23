@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using FarmSystem.Previsão_do_tempo;
+using System.Collections.Generic;
 
 namespace FarmSystem.Principal
 {
@@ -54,6 +55,12 @@ namespace FarmSystem.Principal
 
 		private void Frm_Inicial_Load(object sender, EventArgs e)
 		{
+            // TODO: esta linha de código carrega dados na tabela 'tarefas.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
+            this.dataTable1TableAdapter.Fill(this.tarefas.DataTable1);
+
+			DAOacao ac = new DAOacao();
+
+			dtg_tarefas.DataSource = ac.Lista_Data(Convert.ToDateTime(txt_data.Text));
 
 		}
 
@@ -190,8 +197,57 @@ namespace FarmSystem.Principal
 
         private void plantaçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-			new frmRelPlantacao().ShowDialog();
+		//	new frmRelPlantacao().ShowDialog();
         }
+
+        private void dtg_tarefas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txt_data_KeyDown(object sender, KeyEventArgs e)
+        {
+			
+		}
+
+        private void txt_data_Leave(object sender, EventArgs e)
+        {
+			
+		}
+
+        private void txt_data_ValueChanged(object sender, EventArgs e)
+        {
+			DAOacao ac = new DAOacao();
+
+			dtg_tarefas.DataSource = ac.Lista_Data(Convert.ToDateTime(txt_data.Text));
+		}
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+			DAOacao ac = new DAOacao();
+
+
+			txt_teste.Text = dtg_tarefas.SelectedCells[1].Value.ToString();
+
+			//string vet;
+
+
+			//List<string> objetos = new List<string>();
+
+			//objetos.AddRange((IEnumerable<string>)ac.Lista_Data(Convert.ToDateTime(txt_data.Text)));
+
+			//	foreach (string itens in objetos)
+			//{
+			/*Concateno os itens lidos da lista na textBox pulando uma linha com "\n" */
+			//	txt_teste.Text += itens + "\n";
+			//}
+
+			//vet = Convert.ToString(ac.Lista_Data(Convert.ToDateTime(txt_data.Text)));
+
+			//txt_teste.Text = vet;
+
+		}
     }
 
 }
