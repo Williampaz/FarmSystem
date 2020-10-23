@@ -271,6 +271,7 @@
             this.dgvacoes.Name = "dgvacoes";
             this.dgvacoes.Size = new System.Drawing.Size(1036, 317);
             this.dgvacoes.TabIndex = 17;
+            this.dgvacoes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvacoes_CellContentClick);
             this.dgvacoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvacoes_CellDoubleClick);
             // 
             // codigoDataGridViewTextBoxColumn

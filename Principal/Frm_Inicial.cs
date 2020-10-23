@@ -52,10 +52,10 @@ namespace FarmSystem.Principal
 
 		private void Frm_Inicial_Load(object sender, EventArgs e)
 		{
+          
+        }
 
-		}
-
-		private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
 		{
 			new Frm_Cad_Prod().ShowDialog();
 

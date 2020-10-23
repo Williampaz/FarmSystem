@@ -96,7 +96,7 @@ namespace FarmSystem.Plantação
             txtprod.Text = a.codigoprod.ToString();
             mskdata.Text = a.dataac.ToString();
             txtfunc.Text = a.funcionario.ToString();
-            combstatus.SelectedIndex = posicao;
+            combstatus.Text = a.status.ToString();
             txthorario.Text = a.horario.ToString();
 
         }
@@ -291,6 +291,11 @@ namespace FarmSystem.Plantação
         }
 
         private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvacoes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
