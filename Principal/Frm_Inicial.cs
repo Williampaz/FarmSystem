@@ -57,6 +57,8 @@ namespace FarmSystem.Principal
 		{
             // TODO: esta linha de código carrega dados na tabela 'tarefas.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
             this.dataTable1TableAdapter.Fill(this.tarefas.DataTable1);
+            // TODO: esta linha de código carrega dados na tabela 'tarefas.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
+            this.dataTable1TableAdapter.Fill(this.tarefas.DataTable1);
 
 			DAOacao ac = new DAOacao();
 
@@ -132,13 +134,13 @@ namespace FarmSystem.Principal
 				// Find your Account Sid and Token at twilio.com/console
 				// DANGER! This is insecure. See http://twil.io/secure
 				const string accountSid = "ACcac9d2c8905ff49a25a5482fac9ab034";
-				const string authToken = "4ba42b0c1c580d3d222c7d73bee97380";
+				const string authToken = "be2b6048cf6cd819f1e3ad0d41288a6a";
 
 
 				TwilioClient.Init(accountSid, authToken);
 
 				var message = MessageResource.Create(
-					body: "Teste de mensagem do sistema FarmSystem",
+					body: "",
 					from: new Twilio.Types.PhoneNumber("+19285698227"),
 					to: new Twilio.Types.PhoneNumber("+5514988162072")
 				);
@@ -226,26 +228,45 @@ namespace FarmSystem.Principal
         {
 
 			DAOacao ac = new DAOacao();
+			string vet;
+
+			List<Data_Acao> objetos = new List<Data_Acao>();
+
+			objetos.AddRange(ac.Lista_Data(Convert.ToDateTime(txt_data.Text)));
+
+			
+			for (int i =0; i < dtg_tarefas.RowCount; i++)
+            {
+				
+				for (int j =0; j < dtg_tarefas.ColumnCount; j++)
+				{ 
+
+					txt_teste.Text += dtg_tarefas.SelectedCells[j].Value.ToString() + " ";
+					
 
 
-			txt_teste.Text = dtg_tarefas.SelectedCells[1].Value.ToString();
 
-			//string vet;
+				}
+				txt_teste.Text += "; \n";
+
+			}
+
+			string send = txt_teste.Text;
+
+			// Find your Account Sid and Token at twilio.com/console
+			// DANGER! This is insecure. See http://twil.io/secure
+			const string accountSid = "ACcac9d2c8905ff49a25a5482fac9ab034";
+			const string authToken = "be2b6048cf6cd819f1e3ad0d41288a6a";
 
 
-			//List<string> objetos = new List<string>();
+			TwilioClient.Init(accountSid, authToken);
 
-			//objetos.AddRange((IEnumerable<string>)ac.Lista_Data(Convert.ToDateTime(txt_data.Text)));
+			var message = MessageResource.Create(
+				body: send,
+				from: new Twilio.Types.PhoneNumber("+19285698227"),
+				to: new Twilio.Types.PhoneNumber("+5514988162072")
+			);
 
-			//	foreach (string itens in objetos)
-			//{
-			/*Concateno os itens lidos da lista na textBox pulando uma linha com "\n" */
-			//	txt_teste.Text += itens + "\n";
-			//}
-
-			//vet = Convert.ToString(ac.Lista_Data(Convert.ToDateTime(txt_data.Text)));
-
-			//txt_teste.Text = vet;
 
 		}
     }

@@ -62,20 +62,20 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dtg_tarefas = new System.Windows.Forms.DataGridView();
             this.tarefas = new FarmSystem.Tarefas();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new FarmSystem.TarefasTableAdapters.DataTable1TableAdapter();
             this.txt_data = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.plantaçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoPlantaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcionárioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDeExecuçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.açãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_teste = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1TableAdapter = new FarmSystem.TarefasTableAdapters.DataTable1TableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -428,19 +428,19 @@
             this.dtg_tarefas.AutoGenerateColumns = false;
             this.dtg_tarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_tarefas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.plantaçãoDataGridViewTextBoxColumn,
-            this.tipoPlantaDataGridViewTextBoxColumn,
-            this.produtosDataGridViewTextBoxColumn,
-            this.funcionárioDataGridViewTextBoxColumn,
-            this.dataDeExecuçãoDataGridViewTextBoxColumn,
-            this.açãoDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
             this.statusDataGridViewTextBoxColumn,
-            this.horaDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn7});
             this.dtg_tarefas.DataSource = this.dataTable1BindingSource;
-            this.dtg_tarefas.Location = new System.Drawing.Point(409, 528);
+            this.dtg_tarefas.Location = new System.Drawing.Point(315, 528);
             this.dtg_tarefas.Name = "dtg_tarefas";
             this.dtg_tarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_tarefas.Size = new System.Drawing.Size(949, 171);
+            this.dtg_tarefas.Size = new System.Drawing.Size(1045, 171);
             this.dtg_tarefas.TabIndex = 18;
             this.dtg_tarefas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_tarefas_CellContentClick);
             // 
@@ -448,15 +448,6 @@
             // 
             this.tarefas.DataSetName = "Tarefas";
             this.tarefas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.tarefas;
-            // 
-            // dataTable1TableAdapter
-            // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
             // txt_data
             // 
@@ -481,72 +472,12 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Filtrar data";
             // 
-            // plantaçãoDataGridViewTextBoxColumn
-            // 
-            this.plantaçãoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.plantaçãoDataGridViewTextBoxColumn.HeaderText = "Plantação ";
-            this.plantaçãoDataGridViewTextBoxColumn.Name = "plantaçãoDataGridViewTextBoxColumn";
-            this.plantaçãoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.plantaçãoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // tipoPlantaDataGridViewTextBoxColumn
-            // 
-            this.tipoPlantaDataGridViewTextBoxColumn.DataPropertyName = "semente_usada";
-            this.tipoPlantaDataGridViewTextBoxColumn.HeaderText = "Tipo Planta";
-            this.tipoPlantaDataGridViewTextBoxColumn.Name = "tipoPlantaDataGridViewTextBoxColumn";
-            this.tipoPlantaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipoPlantaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // produtosDataGridViewTextBoxColumn
-            // 
-            this.produtosDataGridViewTextBoxColumn.DataPropertyName = "nome_produto";
-            this.produtosDataGridViewTextBoxColumn.HeaderText = "produtos";
-            this.produtosDataGridViewTextBoxColumn.Name = "produtosDataGridViewTextBoxColumn";
-            this.produtosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // funcionárioDataGridViewTextBoxColumn
-            // 
-            this.funcionárioDataGridViewTextBoxColumn.DataPropertyName = "nome_funcionario";
-            this.funcionárioDataGridViewTextBoxColumn.HeaderText = "funcionário";
-            this.funcionárioDataGridViewTextBoxColumn.Name = "funcionárioDataGridViewTextBoxColumn";
-            this.funcionárioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataDeExecuçãoDataGridViewTextBoxColumn
-            // 
-            this.dataDeExecuçãoDataGridViewTextBoxColumn.DataPropertyName = "data_acao";
-            this.dataDeExecuçãoDataGridViewTextBoxColumn.HeaderText = "Data de Execução";
-            this.dataDeExecuçãoDataGridViewTextBoxColumn.Name = "dataDeExecuçãoDataGridViewTextBoxColumn";
-            this.dataDeExecuçãoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // açãoDataGridViewTextBoxColumn
-            // 
-            this.açãoDataGridViewTextBoxColumn.DataPropertyName = "Tipo_Acao";
-            this.açãoDataGridViewTextBoxColumn.HeaderText = "ação";
-            this.açãoDataGridViewTextBoxColumn.Name = "açãoDataGridViewTextBoxColumn";
-            this.açãoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.açãoDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // horaDataGridViewTextBoxColumn
-            // 
-            this.horaDataGridViewTextBoxColumn.DataPropertyName = "horario";
-            this.horaDataGridViewTextBoxColumn.HeaderText = "hora";
-            this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
-            this.horaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // txt_teste
             // 
             this.txt_teste.Location = new System.Drawing.Point(673, 215);
             this.txt_teste.Multiline = true;
             this.txt_teste.Name = "txt_teste";
-            this.txt_teste.Size = new System.Drawing.Size(433, 118);
+            this.txt_teste.Size = new System.Drawing.Size(397, 118);
             this.txt_teste.TabIndex = 21;
             // 
             // button3
@@ -558,6 +489,79 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.tarefas;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Plantação ";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "semente_usada";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo Planta";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome_produto";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "nome_funcionario";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Funcionário";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "data_acao";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Data de Execução";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "tipo_acao";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Ação";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 150;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "horario";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Horario";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 90;
             // 
             // Frm_Inicial
             // 
@@ -640,8 +644,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dtg_tarefas;
         private Tarefas tarefas;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
-        private TarefasTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
         private System.Windows.Forms.DateTimePicker txt_data;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn plantaçãoDataGridViewTextBoxColumn;
@@ -650,10 +652,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn funcionárioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDeExecuçãoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn açãoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txt_teste;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
+        private TarefasTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 
 }
