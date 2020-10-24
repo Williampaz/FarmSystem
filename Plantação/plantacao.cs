@@ -166,14 +166,14 @@ namespace FarmSystem.Plantação
             txtnomefunc.Clear();
             txtarea.Clear();
             txtdistancia.Clear();
-            mskdataplantio.Value = DateTime.Now;
+            //mskdataplantio.Value = DateTime.Now;
             txtvalorvenda.Clear();
             txtstatus.Text = "";
             txtprevisaosacas.Clear();
-            mskprevisaodata.Value = DateTime.Now;
+            //mskprevisaodata.Value = DateTime.Now;
             txtqtdsacas.Clear();
             txtsemente.Clear();
-            txtdatadacolheita.Value = DateTime.Now;
+            //txtdatadacolheita.Value = DateTime.Now;
 
 
         }
