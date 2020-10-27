@@ -45,7 +45,6 @@
             this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.relatorioDeAçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.Slidepanel = new System.Windows.Forms.Panel();
@@ -61,21 +60,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dtg_tarefas = new System.Windows.Forms.DataGridView();
-            this.tarefas = new FarmSystem.Tarefas();
             this.txt_data = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_teste = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new FarmSystem.TarefasTableAdapters.DataTable1TableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,8 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_tarefas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarefas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -219,18 +214,6 @@
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "&Sair";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Ivory;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(348, 217);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(270, 128);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Teste de Mensagem";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel1
             // 
@@ -389,6 +372,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtuser);
             this.panel2.Controls.Add(this.txtnome);
@@ -422,32 +406,26 @@
             this.pictureBox3.Size = new System.Drawing.Size(1067, 741);
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // dtg_tarefas
             // 
-            this.dtg_tarefas.AutoGenerateColumns = false;
             this.dtg_tarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_tarefas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.statusDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn7});
-            this.dtg_tarefas.DataSource = this.dataTable1BindingSource;
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dtg_tarefas.Location = new System.Drawing.Point(315, 528);
             this.dtg_tarefas.Name = "dtg_tarefas";
             this.dtg_tarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_tarefas.Size = new System.Drawing.Size(1045, 171);
             this.dtg_tarefas.TabIndex = 18;
             this.dtg_tarefas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_tarefas_CellContentClick);
-            // 
-            // tarefas
-            // 
-            this.tarefas.DataSetName = "Tarefas";
-            this.tarefas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txt_data
             // 
@@ -472,96 +450,81 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Filtrar data";
             // 
-            // txt_teste
+            // timer1
             // 
-            this.txt_teste.Location = new System.Drawing.Point(673, 215);
-            this.txt_teste.Multiline = true;
-            this.txt_teste.Name = "txt_teste";
-            this.txt_teste.Size = new System.Drawing.Size(397, 118);
-            this.txt_teste.TabIndex = 21;
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button3
+            // Column1
             // 
-            this.button3.Location = new System.Drawing.Point(673, 340);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(433, 69);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.Column1.DataPropertyName = "codigo";
+            this.Column1.HeaderText = "Plantação Nº";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 80;
             // 
-            // dataTable1BindingSource
+            // Column2
             // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.tarefas;
+            this.Column2.DataPropertyName = "semente_usada";
+            this.Column2.HeaderText = "Planta";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
             // 
-            // dataTable1TableAdapter
+            // Column3
             // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            this.Column3.DataPropertyName = "nome_produto";
+            this.Column3.HeaderText = "Utilizar Produto";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 130;
             // 
-            // dataGridViewTextBoxColumn1
+            // Column4
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Plantação ";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 80;
+            this.Column4.DataPropertyName = "nome_funcionario";
+            this.Column4.HeaderText = "Funcionario Resposavel";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 130;
             // 
-            // dataGridViewTextBoxColumn2
+            // Column5
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "semente_usada";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo Planta";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 160;
+            this.Column5.DataPropertyName = "data_acao";
+            this.Column5.HeaderText = "Data";
+            this.Column5.Name = "Column5";
             // 
-            // dataGridViewTextBoxColumn3
+            // Column6
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome_produto";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 160;
+            this.Column6.DataPropertyName = "tipo_acao";
+            this.Column6.HeaderText = "Tarefa";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 150;
             // 
-            // dataGridViewTextBoxColumn4
+            // Column7
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "nome_funcionario";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Funcionário";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 110;
+            this.Column7.DataPropertyName = "Status";
+            this.Column7.HeaderText = "Status";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
             // 
-            // dataGridViewTextBoxColumn5
+            // Column8
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "data_acao";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Data de Execução";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 80;
+            this.Column8.DataPropertyName = "horario";
+            this.Column8.HeaderText = "Horario";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 90;
             // 
-            // dataGridViewTextBoxColumn6
+            // timer2
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "tipo_acao";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Ação";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 150;
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // statusDataGridViewTextBoxColumn
+            // label3
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "horario";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Horario";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 90;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(345, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Frm_Inicial
             // 
@@ -569,15 +532,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.txt_teste);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_data);
             this.Controls.Add(this.dtg_tarefas);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox3);
@@ -597,8 +557,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_tarefas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarefas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -621,7 +579,6 @@
 		private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acõesToolStripMenuItem;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Slidepanel;
         private System.Windows.Forms.Button button9;
@@ -643,7 +600,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dtg_tarefas;
-        private Tarefas tarefas;
         private System.Windows.Forms.DateTimePicker txt_data;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn plantaçãoDataGridViewTextBoxColumn;
@@ -653,18 +609,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDeExecuçãoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn açãoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txt_teste;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
-        private TarefasTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label3;
     }
 
 }

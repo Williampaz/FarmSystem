@@ -55,14 +55,12 @@ namespace FarmSystem.Principal
 
 		private void Frm_Inicial_Load(object sender, EventArgs e)
 		{
-            // TODO: esta linha de código carrega dados na tabela 'tarefas.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
-            this.dataTable1TableAdapter.Fill(this.tarefas.DataTable1);
-            // TODO: esta linha de código carrega dados na tabela 'tarefas.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
-            this.dataTable1TableAdapter.Fill(this.tarefas.DataTable1);
-
+          
 			DAOacao ac = new DAOacao();
 
 			dtg_tarefas.DataSource = ac.Lista_Data(Convert.ToDateTime(txt_data.Text));
+
+			//timer1.Enabled = true;
 
 		}
 
@@ -227,48 +225,125 @@ namespace FarmSystem.Principal
         private void button3_Click_1(object sender, EventArgs e)
         {
 
-			DAOacao ac = new DAOacao();
-			string vet;
-
-			List<Data_Acao> objetos = new List<Data_Acao>();
-
-			objetos.AddRange(ac.Lista_Data(Convert.ToDateTime(txt_data.Text)));
-
-			
-			for (int i =0; i < dtg_tarefas.RowCount; i++)
-            { 
-				
-				for (int j =0; j < dtg_tarefas.ColumnCount; j++)
-				{ 
-
-					txt_teste.Text += dtg_tarefas.SelectedCells[j].Value.ToString() + " ";
-					
-
-
-
-				}
-				txt_teste.Text += "; \n";
-
-			}
-
-			string send = txt_teste.Text;
-
-			// Find your Account Sid and Token at twilio.com/console
-			// DANGER! This is insecure. See http://twil.io/secure
-			const string accountSid = "ACcac9d2c8905ff49a25a5482fac9ab034";
-			const string authToken = "be2b6048cf6cd819f1e3ad0d41288a6a";
-
-
-			TwilioClient.Init(accountSid, authToken);
-
-			var message = MessageResource.Create(
-				body: send,
-				from: new Twilio.Types.PhoneNumber("+19285698227"),
-				to: new Twilio.Types.PhoneNumber("+5514988162072")
-			);
-
 
 		}
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+			
+		}
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+			label3.Text = DateTime.Now.ToString("HH:mm:ss");
+
+			
+
+
+			if (label3.Text == "07:00:00")
+
+            {
+
+				string send,teste;
+				DAOacao ac = new DAOacao();
+						
+
+				if (dtg_tarefas.Rows[0].Cells[0].Value == null)
+				{
+					send = "Hoje você não tem tarefas a executar!";
+				}
+				else
+				{
+
+					try
+					{
+
+
+						send = "Hoje você tem as seguintes tarefas ";
+
+						for (int i = 0; i < dtg_tarefas.RowCount; i++)
+						{
+
+							for (int j = 0; j < dtg_tarefas.ColumnCount; j++)
+							{
+								if (j == 0)
+								{
+									send += " Plantação " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+
+								if (j == 1)
+								{
+									send += " Planta " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+								if (j == 2)
+								{
+									send += " Utilizar o produto " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+
+								if (j == 3)
+								{
+									send += " Funcionario responsavel " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+
+								if (j == 4)
+								{
+									send += " Data " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+								if (j == 5)
+								{
+									send += " a tarefa " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+								if (j == 6)
+								{
+									send += " que tem o status " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+								if (j == 7)
+								{
+									send += " no horario " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+
+							}
+
+							send += "; ";
+
+						}
+					}
+
+					catch
+					{
+						send = "Hoje você não tem tarefas a executar!";
+
+					}
+				}
+
+				// Find your Account Sid and Token at twilio.com/console
+				// DANGER! This is insecure. See http://twil.io/secure
+				const string accountSid = "ACcac9d2c8905ff49a25a5482fac9ab034";
+				const string authToken = "4b47660a5fca4e27fcb7ccbe9b32625a";
+
+
+				TwilioClient.Init(accountSid, authToken);
+
+				var message = MessageResource.Create(
+					body: send,
+					from: new Twilio.Types.PhoneNumber("+19285698227"),
+				to: new Twilio.Types.PhoneNumber("+5514988162072")
+				) ;
+				
+			}
+
+		}
+
+		private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
