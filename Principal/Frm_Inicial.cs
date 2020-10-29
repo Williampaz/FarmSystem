@@ -10,6 +10,7 @@ using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using FarmSystem.Previsão_do_tempo;
 using System.Collections.Generic;
+using System.Data;
 
 namespace FarmSystem.Principal
 {
@@ -220,6 +221,8 @@ namespace FarmSystem.Principal
 			DAOacao ac = new DAOacao();
 
 			dtg_tarefas.DataSource = ac.Lista_Data(Convert.ToDateTime(txt_data.Text));
+
+			
 		}
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -242,8 +245,16 @@ namespace FarmSystem.Principal
         private void timer2_Tick(object sender, EventArgs e)
         {
 			label3.Text = DateTime.Now.ToString("HH:mm:ss");
-
 			
+
+
+
+            if(label3.Text == "00:00:01"){
+
+
+				this.txt_data.Value = DateTime.Now.Date;
+
+			}
 
 
 			if (label3.Text == "07:00:00")
