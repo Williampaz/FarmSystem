@@ -339,5 +339,16 @@ namespace FarmSystem.Plantação
         {
 
         }
+
+        private void mskprevisaodata_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskprevisaodata_ValueChanged(object sender, EventArgs e)
+        {
+            txtdatadacolheita.Value = mskprevisaodata.Value;
+            
+        }
     }
 }

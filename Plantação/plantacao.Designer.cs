@@ -559,6 +559,8 @@
             this.mskprevisaodata.Name = "mskprevisaodata";
             this.mskprevisaodata.Size = new System.Drawing.Size(201, 20);
             this.mskprevisaodata.TabIndex = 42;
+            this.mskprevisaodata.ValueChanged += new System.EventHandler(this.mskprevisaodata_ValueChanged);
+            this.mskprevisaodata.Leave += new System.EventHandler(this.mskprevisaodata_Leave);
             // 
             // plantacao
             // 

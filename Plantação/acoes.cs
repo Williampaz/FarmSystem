@@ -109,7 +109,7 @@ namespace FarmSystem.Plantação
             txtfunc.Clear();
             txtprod.Clear();
             txtsemente.Clear();
-            mskdata.Clear();
+          
             combstatus.Text = "";
             txtplantacao.Clear();
             txtnome.Clear();
@@ -125,7 +125,7 @@ namespace FarmSystem.Plantação
             txtfunc.Clear();
             txtprod.Clear();
             txtsemente.Clear();
-            mskdata.Clear();
+           
             combstatus.Text = "";
             txtplantacao.Clear();
             txtnome.Clear();
@@ -297,6 +297,11 @@ namespace FarmSystem.Plantação
         }
 
         private void dgvacoes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
