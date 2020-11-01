@@ -150,7 +150,6 @@ namespace FarmSystem.Plantação
             return null;
         }
 
-
         public void Editar(objplantacao plant)
         {
             Conexao conn = new Conexao();

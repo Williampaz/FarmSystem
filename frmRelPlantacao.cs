@@ -16,13 +16,5 @@ namespace FarmSystem
         {
             InitializeComponent();
         }
-
-        private void frmRelPlantacao_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'postgresDataSet2.plantacao'. Você pode movê-la ou removê-la conforme necessário.
-            this.plantacaoTableAdapter.Fill(this.postgresDataSet2.plantacao);
-
-            this.reportViewer1.RefreshReport();
-        }
     }
 }

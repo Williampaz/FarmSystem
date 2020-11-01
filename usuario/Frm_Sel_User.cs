@@ -22,7 +22,7 @@ namespace FarmSystem.usuario
 		private void Frm_Sel_User_Load(object sender, EventArgs e)
 		{
 			// TODO: esta linha de código carrega dados na tabela 'postgresDataSet.usuario'. Você pode movê-la ou removê-la conforme necessário.
-			//this.usuarioTableAdapter.Fill(this.postgresDataSet.usuario);
+			this.usuarioTableAdapter.Fill(this.postgresDataSet.usuario);
 		}
 		public User GetUser()
 		{

@@ -408,6 +408,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Relatorios\frmRelAcoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\frmRelAcoes.Designer.cs">
+      <DependentUpon>frmRelAcoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\frmRelPlantacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\frmRelPlantacao.Designer.cs">
+      <DependentUpon>frmRelPlantacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Plantação\Data_Acao.cs" />
     <Compile Include="Plantação\frmListaPlantacoes.cs">
       <SubType>Form</SubType>
@@ -622,6 +634,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorios\frmRelAcoes.resx">
+      <DependentUpon>frmRelAcoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\relAcoes.rdlc" />
+    <EmbeddedResource Include="Relatorios\frmRelPlantacao.resx">
+      <DependentUpon>frmRelPlantacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\Frm_Relacao_de_Funcionarios.resx">
       <DependentUpon>Frm_Relacao_de_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -638,6 +657,7 @@
     <EmbeddedResource Include="Relatorios\Rel_de_Produtos.rdlc" />
     <EmbeddedResource Include="Relatorios\Rel_de_Usuarios.rdlc" />
     <EmbeddedResource Include="Relatorios\Rel_de Fornecedores.rdlc" />
+    <EmbeddedResource Include="Relatorios\relPlantacao.rdlc" />
     <EmbeddedResource Include="usuario\Frm_Cad_User.resx">
       <DependentUpon>Frm_Cad_User.cs</DependentUpon>
     </EmbeddedResource>

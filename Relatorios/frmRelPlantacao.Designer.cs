@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.postgresDataSet3 = new FarmSystem.postgresDataSet3();
+            this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.plantacaoTableAdapter = new FarmSystem.postgresDataSet3TableAdapters.plantacaoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet3)).BeginInit();
+            this.plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.plantacaoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "plantacaoDataSet";
+            reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.plantacaoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FarmSystem.Relatorios.relPlantacao.rdlc";
@@ -51,15 +51,15 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // postgresDataSet3
+            // postgresDataSet2
             // 
-            this.postgresDataSet3.DataSetName = "postgresDataSet3";
-            this.postgresDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.postgresDataSet2.DataSetName = "postgresDataSet2";
+            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // plantacaoBindingSource
             // 
             this.plantacaoBindingSource.DataMember = "plantacao";
-            this.plantacaoBindingSource.DataSource = this.postgresDataSet3;
+            this.plantacaoBindingSource.DataSource = this.postgresDataSet2;
             // 
             // plantacaoTableAdapter
             // 
@@ -75,7 +75,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório de Plantações";
             this.Load += new System.EventHandler(this.frmRelPlantacao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -85,7 +85,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource plantacaoBindingSource;
-        private postgresDataSet3 postgresDataSet3;
-        private postgresDataSet3TableAdapters.plantacaoTableAdapter plantacaoTableAdapter;
+        private postgresDataSet2 postgresDataSet2;
+        private postgresDataSet2TableAdapters.plantacaoTableAdapter plantacaoTableAdapter;
     }
 }
