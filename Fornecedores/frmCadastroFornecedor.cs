@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FarmSystem.Fornecedor
+namespace FarmSystem.Fornecedores
 {
 	public partial class frmCadastroFornecedor : Form
 	{
@@ -218,6 +218,11 @@ namespace FarmSystem.Fornecedor
                 txtFoneFornecedor.Focus();
                 return;
             }
+        }
+
+        private void frmCadastroFornecedor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

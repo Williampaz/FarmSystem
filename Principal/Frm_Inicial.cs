@@ -1,4 +1,4 @@
-﻿using FarmSystem.Fornecedor;
+﻿using FarmSystem.Fornecedores;
 using FarmSystem.Funcionario;
 using FarmSystem.Plantação;
 using FarmSystem.Produtos;

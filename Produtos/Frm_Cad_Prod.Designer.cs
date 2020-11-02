@@ -43,13 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtdescicao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txttipoprod = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtnomeprod = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcodigofornecedor = new System.Windows.Forms.TextBox();
             this.lblCódigo = new System.Windows.Forms.Label();
-            this.cmb_Sel_Forn = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtvalidade = new System.Windows.Forms.MaskedTextBox();
             this.txtmesplantio = new System.Windows.Forms.MaskedTextBox();
@@ -60,8 +57,10 @@
             this.btnsel = new System.Windows.Forms.Button();
             this.btncad = new System.Windows.Forms.Button();
             this.epdProdutos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmbtipo = new System.Windows.Forms.ComboBox();
+            this.txttipoprod = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.cmb_Sel_Forn = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.epdProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,10 +83,10 @@
             // 
             // txtprecokguni
             // 
-            this.txtprecokguni.Location = new System.Drawing.Point(514, 238);
+            this.txtprecokguni.Location = new System.Drawing.Point(389, 238);
             this.txtprecokguni.Margin = new System.Windows.Forms.Padding(4);
             this.txtprecokguni.Name = "txtprecokguni";
-            this.txtprecokguni.Size = new System.Drawing.Size(185, 22);
+            this.txtprecokguni.Size = new System.Drawing.Size(310, 22);
             this.txtprecokguni.TabIndex = 9;
             this.txtprecokguni.Leave += new System.EventHandler(this.txtprecokguni_Leave);
             // 
@@ -95,10 +94,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(511, 218);
+            this.label7.Location = new System.Drawing.Point(389, 218);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 16);
+            this.label7.Size = new System.Drawing.Size(154, 16);
             this.label7.TabIndex = 38;
             this.label7.Text = "Preço kg (Unidade):";
             // 
@@ -118,7 +117,7 @@
             this.label6.Location = new System.Drawing.Point(413, 119);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 16);
+            this.label6.Size = new System.Drawing.Size(125, 16);
             this.label6.TabIndex = 36;
             this.label6.Text = "Dia da Colheita:";
             // 
@@ -129,7 +128,7 @@
             this.label5.Location = new System.Drawing.Point(389, 172);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 34;
             this.label5.Text = "Validade:";
             // 
@@ -140,7 +139,7 @@
             this.label8.Location = new System.Drawing.Point(588, 119);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 16);
+            this.label8.Size = new System.Drawing.Size(120, 16);
             this.label8.TabIndex = 31;
             this.label8.Text = "Mês de Plantio:";
             // 
@@ -160,17 +159,17 @@
             this.label4.Location = new System.Drawing.Point(546, 172);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 16);
+            this.label4.Size = new System.Drawing.Size(100, 16);
             this.label4.TabIndex = 30;
             this.label4.Text = "Mês de Uso:";
             // 
             // txtquantidade
             // 
-            this.txtquantidade.Location = new System.Drawing.Point(392, 238);
+            this.txtquantidade.Location = new System.Drawing.Point(13, 238);
             this.txtquantidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantidade.MaxLength = 10;
             this.txtquantidade.Name = "txtquantidade";
-            this.txtquantidade.Size = new System.Drawing.Size(114, 22);
+            this.txtquantidade.Size = new System.Drawing.Size(368, 22);
             this.txtquantidade.TabIndex = 8;
             this.txtquantidade.Leave += new System.EventHandler(this.txtquantidade_Leave);
             // 
@@ -178,10 +177,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(389, 218);
+            this.label3.Location = new System.Drawing.Point(10, 218);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 16);
+            this.label3.Size = new System.Drawing.Size(94, 16);
             this.label3.TabIndex = 28;
             this.label3.Text = "Quantidade:";
             // 
@@ -203,30 +202,9 @@
             this.label9.Location = new System.Drawing.Point(10, 268);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 16);
+            this.label9.Size = new System.Drawing.Size(85, 16);
             this.label9.TabIndex = 25;
             this.label9.Text = "Descrição:";
-            // 
-            // txttipoprod
-            // 
-            this.txttipoprod.Location = new System.Drawing.Point(13, 238);
-            this.txttipoprod.Margin = new System.Windows.Forms.Padding(4);
-            this.txttipoprod.MaxLength = 80;
-            this.txttipoprod.Name = "txttipoprod";
-            this.txttipoprod.Size = new System.Drawing.Size(368, 22);
-            this.txttipoprod.TabIndex = 7;
-            this.txttipoprod.Leave += new System.EventHandler(this.txttipoprod_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 218);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 16);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Tipo de Produto:";
             // 
             // txtnomeprod
             // 
@@ -245,7 +223,7 @@
             this.label1.Location = new System.Drawing.Point(10, 172);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 16);
+            this.label1.Size = new System.Drawing.Size(138, 16);
             this.label1.TabIndex = 22;
             this.label1.Text = "Nome do Produto:";
             // 
@@ -254,33 +232,21 @@
             this.txtcodigofornecedor.Location = new System.Drawing.Point(13, 139);
             this.txtcodigofornecedor.Margin = new System.Windows.Forms.Padding(4);
             this.txtcodigofornecedor.Name = "txtcodigofornecedor";
-            this.txtcodigofornecedor.Size = new System.Drawing.Size(138, 22);
+            this.txtcodigofornecedor.Size = new System.Drawing.Size(115, 22);
             this.txtcodigofornecedor.TabIndex = 1;
+            this.txtcodigofornecedor.TextChanged += new System.EventHandler(this.txtcodigofornecedor_TextChanged);
             // 
             // lblCódigo
             // 
             this.lblCódigo.AutoSize = true;
             this.lblCódigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCódigo.Location = new System.Drawing.Point(161, 117);
+            this.lblCódigo.Location = new System.Drawing.Point(173, 120);
             this.lblCódigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCódigo.Name = "lblCódigo";
-            this.lblCódigo.Size = new System.Drawing.Size(137, 16);
+            this.lblCódigo.Size = new System.Drawing.Size(141, 16);
             this.lblCódigo.TabIndex = 20;
             this.lblCódigo.Text = "Nome Fornecedor:";
             this.lblCódigo.Click += new System.EventHandler(this.lblCódigo_Click);
-            // 
-            // cmb_Sel_Forn
-            // 
-            this.cmb_Sel_Forn.FormattingEnabled = true;
-            this.cmb_Sel_Forn.Items.AddRange(new object[] {
-            "Selecione Fornecedor"});
-            this.cmb_Sel_Forn.Location = new System.Drawing.Point(164, 137);
-            this.cmb_Sel_Forn.Margin = new System.Windows.Forms.Padding(4);
-            this.cmb_Sel_Forn.Name = "cmb_Sel_Forn";
-            this.cmb_Sel_Forn.Size = new System.Drawing.Size(244, 24);
-            this.cmb_Sel_Forn.TabIndex = 0;
-            this.cmb_Sel_Forn.SelectedIndexChanged += new System.EventHandler(this.cmb_Sel_Forn_SelectedIndexChanged);
-            this.cmb_Sel_Forn.Click += new System.EventHandler(this.cmb_Sel_Forn_Click);
             // 
             // label10
             // 
@@ -289,7 +255,7 @@
             this.label10.Location = new System.Drawing.Point(10, 119);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 16);
+            this.label10.Size = new System.Drawing.Size(151, 16);
             this.label10.TabIndex = 40;
             this.label10.Text = "Código Fornecedor:";
             // 
@@ -313,7 +279,6 @@
             this.txtmesplantio.Size = new System.Drawing.Size(108, 22);
             this.txtmesplantio.TabIndex = 3;
             this.txtmesplantio.ValidatingType = typeof(System.DateTime);
-           // this.txtmesplantio.Leave += new System.EventHandler(this.txtmesplantio_Leave);
             // 
             // label11
             // 
@@ -322,7 +287,7 @@
             this.label11.Location = new System.Drawing.Point(10, 74);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 16);
+            this.label11.Size = new System.Drawing.Size(65, 16);
             this.label11.TabIndex = 42;
             this.label11.Text = "Código:";
             // 
@@ -409,18 +374,19 @@
             // 
             this.epdProdutos.ContainerControl = this;
             // 
-            // cmbtipo
+            // txttipoprod
             // 
-            this.cmbtipo.FormattingEnabled = true;
-            this.cmbtipo.Items.AddRange(new object[] {
+            this.txttipoprod.FormattingEnabled = true;
+            this.txttipoprod.Items.AddRange(new object[] {
             "Semente",
             "Outros Insumos"});
-            this.cmbtipo.Location = new System.Drawing.Point(13, 37);
-            this.cmbtipo.Name = "cmbtipo";
-            this.cmbtipo.Size = new System.Drawing.Size(331, 24);
-            this.cmbtipo.TabIndex = 43;
-            this.cmbtipo.TextChanged += new System.EventHandler(this.cmbtipo_TextChanged);
-            this.cmbtipo.Leave += new System.EventHandler(this.cmbtipo_Leave);
+            this.txttipoprod.Location = new System.Drawing.Point(13, 37);
+            this.txttipoprod.Name = "txttipoprod";
+            this.txttipoprod.Size = new System.Drawing.Size(331, 24);
+            this.txttipoprod.TabIndex = 43;
+            this.txttipoprod.SelectedIndexChanged += new System.EventHandler(this.txttipoprod_SelectedIndexChanged);
+            this.txttipoprod.TextChanged += new System.EventHandler(this.cmbtipo_TextChanged);
+            this.txttipoprod.Leave += new System.EventHandler(this.cmbtipo_Leave);
             // 
             // label12
             // 
@@ -428,9 +394,26 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(10, 18);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(133, 16);
+            this.label12.Size = new System.Drawing.Size(138, 16);
             this.label12.TabIndex = 44;
             this.label12.Text = "Tipo de Cadastro:";
+            // 
+            // cmb_Sel_Forn
+            // 
+            this.cmb_Sel_Forn.Location = new System.Drawing.Point(172, 139);
+            this.cmb_Sel_Forn.Name = "cmb_Sel_Forn";
+            this.cmb_Sel_Forn.Size = new System.Drawing.Size(237, 22);
+            this.cmb_Sel_Forn.TabIndex = 45;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 23);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_Cad_Prod
             // 
@@ -438,14 +421,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(923, 422);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmb_Sel_Forn);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.cmbtipo);
+            this.Controls.Add(this.txttipoprod);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.txtmesplantio);
             this.Controls.Add(this.txtvalidade);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.cmb_Sel_Forn);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btnedit);
@@ -463,8 +447,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtdescicao);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txttipoprod);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnomeprod);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcodigofornecedor);
@@ -502,13 +484,10 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox txtdescicao;
 		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.TextBox txttipoprod;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtnomeprod;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtcodigofornecedor;
 		private System.Windows.Forms.Label lblCódigo;
-		private System.Windows.Forms.ComboBox cmb_Sel_Forn;
 		private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox txtvalidade;
         private System.Windows.Forms.MaskedTextBox txtmesplantio;
@@ -516,6 +495,8 @@
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.ErrorProvider epdProdutos;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cmbtipo;
+        private System.Windows.Forms.ComboBox txttipoprod;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox cmb_Sel_Forn;
     }
 }

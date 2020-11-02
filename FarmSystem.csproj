@@ -448,18 +448,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FarmsystemDB.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Fornecedor\DAOfornecedor.cs" />
-    <Compile Include="Fornecedor\Fornecedor.cs" />
-    <Compile Include="Fornecedor\frmCadastroFornecedor.cs">
+    <Compile Include="Fornecedores\DAOfornecedor.cs" />
+    <Compile Include="Fornecedores\Fornecedor.cs" />
+    <Compile Include="Fornecedores\frmCadastroFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fornecedor\frmCadastroFornecedor.Designer.cs">
+    <Compile Include="Fornecedores\frmCadastroFornecedor.Designer.cs">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fornecedor\frmListaFornecedor.cs">
+    <Compile Include="Fornecedores\frmListaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fornecedor\frmListaFornecedor.Designer.cs">
+    <Compile Include="Fornecedores\frmListaFornecedor.Designer.cs">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario\daofuncionario.cs" />
@@ -591,10 +591,10 @@
     </Compile>
     <Compile Include="usuario\User.cs" />
     <Compile Include="usuario\User_DAO.cs" />
-    <EmbeddedResource Include="Fornecedor\frmCadastroFornecedor.resx">
+    <EmbeddedResource Include="Fornecedores\frmCadastroFornecedor.resx">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fornecedor\frmListaFornecedor.resx">
+    <EmbeddedResource Include="Fornecedores\frmListaFornecedor.resx">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plantação\frmListaPlantacoes.resx">

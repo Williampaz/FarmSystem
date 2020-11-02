@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarmSystem.Fornecedor
+namespace FarmSystem.Fornecedores
 {
 	class DAOfornecedor
 	{
@@ -132,6 +132,37 @@ namespace FarmSystem.Fornecedor
             }
             conn.sair();
             return num;
+        }
+
+        public Fornecedor ProcuraFornecedor(int codforn)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo, nome, telefone, endereco, cnpj, cidade, email from farmsystem.fornecedor where codigo = @cod");
+            query.Connection = conn.entrar();
+            query.Parameters.Add("@cod", NpgsqlDbType.Integer).Value = codforn;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    Fornecedor f = null;
+                    if (dr.Read())
+                    {
+                        f = new Fornecedor();
+                        f.codigo = dr.GetInt32(0);
+                        f.nome = dr.GetString(1);
+                        f.telefone = dr.GetString(2);
+                        f.endereco = dr.GetString(3);
+                        f.cnpj = dr.GetString(4);
+                        f.cidade = dr.GetString(5);
+                        f.email = dr.GetString(6);
+                        
+                    }
+                    conn.sair();
+                    return f;
+                }
+            }
+            conn.sair();
+            return null;
         }
     }
 }
