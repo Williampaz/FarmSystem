@@ -30,7 +30,6 @@
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Inicial));
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,25 +45,13 @@
             this.relatorioDeAçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.Slidepanel = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dtg_tarefas = new System.Windows.Forms.DataGridView();
-            this.txt_data = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sementeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,34 +60,27 @@
             this.acaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_data = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_tarefas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(25, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(269, 83);
-            this.button1.TabIndex = 0;
-            this.button1.Text = " Usuario";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip1
             // 
@@ -232,6 +212,200 @@
             this.panel1.Size = new System.Drawing.Size(307, 725);
             this.panel1.TabIndex = 12;
             // 
+            // Slidepanel
+            // 
+            this.Slidepanel.BackColor = System.Drawing.Color.ForestGreen;
+            this.Slidepanel.Location = new System.Drawing.Point(3, 35);
+            this.Slidepanel.Name = "Slidepanel";
+            this.Slidepanel.Size = new System.Drawing.Size(16, 83);
+            this.Slidepanel.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Usuario:";
+            // 
+            // txtuser
+            // 
+            this.txtuser.AutoSize = true;
+            this.txtuser.BackColor = System.Drawing.Color.Transparent;
+            this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.Location = new System.Drawing.Point(62, 6);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(40, 16);
+            this.txtuser.TabIndex = 16;
+            this.txtuser.Text = "label2";
+            // 
+            // txtnome
+            // 
+            this.txtnome.AutoSize = true;
+            this.txtnome.BackColor = System.Drawing.Color.Transparent;
+            this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.Location = new System.Drawing.Point(87, 6);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(40, 16);
+            this.txtnome.TabIndex = 15;
+            this.txtnome.Text = "label1";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtuser);
+            this.panel2.Controls.Add(this.txtnome);
+            this.panel2.Location = new System.Drawing.Point(968, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(399, 25);
+            this.panel2.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(345, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // dtg_tarefas
+            // 
+            this.dtg_tarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_tarefas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.sementeDataGridViewTextBoxColumn,
+            this.produtoDataGridViewTextBoxColumn,
+            this.funcionarioDataGridViewTextBoxColumn,
+            this.dataDataGridViewTextBoxColumn,
+            this.acaoDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.horarioDataGridViewTextBoxColumn});
+            this.dtg_tarefas.Location = new System.Drawing.Point(315, 528);
+            this.dtg_tarefas.Name = "dtg_tarefas";
+            this.dtg_tarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtg_tarefas.Size = new System.Drawing.Size(1045, 171);
+            this.dtg_tarefas.TabIndex = 18;
+            this.dtg_tarefas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_tarefas_CellContentClick);
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.Frozen = true;
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Plantação Nº";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // sementeDataGridViewTextBoxColumn
+            // 
+            this.sementeDataGridViewTextBoxColumn.DataPropertyName = "semente_usada";
+            this.sementeDataGridViewTextBoxColumn.Frozen = true;
+            this.sementeDataGridViewTextBoxColumn.HeaderText = "Planta";
+            this.sementeDataGridViewTextBoxColumn.Name = "sementeDataGridViewTextBoxColumn";
+            this.sementeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // produtoDataGridViewTextBoxColumn
+            // 
+            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "nome_produto";
+            this.produtoDataGridViewTextBoxColumn.Frozen = true;
+            this.produtoDataGridViewTextBoxColumn.HeaderText = "Utilizar Produto";
+            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
+            this.produtoDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // funcionarioDataGridViewTextBoxColumn
+            // 
+            this.funcionarioDataGridViewTextBoxColumn.DataPropertyName = "nome_funcionario";
+            this.funcionarioDataGridViewTextBoxColumn.Frozen = true;
+            this.funcionarioDataGridViewTextBoxColumn.HeaderText = "Funcionario Resposavel";
+            this.funcionarioDataGridViewTextBoxColumn.Name = "funcionarioDataGridViewTextBoxColumn";
+            this.funcionarioDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "data_acao";
+            this.dataDataGridViewTextBoxColumn.Frozen = true;
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            // 
+            // acaoDataGridViewTextBoxColumn
+            // 
+            this.acaoDataGridViewTextBoxColumn.DataPropertyName = "tipo_acao";
+            this.acaoDataGridViewTextBoxColumn.Frozen = true;
+            this.acaoDataGridViewTextBoxColumn.HeaderText = "Tarefa";
+            this.acaoDataGridViewTextBoxColumn.Name = "acaoDataGridViewTextBoxColumn";
+            this.acaoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.Frozen = true;
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // horarioDataGridViewTextBoxColumn
+            // 
+            this.horarioDataGridViewTextBoxColumn.DataPropertyName = "horario";
+            this.horarioDataGridViewTextBoxColumn.Frozen = true;
+            this.horarioDataGridViewTextBoxColumn.HeaderText = "Horario";
+            this.horarioDataGridViewTextBoxColumn.Name = "horarioDataGridViewTextBoxColumn";
+            this.horarioDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // txt_data
+            // 
+            this.txt_data.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_data.Location = new System.Drawing.Point(1186, 495);
+            this.txt_data.Name = "txt_data";
+            this.txt_data.Size = new System.Drawing.Size(139, 24);
+            this.txt_data.TabIndex = 19;
+            this.txt_data.ValueChanged += new System.EventHandler(this.txt_data_ValueChanged);
+            this.txt_data.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_data_KeyDown);
+            this.txt_data.Leave += new System.EventHandler(this.txt_data_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1186, 476);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Filtrar data";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -250,14 +424,6 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // Slidepanel
-            // 
-            this.Slidepanel.BackColor = System.Drawing.Color.ForestGreen;
-            this.Slidepanel.Location = new System.Drawing.Point(3, 35);
-            this.Slidepanel.Name = "Slidepanel";
-            this.Slidepanel.Size = new System.Drawing.Size(16, 83);
-            this.Slidepanel.TabIndex = 14;
             // 
             // button9
             // 
@@ -337,75 +503,25 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Usuario:";
-            // 
-            // txtuser
-            // 
-            this.txtuser.AutoSize = true;
-            this.txtuser.BackColor = System.Drawing.Color.Transparent;
-            this.txtuser.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.Location = new System.Drawing.Point(62, 6);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(40, 16);
-            this.txtuser.TabIndex = 16;
-            this.txtuser.Text = "label2";
-            // 
-            // txtnome
-            // 
-            this.txtnome.AutoSize = true;
-            this.txtnome.BackColor = System.Drawing.Color.Transparent;
-            this.txtnome.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnome.Location = new System.Drawing.Point(87, 6);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(40, 16);
-            this.txtnome.TabIndex = 15;
-            this.txtnome.Text = "label1";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtuser);
-            this.panel2.Controls.Add(this.txtnome);
-            this.panel2.Location = new System.Drawing.Point(968, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(399, 25);
-            this.panel2.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(345, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(25, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(269, 83);
+            this.button1.TabIndex = 0;
+            this.button1.Text = " Usuario";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -418,122 +534,6 @@
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // dtg_tarefas
-            // 
-            this.dtg_tarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_tarefas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoDataGridViewTextBoxColumn,
-            this.sementeDataGridViewTextBoxColumn,
-            this.produtoDataGridViewTextBoxColumn,
-            this.funcionarioDataGridViewTextBoxColumn,
-            this.dataDataGridViewTextBoxColumn,
-            this.acaoDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.horarioDataGridViewTextBoxColumn});
-            this.dtg_tarefas.Location = new System.Drawing.Point(315, 528);
-            this.dtg_tarefas.Name = "dtg_tarefas";
-            this.dtg_tarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_tarefas.Size = new System.Drawing.Size(1045, 171);
-            this.dtg_tarefas.TabIndex = 18;
-            this.dtg_tarefas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_tarefas_CellContentClick);
-            // 
-            // txt_data
-            // 
-            this.txt_data.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_data.Location = new System.Drawing.Point(1186, 495);
-            this.txt_data.Name = "txt_data";
-            this.txt_data.Size = new System.Drawing.Size(139, 24);
-            this.txt_data.TabIndex = 19;
-            this.txt_data.ValueChanged += new System.EventHandler(this.txt_data_ValueChanged);
-            this.txt_data.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_data_KeyDown);
-            this.txt_data.Leave += new System.EventHandler(this.txt_data_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1186, 476);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Filtrar data";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.Frozen = true;
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Plantação Nº";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // sementeDataGridViewTextBoxColumn
-            // 
-            this.sementeDataGridViewTextBoxColumn.DataPropertyName = "semente_usada";
-            this.sementeDataGridViewTextBoxColumn.Frozen = true;
-            this.sementeDataGridViewTextBoxColumn.HeaderText = "Planta";
-            this.sementeDataGridViewTextBoxColumn.Name = "sementeDataGridViewTextBoxColumn";
-            this.sementeDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // produtoDataGridViewTextBoxColumn
-            // 
-            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "nome_produto";
-            this.produtoDataGridViewTextBoxColumn.Frozen = true;
-            this.produtoDataGridViewTextBoxColumn.HeaderText = "Utilizar Produto";
-            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
-            this.produtoDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // funcionarioDataGridViewTextBoxColumn
-            // 
-            this.funcionarioDataGridViewTextBoxColumn.DataPropertyName = "nome_funcionario";
-            this.funcionarioDataGridViewTextBoxColumn.Frozen = true;
-            this.funcionarioDataGridViewTextBoxColumn.HeaderText = "Funcionario Resposavel";
-            this.funcionarioDataGridViewTextBoxColumn.Name = "funcionarioDataGridViewTextBoxColumn";
-            this.funcionarioDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // dataDataGridViewTextBoxColumn
-            // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "data_acao";
-            this.dataDataGridViewTextBoxColumn.Frozen = true;
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
-            // 
-            // acaoDataGridViewTextBoxColumn
-            // 
-            this.acaoDataGridViewTextBoxColumn.DataPropertyName = "tipo_acao";
-            this.acaoDataGridViewTextBoxColumn.Frozen = true;
-            this.acaoDataGridViewTextBoxColumn.HeaderText = "Tarefa";
-            this.acaoDataGridViewTextBoxColumn.Name = "acaoDataGridViewTextBoxColumn";
-            this.acaoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.Frozen = true;
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // horarioDataGridViewTextBoxColumn
-            // 
-            this.horarioDataGridViewTextBoxColumn.DataPropertyName = "horario";
-            this.horarioDataGridViewTextBoxColumn.Frozen = true;
-            this.horarioDataGridViewTextBoxColumn.HeaderText = "Horario";
-            this.horarioDataGridViewTextBoxColumn.Name = "horarioDataGridViewTextBoxColumn";
-            this.horarioDataGridViewTextBoxColumn.Width = 90;
             // 
             // Frm_Inicial
             // 
@@ -562,10 +562,10 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_tarefas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

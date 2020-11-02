@@ -189,6 +189,8 @@
     <Reference Include="Npgsql.EntityFrameworkCore.PostgreSQL, Version=3.1.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>packages\Npgsql.EntityFrameworkCore.PostgreSQL.3.1.4\lib\netstandard2.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -380,6 +382,7 @@
     <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -405,6 +408,9 @@
     <Reference Include="Twilio.AspNet.Mvc, Version=5.33.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Twilio.AspNet.Mvc.5.33.1\lib\net451\Twilio.AspNet.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />

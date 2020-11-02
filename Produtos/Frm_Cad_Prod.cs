@@ -96,18 +96,37 @@ namespace FarmSystem.Produtos
         Produtos_DAO df = new Produtos_DAO();
         private void btncad_Click(object sender, EventArgs e)
 		{
-            try
+             try
+             {
+            DateTime  passardate;
+            int passarvalor;
+            if (cmbtipo.SelectedIndex == 1)
             {
+
+                df.Cadastar2(Convert.ToInt32(txtcodigofornecedor.Text), txtnomeprod.Text, Convert.ToInt32(txtquantidade.Text), txttipoprod.Text, txtmesdeuso.Text, Convert.ToDateTime(txtvalidade.Text), Convert.ToDouble(txtprecokguni.Text), txtdescicao.Text);
+                MessageBox.Show("Produto cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpar();
+                res = df.getCod() + 1;
+                txtcodigo.Text = res + "";
+
+            }
+            else
+            {
+
                 df.Cadastar(Convert.ToInt32(txtcodigofornecedor.Text), txtnomeprod.Text, Convert.ToInt32(txtquantidade.Text), txttipoprod.Text, txtmesdeuso.Text, Convert.ToDateTime(txtvalidade.Text), Convert.ToDateTime(txtmesplantio.Text), Convert.ToInt32(txtdiacolheita.Text), Convert.ToDouble(txtprecokguni.Text), txtdescicao.Text);
                 MessageBox.Show("Produto cadastrado com sucesso !", "Cadastro realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpar();
                 res = df.getCod() + 1;
                 txtcodigo.Text = res + "";
             }
-            catch
-            {
-                MessageBox.Show("Não foi possível realizar o cadastro, verifique se os dados estão corretos", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+         
             }
+           catch
+            {
+              //  MessageBox.Show("Não foi possível realizar o cadastro, verifique se os dados estão corretos", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          }
         }
 
 		private void btnlimpar_Click(object sender, EventArgs e)
@@ -157,8 +176,8 @@ namespace FarmSystem.Produtos
 
 		private void btnsel_Click(object sender, EventArgs e)
 		{
-            try
-            {
+           // try
+           // {
                 Frmlistaproduto sel = new Frmlistaproduto();
 
                 sel.ShowDialog();
@@ -170,11 +189,11 @@ namespace FarmSystem.Produtos
                     btnexcluir.Enabled = true;
                     btncad.Enabled = false;
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Ocorreu um erro, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch
+           // {
+           //     MessageBox.Show("Ocorreu um erro, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           // }
         }
 
         private void PreencherCombo()
@@ -219,7 +238,18 @@ namespace FarmSystem.Produtos
         }
         private void Frm_Cad_Prod_Load(object sender, EventArgs e)
 		{
-            
+            txtcodigofornecedor.Enabled = false;
+            txtnomeprod.Enabled = false;
+            cmb_Sel_Forn.Enabled = false;
+            txtdiacolheita.Enabled = false;
+            txtmesplantio.Enabled = false;
+            txtvalidade.Enabled = false;
+            txtmesdeuso.Enabled = false;
+            txttipoprod.Enabled = false;
+            txtquantidade.Enabled = false;
+            txtprecokguni.Enabled = false;
+            txtdescicao.Enabled = false;
+
         }
 
 		private void cmb_Sel_Forn_Click(object sender, EventArgs e)
@@ -271,16 +301,7 @@ namespace FarmSystem.Produtos
             }
         }
 
-        private void txtmesdeuso_Leave(object sender, EventArgs e)
-        {
-            epdProdutos.Clear();
-            if (txtmesdeuso.Text.Equals(""))
-            {
-                epdProdutos.SetError(txtmesdeuso, "Preencha este campo");
-                txtmesdeuso.Focus();
-                return;
-            }
-        }
+        
 
         private void txtvalidade_Leave(object sender, EventArgs e)
         {
@@ -304,31 +325,63 @@ namespace FarmSystem.Produtos
             }
         }
 
-        private void txtmesplantio_Leave(object sender, EventArgs e)
-        {
-            epdProdutos.Clear();
-            if (!txtmesplantio.MaskCompleted)
-            {
-                epdProdutos.SetError(txtmesplantio, "Preencha este campo");
-                txtmesplantio.Focus();
-                return;
-            }
-        }
+      
 
-        private void txtdiacolheita_Leave(object sender, EventArgs e)
-        {
-            epdProdutos.Clear();
-            if (txtdiacolheita.Text.Equals(""))
-            {
-                epdProdutos.SetError(txtdiacolheita, "Preencha este campo");
-                txtdiacolheita.Focus();
-                return;
-            }
-        }
+        
 
 		private void txtcodigo_TextChanged(object sender, EventArgs e)
 		{
 
 		}
-	}
+
+        private void lblCódigo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbtipo_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbtipo_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbtipo.SelectedIndex == 1)
+            {
+                txtdiacolheita.Enabled = false;
+                txtmesplantio.Enabled = false;
+
+                txtcodigofornecedor.Enabled = true;
+                txtnomeprod.Enabled = true;
+                cmb_Sel_Forn.Enabled = true;
+                txtvalidade.Enabled = true;
+                txtmesdeuso.Enabled = true;
+                txttipoprod.Enabled = true;
+                txtquantidade.Enabled = true;
+                txtprecokguni.Enabled = true;
+                txtdescicao.Enabled = true;
+
+            }
+            else
+            {
+
+                txtdiacolheita.Enabled = true;
+                txtmesplantio.Enabled = true;
+                txtcodigofornecedor.Enabled = true;
+                txtnomeprod.Enabled = true;
+                cmb_Sel_Forn.Enabled = true;
+                txtvalidade.Enabled = true;
+                txtmesdeuso.Enabled = true;
+                txttipoprod.Enabled = true;
+                txtquantidade.Enabled = true;
+                txtprecokguni.Enabled = true;
+                txtdescicao.Enabled = true;
+            }
+        }
+
+        private void txtdiacolheita_Leave(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

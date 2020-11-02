@@ -305,5 +305,10 @@ namespace FarmSystem.Plantação
         {
 
         }
+
+        private void txthorario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

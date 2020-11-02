@@ -481,6 +481,7 @@
             this.txthorario.Name = "txthorario";
             this.txthorario.Size = new System.Drawing.Size(136, 20);
             this.txthorario.TabIndex = 34;
+            this.txthorario.TextChanged += new System.EventHandler(this.txthorario_TextChanged);
             // 
             // mskdata
             // 

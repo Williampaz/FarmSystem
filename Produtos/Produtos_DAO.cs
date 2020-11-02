@@ -12,6 +12,26 @@ namespace FarmSystem.Produtos
 {
 	class Produtos_DAO
 	{
+
+
+        public void Cadastar2(int codigoforn, string nome, int quantidade, string tipoprod, String mesdeuso, DateTime validade, double precokg_uni, string descricao)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("insert into farmsystem.produtos (codigoforn,nome,quantidade,tipoprod,mesdeuso,validade,precokg_uni,descricao) values (@codforn,@nome,@quantidade,@tipoprod,@mesdeuso,@validade,@precokg_uni,@descricao)");
+            query.Connection = conn.entrar();
+            Produto p = new Produto();
+            query.Parameters.Add("@codforn", NpgsqlDbType.Integer).Value = codigoforn;
+            query.Parameters.Add("@nome", NpgsqlDbType.Varchar).Value = nome;
+            query.Parameters.Add("@quantidade", NpgsqlDbType.Integer).Value = quantidade;
+            query.Parameters.Add("@tipoprod", NpgsqlDbType.Varchar).Value = tipoprod;
+            query.Parameters.Add("@mesdeuso", NpgsqlDbType.Varchar).Value = mesdeuso;
+            query.Parameters.Add("@validade", NpgsqlDbType.Date).Value = validade;
+            query.Parameters.Add("@precokg_uni", NpgsqlDbType.Double).Value = precokg_uni;
+            query.Parameters.Add("@descricao", NpgsqlDbType.Varchar).Value = descricao;
+            query.ExecuteNonQuery();
+            conn.sair();
+        }
+
         public void Cadastar(int codigoforn, string nome, int quantidade, string tipoprod, String mesdeuso, DateTime validade, DateTime mesdeplantio, int diacolheita, double precokg_uni, string descricao)
         {
             Conexao conn = new Conexao();
