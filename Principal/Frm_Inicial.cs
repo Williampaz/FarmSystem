@@ -62,9 +62,10 @@ namespace FarmSystem.Principal
 
 			dtg_tarefas.DataSource = ac.Lista_Data(Convert.ToDateTime(txt_data.Text));
 
-			//timer1.Enabled = true;
+            //timer1.Enabled = true;
 
-		}
+            //this.reportViewer1.RefreshReport();
+        }
 
         private void button4_Click(object sender, EventArgs e)
 		{
@@ -357,6 +358,16 @@ namespace FarmSystem.Principal
 		private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void plantacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			new frmRelPlantacao().ShowDialog();
+		}
+
+        private void relatorioDeAcoesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			new frmRelAcoes().ShowDialog();
         }
     }
 

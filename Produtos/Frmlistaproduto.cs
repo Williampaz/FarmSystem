@@ -43,7 +43,7 @@ namespace FarmSystem.Produtos
 		private void Frmlistaproduto_Load(object sender, EventArgs e)
 		{
             // TODO: esta linha de código carrega dados na tabela 'postgresDataSet1.produtos'. Você pode movê-la ou removê-la conforme necessário.
-            //this.produtosTableAdapter.Fill(this.postgresDataSet1.produtos);
+            this.produtosTableAdapter.Fill(this.postgresDataSet1.produtos);
            
 		}
 
