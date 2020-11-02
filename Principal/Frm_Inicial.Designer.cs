@@ -74,6 +74,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.todasAsAçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.açõesDeUmaPlantaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -160,44 +162,46 @@
             // relaçãoDeUsuariosToolStripMenuItem
             // 
             this.relaçãoDeUsuariosToolStripMenuItem.Name = "relaçãoDeUsuariosToolStripMenuItem";
-            this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.relaçãoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.relaçãoDeUsuariosToolStripMenuItem.Text = "&Usuarios";
             this.relaçãoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.relaçãoDeUsuariosToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.funcionáriosToolStripMenuItem.Text = "Fu&ncionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem1
             // 
             this.fornecedoresToolStripMenuItem1.Name = "fornecedoresToolStripMenuItem1";
-            this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.fornecedoresToolStripMenuItem1.Text = "&Fornecedores";
             this.fornecedoresToolStripMenuItem1.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem1_Click);
             // 
             // produtosToolStripMenuItem1
             // 
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem1.Text = "&Produtos";
             this.produtosToolStripMenuItem1.Click += new System.EventHandler(this.produtosToolStripMenuItem1_Click);
             // 
             // plantaçãoToolStripMenuItem
             // 
             this.plantaçãoToolStripMenuItem.Name = "plantaçãoToolStripMenuItem";
-            this.plantaçãoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.plantaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.plantaçãoToolStripMenuItem.Text = "Plantação";
             this.plantaçãoToolStripMenuItem.Click += new System.EventHandler(this.plantacaoToolStripMenuItem_Click);
             // 
             // relatorioDeAçõesToolStripMenuItem
             // 
+            this.relatorioDeAçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.todasAsAçõesToolStripMenuItem,
+            this.açõesDeUmaPlantaçãoToolStripMenuItem});
             this.relatorioDeAçõesToolStripMenuItem.Name = "relatorioDeAçõesToolStripMenuItem";
             this.relatorioDeAçõesToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
             this.relatorioDeAçõesToolStripMenuItem.Text = "&Relatorio de Ações";
-            this.relatorioDeAçõesToolStripMenuItem.Click += new System.EventHandler(this.relatorioDeAcoesToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -545,6 +549,20 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // todasAsAçõesToolStripMenuItem
+            // 
+            this.todasAsAçõesToolStripMenuItem.Name = "todasAsAçõesToolStripMenuItem";
+            this.todasAsAçõesToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.todasAsAçõesToolStripMenuItem.Text = "Todas as ações";
+            this.todasAsAçõesToolStripMenuItem.Click += new System.EventHandler(this.todasAsAcoesToolStripMenuItem_Click);
+            // 
+            // açõesDeUmaPlantaçãoToolStripMenuItem
+            // 
+            this.açõesDeUmaPlantaçãoToolStripMenuItem.Name = "açõesDeUmaPlantaçãoToolStripMenuItem";
+            this.açõesDeUmaPlantaçãoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.açõesDeUmaPlantaçãoToolStripMenuItem.Text = "Ações de uma plantação";
+            this.açõesDeUmaPlantaçãoToolStripMenuItem.Click += new System.EventHandler(this.acoesDeUmaPlantacaoToolStripMenuItem_Click);
+            // 
             // Frm_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,6 +665,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem plantaçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem todasAsAçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem açõesDeUmaPlantaçãoToolStripMenuItem;
     }
 
 }

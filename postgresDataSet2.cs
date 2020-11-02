@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace FarmSystem.postgresDataSet2TableAdapters {
+    
+    
+    public partial class acoes_plantacaoTableAdapter {
+    }
+}

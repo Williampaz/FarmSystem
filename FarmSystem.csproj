@@ -414,6 +414,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Relatorios\frmRelTodasAcoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\frmRelTodasAcoes.Designer.cs">
+      <DependentUpon>frmRelTodasAcoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relatorios\frmRelAcoes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -640,10 +646,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorios\relAcoes.rdlc" />
     <EmbeddedResource Include="Relatorios\frmRelAcoes.resx">
       <DependentUpon>frmRelAcoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatorios\relAcoes.rdlc" />
+    <EmbeddedResource Include="Relatorios\frmRelTodasAcoes.resx">
+      <DependentUpon>frmRelTodasAcoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\frmRelPlantacao.resx">
       <DependentUpon>frmRelPlantacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -664,6 +673,7 @@
     <EmbeddedResource Include="Relatorios\Rel_de_Usuarios.rdlc" />
     <EmbeddedResource Include="Relatorios\Rel_de Fornecedores.rdlc" />
     <EmbeddedResource Include="Relatorios\relPlantacao.rdlc" />
+    <EmbeddedResource Include="Relatorios\relTodasAcoes.rdlc" />
     <EmbeddedResource Include="usuario\Frm_Cad_User.resx">
       <DependentUpon>Frm_Cad_User.cs</DependentUpon>
     </EmbeddedResource>
