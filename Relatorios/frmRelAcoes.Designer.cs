@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.acoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.acoesTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.acoesTableAdapter();
-            this.cbbPlantacao = new System.Windows.Forms.ComboBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnTodos = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnListaPlant = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtsemente = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtplantacao = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.acoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
             this.SuspendLayout();
@@ -54,36 +57,26 @@
             // 
             // reportViewer1
             // 
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.acoesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.acoesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FarmSystem.Relatorios.relAcoes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 36);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 62);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 414);
+            this.reportViewer1.Size = new System.Drawing.Size(911, 388);
             this.reportViewer1.TabIndex = 0;
             // 
             // acoesTableAdapter
             // 
             this.acoesTableAdapter.ClearBeforeFill = true;
             // 
-            // cbbPlantacao
-            // 
-            this.cbbPlantacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbPlantacao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbbPlantacao.FormattingEnabled = true;
-            this.cbbPlantacao.Location = new System.Drawing.Point(91, 9);
-            this.cbbPlantacao.Name = "cbbPlantacao";
-            this.cbbPlantacao.Size = new System.Drawing.Size(121, 21);
-            this.cbbPlantacao.TabIndex = 1;
-            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.Location = new System.Drawing.Point(230, 7);
+            this.btnFiltrar.Location = new System.Drawing.Point(602, 21);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(80, 23);
             this.btnFiltrar.TabIndex = 2;
@@ -96,7 +89,7 @@
             this.btnTodos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTodos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodos.Location = new System.Drawing.Point(325, 7);
+            this.btnTodos.Location = new System.Drawing.Point(688, 21);
             this.btnTodos.Name = "btnTodos";
             this.btnTodos.Size = new System.Drawing.Size(201, 23);
             this.btnTodos.TabIndex = 3;
@@ -104,26 +97,64 @@
             this.btnTodos.UseVisualStyleBackColor = true;
             this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
-            // label1
+            // btnListaPlant
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 18);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Plantação:";
+            this.btnListaPlant.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListaPlant.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListaPlant.Location = new System.Drawing.Point(149, 21);
+            this.btnListaPlant.Name = "btnListaPlant";
+            this.btnListaPlant.Size = new System.Drawing.Size(46, 23);
+            this.btnListaPlant.TabIndex = 15;
+            this.btnListaPlant.Text = "Listar";
+            this.btnListaPlant.UseVisualStyleBackColor = true;
+            this.btnListaPlant.Click += new System.EventHandler(this.btnListaPlant_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(198, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Semente Utilizada:";
+            // 
+            // txtsemente
+            // 
+            this.txtsemente.AcceptsReturn = true;
+            this.txtsemente.Location = new System.Drawing.Point(201, 24);
+            this.txtsemente.Name = "txtsemente";
+            this.txtsemente.Size = new System.Drawing.Size(384, 20);
+            this.txtsemente.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Plantação:";
+            // 
+            // txtplantacao
+            // 
+            this.txtplantacao.Location = new System.Drawing.Point(67, 24);
+            this.txtplantacao.Name = "txtplantacao";
+            this.txtplantacao.Size = new System.Drawing.Size(82, 20);
+            this.txtplantacao.TabIndex = 17;
             // 
             // frmRelAcoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(910, 450);
+            this.Controls.Add(this.btnListaPlant);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtsemente);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtplantacao);
             this.Controls.Add(this.btnTodos);
             this.Controls.Add(this.btnFiltrar);
-            this.Controls.Add(this.cbbPlantacao);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmRelAcoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -142,9 +173,12 @@
         private System.Windows.Forms.BindingSource acoesBindingSource;
         private postgresDataSet2 postgresDataSet2;
         private postgresDataSet2TableAdapters.acoesTableAdapter acoesTableAdapter;
-        private System.Windows.Forms.ComboBox cbbPlantacao;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Button btnTodos;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnListaPlant;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtsemente;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtplantacao;
     }
 }

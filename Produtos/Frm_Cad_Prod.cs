@@ -125,7 +125,7 @@ namespace FarmSystem.Produtos
             }
            catch
             {
-              //  MessageBox.Show("Não foi possível realizar o cadastro, verifique se os dados estão corretos", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show("Não foi possível realizar o cadastro, verifique se os dados estão corretos", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
         }
 
