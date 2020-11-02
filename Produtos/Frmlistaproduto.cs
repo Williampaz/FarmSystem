@@ -18,7 +18,12 @@ namespace FarmSystem.Produtos
 			Produtos_DAO df = new Produtos_DAO();
 			dvgprod.DataSource = df.ListaProduto();
 		}
-
+		public Frmlistaproduto(string tipo)
+		{
+			InitializeComponent();
+			Produtos_DAO df = new Produtos_DAO();
+			dvgprod.DataSource = df.ListaProduto2(tipo);
+		}
 
 		public Produto getProduto()
         {
@@ -58,5 +63,11 @@ namespace FarmSystem.Produtos
 			this.DialogResult = DialogResult.OK;
 
         }
+
+        private void txttipoprod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			Produtos_DAO d = new Produtos_DAO();
+			dvgprod.DataSource = d.ListaProduto2(txttipoprod.Text);
+		}
     }
 }

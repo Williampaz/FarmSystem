@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelPlantacao));
             this.plantacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -71,9 +72,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRelPlantacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "e";
+            this.Text = "Relatório de Plantações";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmRelPlantacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).EndInit();

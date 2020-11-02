@@ -1151,6 +1151,12 @@ namespace FarmSystem {
             
             private global::System.Data.DataColumn columncodpro;
             
+            private global::System.Data.DataColumn columnprevisaodecolheita;
+            
+            private global::System.Data.DataColumn columnquantidadecolhida;
+            
+            private global::System.Data.DataColumn columnvalordevenda;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public acoes_plantacaoDataTable() {
@@ -1274,6 +1280,30 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn previsaodecolheitaColumn {
+                get {
+                    return this.columnprevisaodecolheita;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn quantidadecolhidaColumn {
+                get {
+                    return this.columnquantidadecolhida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn valordevendaColumn {
+                get {
+                    return this.columnvalordevenda;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1309,7 +1339,7 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public acoes_plantacaoRow Addacoes_plantacaoRow(string tipoacao, System.DateTime dataac, int funcionario, string status, string horario, System.DateTime datadeplantio, string sementeusada, string nome) {
+            public acoes_plantacaoRow Addacoes_plantacaoRow(string tipoacao, System.DateTime dataac, int funcionario, string status, string horario, System.DateTime datadeplantio, string sementeusada, string nome, int previsaodecolheita, int quantidadecolhida, string valordevenda) {
                 acoes_plantacaoRow rowacoes_plantacaoRow = ((acoes_plantacaoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1322,7 +1352,10 @@ namespace FarmSystem {
                         sementeusada,
                         nome,
                         null,
-                        null};
+                        null,
+                        previsaodecolheita,
+                        quantidadecolhida,
+                        valordevenda};
                 rowacoes_plantacaoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowacoes_plantacaoRow);
                 return rowacoes_plantacaoRow;
@@ -1356,6 +1389,9 @@ namespace FarmSystem {
                 this.columnnome = base.Columns["nome"];
                 this.columncodplant = base.Columns["codplant"];
                 this.columncodpro = base.Columns["codpro"];
+                this.columnprevisaodecolheita = base.Columns["previsaodecolheita"];
+                this.columnquantidadecolhida = base.Columns["quantidadecolhida"];
+                this.columnvalordevenda = base.Columns["valordevenda"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1383,6 +1419,12 @@ namespace FarmSystem {
                 base.Columns.Add(this.columncodplant);
                 this.columncodpro = new global::System.Data.DataColumn("codpro", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodpro);
+                this.columnprevisaodecolheita = new global::System.Data.DataColumn("previsaodecolheita", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprevisaodecolheita);
+                this.columnquantidadecolhida = new global::System.Data.DataColumn("quantidadecolhida", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantidadecolhida);
+                this.columnvalordevenda = new global::System.Data.DataColumn("valordevenda", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvalordevenda);
                 this.columncodigo.AutoIncrement = true;
                 this.columncodigo.AutoIncrementSeed = -1;
                 this.columncodigo.AutoIncrementStep = -1;
@@ -1411,6 +1453,10 @@ namespace FarmSystem {
                 this.columncodpro.AutoIncrementStep = -1;
                 this.columncodpro.AllowDBNull = false;
                 this.columncodpro.ReadOnly = true;
+                this.columnprevisaodecolheita.ReadOnly = true;
+                this.columnquantidadecolhida.ReadOnly = true;
+                this.columnvalordevenda.ReadOnly = true;
+                this.columnvalordevenda.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2270,6 +2316,54 @@ namespace FarmSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int previsaodecolheita {
+                get {
+                    try {
+                        return ((int)(this[this.tableacoes_plantacao.previsaodecolheitaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'previsaodecolheita\' na tabela \'acoes_plantacao\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableacoes_plantacao.previsaodecolheitaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int quantidadecolhida {
+                get {
+                    try {
+                        return ((int)(this[this.tableacoes_plantacao.quantidadecolhidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'quantidadecolhida\' na tabela \'acoes_plantacao\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableacoes_plantacao.quantidadecolhidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string valordevenda {
+                get {
+                    try {
+                        return ((string)(this[this.tableacoes_plantacao.valordevendaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'valordevenda\' na tabela \'acoes_plantacao\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableacoes_plantacao.valordevendaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IstipoacaoNull() {
                 return this.IsNull(this.tableacoes_plantacao.tipoacaoColumn);
             }
@@ -2362,6 +2456,42 @@ namespace FarmSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetnomeNull() {
                 this[this.tableacoes_plantacao.nomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsprevisaodecolheitaNull() {
+                return this.IsNull(this.tableacoes_plantacao.previsaodecolheitaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetprevisaodecolheitaNull() {
+                this[this.tableacoes_plantacao.previsaodecolheitaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsquantidadecolhidaNull() {
+                return this.IsNull(this.tableacoes_plantacao.quantidadecolhidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetquantidadecolhidaNull() {
+                this[this.tableacoes_plantacao.quantidadecolhidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsvalordevendaNull() {
+                return this.IsNull(this.tableacoes_plantacao.valordevendaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetvalordevendaNull() {
+                this[this.tableacoes_plantacao.valordevendaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2958,6 +3088,9 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("nome", "nome");
             tableMapping.ColumnMappings.Add("codplant", "codplant");
             tableMapping.ColumnMappings.Add("codpro", "codpro");
+            tableMapping.ColumnMappings.Add("previsaodecolheita", "previsaodecolheita");
+            tableMapping.ColumnMappings.Add("quantidadecolhida", "quantidadecolhida");
+            tableMapping.ColumnMappings.Add("valordevenda", "valordevenda");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2975,9 +3108,10 @@ namespace FarmSystem.postgresDataSet2TableAdapters {
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        farmsystem.acoes.codigo, farmsystem.acoes.tipoacao, farmsystem.acoes.dataac, farmsystem.acoes.funcionario, farmsystem.acoes.status, farmsystem.acoes.horario, farmsystem.plantacao.codigo AS codplant, 
-                         farmsystem.plantacao.datadeplantio, farmsystem.plantacao.sementeusada, farmsystem.produtos.codigo AS codpro, farmsystem.produtos.nome
+                         farmsystem.plantacao.datadeplantio, farmsystem.plantacao.sementeusada, farmsystem.produtos.codigo AS codpro, farmsystem.produtos.nome, farmsystem.plantacao.previsaodecolheita, 
+                         farmsystem.plantacao.quantidadecolhida, farmsystem.plantacao.valordevenda
 FROM            farmsystem.acoes, farmsystem.plantacao, farmsystem.produtos
-WHERE        farmsystem.acoes.codigo = farmsystem.plantacao.codigo AND farmsystem.acoes.codigo = farmsystem.produtos.codigo";
+WHERE        farmsystem.acoes.plantacao = farmsystem.plantacao.codigo AND farmsystem.acoes.codigoprod = farmsystem.produtos.codigo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

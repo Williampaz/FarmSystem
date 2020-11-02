@@ -1,4 +1,5 @@
 ﻿using FarmSystem.Funcionario;
+using FarmSystem.Produtos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -349,6 +350,20 @@ namespace FarmSystem.Plantação
         {
             txtdatadacolheita.Value = mskprevisaodata.Value;
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String tipo = "Semente";
+            Frmlistaproduto lp = new Frmlistaproduto(tipo);
+            lp.ShowDialog();
+        
+            if (lp.DialogResult == DialogResult.OK)
+            {
+                Produto pd = lp.getProduto();
+                txtsemente.Text = pd.nome.ToString();
+
+            }
         }
     }
 }

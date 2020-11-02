@@ -122,6 +122,42 @@ namespace FarmSystem.Produtos
             return null;
         }
 
+        public List<Produto> ListaProduto2(String tipo)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,codigoforn,tipoprod,nome,quantidade,mesdeuso,validade," +
+                "mesdeplantio,diacolheita,precokg_uni,descricao from farmsystem.produtos where tipoprod = @tipo");
+            query.Connection = conn.entrar();
+            query.Parameters.Add("@tipo", NpgsqlDbType.Varchar).Value = tipo;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    List<Produto> produtos = new List<Produto>();
+                    while (dr.Read())
+                    {
+                        Produto p = new Produto();
+                        p.codigo = dr.GetInt32(0);
+                        p.codigoforn = dr.GetInt32(1);
+                        p.tipoprod = dr.GetString(2);
+                        p.nome = dr.GetString(3);
+                        p.quantidade = dr.GetInt32(4);
+                        p.mesdeuso = dr.GetString(5);
+                        p.validade = dr.GetDateTime(6);
+                        p.mesdeplantio = dr.GetDateTime(7);
+                        p.diacolheita = dr.GetInt32(8);
+                        p.precokg_uni = dr.GetDouble(9);
+                        p.descricao = dr.GetString(10);
+                        produtos.Add(p);
+                    }
+                    conn.sair();
+                    return produtos;
+                }
+            }
+            conn.sair();
+            return null;
+        }
+
         public void Editar(Produto p)
         {
             Conexao conn = new Conexao();

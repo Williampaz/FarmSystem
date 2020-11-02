@@ -33,9 +33,6 @@
             this.txtbusca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dvgprod = new System.Windows.Forms.DataGridView();
-            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postgresDataSet1 = new FarmSystem.postgresDataSet1();
-            this.produtosTableAdapter = new FarmSystem.postgresDataSet1TableAdapters.produtosTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigofornDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,11 @@
             this.diacolheitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precokguniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet1 = new FarmSystem.postgresDataSet1();
+            this.produtosTableAdapter = new FarmSystem.postgresDataSet1TableAdapters.produtosTableAdapter();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txttipoprod = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvgprod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet1)).BeginInit();
@@ -54,7 +56,7 @@
             // 
             // txtbusca
             // 
-            this.txtbusca.Location = new System.Drawing.Point(319, 28);
+            this.txtbusca.Location = new System.Drawing.Point(82, 27);
             this.txtbusca.Name = "txtbusca";
             this.txtbusca.Size = new System.Drawing.Size(690, 20);
             this.txtbusca.TabIndex = 5;
@@ -63,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(263, 31);
+            this.label1.Location = new System.Drawing.Point(26, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 4;
@@ -92,20 +94,6 @@
             this.dvgprod.Size = new System.Drawing.Size(1317, 403);
             this.dvgprod.TabIndex = 3;
             this.dvgprod.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgprod_CellDoubleClick);
-            // 
-            // produtosBindingSource
-            // 
-            this.produtosBindingSource.DataMember = "produtos";
-            this.produtosBindingSource.DataSource = this.postgresDataSet1;
-            // 
-            // postgresDataSet1
-            // 
-            this.postgresDataSet1.DataSetName = "postgresDataSet1";
-            this.postgresDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produtosTableAdapter
-            // 
-            this.produtosTableAdapter.ClearBeforeFill = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -179,12 +167,51 @@
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
             this.descricaoDataGridViewTextBoxColumn.Width = 295;
             // 
+            // produtosBindingSource
+            // 
+            this.produtosBindingSource.DataMember = "produtos";
+            this.produtosBindingSource.DataSource = this.postgresDataSet1;
+            // 
+            // postgresDataSet1
+            // 
+            this.postgresDataSet1.DataSetName = "postgresDataSet1";
+            this.postgresDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // produtosTableAdapter
+            // 
+            this.produtosTableAdapter.ClearBeforeFill = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(884, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Tipo de Cadastro:";
+            // 
+            // txttipoprod
+            // 
+            this.txttipoprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttipoprod.FormattingEnabled = true;
+            this.txttipoprod.Items.AddRange(new object[] {
+            "Semente",
+            "Outros Insumos"});
+            this.txttipoprod.Location = new System.Drawing.Point(981, 26);
+            this.txttipoprod.Name = "txttipoprod";
+            this.txttipoprod.Size = new System.Drawing.Size(331, 21);
+            this.txttipoprod.TabIndex = 45;
+            this.txttipoprod.SelectedIndexChanged += new System.EventHandler(this.txttipoprod_SelectedIndexChanged);
+            // 
             // Frmlistaproduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1324, 472);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txttipoprod);
             this.Controls.Add(this.txtbusca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dvgprod);
@@ -221,5 +248,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diacolheitaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precokguniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox txttipoprod;
     }
 }

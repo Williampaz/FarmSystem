@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelAcoes));
+            this.acoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnListaPlant = new System.Windows.Forms.Button();
@@ -37,23 +40,31 @@
             this.txtsemente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtplantacao = new System.Windows.Forms.TextBox();
-            this.acoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.acoes_plantacaoTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.acoes_plantacaoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.acoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
+            // acoesBindingSource
+            // 
+            this.acoesBindingSource.DataMember = "acoes_plantacao";
+            this.acoesBindingSource.DataSource = this.postgresDataSet2;
+            // 
+            // postgresDataSet2
+            // 
+            this.postgresDataSet2.DataSetName = "postgresDataSet2";
+            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.acoesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.acoesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FarmSystem.Relatorios.relAcoes.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 62);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(758, 388);
+            this.reportViewer1.Size = new System.Drawing.Size(1009, 566);
             this.reportViewer1.TabIndex = 0;
             // 
             // btnFiltrar
@@ -114,16 +125,6 @@
             this.txtplantacao.Size = new System.Drawing.Size(82, 20);
             this.txtplantacao.TabIndex = 17;
             // 
-            // acoesBindingSource
-            // 
-            this.acoesBindingSource.DataMember = "acoes_plantacao";
-            this.acoesBindingSource.DataSource = this.postgresDataSet2;
-            // 
-            // postgresDataSet2
-            // 
-            this.postgresDataSet2.DataSetName = "postgresDataSet2";
-            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // acoes_plantacaoTableAdapter
             // 
             this.acoes_plantacaoTableAdapter.ClearBeforeFill = true;
@@ -133,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(760, 450);
+            this.ClientSize = new System.Drawing.Size(1010, 635);
             this.Controls.Add(this.btnListaPlant);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtsemente);
@@ -141,6 +142,7 @@
             this.Controls.Add(this.txtplantacao);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRelAcoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório das Ações";
