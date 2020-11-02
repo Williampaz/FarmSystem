@@ -369,6 +369,16 @@ namespace FarmSystem.Principal
         {
 			new frmRelAcoes().ShowDialog();
         }
+
+        private void todasAsAcoesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			new frmRelTodasAcoes().ShowDialog();
+        }
+
+        private void acoesDeUmaPlantacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			new frmRelAcoes().ShowDialog();
+        }
     }
 
 }

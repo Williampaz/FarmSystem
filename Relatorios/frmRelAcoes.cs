@@ -21,13 +21,8 @@ namespace FarmSystem
 
         private void frmRelAcoes_Load(object sender, EventArgs e)
         {
-           // cbbPlantacao.DataSource = new daoplantacao().Listaplantacao();
-           // cbbPlantacao.DisplayMember = "codigo";
-
-            // TODO: esta linha de código carrega dados na tabela 'postgresDataSet2.acoes'. Você pode movê-la ou removê-la conforme necessário.
-            this.acoesTableAdapter.Fill(this.postgresDataSet2.acoes);
-
-            //this.reportViewer1.LocalReport.SetParameters(new ReportParameter("par_plantacao",cbbPlantacao.SelectedValue.ToString()));
+            // TODO: esta linha de código carrega dados na tabela 'postgresDataSet2.acoes_plantacao'. Você pode movê-la ou removê-la conforme necessário.
+            this.acoes_plantacaoTableAdapter.Fill(this.postgresDataSet2.acoes_plantacao);
 
             this.reportViewer1.RefreshReport();
         }
@@ -35,12 +30,6 @@ namespace FarmSystem
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("plantacao", txtplantacao.Text));
-            this.reportViewer1.RefreshReport();
-        }
-
-        private void btnTodos_Click(object sender, EventArgs e)
-        {
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("plantacao", (string)null));
             this.reportViewer1.RefreshReport();
         }
 
