@@ -78,13 +78,18 @@ namespace FarmSystem.Plantação
         {
             objacao a = new objacao();
 
+            String prod = txtsemente.Text;
+            daoplantacao dp = new daoplantacao();
+             int produto = dp.ProcuraProduto(prod);
+                        
             a.tipoacao = "Plantar";
             a.plantacao = Convert.ToInt32(txtcodigo.Text);
-            a.codigoprod = Convert.ToInt32(2);
+            a.codigoprod = produto;
             a.dataac = Convert.ToDateTime(mskdataplantio.Text);
             a.funcionario = Convert.ToInt32(txtcodfunc.Text);
             a.status = "A executar";
             a.horario = "07h00";
+            a.quantidade = Convert.ToDouble(txt_quantidade.Text);
 
             return a;
         }
@@ -93,13 +98,19 @@ namespace FarmSystem.Plantação
         {
             objacao a = new objacao();
 
+
+            String prod = txtsemente.Text;
+            daoplantacao dp = new daoplantacao();
+            int produto = dp.ProcuraProduto(prod);
+
             a.tipoacao = "Colher";
             a.plantacao = Convert.ToInt32(txtcodigo.Text);
-            a.codigoprod = Convert.ToInt32(2);
+            a.codigoprod = produto;
             a.dataac = Convert.ToDateTime(mskprevisaodata.Text);
             a.funcionario = Convert.ToInt32(txtcodfunc.Text);
             a.status = "A executar";
             a.horario = "07h00";
+            a.quantidade = Convert.ToDouble("0");
 
             return a;
         }
@@ -174,6 +185,7 @@ namespace FarmSystem.Plantação
             //mskprevisaodata.Value = DateTime.Now;
             txtqtdsacas.Clear();
             txtsemente.Clear();
+            txt_quantidade.Clear();
             //txtdatadacolheita.Value = DateTime.Now;
 
 
@@ -191,6 +203,8 @@ namespace FarmSystem.Plantação
             this.plantacaoTableAdapter.Fill(this.postgresDataSet2.plantacao);
 
             atualizardtg();
+
+            txtqtdsacas.Text = "0";
 
 
         }

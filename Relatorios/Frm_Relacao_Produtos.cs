@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace FarmSystem.Relatorios
 {
-	public partial class Frm_Relacao_Produtos : Form
-	{
-		public Frm_Relacao_Produtos()
-		{
-			InitializeComponent();
-		}
+    public partial class Frm_Relacao_Produtos : Form
+    {
+        public Frm_Relacao_Produtos()
+        {
+            InitializeComponent();
+        }
 
-		private void Frm_Relacao_Produtos_Load(object sender, EventArgs e)
-		{
+        private void Frm_Relacao_Produtos_Load(object sender, EventArgs e)
+        {
 
-			this.reportViewer1.RefreshReport();
-		}
-	}
+            this.reportViewer1.RefreshReport();
+        }
+    }
 }

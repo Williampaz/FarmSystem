@@ -39,6 +39,7 @@
             this.Funcionário = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcoes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +55,11 @@
             this.Data,
             this.Funcionário,
             this.Status,
-            this.horario});
+            this.horario,
+            this.quantidade});
             this.dgvAcoes.Location = new System.Drawing.Point(1, 61);
             this.dgvAcoes.Name = "dgvAcoes";
-            this.dgvAcoes.Size = new System.Drawing.Size(974, 425);
+            this.dgvAcoes.Size = new System.Drawing.Size(1054, 425);
             this.dgvAcoes.TabIndex = 0;
             this.dgvAcoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcoes_CellDoubleClick);
             // 
@@ -132,12 +134,19 @@
             this.horario.HeaderText = "Horário";
             this.horario.Name = "horario";
             // 
+            // quantidade
+            // 
+            this.quantidade.DataPropertyName = "quantidade";
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.Width = 90;
+            // 
             // frmListaAcoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(987, 486);
+            this.ClientSize = new System.Drawing.Size(1068, 486);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAcoes);
@@ -145,6 +154,7 @@
             this.Name = "frmListaAcoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Ações";
+            this.Load += new System.EventHandler(this.frmListaAcoes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcoes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,5 +174,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Funcionário;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn horario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
     }
 }

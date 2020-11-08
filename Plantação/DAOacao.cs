@@ -17,7 +17,7 @@ namespace FarmSystem
         {
             Conexao conn = new Conexao();
             NpgsqlCommand query = new NpgsqlCommand("insert into farmsystem.acoes (tipoacao,plantacao," +
-                "codigoprod,dataac,funcionario,status,horario) values (@tipo,@plantacao,@prod,@dt,@func,@status,@horario)");
+                "codigoprod,dataac,funcionario,status,horario, quantidade) values (@tipo,@plantacao,@prod,@dt,@func,@status,@horario, @quantidade)");
             query.Connection = conn.entrar();
             query.Parameters.Add("@tipo", NpgsqlDbType.Varchar).Value = acao.tipoacao;
             query.Parameters.Add("@plantacao", NpgsqlDbType.Integer).Value = acao.plantacao;
@@ -26,7 +26,7 @@ namespace FarmSystem
             query.Parameters.Add("@func", NpgsqlDbType.Integer).Value = acao.funcionario;
             query.Parameters.Add("@status", NpgsqlDbType.Varchar).Value = acao.status;
             query.Parameters.Add("@horario", NpgsqlDbType.Varchar).Value = acao.horario;
-
+            query.Parameters.Add("@quantidade", NpgsqlDbType.Double).Value = acao.quantidade;
             query.ExecuteNonQuery();
             conn.sair();
         }
@@ -34,7 +34,7 @@ namespace FarmSystem
         public List<objacao> ListaAcoes()
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("Select codigo,tipoacao,plantacao,codigoprod,dataac,funcionario,status,horario from farmsystem.acoes");
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,tipoacao,plantacao,codigoprod,dataac,funcionario,status,horario, quantidade from farmsystem.acoes");
             query.Connection = conn.entrar();
             using (NpgsqlDataReader dr = query.ExecuteReader())
             {
@@ -52,6 +52,7 @@ namespace FarmSystem
                         ac.funcionario = dr.GetInt32(5);
                         ac.status = dr.GetString(6);
                         ac.horario = dr.GetString(7);
+                        ac.quantidade = dr.GetDouble(8);
 
                         acoes.Add(ac);
                     }
@@ -91,7 +92,7 @@ namespace FarmSystem
             Conexao conn = new Conexao();
             NpgsqlCommand query = new NpgsqlCommand("update farmsystem.acoes set " +
                 "tipoacao=@tipo, plantacao=@plant, codigoprod=@prod, dataac=@dt," +
-                " funcionario=@func, status=@status, horario = @horario where codigo=@cod");
+                " funcionario=@func, status=@status, horario = @horario, quantidade = @quantidade where codigo=@cod");
             query.Connection = conn.entrar();
             query.Parameters.Add("@tipo", NpgsqlDbType.Varchar).Value = a.tipoacao;
             query.Parameters.Add("@plant", NpgsqlDbType.Integer).Value = a.plantacao;
@@ -101,6 +102,8 @@ namespace FarmSystem
             query.Parameters.Add("@status", NpgsqlDbType.Varchar).Value = a.status;
             query.Parameters.Add("@cod", NpgsqlDbType.Integer).Value = a.codigo;
             query.Parameters.Add("@horario", NpgsqlDbType.Varchar).Value = a.horario;
+            query.Parameters.Add("@qunatidade", NpgsqlDbType.Double).Value = a.quantidade;
+
             query.ExecuteNonQuery();
             conn.sair();
         }
@@ -118,7 +121,7 @@ namespace FarmSystem
         public List<objacao> ListaAcoes(String acao)
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("Select codigo,tipoacao,plantacao,codigoprod,dataac,funcionario,status, horario from farmsystem.acoes where LIKE @acao");
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,tipoacao,plantacao,codigoprod,dataac,funcionario,status, horario, quantidade from farmsystem.acoes where LIKE @acao");
             query.Parameters.Add("@acao", NpgsqlDbType.Varchar).Value = "%" + acao + "%";
             query.Connection = conn.entrar();
             using (NpgsqlDataReader dr = query.ExecuteReader())
@@ -137,6 +140,7 @@ namespace FarmSystem
                         ac.funcionario = dr.GetInt32(5);
                         ac.status = dr.GetString(6);
                         ac.horario = dr.GetString(7);
+                        ac.quantidade = dr.GetDouble(8);
 
                         acoes.Add(ac);
                     }
@@ -250,7 +254,7 @@ namespace FarmSystem
         public List<Data_Acao> Lista_Data(DateTime data)
         {
             Conexao conn = new Conexao();
-            NpgsqlCommand query = new NpgsqlCommand("SELECT p2.codigo, p2.sementeusada, p.nome, f.nome, a.dataac, a.tipoacao, a.status, a.horario FROM farmsystem.acoes a, farmsystem.produtos p, farmsystem.plantacao p2, farmsystem.funcionario f where a.plantacao = p2.codigo and f.codigo = a.funcionario and a.codigoprod = p.codigo and a.dataac = @data order by a.dataac, a.codigo");
+            NpgsqlCommand query = new NpgsqlCommand("SELECT p2.codigo, p2.sementeusada, p.nome,a.quantidade, f.nome, a.dataac, a.tipoacao, a.status, a.horario FROM farmsystem.acoes a, farmsystem.produtos p, farmsystem.plantacao p2, farmsystem.funcionario f where a.plantacao = p2.codigo and f.codigo = a.funcionario and a.codigoprod = p.codigo and a.dataac = @data order by a.dataac, a.codigo");
             query.Parameters.Add("@data", NpgsqlDbType.Date).Value = data;
             query.Connection = conn.entrar();
             using (NpgsqlDataReader dr = query.ExecuteReader())
@@ -264,11 +268,13 @@ namespace FarmSystem
                         ac.codigo = dr.GetInt32(0);
                         ac.semente_usada = dr.GetString(1);
                         ac.nome_produto = dr.GetString(2);
-                        ac.nome_funcionario = dr.GetString(3);
-                        ac.data_acao = dr.GetDateTime(4);
-                        ac.Tipo_Acao = dr.GetString(5);
-                        ac.Status = dr.GetString(6);
-                        ac.Horario = dr.GetString(7);
+                        ac.quantidade = dr.GetDouble(3);
+                        ac.nome_funcionario = dr.GetString(4);
+                        ac.data_acao = dr.GetDateTime(5);
+                        ac.Tipo_Acao = dr.GetString(6);
+                        ac.Status = dr.GetString(7);
+                        ac.Horario = dr.GetString(8);
+                       
 
                         acoes.Add(ac);
                     }

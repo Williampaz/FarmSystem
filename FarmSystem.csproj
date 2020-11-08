@@ -414,6 +414,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="postgresDataSet1.cs">
+      <DependentUpon>postgresDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Relatorios\frmRelTodasAcoes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,6 +649,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorios\Frm_Relacao_Produtos.resx">
+      <DependentUpon>Frm_Relacao_Produtos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\relAcoes.rdlc" />
     <EmbeddedResource Include="Relatorios\frmRelAcoes.resx">
       <DependentUpon>frmRelAcoes.cs</DependentUpon>
@@ -661,9 +667,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\Frm_Relacao_Fornecedores.resx">
       <DependentUpon>Frm_Relacao_Fornecedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Relatorios\Frm_Relacao_Produtos.resx">
-      <DependentUpon>Frm_Relacao_Produtos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\Frm_Relacao_User.resx">
       <DependentUpon>Frm_Relacao_User.cs</DependentUpon>

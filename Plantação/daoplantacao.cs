@@ -1,4 +1,5 @@
 ﻿using FarmSystem.Funcionario;
+using FarmSystem.Produtos;
 using Npgsql;
 using NpgsqlTypes;
 using System;
@@ -262,7 +263,31 @@ namespace FarmSystem.Plantação
             return num;
         }
 
+        public int ProcuraProduto(string prod)
+        {
+            Conexao conn = new Conexao();
+            NpgsqlCommand query = new NpgsqlCommand("Select codigo,nome from farmsystem.produtos where nome = @prod");
+            query.Connection = conn.entrar();
+            query.Parameters.Add("@prod", NpgsqlDbType.Varchar).Value = prod;
+            int cod = 0;
+            using (NpgsqlDataReader dr = query.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                   
+                    if (dr.Read())
+                    {
 
+                        cod = dr.GetInt32(0);
+
+                    }
+                    conn.sair();
+                    return cod;
+                }
+            }
+            conn.sair();
+            return cod;
+        }
     }
 
 

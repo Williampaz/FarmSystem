@@ -56,5 +56,12 @@ namespace FarmSystem.Plantação
             get { return _Horario; }
             set { _Horario = value; }
         }
+
+        private double _quantidade;
+        public double quantidade
+        {
+            get { return _quantidade; }
+            set { _quantidade = value; }
+        }
     }
 }

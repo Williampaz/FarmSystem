@@ -85,6 +85,8 @@
             this.txtdatadacolheita = new System.Windows.Forms.DateTimePicker();
             this.mskprevisaodata = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txt_quantidade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgplantacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plantacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
@@ -388,7 +390,7 @@
             // 
             this.txtsemente.Location = new System.Drawing.Point(249, 211);
             this.txtsemente.Name = "txtsemente";
-            this.txtsemente.Size = new System.Drawing.Size(366, 20);
+            this.txtsemente.Size = new System.Drawing.Size(301, 20);
             this.txtsemente.TabIndex = 10;
             // 
             // label13
@@ -531,7 +533,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(617, 195);
+            this.label18.Location = new System.Drawing.Point(666, 195);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(89, 13);
             this.label18.TabIndex = 39;
@@ -548,9 +550,9 @@
             // txtdatadacolheita
             // 
             this.txtdatadacolheita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtdatadacolheita.Location = new System.Drawing.Point(621, 211);
+            this.txtdatadacolheita.Location = new System.Drawing.Point(670, 211);
             this.txtdatadacolheita.Name = "txtdatadacolheita";
-            this.txtdatadacolheita.Size = new System.Drawing.Size(172, 20);
+            this.txtdatadacolheita.Size = new System.Drawing.Size(123, 20);
             this.txtdatadacolheita.TabIndex = 41;
             // 
             // mskprevisaodata
@@ -576,12 +578,30 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(556, 195);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(105, 13);
+            this.label19.TabIndex = 46;
+            this.label19.Text = "Quantidade Produto:";
+            // 
+            // txt_quantidade
+            // 
+            this.txt_quantidade.Location = new System.Drawing.Point(556, 211);
+            this.txt_quantidade.Name = "txt_quantidade";
+            this.txt_quantidade.Size = new System.Drawing.Size(108, 20);
+            this.txt_quantidade.TabIndex = 11;
+            // 
             // plantacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1370, 699);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.txt_quantidade);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.mskprevisaodata);
             this.Controls.Add(this.txtdatadacolheita);
@@ -693,5 +713,7 @@
         private System.Windows.Forms.DateTimePicker txtdatadacolheita;
         private System.Windows.Forms.DateTimePicker mskprevisaodata;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txt_quantidade;
     }
 }

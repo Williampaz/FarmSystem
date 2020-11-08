@@ -50,14 +50,6 @@
             this.btnListaProd = new System.Windows.Forms.Button();
             this.btnListaFunc = new System.Windows.Forms.Button();
             this.dgvacoes = new System.Windows.Forms.DataGridView();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postgresDataSet2 = new FarmSystem.postgresDataSet2();
             this.acoesTableAdapter = new FarmSystem.postgresDataSet2TableAdapters.acoesTableAdapter();
@@ -75,6 +67,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txthorario = new System.Windows.Forms.TextBox();
             this.mskdata = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_quantidade = new System.Windows.Forms.TextBox();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plantacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoprodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funcionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvacoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postgresDataSet2)).BeginInit();
@@ -86,7 +89,7 @@
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.ReadOnly = true;
             this.txtcodigo.Size = new System.Drawing.Size(170, 20);
-            this.txtcodigo.TabIndex = 0;
+            this.txtcodigo.TabIndex = 27;
             this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
             // 
             // txtplantacao
@@ -109,7 +112,7 @@
             // 
             this.txtdescricao.Location = new System.Drawing.Point(145, 159);
             this.txtdescricao.Name = "txtdescricao";
-            this.txtdescricao.Size = new System.Drawing.Size(384, 20);
+            this.txtdescricao.Size = new System.Drawing.Size(299, 20);
             this.txtdescricao.TabIndex = 15;
             // 
             // label1
@@ -171,7 +174,7 @@
             this.txtsemente.AcceptsReturn = true;
             this.txtsemente.Location = new System.Drawing.Point(145, 118);
             this.txtsemente.Name = "txtsemente";
-            this.txtsemente.Size = new System.Drawing.Size(384, 20);
+            this.txtsemente.Size = new System.Drawing.Size(408, 20);
             this.txtsemente.TabIndex = 14;
             // 
             // label7
@@ -205,7 +208,7 @@
             // 
             this.txtnome.Location = new System.Drawing.Point(144, 202);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(384, 20);
+            this.txtnome.Size = new System.Drawing.Size(409, 20);
             this.txtnome.TabIndex = 16;
             // 
             // txtfunc
@@ -223,7 +226,7 @@
             this.btnListaPlant.Location = new System.Drawing.Point(93, 116);
             this.btnListaPlant.Name = "btnListaPlant";
             this.btnListaPlant.Size = new System.Drawing.Size(46, 23);
-            this.btnListaPlant.TabIndex = 2;
+            this.btnListaPlant.TabIndex = 1;
             this.btnListaPlant.Text = "Listar";
             this.btnListaPlant.UseVisualStyleBackColor = true;
             this.btnListaPlant.Click += new System.EventHandler(this.btnListaPlant_Click);
@@ -235,7 +238,7 @@
             this.btnListaProd.Location = new System.Drawing.Point(92, 157);
             this.btnListaProd.Name = "btnListaProd";
             this.btnListaProd.Size = new System.Drawing.Size(46, 23);
-            this.btnListaProd.TabIndex = 3;
+            this.btnListaProd.TabIndex = 2;
             this.btnListaProd.Text = "Listar";
             this.btnListaProd.UseVisualStyleBackColor = true;
             this.btnListaProd.Click += new System.EventHandler(this.btnListaProd_Click);
@@ -265,14 +268,197 @@
             this.dataacDataGridViewTextBoxColumn,
             this.funcionarioDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn,
-            this.horario});
+            this.horario,
+            this.quantidade});
             this.dgvacoes.DataSource = this.acoesBindingSource;
-            this.dgvacoes.Location = new System.Drawing.Point(11, 272);
+            this.dgvacoes.Location = new System.Drawing.Point(12, 272);
             this.dgvacoes.Name = "dgvacoes";
-            this.dgvacoes.Size = new System.Drawing.Size(1014, 280);
-            this.dgvacoes.TabIndex = 17;
+            this.dgvacoes.Size = new System.Drawing.Size(1129, 280);
+            this.dgvacoes.TabIndex = 12;
             this.dgvacoes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvacoes_CellContentClick);
             this.dgvacoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvacoes_CellDoubleClick);
+            // 
+            // acoesBindingSource
+            // 
+            this.acoesBindingSource.DataMember = "acoes";
+            this.acoesBindingSource.DataSource = this.postgresDataSet2;
+            // 
+            // postgresDataSet2
+            // 
+            this.postgresDataSet2.DataSetName = "postgresDataSet2";
+            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // acoesTableAdapter
+            // 
+            this.acoesTableAdapter.ClearBeforeFill = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(670, 187);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Gravar";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(781, 187);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Editar";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(894, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Excluir";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1002, 187);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Limpar";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(145, 229);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Status";
+            // 
+            // combstatus
+            // 
+            this.combstatus.FormattingEnabled = true;
+            this.combstatus.Items.AddRange(new object[] {
+            "A executar",
+            "Em execução",
+            "Executada",
+            "Ação Cancelada"});
+            this.combstatus.Location = new System.Drawing.Point(148, 245);
+            this.combstatus.Name = "combstatus";
+            this.combstatus.Size = new System.Drawing.Size(263, 21);
+            this.combstatus.TabIndex = 6;
+            // 
+            // btnlimpar
+            // 
+            this.btnlimpar.BackgroundImage = global::FarmSystem.Properties.Resources.clean;
+            this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnlimpar.Location = new System.Drawing.Point(969, 102);
+            this.btnlimpar.Name = "btnlimpar";
+            this.btnlimpar.Size = new System.Drawing.Size(104, 82);
+            this.btnlimpar.TabIndex = 11;
+            this.btnlimpar.UseVisualStyleBackColor = true;
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
+            // 
+            // btnexcluir
+            // 
+            this.btnexcluir.BackgroundImage = global::FarmSystem.Properties.Resources.delete;
+            this.btnexcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnexcluir.Location = new System.Drawing.Point(859, 105);
+            this.btnexcluir.Name = "btnexcluir";
+            this.btnexcluir.Size = new System.Drawing.Size(104, 82);
+            this.btnexcluir.TabIndex = 10;
+            this.btnexcluir.UseVisualStyleBackColor = true;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
+            // 
+            // btneditar
+            // 
+            this.btneditar.BackgroundImage = global::FarmSystem.Properties.Resources.edit;
+            this.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btneditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btneditar.Location = new System.Drawing.Point(749, 102);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(104, 82);
+            this.btneditar.TabIndex = 9;
+            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
+            // 
+            // btngravar
+            // 
+            this.btngravar.BackgroundImage = global::FarmSystem.Properties.Resources.floppy_disk;
+            this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btngravar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btngravar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btngravar.Location = new System.Drawing.Point(639, 102);
+            this.btngravar.Name = "btngravar";
+            this.btngravar.Size = new System.Drawing.Size(104, 82);
+            this.btngravar.TabIndex = 8;
+            this.btngravar.UseVisualStyleBackColor = true;
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
+            // 
+            // txtipoac
+            // 
+            this.txtipoac.FormattingEnabled = true;
+            this.txtipoac.Items.AddRange(new object[] {
+            "Plantar",
+            "Colher",
+            "Detetizar",
+            "Adubar"});
+            this.txtipoac.Location = new System.Drawing.Point(10, 76);
+            this.txtipoac.Name = "txtipoac";
+            this.txtipoac.Size = new System.Drawing.Size(543, 21);
+            this.txtipoac.TabIndex = 0;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(415, 230);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 13);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "Horário:";
+            // 
+            // txthorario
+            // 
+            this.txthorario.Location = new System.Drawing.Point(417, 246);
+            this.txthorario.Name = "txthorario";
+            this.txthorario.Size = new System.Drawing.Size(136, 20);
+            this.txthorario.TabIndex = 7;
+            this.txthorario.TextChanged += new System.EventHandler(this.txthorario_TextChanged);
+            // 
+            // mskdata
+            // 
+            this.mskdata.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.mskdata.Location = new System.Drawing.Point(10, 246);
+            this.mskdata.Name = "mskdata";
+            this.mskdata.Size = new System.Drawing.Size(128, 20);
+            this.mskdata.TabIndex = 5;
+            this.mskdata.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(447, 143);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(108, 13);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "Quantidade Utilizada:";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // txt_quantidade
+            // 
+            this.txt_quantidade.Location = new System.Drawing.Point(450, 159);
+            this.txt_quantidade.Name = "txt_quantidade";
+            this.txt_quantidade.Size = new System.Drawing.Size(103, 20);
+            this.txt_quantidade.TabIndex = 3;
+            this.txt_quantidade.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -328,176 +514,21 @@
             this.horario.HeaderText = "Horário";
             this.horario.Name = "horario";
             // 
-            // acoesBindingSource
+            // quantidade
             // 
-            this.acoesBindingSource.DataMember = "acoes";
-            this.acoesBindingSource.DataSource = this.postgresDataSet2;
-            // 
-            // postgresDataSet2
-            // 
-            this.postgresDataSet2.DataSetName = "postgresDataSet2";
-            this.postgresDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // acoesTableAdapter
-            // 
-            this.acoesTableAdapter.ClearBeforeFill = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(600, 187);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Gravar";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(711, 187);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Editar";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(824, 190);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Excluir";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(932, 187);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 13);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Limpar";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(145, 229);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 13);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "Status";
-            // 
-            // combstatus
-            // 
-            this.combstatus.FormattingEnabled = true;
-            this.combstatus.Items.AddRange(new object[] {
-            "A executar",
-            "Em execução",
-            "Executada",
-            "Ação Cancelada"});
-            this.combstatus.Location = new System.Drawing.Point(148, 245);
-            this.combstatus.Name = "combstatus";
-            this.combstatus.Size = new System.Drawing.Size(238, 21);
-            this.combstatus.TabIndex = 6;
-            // 
-            // btnlimpar
-            // 
-            this.btnlimpar.BackgroundImage = global::FarmSystem.Properties.Resources.clean;
-            this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlimpar.Location = new System.Drawing.Point(899, 102);
-            this.btnlimpar.Name = "btnlimpar";
-            this.btnlimpar.Size = new System.Drawing.Size(104, 82);
-            this.btnlimpar.TabIndex = 10;
-            this.btnlimpar.UseVisualStyleBackColor = true;
-            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
-            // 
-            // btnexcluir
-            // 
-            this.btnexcluir.BackgroundImage = global::FarmSystem.Properties.Resources.delete;
-            this.btnexcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnexcluir.Location = new System.Drawing.Point(789, 105);
-            this.btnexcluir.Name = "btnexcluir";
-            this.btnexcluir.Size = new System.Drawing.Size(104, 82);
-            this.btnexcluir.TabIndex = 9;
-            this.btnexcluir.UseVisualStyleBackColor = true;
-            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
-            // 
-            // btneditar
-            // 
-            this.btneditar.BackgroundImage = global::FarmSystem.Properties.Resources.edit;
-            this.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btneditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btneditar.Location = new System.Drawing.Point(679, 102);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(104, 82);
-            this.btneditar.TabIndex = 8;
-            this.btneditar.UseVisualStyleBackColor = true;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
-            // btngravar
-            // 
-            this.btngravar.BackgroundImage = global::FarmSystem.Properties.Resources.floppy_disk;
-            this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btngravar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btngravar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btngravar.Location = new System.Drawing.Point(569, 102);
-            this.btngravar.Name = "btngravar";
-            this.btngravar.Size = new System.Drawing.Size(104, 82);
-            this.btngravar.TabIndex = 7;
-            this.btngravar.UseVisualStyleBackColor = true;
-            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
-            // 
-            // txtipoac
-            // 
-            this.txtipoac.FormattingEnabled = true;
-            this.txtipoac.Items.AddRange(new object[] {
-            "Plantar",
-            "Colher",
-            "Detetizar",
-            "Adubar"});
-            this.txtipoac.Location = new System.Drawing.Point(10, 76);
-            this.txtipoac.Name = "txtipoac";
-            this.txtipoac.Size = new System.Drawing.Size(518, 21);
-            this.txtipoac.TabIndex = 33;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(390, 229);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 13);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "Horário:";
-            // 
-            // txthorario
-            // 
-            this.txthorario.Location = new System.Drawing.Point(392, 245);
-            this.txthorario.Name = "txthorario";
-            this.txthorario.Size = new System.Drawing.Size(136, 20);
-            this.txthorario.TabIndex = 34;
-            this.txthorario.TextChanged += new System.EventHandler(this.txthorario_TextChanged);
-            // 
-            // mskdata
-            // 
-            this.mskdata.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.mskdata.Location = new System.Drawing.Point(10, 246);
-            this.mskdata.Name = "mskdata";
-            this.mskdata.Size = new System.Drawing.Size(128, 20);
-            this.mskdata.TabIndex = 36;
-            this.mskdata.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.quantidade.DataPropertyName = "quantidade";
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.Width = 90;
             // 
             // acoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(1037, 564);
+            this.ClientSize = new System.Drawing.Size(1149, 564);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txt_quantidade);
             this.Controls.Add(this.mskdata);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txthorario);
@@ -584,6 +615,9 @@
 		private System.Windows.Forms.ComboBox txtipoac;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txthorario;
+        private System.Windows.Forms.DateTimePicker mskdata;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txt_quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn plantacaoDataGridViewTextBoxColumn;
@@ -592,6 +626,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn funcionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horario;
-        private System.Windows.Forms.DateTimePicker mskdata;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
     }
 }

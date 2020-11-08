@@ -261,7 +261,7 @@ namespace FarmSystem.Principal
 			}
 
 
-			if (label3.Text == "07:00:00")
+			if (label3.Text == "23:07:00")
 
             {
 
@@ -296,9 +296,15 @@ namespace FarmSystem.Principal
 								{
 									send += " Planta " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
 								}
+
 								if (j == 2)
 								{
 									send += " Utilizar o produto " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
+								}
+
+								if (j == 8)
+								{
+									send += " Quantidade de Produto a utilizar " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
 								}
 
 								if (j == 3)
@@ -310,14 +316,17 @@ namespace FarmSystem.Principal
 								{
 									send += " Data " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
 								}
-								if (j == 5)
+
+								if (j ==5)
 								{
 									send += " a tarefa " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
 								}
+
 								if (j == 6)
 								{
 									send += " que tem o status " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
 								}
+
 								if (j == 7)
 								{
 									send += " no horario " + dtg_tarefas.Rows[i].Cells[j].Value.ToString() + " ";
@@ -340,7 +349,7 @@ namespace FarmSystem.Principal
 				// Find your Account Sid and Token at twilio.com/console
 				// DANGER! This is insecure. See http://twil.io/secure
 				const string accountSid = "ACcac9d2c8905ff49a25a5482fac9ab034";
-				const string authToken = "4b47660a5fca4e27fcb7ccbe9b32625a";
+				const string authToken = "e5a17ae9c84acf5d33141409afbac23f";
 
 
 				TwilioClient.Init(accountSid, authToken);

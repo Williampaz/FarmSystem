@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Routing.Constraints;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,5 +66,13 @@ namespace FarmSystem.Plantação
             set { _horario = value; }
 
         }
+
+        private double _quantidade;
+        public double quantidade
+        {
+            get { return _quantidade; }
+            set { _quantidade = value; }
+        }
+
     }
 }

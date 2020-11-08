@@ -67,6 +67,8 @@ namespace FarmSystem.Plantação
             acao.funcionario = Convert.ToInt32(dgvacoes.CurrentRow.Cells[5].Value.ToString());
             acao.status = dgvacoes.CurrentRow.Cells[6].Value.ToString();
             acao.horario = dgvacoes.CurrentRow.Cells[7].Value.ToString();
+            acao.quantidade = Convert.ToDouble(dgvacoes.CurrentRow.Cells[8].Value.ToString());
+
 
             return acao;
         }
@@ -82,6 +84,7 @@ namespace FarmSystem.Plantação
             a.funcionario = Convert.ToInt32(txtfunc.Text);
             a.status = combstatus.SelectedItem.ToString();
             a.horario = txthorario.Text;
+            a.quantidade = Convert.ToDouble(txt_quantidade.Text);
 
             return a;
         }
@@ -98,6 +101,8 @@ namespace FarmSystem.Plantação
             txtfunc.Text = a.funcionario.ToString();
             combstatus.Text = a.status.ToString();
             txthorario.Text = a.horario.ToString();
+            txt_quantidade.Text = a.quantidade.ToString();
+
 
         }
 
@@ -114,6 +119,7 @@ namespace FarmSystem.Plantação
             txtplantacao.Clear();
             txtnome.Clear();
             txthorario.Clear();
+            txt_quantidade.Clear();
 
 
         }
@@ -130,6 +136,7 @@ namespace FarmSystem.Plantação
             txtplantacao.Clear();
             txtnome.Clear();
             txthorario.Clear();
+            txt_quantidade.Clear();
         }
 
         private void btnlimpar_Click(object sender, EventArgs e)
@@ -307,6 +314,16 @@ namespace FarmSystem.Plantação
         }
 
         private void txthorario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

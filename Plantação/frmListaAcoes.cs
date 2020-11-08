@@ -37,6 +37,9 @@ namespace FarmSystem
             a.dataac = Convert.ToDateTime(dgvAcoes.CurrentRow.Cells[4].Value);
             a.funcionario = Convert.ToInt32(dgvAcoes.CurrentRow.Cells[5].Value);
             a.status = dgvAcoes.CurrentRow.Cells[6].Value.ToString();
+            a.horario =  dgvAcoes.CurrentRow.Cells[7].Value.ToString();
+            a.quantidade = Convert.ToInt32(dgvAcoes.CurrentRow.Cells[8].Value.ToString());
+
             return a;
         }
 
@@ -49,6 +52,11 @@ namespace FarmSystem
         {
             DAOacao da = new DAOacao();
             dgvAcoes.DataSource = da.ListaAcoes(txtPesquisar.Text);
+        }
+
+        private void frmListaAcoes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
