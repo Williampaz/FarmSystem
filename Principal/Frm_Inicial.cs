@@ -388,6 +388,11 @@ namespace FarmSystem.Principal
         {
 			new frmRelAcoes().ShowDialog();
         }
+
+        private void produtosToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+			new Frm_Relacao_Produtos().ShowDialog();
+        }
     }
 
 }

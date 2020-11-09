@@ -20,7 +20,7 @@ namespace FarmSystem.Relatorios
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			// TODO: esta linha de código carrega dados na tabela 'farmsystemDB.usuario'. Você pode movê-la ou removê-la conforme necessário.
-			//this.usuarioTableAdapter.Fill(this.farmsystemDB.usuario);
+			this.usuarioTableAdapter.Fill(this.farmsystemDB.usuario);
 
 			this.Rp_Usuarios.RefreshReport();
 		}
