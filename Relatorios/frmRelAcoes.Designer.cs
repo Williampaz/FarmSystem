@@ -64,7 +64,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 62);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1009, 566);
+            this.reportViewer1.Size = new System.Drawing.Size(1361, 622);
             this.reportViewer1.TabIndex = 0;
             // 
             // btnFiltrar
@@ -104,7 +104,7 @@
             // txtsemente
             // 
             this.txtsemente.AcceptsReturn = true;
-            this.txtsemente.Location = new System.Drawing.Point(156, 23);
+            this.txtsemente.Location = new System.Drawing.Point(153, 25);
             this.txtsemente.Name = "txtsemente";
             this.txtsemente.Size = new System.Drawing.Size(372, 20);
             this.txtsemente.TabIndex = 19;
@@ -120,7 +120,7 @@
             // 
             // txtplantacao
             // 
-            this.txtplantacao.Location = new System.Drawing.Point(15, 23);
+            this.txtplantacao.Location = new System.Drawing.Point(15, 24);
             this.txtplantacao.Name = "txtplantacao";
             this.txtplantacao.Size = new System.Drawing.Size(82, 20);
             this.txtplantacao.TabIndex = 17;
@@ -134,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(1010, 635);
+            this.ClientSize = new System.Drawing.Size(1362, 681);
             this.Controls.Add(this.btnListaPlant);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtsemente);

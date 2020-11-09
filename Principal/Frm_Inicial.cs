@@ -393,6 +393,11 @@ namespace FarmSystem.Principal
         {
 			new Frm_Relacao_Produtos().ShowDialog();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			this.Close();
+        }
     }
 
 }

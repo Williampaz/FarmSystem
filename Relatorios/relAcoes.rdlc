@@ -337,7 +337,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>="Previsão de Faturamento "  &amp; FormatCurrency( Sum(Fields!previsaodecolheita.Value * Fields!valordevenda.Value))</Value>
+                                  <Value>="Previsão de Faturamento "  &amp; FormatCurrency( Fields!previsaodecolheita.Value * Fields!valordevenda.Value)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -382,7 +382,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>="Faturamento Real " &amp;  FormatCurrency(Sum(Fields!quantidadecolhida.Value * Fields!valordevenda.Value))</Value>
+                                  <Value>="Faturamento Real " &amp;  FormatCurrency(Fields!quantidadecolhida.Value * Fields!valordevenda.Value)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1135,7 +1135,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!precokg_uni.Value</Value>
+                                  <Value>=FormatCurrency(Fields!precokg_uni.Value)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1638,7 +1638,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!quantidadecolhida.Value * Fields!valordevenda.Value)</Y>
+                        <Y>=Fields!quantidadecolhida.Value * Fields!valordevenda.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -1674,7 +1674,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!previsaodecolheita.Value * Fields!valordevenda.Value)</Y>
+                        <Y>=Fields!previsaodecolheita.Value * Fields!valordevenda.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
